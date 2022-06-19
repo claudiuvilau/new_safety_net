@@ -2,7 +2,6 @@ package com.openclassrooms.new_safety_net.service;
 
 import java.io.IOException;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.jsoniter.JsonIterator;
@@ -17,10 +16,10 @@ import lombok.Data;
 @Service
 public class SafetyNetService implements SafetyNetRepository {
 
-    @Autowired
-    private SafetyNetRepository repository;
-    private Persons persons;
+    // @Autowired
+    // pourquoi pas de Autowired ?
     private JsonToFile jsonToFile;
+    private Persons persons;
 
     @Override
     public void getPerson() throws IOException {
