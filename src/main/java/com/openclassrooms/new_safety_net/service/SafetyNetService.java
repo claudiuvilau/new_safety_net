@@ -1,8 +1,14 @@
 package com.openclassrooms.new_safety_net.service;
 
+import java.io.IOException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.jsoniter.JsonIterator;
+import com.jsoniter.output.JsonStream;
+import com.openclassrooms.new_safety_net.model.JsonToFile;
+import com.openclassrooms.new_safety_net.model.Persons;
 import com.openclassrooms.new_safety_net.repository.SafetyNetRepository;
 
 import lombok.Data;
@@ -13,11 +19,14 @@ public class SafetyNetService implements SafetyNetRepository {
 
     @Autowired
     private SafetyNetRepository repository;
+    private Persons persons;
+    private JsonToFile jsonToFile;
 
     @Override
-    public void getPerson(String nomperson) {
-        // TODO Auto-generated method stub
-
+    public void getPerson() throws IOException {
+        byte[] bytesFile = jsonToFile.readJsonFile();
+        persons = JsonIterator.deserialize(bytesFile, Persons.class);
+        JsonStream.serialize(persons);
     }
 
     @Override

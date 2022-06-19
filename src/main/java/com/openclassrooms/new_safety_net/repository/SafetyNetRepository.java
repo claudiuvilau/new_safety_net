@@ -1,5 +1,7 @@
 package com.openclassrooms.new_safety_net.repository;
 
+import java.io.IOException;
+
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -18,7 +20,7 @@ public interface SafetyNetRepository {
      * unique).
      */
 
-    void getPerson(String nomperson);
+    void getPerson() throws IOException;
 
     void postPerson(String nomperson);
 
