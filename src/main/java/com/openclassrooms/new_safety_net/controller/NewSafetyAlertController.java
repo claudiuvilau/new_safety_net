@@ -16,7 +16,7 @@ public class NewSafetyAlertController {
 
     @GetMapping("/person")
     public void getPersons() throws IOException {
-
+        repository.getPerson();
     }
 
 }
