@@ -1,11 +1,13 @@
 package com.openclassrooms.new_safety_net.service;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.stereotype.Service;
 
 import com.jsoniter.JsonIterator;
-import com.jsoniter.output.JsonStream;
+import com.jsoniter.any.Any;
 import com.openclassrooms.new_safety_net.model.JsonToFile;
 import com.openclassrooms.new_safety_net.model.Persons;
 import com.openclassrooms.new_safety_net.repository.SafetyNetRepository;
@@ -18,14 +20,32 @@ public class SafetyNetService implements SafetyNetRepository {
 
     // @Autowired
     // pourquoi pas de Autowired ?
-    private JsonToFile jsonToFile;
-    private Persons persons;
+    private JsonToFile jsonToFile = new JsonToFile();
+    private Persons persons = new Persons();
 
+    // pourquoi Override ?
     @Override
-    public void getPerson() throws IOException {
-        byte[] bytesFile = jsonToFile.readJsonFile();
-        persons = JsonIterator.deserialize(bytesFile, Persons.class);
-        JsonStream.serialize(persons);
+    public List<Persons> getPerson() throws IOException {
+        List<Persons> listPersons = new ArrayList<>();
+        byte[] objetfile = null;
+        objetfile = jsonToFile.readJsonFile();
+        JsonIterator iter = JsonIterator.parse(objetfile);
+        Any any = null;
+        try {
+            any = iter.readAny();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        if (any != null) {
+            Any personsAny = any.get("persons");
+            for (Any element : personsAny) {
+                // transforming the json in java object
+                persons = JsonIterator.deserialize(element.toString(), Persons.class);
+                listPersons.add(persons);
+            }
+        }
+        return listPersons;
     }
 
     @Override

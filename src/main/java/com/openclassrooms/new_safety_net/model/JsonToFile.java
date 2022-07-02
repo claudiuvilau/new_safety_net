@@ -6,32 +6,36 @@ import java.nio.file.Files;
 
 public class JsonToFile {
 
-    private String filePathJson = "resources/jsonFile.json";
+    private String filepathjson = "src\\main\\resources\\jsonFile.json";
 
-    private String objetfile = "";
+    private byte[] objetfile;
 
     /**
      * @return String return the objetjson
      */
-    public String getObjetjson() {
+    public byte[] getObjetjson() {
         return objetfile;
     }
 
     /**
      * @param objetjson the objetjson to set
      */
-    public void setObjetjson(String objetjson) {
+    public void setObjetjson(byte[] objetjson) {
         this.objetfile = objetjson;
     }
 
     public byte[] readJsonFile() throws IOException {
 
-        if (filePathJson != null) {
-            byte[] bytesFile = Files.readAllBytes(new File(filePathJson).toPath());
-            return bytesFile;
+        if (filepathjson != null) {
+            byte[] bytesFile = null;
+            try {
+                bytesFile = Files.readAllBytes(new File(filepathjson).toPath());
+                objetfile = bytesFile;
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
-
-        return null;
+        return objetfile;
     }
 
 }
