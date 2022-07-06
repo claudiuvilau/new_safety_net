@@ -4,11 +4,19 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class JsonToFile {
 
     private String filepathjson = "src\\main\\resources\\jsonFile.json";
 
     private byte[] objetfile;
+
+    File fileInPath;
+
+    // Récupération de notre logger.
+    private static final Logger LOGGER = LogManager.getLogger(JsonToFile.class);
 
     /**
      * @return String return the objetjson
@@ -24,16 +32,19 @@ public class JsonToFile {
         this.objetfile = objetjson;
     }
 
-    public byte[] readJsonFile() throws IOException {
+    public byte[] readJsonFile() {
 
-        if (filepathjson != null) {
-            byte[] bytesFile = null;
-            try {
-                bytesFile = Files.readAllBytes(new File(filepathjson).toPath());
-                objetfile = bytesFile;
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        fileInPath = new File(filepathjson);
+
+        if (!fileInPath.exists()) {
+            LOGGER.debug("Fichier introuvable. Vérifier le chemin du fichier .json");
+            return objetfile;
+        }
+
+        try {
+            objetfile = Files.readAllBytes(new File(filepathjson).toPath());
+        } catch (IOException e) {
+            LOGGER.debug("Erreur création objet JAVA à partir du fichier .json");
         }
         return objetfile;
     }

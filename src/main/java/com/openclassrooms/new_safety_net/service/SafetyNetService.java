@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
 
 import com.jsoniter.JsonIterator;
@@ -23,26 +25,31 @@ public class SafetyNetService implements SafetyNetRepository {
     private JsonToFile jsonToFile = new JsonToFile();
     private Persons persons = new Persons();
 
+    // Récupération de notre logger.
+    private static final Logger LOGGER = LogManager.getLogger(SafetyNetService.class);
+
     // pourquoi Override ?
     @Override
-    public List<Persons> getPerson() throws IOException {
+    public List<Persons> getPerson() {
         List<Persons> listPersons = new ArrayList<>();
         byte[] objetfile = null;
         objetfile = jsonToFile.readJsonFile();
-        JsonIterator iter = JsonIterator.parse(objetfile);
-        Any any = null;
-        try {
-            any = iter.readAny();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        if (objetfile != null) {
+            JsonIterator iter = JsonIterator.parse(objetfile);
+            Any any = null;
+            try {
+                any = iter.readAny();
+            } catch (IOException e) {
+                LOGGER.debug("No objet Java from Json !");
+            }
 
-        if (any != null) {
-            Any personsAny = any.get("persons");
-            for (Any element : personsAny) {
-                // transforming the json in java object
-                persons = JsonIterator.deserialize(element.toString(), Persons.class);
-                listPersons.add(persons);
+            if (any != null) {
+                Any personsAny = any.get("persons");
+                for (Any element : personsAny) {
+                    // transforming the json in java object
+                    persons = JsonIterator.deserialize(element.toString(), Persons.class);
+                    listPersons.add(persons);
+                }
             }
         }
         return listPersons;
