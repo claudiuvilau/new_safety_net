@@ -42,6 +42,7 @@ public class NewSafetyAlertController {
             // 204 Requête traitée avec succès mais pas d’information à renvoyer.
             response.setStatus(204);
         }
+
         LOGGER.info(HttpStatus.valueOf(response.getStatus()));
         return new ResponseEntity<>(listPersons, HttpStatus.valueOf(response.getStatus()));
     }
