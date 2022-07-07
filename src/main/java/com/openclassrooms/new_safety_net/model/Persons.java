@@ -2,26 +2,42 @@ package com.openclassrooms.new_safety_net.model;
 
 public class Persons {
 
-    private String firstname = "";
-    private String lastName = "";
-    private String address = "";
-    private String city = "";
-    private String zip = "";
-    private String phone = "";
-    private String email = "";
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String city;
+    private String zip;
+    private String phone;
+    private String email;
 
-    /**
-     * @return String return the firstname
-     */
-    public String getFirstname() {
-        return firstname;
+    public Persons() {
+
+    }
+
+    public Persons(String firstName, String lastName, String address, String city, String zip, String phone,
+            String email) {
+        super();
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.city = city;
+        this.zip = zip;
+        this.phone = phone;
+        this.email = email;
     }
 
     /**
-     * @param firstname the firstname to set
+     * @return String return the firstName
      */
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
+    public String getFirstName() {
+        return firstName;
+    }
+
+    /**
+     * @param firstName the firstName to set
+     */
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     /**
@@ -106,6 +122,14 @@ public class Persons {
      */
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "Persons{" + "firstName='" + firstName + '\'' + ", lastName='" + lastName + '\'' + ", address='"
+                + address + '\'' + ", city='" + city + '\'' + ", zip='" + zip + '\'' + ", phone='" + phone + '\''
+                + ", email='" + email + '\'' + "}";
+
     }
 
 }
