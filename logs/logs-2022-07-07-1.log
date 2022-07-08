@@ -1,0 +1,242 @@
+2022-07-07 19:26:57 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 18328 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-07 19:26:57 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-07 19:26:57 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-07 19:26:58 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-07 19:26:58 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-07 19:26:58 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.732 seconds (process running for 2.409)
+2022-07-07 19:27:38 [http-nio-9002-exec-2] INFO  c.o.n.c.NewSafetyAlertController                   - 200 OK
+2022-07-07 20:51:31 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 13984 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-07 20:51:31 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-07 20:51:32 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9000 (http)
+2022-07-07 20:51:33 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-07 20:51:33 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.903 seconds (process running for 2.678)
+2022-07-07 20:52:12 [http-nio-9000-exec-2] INFO  c.o.n.c.NewSafetyAlertController                   - 200 OK
+2022-07-07 20:55:31 [http-nio-9000-exec-4] INFO  c.o.n.c.NewSafetyAlertController                   - 200 OK
+2022-07-07 20:59:47 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 13868 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-07 20:59:47 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-07 20:59:48 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9000 (http)
+2022-07-07 20:59:49 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-07 20:59:49 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.82 seconds (process running for 2.532)
+2022-07-07 21:00:25 [http-nio-9000-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]                - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.jsoniter.spi.JsonException: read: premature end, head: 7749, peek:      ] 
+}, buf: {
+    "persons": [
+        { "firstName":"John", "lastName":"Boyd", "address":"1509 Culver St", "city":"Culver", "zip":"97451", "phone":"841-874-6512", "email":"jaboyd@email.com" },
+        { "firstName":"Jacob", "lastName":"Boyd", "address":"1509 Culver St", "city":"Culver", "zip":"97451", "phone":"841-874-6513", "email":"drk@email.com" },
+        { "firstName":"Tenley", "lastName":"Boyd", "address":"1509 Culver St", "city":"Culver", "zip":"97451", "phone":"841-874-6512", "email":"tenz@email.com" },
+        { "firstName":"Roger", "lastName":"Boyd", "address":"1509 Culver St", "city":"Culver", "zip":"97451", "phone":"841-874-6512", "email":"jaboyd@email.com" },
+        { "firstName":"Felicia", "lastName":"Boyd", "address":"1509 Culver St", "city":"Culver", "zip":"97451", "phone":"841-874-6544", "email":"jaboyd@email.com" },
+        { "firstName":"Jonanathan", "lastName":"Marrack", "address":"29 15th St", "city":"Culver", "zip":"97451", "phone":"841-874-6513", "email":"drk@email.com" },
+        { "firstName":"Tessa", "lastName":"Carman", "address":"834 Binoc Ave", "city":"Culver", "zip":"97451", "phone":"841-874-6512", "email":"tenz@email.com" },
+        { "firstName":"Peter", "lastName":"Duncan", "address":"644 Gershwin Cir", "city":"Culver", "zip":"97451", "phone":"841-874-6512", "email":"jaboyd@email.com" },
+        { "firstName":"Foster", "lastName":"Shepard", "address":"748 Townings Dr", "city":"Culver", "zip":"97451", "phone":"841-874-6544", "email":"jaboyd@email.com" },
+        { "firstName":"Tony", "lastName":"Cooper", "address":"112 Steppes Pl", "city":"Culver", "zip":"97451", "phone":"841-874-6874", "email":"tcoop@ymail.com" },
+        { "firstName":"Lily", "lastName":"Cooper", "address":"489 Manchester St", "city":"Culver", "zip":"97451", "phone":"841-874-9845", "email":"lily@email.com" },
+        { "firstName":"Sophia", "lastName":"Zemicks", "address":"892 Downing Ct", "city":"Culver", "zip":"97451", "phone":"841-874-7878", "email":"soph@email.com" },
+        { "firstName":"Warren", "lastName":"Zemicks", "address":"892 Downing Ct", "city":"Culver", "zip":"97451", "phone":"841-874-7512", "email":"ward@email.com" },
+        { "firstName":"Zach", "lastName":"Zemicks", "address":"892 Downing Ct", "city":"Culver", "zip":"97451", "phone":"841-874-7512", "email":"zarc@email.com" },
+        { "firstName":"Reginold", "lastName":"Walker", "address":"908 73rd St", "city":"Culver", "zip":"97451", "phone":"841-874-8547", "email":"reg@email.com" },
+        { "firstName":"Jamie", "lastName":"Peters", "address":"908 73rd St", "city":"Culver", "zip":"97451", "phone":"841-874-7462", "email":"jpeter@email.com" },
+        { "firstName":"Ron", "lastName":"Peters", "address":"112 Steppes Pl", "city":"Culver", "zip":"97451", "phone":"841-874-8888", "email":"jpeter@email.com" },
+        { "firstName":"Allison", "lastName":"Boyd", "address":"112 Steppes Pl", "city":"Culver", "zip":"97451", "phone":"841-874-9888", "email":"aly@imail.com" },
+        { "firstName":"Brian", "lastName":"Stelzer", "address":"947 E. Rose Dr", "city":"Culver", "zip":"97451", "phone":"841-874-7784", "email":"bstel@email.com" },
+        { "firstName":"Shawna", "lastName":"Stelzer", "address":"947 E. Rose Dr", "city":"Culver", "zip":"97451", "phone":"841-874-7784", "email":"ssanw@email.com" },
+        { "firstName":"Kendrik", "lastName":"Stelzer", "address":"947 E. Rose Dr", "city":"Culver", "zip":"97451", "phone":"841-874-7784", "email":"bstel@email.com" },
+        { "firstName":"Clive", "lastName":"Ferguson", "address":"748 Townings Dr", "city":"Culver", "zip":"97451", "phone":"841-874-6741", "email":"clivfd@ymail.com" },
+        { "firstName":"Eric", "lastName":"Cadigan", "address":"951 LoneTree Rd", "city":"Culver", "zip":"97451", "phone":"841-874-7458", "email":"gramps@email.com" }
+	], 
+    "firestations": [
+	{ "address":"1509 Culver St", "station":"3" },
+        { "address":"29 15th St", "station":"2" },
+        { "address":"834 Binoc Ave", "station":"3" },
+        { "address":"644 Gershwin Cir", "station":"1" },
+        { "address":"748 Townings Dr", "station":"3" },
+        { "address":"112 Steppes Pl", "station":"3" },
+        { "address":"489 Manchester St", "station":"4" },
+        { "address":"892 Downing Ct", "station":"2" },
+        { "address":"908 73rd St", "station":"1" },
+        { "address":"112 Steppes Pl", "station":"4" },
+        { "address":"947 E. Rose Dr", "station":"1" },
+        { "address":"748 Townings Dr", "station":"3" },
+        { "address":"951 LoneTree Rd", "station":"2" }
+	],
+    "medicalrecords": [
+        { "firstName":"John", "lastName":"Boyd", "birthdate":"03/06/1984", "medications":["aznol:350mg", "hydrapermazol:100mg"], "allergies":["nillacilan"] },
+        { "firstName":"Jacob", "lastName":"Boyd", "birthdate":"03/06/1989", "medications":["pharmacol:5000mg", "terazine:10mg", "noznazol:250mg"], "allergies":[] },
+        { "firstName":"Tenley", "lastName":"Boyd", "birthdate":"02/18/2012", "medications":[], "allergies":["peanut"] },
+        { "firstName":"Roger", "lastName":"Boyd", "birthdate":"09/06/2017", "medications":[], "allergies":[] },
+        { "firstName":"Felicia", "lastName":"Boyd","birthdate":"01/08/1986", "medications":["tetracyclaz:650mg"], "allergies":["xilliathal"] },
+        { "firstName":"Jonanathan", "lastName":"Marrack", "birthdate":"01/03/1989", "medications":[], "allergies":[] },
+        { "firstName":"Tessa", "lastName":"Carman", "birthdate":"02/18/2012", "medications":[], "allergies":[] },
+        { "firstName":"Peter", "lastName":"Duncan", "birthdate":"09/06/2000", "medications":[], "allergies":["shellfish"] },
+        { "firstName":"Foster", "lastName":"Shepard", "birthdate":"01/08/1980", "medications":[], "allergies":[] },
+        { "firstName":"Tony", "lastName":"Cooper", "birthdate":"03/06/1994", "medications":["hydrapermazol:300mg", "dodoxadin:30mg"], "allergies":["shellfish"] },
+        { "firstName":"Lily", "lastName":"Cooper", "birthdate":"03/06/1994", "medications":[], "allergies":[] },
+        { "firstName":"Sophia", "lastName":"Zemicks", "birthdate":"03/06/1988", "medications":["aznol:60mg", "hydrapermazol:900mg", "pharmacol:5000mg", "terazine:500mg"], "allergies":["peanut", "shellfish", "aznol"] },
+        { "firstName":"Warren", "lastName":"Zemicks", "birthdate":"03/06/1985", "medications":[], "allergies":[] },
+        { "firstName":"Zach", "lastName":"Zemicks", "birthdate":"03/06/2017", "medications":[], "allergies":[] },
+        { "firstName":"Reginold", "lastName":"Walker", "birthdate":"08/30/1979", "medications":["thradox:700mg"], "allergies":["illisoxian"] },
+        { "firstName":"Jamie", "lastName":"Peters", "birthdate":"03/06/1982", "medications":[], "allergies":[] },
+        { "firstName":"Ron", "lastName":"Peters", "birthdate":"04/06/1965", "medications":[], "allergies":[] },
+        { "firstName":"Allison", "lastName":"Boyd", "birthdate":"03/15/1965", "medications":["aznol:200mg"], "allergies":["nillacilan"] },
+        { "firstName":"Brian", "lastName":"Stelzer", "birthdate":"12/06/1975", "medications":["ibupurin:200mg", "hydrapermazol:400mg"], "allergies":["nillacilan"] },
+        { "firstName":"Shawna", "lastName":"Stelzer", "birthdate":"07/08/1980", "medications":[], "allergies":[] },
+        { "firstName":"Kendrik", "lastName":"Stelzer", "birthdate":"03/06/2014", "medications":["noxidian:100mg", "pharmacol:2500mg"], "allergies":[] },
+        { "firstName":"Clive", "lastName":"Ferguson", "birthdate":"03/06/1994", "medications":[], "allergies":[] },
+        { "firstName":"Eric", "lastName":"Cadigan", "birthdate":"08/06/1945", "medications":["tradoxidine:400mg"], "allergies":[] }
+        ] 
+}] with root cause
+com.jsoniter.spi.JsonException: read: premature end, head: 7749, peek:      ] 
+}, buf: {
+    "persons": [
+        { "firstName":"John", "lastName":"Boyd", "address":"1509 Culver St", "city":"Culver", "zip":"97451", "phone":"841-874-6512", "email":"jaboyd@email.com" },
+        { "firstName":"Jacob", "lastName":"Boyd", "address":"1509 Culver St", "city":"Culver", "zip":"97451", "phone":"841-874-6513", "email":"drk@email.com" },
+        { "firstName":"Tenley", "lastName":"Boyd", "address":"1509 Culver St", "city":"Culver", "zip":"97451", "phone":"841-874-6512", "email":"tenz@email.com" },
+        { "firstName":"Roger", "lastName":"Boyd", "address":"1509 Culver St", "city":"Culver", "zip":"97451", "phone":"841-874-6512", "email":"jaboyd@email.com" },
+        { "firstName":"Felicia", "lastName":"Boyd", "address":"1509 Culver St", "city":"Culver", "zip":"97451", "phone":"841-874-6544", "email":"jaboyd@email.com" },
+        { "firstName":"Jonanathan", "lastName":"Marrack", "address":"29 15th St", "city":"Culver", "zip":"97451", "phone":"841-874-6513", "email":"drk@email.com" },
+        { "firstName":"Tessa", "lastName":"Carman", "address":"834 Binoc Ave", "city":"Culver", "zip":"97451", "phone":"841-874-6512", "email":"tenz@email.com" },
+        { "firstName":"Peter", "lastName":"Duncan", "address":"644 Gershwin Cir", "city":"Culver", "zip":"97451", "phone":"841-874-6512", "email":"jaboyd@email.com" },
+        { "firstName":"Foster", "lastName":"Shepard", "address":"748 Townings Dr", "city":"Culver", "zip":"97451", "phone":"841-874-6544", "email":"jaboyd@email.com" },
+        { "firstName":"Tony", "lastName":"Cooper", "address":"112 Steppes Pl", "city":"Culver", "zip":"97451", "phone":"841-874-6874", "email":"tcoop@ymail.com" },
+        { "firstName":"Lily", "lastName":"Cooper", "address":"489 Manchester St", "city":"Culver", "zip":"97451", "phone":"841-874-9845", "email":"lily@email.com" },
+        { "firstName":"Sophia", "lastName":"Zemicks", "address":"892 Downing Ct", "city":"Culver", "zip":"97451", "phone":"841-874-7878", "email":"soph@email.com" },
+        { "firstName":"Warren", "lastName":"Zemicks", "address":"892 Downing Ct", "city":"Culver", "zip":"97451", "phone":"841-874-7512", "email":"ward@email.com" },
+        { "firstName":"Zach", "lastName":"Zemicks", "address":"892 Downing Ct", "city":"Culver", "zip":"97451", "phone":"841-874-7512", "email":"zarc@email.com" },
+        { "firstName":"Reginold", "lastName":"Walker", "address":"908 73rd St", "city":"Culver", "zip":"97451", "phone":"841-874-8547", "email":"reg@email.com" },
+        { "firstName":"Jamie", "lastName":"Peters", "address":"908 73rd St", "city":"Culver", "zip":"97451", "phone":"841-874-7462", "email":"jpeter@email.com" },
+        { "firstName":"Ron", "lastName":"Peters", "address":"112 Steppes Pl", "city":"Culver", "zip":"97451", "phone":"841-874-8888", "email":"jpeter@email.com" },
+        { "firstName":"Allison", "lastName":"Boyd", "address":"112 Steppes Pl", "city":"Culver", "zip":"97451", "phone":"841-874-9888", "email":"aly@imail.com" },
+        { "firstName":"Brian", "lastName":"Stelzer", "address":"947 E. Rose Dr", "city":"Culver", "zip":"97451", "phone":"841-874-7784", "email":"bstel@email.com" },
+        { "firstName":"Shawna", "lastName":"Stelzer", "address":"947 E. Rose Dr", "city":"Culver", "zip":"97451", "phone":"841-874-7784", "email":"ssanw@email.com" },
+        { "firstName":"Kendrik", "lastName":"Stelzer", "address":"947 E. Rose Dr", "city":"Culver", "zip":"97451", "phone":"841-874-7784", "email":"bstel@email.com" },
+        { "firstName":"Clive", "lastName":"Ferguson", "address":"748 Townings Dr", "city":"Culver", "zip":"97451", "phone":"841-874-6741", "email":"clivfd@ymail.com" },
+        { "firstName":"Eric", "lastName":"Cadigan", "address":"951 LoneTree Rd", "city":"Culver", "zip":"97451", "phone":"841-874-7458", "email":"gramps@email.com" }
+	], 
+    "firestations": [
+	{ "address":"1509 Culver St", "station":"3" },
+        { "address":"29 15th St", "station":"2" },
+        { "address":"834 Binoc Ave", "station":"3" },
+        { "address":"644 Gershwin Cir", "station":"1" },
+        { "address":"748 Townings Dr", "station":"3" },
+        { "address":"112 Steppes Pl", "station":"3" },
+        { "address":"489 Manchester St", "station":"4" },
+        { "address":"892 Downing Ct", "station":"2" },
+        { "address":"908 73rd St", "station":"1" },
+        { "address":"112 Steppes Pl", "station":"4" },
+        { "address":"947 E. Rose Dr", "station":"1" },
+        { "address":"748 Townings Dr", "station":"3" },
+        { "address":"951 LoneTree Rd", "station":"2" }
+	],
+    "medicalrecords": [
+        { "firstName":"John", "lastName":"Boyd", "birthdate":"03/06/1984", "medications":["aznol:350mg", "hydrapermazol:100mg"], "allergies":["nillacilan"] },
+        { "firstName":"Jacob", "lastName":"Boyd", "birthdate":"03/06/1989", "medications":["pharmacol:5000mg", "terazine:10mg", "noznazol:250mg"], "allergies":[] },
+        { "firstName":"Tenley", "lastName":"Boyd", "birthdate":"02/18/2012", "medications":[], "allergies":["peanut"] },
+        { "firstName":"Roger", "lastName":"Boyd", "birthdate":"09/06/2017", "medications":[], "allergies":[] },
+        { "firstName":"Felicia", "lastName":"Boyd","birthdate":"01/08/1986", "medications":["tetracyclaz:650mg"], "allergies":["xilliathal"] },
+        { "firstName":"Jonanathan", "lastName":"Marrack", "birthdate":"01/03/1989", "medications":[], "allergies":[] },
+        { "firstName":"Tessa", "lastName":"Carman", "birthdate":"02/18/2012", "medications":[], "allergies":[] },
+        { "firstName":"Peter", "lastName":"Duncan", "birthdate":"09/06/2000", "medications":[], "allergies":["shellfish"] },
+        { "firstName":"Foster", "lastName":"Shepard", "birthdate":"01/08/1980", "medications":[], "allergies":[] },
+        { "firstName":"Tony", "lastName":"Cooper", "birthdate":"03/06/1994", "medications":["hydrapermazol:300mg", "dodoxadin:30mg"], "allergies":["shellfish"] },
+        { "firstName":"Lily", "lastName":"Cooper", "birthdate":"03/06/1994", "medications":[], "allergies":[] },
+        { "firstName":"Sophia", "lastName":"Zemicks", "birthdate":"03/06/1988", "medications":["aznol:60mg", "hydrapermazol:900mg", "pharmacol:5000mg", "terazine:500mg"], "allergies":["peanut", "shellfish", "aznol"] },
+        { "firstName":"Warren", "lastName":"Zemicks", "birthdate":"03/06/1985", "medications":[], "allergies":[] },
+        { "firstName":"Zach", "lastName":"Zemicks", "birthdate":"03/06/2017", "medications":[], "allergies":[] },
+        { "firstName":"Reginold", "lastName":"Walker", "birthdate":"08/30/1979", "medications":["thradox:700mg"], "allergies":["illisoxian"] },
+        { "firstName":"Jamie", "lastName":"Peters", "birthdate":"03/06/1982", "medications":[], "allergies":[] },
+        { "firstName":"Ron", "lastName":"Peters", "birthdate":"04/06/1965", "medications":[], "allergies":[] },
+        { "firstName":"Allison", "lastName":"Boyd", "birthdate":"03/15/1965", "medications":["aznol:200mg"], "allergies":["nillacilan"] },
+        { "firstName":"Brian", "lastName":"Stelzer", "birthdate":"12/06/1975", "medications":["ibupurin:200mg", "hydrapermazol:400mg"], "allergies":["nillacilan"] },
+        { "firstName":"Shawna", "lastName":"Stelzer", "birthdate":"07/08/1980", "medications":[], "allergies":[] },
+        { "firstName":"Kendrik", "lastName":"Stelzer", "birthdate":"03/06/2014", "medications":["noxidian:100mg", "pharmacol:2500mg"], "allergies":[] },
+        { "firstName":"Clive", "lastName":"Ferguson", "birthdate":"03/06/1994", "medications":[], "allergies":[] },
+        { "firstName":"Eric", "lastName":"Cadigan", "birthdate":"08/06/1945", "medications":["tradoxidine:400mg"], "allergies":[] }
+        ] 
+}
+	at com.jsoniter.JsonIterator.reportError(JsonIterator.java:136) ~[jsoniter-0.9.23.jar:?]
+	at com.jsoniter.JsonIterator.readAny(JsonIterator.java:265) ~[jsoniter-0.9.23.jar:?]
+	at com.openclassrooms.new_safety_net.service.SafetyNetService.getPerson(SafetyNetService.java:42) ~[classes/:?]
+	at com.openclassrooms.new_safety_net.service.SafetyNetService$$FastClassBySpringCGLIB$$ca1d92cb.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793) ~[spring-aop-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708) ~[spring-aop-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at com.openclassrooms.new_safety_net.service.SafetyNetService$$EnhancerBySpringCGLIB$$724f96c7.getPerson(<generated>) ~[classes/:?]
+	at com.openclassrooms.new_safety_net.controller.NewSafetyAlertController.getPersons(NewSafetyAlertController.java:36) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:960) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:895) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:668) ~[tomcat-embed-core-10.0.21.jar:5.0.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:777) ~[tomcat-embed-core-10.0.21.jar:5.0.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.0.21.jar:10.0.21]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:356) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:867) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1716) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at java.lang.Thread.run(Unknown Source) ~[?:?]
+2022-07-07 21:55:56 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 16092 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-07 21:55:56 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-07 21:55:57 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9000 (http)
+2022-07-07 21:55:58 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-07 21:55:58 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.003 seconds (process running for 2.732)
+2022-07-07 21:56:22 [http-nio-9000-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - 200 OK
+2022-07-07 21:59:58 [http-nio-9000-exec-2] INFO  c.o.n.c.NewSafetyAlertController                   - 200 OK
+2022-07-07 22:40:21 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 7456 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-07 22:40:21 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-07 22:40:22 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9000 (http)
+2022-07-07 22:40:22 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-07 22:40:22 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.859 seconds (process running for 2.526)
+2022-07-07 22:40:33 [http-nio-9000-exec-2] INFO  c.o.n.c.NewSafetyAlertController                   - 200 OK
+2022-07-07 22:40:35 [http-nio-9000-exec-3] INFO  c.o.n.c.NewSafetyAlertController                   - 200 OK
+2022-07-07 22:40:36 [http-nio-9000-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - 200 OK
+2022-07-07 22:51:16 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 16044 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-07 22:51:16 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-07 22:51:16 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9000 (http)
+2022-07-07 22:51:17 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-07 22:51:17 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.818 seconds (process running for 2.484)
+2022-07-07 22:51:24 [http-nio-9000-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - 200 OK
+2022-07-07 22:51:24 [http-nio-9000-exec-2] INFO  c.o.n.c.NewSafetyAlertController                   - 200 OK
+2022-07-07 22:51:25 [http-nio-9000-exec-3] INFO  c.o.n.c.NewSafetyAlertController                   - 200 OK
