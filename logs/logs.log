@@ -131,3 +131,4 @@ java.lang.IllegalStateException: getWriter() has already been called for this re
 2022-07-08 22:57:27 [http-nio-9000-exec-6] INFO  c.o.n.s.SafetyNetService                           - Json iterator is created.
 2022-07-08 22:57:27 [http-nio-9000-exec-6] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
 2022-07-08 22:57:27 [http-nio-9000-exec-6] INFO  c.o.n.c.NewSafetyAlertController                   - GET /persons : 200 OK
+
