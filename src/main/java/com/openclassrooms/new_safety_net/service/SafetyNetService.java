@@ -23,36 +23,46 @@ public class SafetyNetService implements SafetyNetRepository {
     // @Autowired
     // pourquoi pas de Autowired ?
     private JsonToFile jsonToFile = new JsonToFile();
-    private Persons persons = new Persons();
+    private Persons personsObj = new Persons();
 
     // Récupération de notre logger.
     private static final Logger LOGGER = LogManager.getLogger(SafetyNetService.class);
 
     // pourquoi Override ?
     @Override
-    public List<Persons> getPerson() {
+    public List<Persons> getPersons(String elemjson) {
         List<Persons> listPersons = new ArrayList<>();
+        Any any = null;
+
+        any = anyAny(elemjson, any);
+
+        if (any != null) {
+            Any personsAny = any.get(elemjson);
+            for (Any element : personsAny) {
+                // transforming the json in java object Persons.class
+                personsObj = JsonIterator.deserialize(element.toString(), Persons.class);
+                listPersons.add(personsObj);
+            }
+            LOGGER.info("List persons is created.");
+        }
+        return listPersons;
+    }
+
+    private Any anyAny(String elemjson, Any any) {
         byte[] objetfile = null;
         objetfile = jsonToFile.readJsonFile();
         if (objetfile != null) {
             JsonIterator iter = JsonIterator.parse(objetfile);
-            Any any = null;
-            try {
-                any = iter.readAny();
-            } catch (IOException e) {
-                LOGGER.debug("No objet Java from Json !");
-            }
-
-            if (any != null) {
-                Any personsAny = any.get("persons");
-                for (Any element : personsAny) {
-                    // transforming the json in java object
-                    persons = JsonIterator.deserialize(element.toString(), Persons.class);
-                    listPersons.add(persons);
+            if (iter.currentBuffer().contains(elemjson)) {
+                try {
+                    any = iter.readAny();
+                    LOGGER.info("Json iterator is created.");
+                } catch (IOException e) {
+                    LOGGER.debug("No objet Java from Json !");
                 }
             }
         }
-        return listPersons;
+        return any;
     }
 
     @Override

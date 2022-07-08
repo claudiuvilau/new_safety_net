@@ -23,7 +23,7 @@ public interface SafetyNetRepository {
      * unique).
      */
 
-    List<Persons> getPerson() throws IOException;
+    List<Persons> getPersons(String elemjson) throws IOException;
 
     void postPerson(String nomperson);
 
