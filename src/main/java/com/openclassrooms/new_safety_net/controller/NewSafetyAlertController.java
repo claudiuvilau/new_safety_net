@@ -1,7 +1,6 @@
 package com.openclassrooms.new_safety_net.controller;
 
 import java.io.IOException;
-import java.security.Provider.Service;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,6 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.openclassrooms.new_safety_net.model.Firestations;
 import com.openclassrooms.new_safety_net.model.Persons;
 import com.openclassrooms.new_safety_net.repository.SafetyNetRepository;
 
@@ -26,6 +26,7 @@ public class NewSafetyAlertController {
     private SafetyNetRepository repository;
 
     List<Persons> listPersons = new ArrayList<>();
+    List<Firestations> listFirestations = new ArrayList<>();
 
     // Récupération de notre logger.
     private static final Logger LOGGER = LogManager.getLogger(NewSafetyAlertController.class);
@@ -47,6 +48,20 @@ public class NewSafetyAlertController {
         }
         loggerInfoRequete(response, request, elemjson);
         return new ResponseEntity<>(listPersons, HttpStatus.valueOf(response.getStatus()));
+    }
+
+    @GetMapping("/firestations")
+    public ResponseEntity<List<Firestations>> getFirestations(HttpServletResponse response,
+            HttpServletRequest request) {
+        String elemjson = "firestations";
+        listFirestations = repository.getFirestations(elemjson);
+
+        if (listPersons.isEmpty()) {
+            // 204 Requête traitée avec succès mais pas d’information à renvoyer.
+            response.setStatus(204);
+        }
+        loggerInfoRequete(response, request, elemjson);
+        return new ResponseEntity<>(listFirestations, HttpStatus.valueOf(response.getStatus()));
     }
 
     private void loggerInfoRequete(HttpServletResponse response, HttpServletRequest request, String elemjson) {

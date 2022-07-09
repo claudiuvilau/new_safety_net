@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import com.jsoniter.JsonIterator;
 import com.jsoniter.any.Any;
+import com.openclassrooms.new_safety_net.model.Firestations;
 import com.openclassrooms.new_safety_net.model.JsonToFile;
 import com.openclassrooms.new_safety_net.model.Persons;
 import com.openclassrooms.new_safety_net.repository.SafetyNetRepository;
@@ -24,6 +25,7 @@ public class SafetyNetService implements SafetyNetRepository {
     // pourquoi pas de Autowired ?
     private JsonToFile jsonToFile = new JsonToFile();
     private Persons personsObj = new Persons();
+    private Firestations firestationsObj = new Firestations();
 
     // Récupération de notre logger.
     private static final Logger LOGGER = LogManager.getLogger(SafetyNetService.class);
@@ -46,6 +48,25 @@ public class SafetyNetService implements SafetyNetRepository {
             LOGGER.info("List persons is created.");
         }
         return listPersons;
+    }
+
+    @Override
+    public List<Firestations> getFirestations(String elemjson) {
+        List<Firestations> listFirestations = new ArrayList<>();
+        Any any = null;
+
+        any = anyAny(elemjson, any);
+
+        if (any != null) {
+            Any firestationsAny = any.get(elemjson);
+            for (Any element : firestationsAny) {
+                // transforming the json in java object Firestations.class
+                firestationsObj = JsonIterator.deserialize(element.toString(), Firestations.class);
+                listFirestations.add(firestationsObj);
+            }
+            LOGGER.info("List firestations is created.");
+        }
+        return listFirestations;
     }
 
     private Any anyAny(String elemjson, Any any) {
@@ -79,12 +100,6 @@ public class SafetyNetService implements SafetyNetRepository {
 
     @Override
     public void deletePerson(String nomperson) {
-        // TODO Auto-generated method stub
-
-    }
-
-    @Override
-    public void getFirestation(String firestation) {
         // TODO Auto-generated method stub
 
     }
@@ -130,5 +145,4 @@ public class SafetyNetService implements SafetyNetRepository {
         // TODO Auto-generated method stub
 
     }
-
 }

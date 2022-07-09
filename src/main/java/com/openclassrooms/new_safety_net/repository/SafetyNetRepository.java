@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import com.openclassrooms.new_safety_net.model.Firestations;
 import com.openclassrooms.new_safety_net.model.Persons;
 
 @Repository
@@ -40,7 +41,7 @@ public interface SafetyNetRepository {
      * ● supprimer le mapping d'une caserne ou d'une adresse.
      */
 
-    void getFirestation(String firestation);
+    List<Firestations> getFirestations(String firestation);
 
     void postFirestation(String firestation);
 
