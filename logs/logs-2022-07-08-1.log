@@ -1,0 +1,134 @@
+2022-07-08 22:18:47 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 3288 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-08 22:18:48 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-08 22:18:48 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9000 (http)
+2022-07-08 22:18:49 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-08 22:18:49 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.074 seconds (process running for 4.33)
+2022-07-08 22:21:55 [http-nio-9000-exec-2] INFO  c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-08 22:21:55 [http-nio-9000-exec-2] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-08 22:21:55 [http-nio-9000-exec-2] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-08 22:21:55 [http-nio-9000-exec-2] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-08 22:21:55 [http-nio-9000-exec-2] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-08 22:21:55 [http-nio-9000-exec-2] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-08 22:21:55 [http-nio-9000-exec-2] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-08 22:21:55 [http-nio-9000-exec-2] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-08 22:21:55 [http-nio-9000-exec-2] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-08 22:21:55 [http-nio-9000-exec-2] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-08 22:21:55 [http-nio-9000-exec-2] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-08 22:21:55 [http-nio-9000-exec-2] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-08 22:21:55 [http-nio-9000-exec-2] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-08 22:21:55 [http-nio-9000-exec-2] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-08 22:21:55 [http-nio-9000-exec-2] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-08 22:21:55 [http-nio-9000-exec-2] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-08 22:21:55 [http-nio-9000-exec-2] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-08 22:21:55 [http-nio-9000-exec-2] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-08 22:21:55 [http-nio-9000-exec-2] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-08 22:21:55 [http-nio-9000-exec-2] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-08 22:21:55 [http-nio-9000-exec-2] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-08 22:21:55 [http-nio-9000-exec-2] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-08 22:21:55 [http-nio-9000-exec-2] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-08 22:21:55 [http-nio-9000-exec-2] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-08 22:21:55 [http-nio-9000-exec-2] INFO  c.o.n.c.NewSafetyAlertController                   - 200 OK
+2022-07-08 22:23:35 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 18092 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-08 22:23:35 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-08 22:23:36 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9000 (http)
+2022-07-08 22:23:37 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-08 22:23:37 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.982 seconds (process running for 2.675)
+2022-07-08 22:23:42 [http-nio-9000-exec-1] INFO  c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-08 22:23:42 [http-nio-9000-exec-1] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-08 22:23:42 [http-nio-9000-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - 200 OK
+2022-07-08 22:27:40 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 13004 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-08 22:27:40 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-08 22:27:40 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9000 (http)
+2022-07-08 22:27:41 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-08 22:27:41 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.799 seconds (process running for 2.512)
+2022-07-08 22:27:45 [http-nio-9000-exec-3] INFO  c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-08 22:27:45 [http-nio-9000-exec-3] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-08 22:27:45 [http-nio-9000-exec-3] INFO  c.o.n.c.NewSafetyAlertController                   - 200 OK
+2022-07-08 22:27:52 [http-nio-9000-exec-2] INFO  c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-08 22:27:52 [http-nio-9000-exec-2] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-08 22:27:52 [http-nio-9000-exec-2] INFO  c.o.n.c.NewSafetyAlertController                   - 200 OK
+2022-07-08 22:32:20 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 15552 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-08 22:32:20 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-08 22:32:21 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9000 (http)
+2022-07-08 22:32:22 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-08 22:32:22 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.987 seconds (process running for 2.593)
+2022-07-08 22:32:25 [http-nio-9000-exec-2] INFO  c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-08 22:32:25 [http-nio-9000-exec-2] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-08 22:32:25 [http-nio-9000-exec-2] INFO  c.o.n.c.NewSafetyAlertController                   - GET /persons : 200 OK
+2022-07-08 22:41:25 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 12280 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-08 22:41:25 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-08 22:41:26 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9000 (http)
+2022-07-08 22:41:26 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-08 22:41:26 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.813 seconds (process running for 2.48)
+2022-07-08 22:43:19 [http-nio-9000-exec-1] INFO  c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-08 22:43:19 [http-nio-9000-exec-1] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-08 22:49:26 [http-nio-9000-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - GET /persons : 200 OK
+2022-07-08 22:49:26 [http-nio-9000-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]                - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalStateException: getWriter() has already been called for this response] with root cause
+java.lang.IllegalStateException: getWriter() has already been called for this response
+	at org.apache.catalina.connector.Response.getOutputStream(Response.java:525) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.connector.ResponseFacade.getOutputStream(ResponseFacade.java:210) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.springframework.http.server.ServletServerHttpResponse.getBody(ServletServerHttpResponse.java:97) ~[spring-web-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:437) ~[spring-web-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:103) ~[spring-web-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:297) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:238) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78) ~[spring-web-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:135) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:960) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:895) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:668) ~[tomcat-embed-core-10.0.21.jar:5.0.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:777) ~[tomcat-embed-core-10.0.21.jar:5.0.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.0.21.jar:10.0.21]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:356) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:867) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1716) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at java.lang.Thread.run(Unknown Source) ~[?:?]
+2022-07-08 22:52:31 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 2936 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-08 22:52:31 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-08 22:52:32 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9000 (http)
+2022-07-08 22:52:32 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-08 22:52:32 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.895 seconds (process running for 2.622)
+2022-07-08 22:52:53 [http-nio-9000-exec-1] INFO  c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-08 22:52:53 [http-nio-9000-exec-1] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-08 22:52:53 [http-nio-9000-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - GET /persons : 200 OK
+2022-07-08 22:53:04 [http-nio-9000-exec-2] INFO  c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-08 22:53:04 [http-nio-9000-exec-2] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-08 22:53:04 [http-nio-9000-exec-2] INFO  c.o.n.c.NewSafetyAlertController                   - GET /persons : 200 OK
+2022-07-08 22:57:27 [http-nio-9000-exec-6] INFO  c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-08 22:57:27 [http-nio-9000-exec-6] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-08 22:57:27 [http-nio-9000-exec-6] INFO  c.o.n.c.NewSafetyAlertController                   - GET /persons : 200 OK
+
