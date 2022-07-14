@@ -1,0 +1,827 @@
+2022-07-14 15:03:30 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 19532 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 15:03:30 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 15:03:31 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9001 (http)
+2022-07-14 15:03:32 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9001 (http) with context path ''
+2022-07-14 15:03:32 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.035 seconds (process running for 2.651)
+2022-07-14 15:03:39 [http-nio-9001-exec-1] INFO  c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 15:03:39 [http-nio-9001-exec-1] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 15:03:39 [http-nio-9001-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - 
+Request Method: <[GET]> /persons
+Request URL: http://localhost:9001/persons
+Content Type: null
+Response Code: 200
+Header Name: {"host": "localhost:9001", "connection": "keep-alive", "cache-control": "max-age=0", "sec-ch-ua": "" Not;A Brand";v="99", "Microsoft Edge";v="103", "Chromium";v="103"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.49", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6", "cookie": "tll_1912723=1648153978; nv_1912723=78; vid_1912723=1592203843415.6963"}
+2022-07-14 15:03:40 [http-nio-9001-exec-2] INFO  c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 15:03:40 [http-nio-9001-exec-2] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 15:03:40 [http-nio-9001-exec-2] INFO  c.o.n.c.NewSafetyAlertController                   - 
+Request Method: <[GET]> /persons
+Request URL: http://localhost:9001/persons
+Content Type: null
+Response Code: 200
+Header Name: {"host": "localhost:9001", "connection": "keep-alive", "cache-control": "max-age=0", "sec-ch-ua": "" Not;A Brand";v="99", "Microsoft Edge";v="103", "Chromium";v="103"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.49", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6", "cookie": "tll_1912723=1648153978; nv_1912723=78; vid_1912723=1592203843415.6963"}
+2022-07-14 15:03:41 [http-nio-9001-exec-3] INFO  c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 15:03:41 [http-nio-9001-exec-3] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 15:03:41 [http-nio-9001-exec-3] INFO  c.o.n.c.NewSafetyAlertController                   - 
+Request Method: <[GET]> /persons
+Request URL: http://localhost:9001/persons
+Content Type: null
+Response Code: 200
+Header Name: {"host": "localhost:9001", "connection": "keep-alive", "cache-control": "max-age=0", "sec-ch-ua": "" Not;A Brand";v="99", "Microsoft Edge";v="103", "Chromium";v="103"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.49", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6", "cookie": "tll_1912723=1648153978; nv_1912723=78; vid_1912723=1592203843415.6963"}
+2022-07-14 15:03:41 [http-nio-9001-exec-5] INFO  c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 15:03:41 [http-nio-9001-exec-5] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 15:03:41 [http-nio-9001-exec-5] INFO  c.o.n.c.NewSafetyAlertController                   - 
+Request Method: <[GET]> /persons
+Request URL: http://localhost:9001/persons
+Content Type: null
+Response Code: 200
+Header Name: {"host": "localhost:9001", "connection": "keep-alive", "cache-control": "max-age=0", "sec-ch-ua": "" Not;A Brand";v="99", "Microsoft Edge";v="103", "Chromium";v="103"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.49", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6", "cookie": "tll_1912723=1648153978; nv_1912723=78; vid_1912723=1592203843415.6963"}
+2022-07-14 15:03:41 [http-nio-9001-exec-4] INFO  c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 15:03:41 [http-nio-9001-exec-4] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 15:03:41 [http-nio-9001-exec-4] INFO  c.o.n.c.NewSafetyAlertController                   - 
+Request Method: <[GET]> /persons
+Request URL: http://localhost:9001/persons
+Content Type: null
+Response Code: 200
+Header Name: {"host": "localhost:9001", "connection": "keep-alive", "cache-control": "max-age=0", "sec-ch-ua": "" Not;A Brand";v="99", "Microsoft Edge";v="103", "Chromium";v="103"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.49", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6", "cookie": "tll_1912723=1648153978; nv_1912723=78; vid_1912723=1592203843415.6963"}
+2022-07-14 15:04:47 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 1456 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 15:04:47 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 15:04:48 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9001 (http)
+2022-07-14 15:04:48 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9001 (http) with context path ''
+2022-07-14 15:04:48 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.969 seconds (process running for 2.588)
+2022-07-14 15:04:58 [http-nio-9001-exec-2] INFO  c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 15:04:58 [http-nio-9001-exec-2] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 15:04:58 [http-nio-9001-exec-2] INFO  c.o.n.c.NewSafetyAlertController                   - 
+Request Method: <[GET]> /persons
+Request URL: http://localhost:9001/persons
+Content Type: null
+Response Code: 200
+Header Name: {"host": "localhost:9001", "connection": "keep-alive", "cache-control": "max-age=0", "sec-ch-ua": "" Not;A Brand";v="99", "Microsoft Edge";v="103", "Chromium";v="103"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.49", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6", "cookie": "tll_1912723=1648153978; nv_1912723=78; vid_1912723=1592203843415.6963"}
+2022-07-14 15:04:58 [http-nio-9001-exec-3] INFO  c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 15:04:58 [http-nio-9001-exec-3] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 15:04:58 [http-nio-9001-exec-3] INFO  c.o.n.c.NewSafetyAlertController                   - 
+Request Method: <[GET]> /persons
+Request URL: http://localhost:9001/persons
+Content Type: null
+Response Code: 200
+Header Name: {"host": "localhost:9001", "connection": "keep-alive", "cache-control": "max-age=0", "sec-ch-ua": "" Not;A Brand";v="99", "Microsoft Edge";v="103", "Chromium";v="103"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.49", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6", "cookie": "tll_1912723=1648153978; nv_1912723=78; vid_1912723=1592203843415.6963"}
+2022-07-14 15:04:58 [http-nio-9001-exec-1] INFO  c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 15:04:58 [http-nio-9001-exec-1] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 15:04:58 [http-nio-9001-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - 
+Request Method: <[GET]> /persons
+Request URL: http://localhost:9001/persons
+Content Type: null
+Response Code: 200
+Header Name: {"host": "localhost:9001", "connection": "keep-alive", "cache-control": "max-age=0", "sec-ch-ua": "" Not;A Brand";v="99", "Microsoft Edge";v="103", "Chromium";v="103"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.49", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6", "cookie": "tll_1912723=1648153978; nv_1912723=78; vid_1912723=1592203843415.6963"}
+2022-07-14 15:04:58 [http-nio-9001-exec-4] INFO  c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 15:04:58 [http-nio-9001-exec-4] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 15:04:58 [http-nio-9001-exec-4] INFO  c.o.n.c.NewSafetyAlertController                   - 
+Request Method: <[GET]> /persons
+Request URL: http://localhost:9001/persons
+Content Type: null
+Response Code: 200
+Header Name: {"host": "localhost:9001", "connection": "keep-alive", "cache-control": "max-age=0", "sec-ch-ua": "" Not;A Brand";v="99", "Microsoft Edge";v="103", "Chromium";v="103"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.49", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6", "cookie": "tll_1912723=1648153978; nv_1912723=78; vid_1912723=1592203843415.6963"}
+2022-07-14 15:04:59 [http-nio-9001-exec-7] INFO  c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 15:04:59 [http-nio-9001-exec-7] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 15:04:59 [http-nio-9001-exec-7] INFO  c.o.n.c.NewSafetyAlertController                   - 
+Request Method: <[GET]> /persons
+Request URL: http://localhost:9001/persons
+Content Type: null
+Response Code: 200
+Header Name: {"host": "localhost:9001", "connection": "keep-alive", "cache-control": "max-age=0", "sec-ch-ua": "" Not;A Brand";v="99", "Microsoft Edge";v="103", "Chromium";v="103"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.49", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6", "cookie": "tll_1912723=1648153978; nv_1912723=78; vid_1912723=1592203843415.6963"}
+2022-07-14 15:05:53 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 4160 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 15:05:53 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 15:05:54 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9001 (http)
+2022-07-14 15:05:55 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9001 (http) with context path ''
+2022-07-14 15:05:55 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.894 seconds (process running for 2.524)
+2022-07-14 15:07:43 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 17464 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 15:07:43 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 15:07:44 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9001 (http)
+2022-07-14 15:07:44 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9001 (http) with context path ''
+2022-07-14 15:07:44 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.174 seconds (process running for 2.823)
+2022-07-14 15:07:50 [http-nio-9001-exec-1] INFO  c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 15:07:50 [http-nio-9001-exec-1] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 15:07:50 [http-nio-9001-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - 
+Request Method: <[GET]> /persons
+Request URL: http://localhost:9001/persons
+Content Type: null
+Response Code: 200
+Header Name: {"host": "localhost:9001", "connection": "keep-alive", "cache-control": "max-age=0", "sec-ch-ua": "" Not;A Brand";v="99", "Microsoft Edge";v="103", "Chromium";v="103"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.49", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6", "cookie": "tll_1912723=1648153978; nv_1912723=78; vid_1912723=1592203843415.6963"}
+2022-07-14 15:09:13 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 7520 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 15:09:13 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 15:09:14 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9001 (http)
+2022-07-14 15:09:14 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9001 (http) with context path ''
+2022-07-14 15:09:14 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.971 seconds (process running for 2.585)
+2022-07-14 15:09:21 [http-nio-9001-exec-1] INFO  c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 15:09:21 [http-nio-9001-exec-1] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 15:09:21 [http-nio-9001-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - 
+Request Method: <[GET]> /persons
+Request URL: http://localhost:9001/persons
+Content Type: null
+Response Code: 200
+Header Name: {"host": "localhost:9001", "connection": "keep-alive", "cache-control": "max-age=0", "sec-ch-ua": "" Not;A Brand";v="99", "Microsoft Edge";v="103", "Chromium";v="103"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.49", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6", "cookie": "tll_1912723=1648153978; nv_1912723=78; vid_1912723=1592203843415.6963"}
+2022-07-14 16:51:19 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 14828 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 16:51:19 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 16:51:20 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9001 (http)
+2022-07-14 16:51:20 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9001 (http) with context path ''
+2022-07-14 16:51:20 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.002 seconds (process running for 2.613)
+2022-07-14 16:52:00 [http-nio-9001-exec-1] INFO  c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 16:52:00 [http-nio-9001-exec-1] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 16:52:00 [http-nio-9001-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - 
+Request Method: <[GET]> /persons
+Request URL: http://localhost:9001/persons
+Content Type: null
+Response Code: 200
+Header Name: {"host": "localhost:9001", "connection": "keep-alive", "cache-control": "max-age=0", "sec-ch-ua": "" Not;A Brand";v="99", "Microsoft Edge";v="103", "Chromium";v="103"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.49", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6", "cookie": "vid_1912723=1592203843415.6963; ASP.NET_SessionId=cusecmadao04wskm10xdcglh; tll_1912723=1657571902; nv_1912723=116; or_1912723=1"}
+2022-07-14 16:53:05 [http-nio-9001-exec-6] INFO  c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 16:53:05 [http-nio-9001-exec-6] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 16:53:05 [http-nio-9001-exec-6] INFO  c.o.n.c.NewSafetyAlertController                   - 
+Request Method: <[GET]> /person/JohnBoyd
+Request URL: http://localhost:9001/person/JohnBoyd
+Content Type: null
+Response Code: 200
+Header Name: {"host": "localhost:9001", "connection": "keep-alive", "sec-ch-ua": "" Not;A Brand";v="99", "Microsoft Edge";v="103", "Chromium";v="103"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.49", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6", "cookie": "vid_1912723=1592203843415.6963; ASP.NET_SessionId=cusecmadao04wskm10xdcglh; tll_1912723=1657571902; nv_1912723=116; or_1912723=1"}
+2022-07-14 16:54:27 [http-nio-9001-exec-7] INFO  c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 16:54:27 [http-nio-9001-exec-7] INFO  c.o.n.s.SafetyNetService                           - List firestations is created.
+2022-07-14 16:54:27 [http-nio-9001-exec-7] INFO  c.o.n.c.NewSafetyAlertController                   - 
+Request Method: <[GET]> /firestations
+Request URL: http://localhost:9001/firestations
+Content Type: null
+Response Code: 200
+Header Name: {"host": "localhost:9001", "connection": "keep-alive", "sec-ch-ua": "" Not;A Brand";v="99", "Microsoft Edge";v="103", "Chromium";v="103"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.49", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6", "cookie": "vid_1912723=1592203843415.6963; ASP.NET_SessionId=cusecmadao04wskm10xdcglh; tll_1912723=1657571902; nv_1912723=116; or_1912723=1"}
+2022-07-14 17:10:24 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 19064 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 17:10:24 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 17:10:25 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9001 (http)
+2022-07-14 17:10:25 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter             - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 9001 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 9001 or configure this application to listen on another port.
+
+2022-07-14 17:10:31 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 13016 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 17:10:31 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 17:10:31 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9001 (http)
+2022-07-14 17:10:32 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter             - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 9001 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 9001 or configure this application to listen on another port.
+
+2022-07-14 17:10:54 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 23092 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 17:10:54 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 17:10:55 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 17:10:55 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 17:10:55 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.851 seconds (process running for 2.503)
+2022-07-14 17:11:18 [http-nio-9002-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - 
+Request Method: <[GET]> /persons
+Request URL: http://localhost:9002/persons
+Content Type: null
+Response Code: 200
+Header Name: {"host": "localhost:9002", "connection": "keep-alive", "sec-ch-ua": "" Not;A Brand";v="99", "Microsoft Edge";v="103", "Chromium";v="103"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.49", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "purpose": "prefetch", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6", "cookie": "vid_1912723=1592203843415.6963; tll_1912723=1657571902; nv_1912723=116; or_1912723=1"}
+2022-07-14 17:12:54 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 1560 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 17:12:54 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 17:12:54 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 17:12:55 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 17:12:55 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 17:12:55 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.843 seconds (process running for 2.446)
+2022-07-14 17:13:02 [http-nio-9002-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 17:13:02 [http-nio-9002-exec-1] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 17:13:02 [http-nio-9002-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - 
+Request Method: <[GET]> /persons
+Request URL: http://localhost:9002/persons
+Content Type: null
+Response Code: 200
+Header Name: {"host": "localhost:9002", "connection": "keep-alive", "cache-control": "max-age=0", "sec-ch-ua": "" Not;A Brand";v="99", "Microsoft Edge";v="103", "Chromium";v="103"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.49", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6", "cookie": "vid_1912723=1592203843415.6963; tll_1912723=1657571902; nv_1912723=116; or_1912723=1"}
+2022-07-14 17:21:21 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 9660 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 17:21:21 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 17:21:21 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 17:21:22 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 17:21:23 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 17:21:23 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.099 seconds (process running for 2.709)
+2022-07-14 17:21:39 [http-nio-9001-exec-10] INFO  c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 17:21:39 [http-nio-9001-exec-10] INFO  c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 17:21:39 [http-nio-9001-exec-10] INFO  c.o.n.c.NewSafetyAlertController                   - 
+Request Method: <[GET]> /person/JohnBoyd
+Request URL: http://localhost:9001/person/JohnBoyd
+Content Type: null
+Response Code: 200
+Header Name: {"host": "localhost:9001", "connection": "keep-alive", "sec-ch-ua": "" Not;A Brand";v="99", "Microsoft Edge";v="103", "Chromium";v="103"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.49", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6", "cookie": "vid_1912723=1592203843415.6963; tll_1912723=1657571902; nv_1912723=116; or_1912723=1"}
+2022-07-14 17:21:57 [http-nio-9002-exec-4] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 17:21:57 [http-nio-9002-exec-4] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 17:21:57 [http-nio-9002-exec-4] INFO  c.o.n.c.NewSafetyAlertController                   - 
+Request Method: <[GET]> /person/JohnBoyd
+Request URL: http://localhost:9002/person/JohnBoyd
+Content Type: null
+Response Code: 200
+Header Name: {"host": "localhost:9002", "connection": "keep-alive", "sec-ch-ua": "" Not;A Brand";v="99", "Microsoft Edge";v="103", "Chromium";v="103"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.49", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6", "cookie": "vid_1912723=1592203843415.6963; tll_1912723=1657571902; nv_1912723=116; or_1912723=1"}
+2022-07-14 17:24:30 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 9404 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 17:24:30 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 17:24:30 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 17:24:30 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 17:24:31 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 17:24:31 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.001 seconds (process running for 2.666)
+2022-07-14 17:24:34 [http-nio-9002-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 17:24:34 [http-nio-9002-exec-1] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 17:24:34 [http-nio-9002-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-07-14 17:24:34 [http-nio-9002-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - 
+Request Method: <[GET]> /person/JohnBoyd
+Request URL: http://localhost:9002/person/JohnBoyd
+Content Type: null
+Response Code: 200
+Header Name: {"host": "localhost:9002", "connection": "keep-alive", "cache-control": "max-age=0", "sec-ch-ua": "" Not;A Brand";v="99", "Microsoft Edge";v="103", "Chromium";v="103"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.49", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6", "cookie": "vid_1912723=1592203843415.6963; tll_1912723=1657571902; nv_1912723=116; or_1912723=1"}
+2022-07-14 17:51:51 [http-nio-9002-exec-5] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 17:51:51 [http-nio-9002-exec-5] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 17:51:51 [http-nio-9002-exec-5] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-07-14 17:51:51 [http-nio-9002-exec-5] INFO  c.o.n.c.NewSafetyAlertController                   - 
+Request Method: <[GET]> /person/johnboyd
+Request URL: http://localhost:9002/person/johnboyd
+Content Type: application/json
+Response Code: 200
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "e55d0438-b090-4f08-9665-8f41bd7a719f", "host": "localhost:9002", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "47"}
+2022-07-14 17:52:00 [http-nio-9002-exec-8] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 17:52:00 [http-nio-9002-exec-8] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 17:52:00 [http-nio-9002-exec-8] INFO  c.o.n.c.NewSafetyAlertController                   - 
+Request Method: <[GET]> /persons
+Request URL: http://localhost:9002/persons
+Content Type: application/json
+Response Code: 200
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "958562bb-0029-46d2-87b9-9eab060bf4f6", "host": "localhost:9002", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "47"}
+2022-07-14 17:54:47 [http-nio-9002-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 17:54:47 [http-nio-9002-exec-1] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 17:54:47 [http-nio-9002-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-07-14 17:55:07 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 17:55:07 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 17:55:07 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-07-14 18:00:02 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 16564 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 18:00:02 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 18:00:02 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 18:00:03 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 18:00:04 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 18:00:04 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.001 seconds (process running for 2.602)
+2022-07-14 18:00:10 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 18:00:10 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 18:00:10 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-07-14 18:00:41 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 21368 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 18:00:41 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 18:00:41 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 18:00:42 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 18:00:43 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 18:00:43 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.022 seconds (process running for 2.597)
+2022-07-14 18:00:47 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 18:00:47 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 18:00:47 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-07-14 18:00:47 [http-nio-9002-exec-2] INFO  c.o.n.c.NewSafetyAlertController                   - 
+Request Method: <[GET]> /person/jhkj
+Request URL: http://localhost:9002/person/jhkj
+Content Type: application/json
+Response Code: 404
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "c328ecb4-bc5a-41b2-ae91-ae6652ae6e3a", "host": "localhost:9002", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "47"}
+2022-07-14 18:07:10 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 19500 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 18:07:10 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 18:07:10 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 18:07:11 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 18:07:11 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 18:07:11 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.951 seconds (process running for 2.6)
+2022-07-14 18:07:17 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 18:07:17 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 18:07:17 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-07-14 18:07:17 [http-nio-9002-exec-2] INFO  c.o.n.c.NewSafetyAlertController                   - 
+Request Method: <[GET]> /person/jhkj
+Request URL: http://localhost:9002/person/jhkj
+Content Type: application/json
+Response Code: 404
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "d3f15273-fa7c-41ac-bf51-b1197384bea1", "host": "localhost:9002", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "47"}
+2022-07-14 18:08:50 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 22480 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 18:08:50 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 18:08:50 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 18:08:51 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 18:08:51 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 18:08:51 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.102 seconds (process running for 2.754)
+2022-07-14 18:08:58 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 18:08:58 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 18:08:58 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-07-14 18:08:58 [http-nio-9002-exec-2] INFO  c.o.n.c.NewSafetyAlertController                   - 
+Request Method: <[GET]> /person/jhkj
+Request URL: http://localhost:9002/person/jhkj
+Content Type: application/json
+Response Code: 404
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "658509a7-1732-4555-aa06-ef6feac06455", "host": "localhost:9002", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "47"}
+2022-07-14 18:10:03 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 5576 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 18:10:03 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 18:10:03 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 18:10:04 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 18:10:05 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 18:10:05 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.927 seconds (process running for 2.554)
+2022-07-14 18:10:16 [http-nio-9002-exec-3] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 18:10:16 [http-nio-9002-exec-3] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 18:10:16 [http-nio-9002-exec-3] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-07-14 18:10:52 [http-nio-9002-exec-3] INFO  c.o.n.c.NewSafetyAlertController                   - 
+Request Method: <[GET]> /person/jhkj
+Request URL: http://localhost:9002/person/jhkj
+Content Type: application/json
+Response Code: 404
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "e5d77896-fe50-4250-ba76-18017d752f5b", "host": "localhost:9002", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "47"}
+2022-07-14 18:11:39 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 19736 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 18:11:39 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 18:11:39 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 18:11:39 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 18:11:40 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 18:11:40 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.854 seconds (process running for 2.46)
+2022-07-14 18:11:51 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 18:11:51 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 18:11:51 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-07-14 18:12:02 [http-nio-9002-exec-3] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 18:12:02 [http-nio-9002-exec-3] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 18:12:02 [http-nio-9002-exec-3] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-07-14 18:13:57 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 14568 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 18:13:57 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 18:13:57 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 18:13:58 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 18:13:59 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 18:13:59 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.129 seconds (process running for 2.731)
+2022-07-14 18:14:02 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 18:14:02 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 18:14:02 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-07-14 18:14:30 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 5204 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 18:14:30 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 18:14:30 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 18:14:31 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 18:14:32 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 18:14:32 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.064 seconds (process running for 2.656)
+2022-07-14 18:14:35 [http-nio-9002-exec-3] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 18:14:35 [http-nio-9002-exec-3] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 18:14:35 [http-nio-9002-exec-3] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-07-14 18:14:35 [http-nio-9002-exec-3] INFO  c.o.n.c.NewSafetyAlertController                   - 
+Request Method: <[GET]> /person/jhkj
+Request URL: http://localhost:9002/person/jhkj
+Content Type: application/json
+Response Code: 404
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "ca3eaea7-8039-4f21-b7e2-495be447cecf", "host": "localhost:9002", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "47"}
+2022-07-14 18:19:41 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 21188 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 18:19:41 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 18:19:41 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 18:19:42 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 18:19:43 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 18:19:43 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.008 seconds (process running for 2.548)
+2022-07-14 18:19:49 [http-nio-9002-exec-3] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 18:19:49 [http-nio-9002-exec-3] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 18:19:49 [http-nio-9002-exec-3] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-07-14 18:19:49 [http-nio-9002-exec-3] INFO  c.o.n.c.NewSafetyAlertController                   - The person does not exist. 
+2022-07-14 18:21:55 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 14360 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 18:21:55 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 18:21:55 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 18:21:56 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 18:21:57 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 18:21:57 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.895 seconds (process running for 2.485)
+2022-07-14 18:22:02 [http-nio-9002-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]                - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Handler dispatch failed: java.lang.Error: Unresolved compilation problem: 
+	Syntax error, insert ";" to complete Statement
+] with root cause
+java.lang.Error: Unresolved compilation problem: 
+	Syntax error, insert ";" to complete Statement
+
+	at com.openclassrooms.new_safety_net.controller.NewSafetyAlertController.getAPerson(NewSafetyAlertController.java:82) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:?]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:960) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:895) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:668) ~[tomcat-embed-core-10.0.21.jar:5.0.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:777) ~[tomcat-embed-core-10.0.21.jar:5.0.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.0.21.jar:10.0.21]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:356) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:867) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1716) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.0.21.jar:10.0.21]
+	at java.lang.Thread.run(Unknown Source) ~[?:?]
+2022-07-14 18:22:21 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 10048 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 18:22:21 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 18:22:21 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 18:22:22 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 18:22:23 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 18:22:23 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.055 seconds (process running for 2.646)
+2022-07-14 18:22:27 [http-nio-9002-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 18:22:27 [http-nio-9002-exec-1] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 18:22:27 [http-nio-9002-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-07-14 18:22:27 [http-nio-9002-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - The person does not exist. 
+2022-07-14 18:24:08 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 11036 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 18:24:08 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 18:24:08 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 18:24:09 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 18:24:10 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 18:24:10 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.866 seconds (process running for 2.577)
+2022-07-14 18:24:13 [http-nio-9002-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 18:24:13 [http-nio-9002-exec-1] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 18:24:13 [http-nio-9002-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-07-14 18:24:13 [http-nio-9002-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - The person does not exist. 
+2022-07-14 18:24:54 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 13972 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 18:24:54 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 18:24:54 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 18:24:55 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 18:24:56 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 18:24:56 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.866 seconds (process running for 2.549)
+2022-07-14 18:25:00 [http-nio-9002-exec-3] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 18:25:00 [http-nio-9002-exec-3] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 18:25:00 [http-nio-9002-exec-3] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-07-14 18:25:00 [http-nio-9002-exec-3] INFO  c.o.n.c.NewSafetyAlertController                   - The person does not exist. 
+2022-07-14 18:25:40 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 2352 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 18:25:40 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 18:25:40 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 18:25:41 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 18:25:41 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 18:25:41 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.973 seconds (process running for 2.76)
+2022-07-14 18:26:31 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 13660 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 18:26:31 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 18:26:31 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 18:26:32 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 18:26:33 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 18:26:33 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.155 seconds (process running for 2.78)
+2022-07-14 18:26:36 [http-nio-9002-exec-4] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 18:26:36 [http-nio-9002-exec-4] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 18:26:36 [http-nio-9002-exec-4] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-07-14 18:26:49 [http-nio-9002-exec-4] INFO  c.o.n.c.NewSafetyAlertController                   - The person does not exist. 
+Request Method: <[GET]> /person/jhkj
+Request URL: http://localhost:9002/person/jhkj
+Content Type: application/json
+Response Code: 404
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "8b8727e7-bf8f-4172-b3e2-77f4187ec616", "host": "localhost:9002", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "47"}
+2022-07-14 18:29:15 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 11836 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 18:29:15 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 18:29:15 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 18:29:16 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 18:29:17 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 18:29:17 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.998 seconds (process running for 2.588)
+2022-07-14 18:29:20 [http-nio-9002-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 18:29:20 [http-nio-9002-exec-1] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 18:29:20 [http-nio-9002-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-07-14 18:29:20 [http-nio-9002-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - The person does not exist. 
+Request Method: <[GET]> /person/jhkj
+Request URL: http://localhost:9002/person/jhkj
+Content Type: application/json
+Response Code: 404
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "d16d1439-f1cb-4098-b84e-536418d5d6bf", "host": "localhost:9002", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "47"}
+2022-07-14 18:36:26 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 16420 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 18:36:26 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 18:36:26 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 18:36:27 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 18:36:27 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 18:36:27 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.923 seconds (process running for 2.509)
+2022-07-14 18:36:31 [http-nio-9002-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 18:36:32 [http-nio-9002-exec-1] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 18:36:32 [http-nio-9002-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-07-14 18:36:32 [http-nio-9002-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - The person does not exist. 
+Request Method: <[GET]> /person/jhkj
+Request URL: http://localhost:9002/person/jhkj
+Content Type: application/json
+Response Code: 404
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "fae0fdfb-233a-4dec-bb27-048da91b3339", "host": "localhost:9002", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "47"}
+2022-07-14 19:03:21 [http-nio-9002-exec-5] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 19:03:21 [http-nio-9002-exec-5] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 19:03:21 [http-nio-9002-exec-5] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-07-14 19:03:21 [http-nio-9002-exec-5] INFO  c.o.n.c.NewSafetyAlertController                   - The person does not exist. 
+Request Method: <[GET]> /person/Jhon
+Request URL: http://localhost:9002/person/Jhon
+Content Type: application/json
+Response Code: 404
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "a5564de0-0db8-464e-9ef2-b745db1306a5", "host": "localhost:9002", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "47"}
+2022-07-14 19:03:40 [http-nio-9002-exec-4] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 19:03:40 [http-nio-9002-exec-4] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 19:03:40 [http-nio-9002-exec-4] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-07-14 19:03:40 [http-nio-9002-exec-4] INFO  c.o.n.c.NewSafetyAlertController                   - 
+Request Method: <[GET]> /person/JohnBoyd
+Request URL: http://localhost:9002/person/JohnBoyd
+Content Type: application/json
+Response Code: 200
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "72f2d0bc-5298-4242-a9b9-b43a9db014cc", "host": "localhost:9002", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "47"}
+2022-07-14 19:05:23 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 21560 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 19:05:23 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 19:05:23 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 19:05:24 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 19:05:25 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 19:05:25 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.106 seconds (process running for 2.696)
+2022-07-14 19:05:32 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 19:05:32 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 19:05:32 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-07-14 19:05:32 [http-nio-9002-exec-2] INFO  c.o.n.c.NewSafetyAlertController                   - 
+Request Method: <[GET]> /person/JohnBoyd
+Request URL: http://localhost:9002/person/JohnBoyd
+Content Type: application/json
+Response Code: 200
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "6c575d75-667f-4f02-a5e3-06d5c376b593", "host": "localhost:9002", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "47"}
+2022-07-14 19:05:41 [http-nio-9002-exec-4] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 19:05:41 [http-nio-9002-exec-4] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 19:05:41 [http-nio-9002-exec-4] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-07-14 19:05:41 [http-nio-9002-exec-4] INFO  c.o.n.c.NewSafetyAlertController                   - The person does not exist. 
+Request Method: <[GET]> /person/Jkjkj
+Request URL: http://localhost:9002/person/Jkjkj
+Content Type: application/json
+Response Code: 207
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "f101be92-5fa7-45ab-b0ce-0f9172c3ce17", "host": "localhost:9002", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "47"}
+2022-07-14 19:06:15 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 8756 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 19:06:15 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 19:06:15 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 19:06:16 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 19:06:17 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 19:06:17 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.064 seconds (process running for 2.69)
+2022-07-14 19:06:34 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 19:06:34 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 19:06:34 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-07-14 19:06:34 [http-nio-9002-exec-2] INFO  c.o.n.c.NewSafetyAlertController                   - The person does not exist. 
+Request Method: <[GET]> /person/Jkjkj
+Request URL: http://localhost:9002/person/Jkjkj
+Content Type: application/json
+Response Code: 404
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "550cd964-6f41-4e63-bc48-a64b9f364340", "host": "localhost:9002", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "47"}
+2022-07-14 19:10:10 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 22156 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 19:10:10 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 19:10:10 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 19:10:10 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 19:10:11 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 19:10:11 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.953 seconds (process running for 2.548)
+2022-07-14 19:10:36 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 19:10:36 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 19:10:36 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-07-14 19:10:36 [http-nio-9002-exec-2] INFO  c.o.n.c.NewSafetyAlertController                   - 
+Request Method: <[GET]> /person/JohnBoyd
+Request URL: http://localhost:9002/person/JohnBoyd
+Content Type: application/json
+Response Code: 200
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "aa40bced-a467-4f9b-ad3a-79f3395358d1", "host": "localhost:9002", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "47"}
+2022-07-14 19:17:45 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 20300 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 19:17:45 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 19:17:45 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 19:17:46 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 19:17:47 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 19:17:47 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.89 seconds (process running for 2.55)
+2022-07-14 19:17:50 [http-nio-9002-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 19:17:50 [http-nio-9002-exec-1] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 19:17:50 [http-nio-9002-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-07-14 19:18:18 [http-nio-9002-exec-3] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 19:18:18 [http-nio-9002-exec-3] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 19:18:18 [http-nio-9002-exec-3] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-07-14 19:20:57 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 12968 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 19:20:57 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 19:20:57 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 19:20:58 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 19:20:59 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 19:20:59 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.017 seconds (process running for 2.583)
+2022-07-14 19:21:01 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 19:21:01 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 19:21:01 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-07-14 19:21:01 [http-nio-9002-exec-2] INFO  c.o.n.c.NewSafetyAlertController                   - 
+Request Method: <[GET]> /person/JohnBoyd
+Request URL: http://localhost:9002/person/JohnBoyd
+Content Type: application/json
+Response Code: 200
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "473bb06a-9945-4ee4-9e0c-3227d48e7b9a", "host": "localhost:9002", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "47"}
+2022-07-14 19:22:39 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 21560 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 19:22:39 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 19:22:39 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 19:22:40 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 19:22:40 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 19:22:40 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.873 seconds (process running for 2.52)
+2022-07-14 19:23:22 [http-nio-9002-exec-2] INFO  c.o.n.c.NewSafetyAlertController                   - 
+Request Method: <[GET]> /persons
+Request URL: http://localhost:9002/persons
+Content Type: application/json
+Response Code: 204
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "85cdb139-80cd-4bd7-a730-44342fd5933b", "host": "localhost:9002", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "47"}
+2022-07-14 19:24:34 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 17616 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 19:24:34 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 19:24:34 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 19:24:35 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 19:24:36 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 19:24:36 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.059 seconds (process running for 2.682)
+2022-07-14 19:24:42 [http-nio-9002-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - Requête traitée avec succès mais pas d’information à renvoyer. 
+Request Method: <[GET]> /persons
+Request URL: http://localhost:9002/persons
+Content Type: application/json
+Response Code: 204
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "3d616a13-0178-4562-a983-5098cf079ed2", "host": "localhost:9002", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "47"}
+2022-07-14 19:25:50 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 18196 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 19:25:50 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 19:25:50 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 19:25:51 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 19:25:51 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 19:25:51 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.117 seconds (process running for 2.704)
+2022-07-14 19:25:54 [http-nio-9002-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - No Content
+Request Method: <[GET]> /persons
+Request URL: http://localhost:9002/persons
+Content Type: application/json
+Response Code: 204
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "3d6f8d2d-c787-4a93-8b61-362cbc79654a", "host": "localhost:9002", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "47"}
+2022-07-14 19:26:46 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 18792 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 19:26:46 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 19:26:46 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 19:26:47 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 19:26:48 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 19:26:48 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.215 seconds (process running for 2.801)
+2022-07-14 19:26:51 [http-nio-9002-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - 204 No Content
+Request Method: <[GET]> /persons
+Request URL: http://localhost:9002/persons
+Content Type: application/json
+Response Code: 204
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "def98e00-378e-43fd-abf4-de8a235e4b37", "host": "localhost:9002", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "47"}
+2022-07-14 19:29:07 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 21324 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 19:29:07 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 19:29:07 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 19:29:08 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 19:29:08 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 19:29:08 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.95 seconds (process running for 2.552)
+2022-07-14 19:29:12 [http-nio-9002-exec-2] INFO  c.o.n.c.NewSafetyAlertController                   - 204 No Content
+Request Method: <[GET]> /persons
+Request URL: http://localhost:9002/persons
+Content Type: application/json
+Response Code: 204
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "8582a498-1ef8-4c61-89b1-f3d643e5ae6d", "host": "localhost:9002", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "47"}
+2022-07-14 19:29:59 [http-nio-9002-exec-6] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 19:29:59 [http-nio-9002-exec-6] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 19:30:46 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 6792 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 19:30:46 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 19:30:46 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 19:30:47 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 19:30:48 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 19:30:48 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.998 seconds (process running for 2.564)
+2022-07-14 19:30:51 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 19:30:51 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 19:30:51 [http-nio-9002-exec-2] INFO  c.o.n.c.NewSafetyAlertController                   - 
+Request Method: <[GET]> /persons
+Request URL: http://localhost:9002/persons
+Content Type: application/json
+Response Code: 200
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "bd2b4087-860d-48d5-9242-63643e376522", "host": "localhost:9002", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "47"}
+2022-07-14 19:31:54 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 164 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 19:31:54 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 19:31:54 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 19:31:55 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 19:31:56 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 19:31:56 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.068 seconds (process running for 2.733)
+2022-07-14 19:31:58 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 19:31:59 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 19:31:59 [http-nio-9002-exec-2] INFO  c.o.n.c.NewSafetyAlertController                   - 200 OK
+Request Method: <[GET]> /persons
+Request URL: http://localhost:9002/persons
+Content Type: application/json
+Response Code: 200
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "64775c20-c050-4481-99dc-67ae73b6ac52", "host": "localhost:9002", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "47"}
+2022-07-14 19:51:48 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 13800 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 19:51:48 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 19:51:48 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 19:51:48 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 19:51:49 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 19:51:49 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.839 seconds (process running for 2.508)
+2022-07-14 19:51:58 [http-nio-9002-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 19:51:58 [http-nio-9002-exec-1] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 19:51:58 [http-nio-9002-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - 200
+Request Method: <[GET]> /persons
+Request URL: http://localhost:9002/persons
+Content Type: application/json
+Response Code: 200
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "0e8faef1-b179-4e10-840c-4d660adcf174", "host": "localhost:9002", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "47"}
+2022-07-14 19:53:03 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 21016 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 19:53:03 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 19:53:03 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 19:53:04 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 19:53:04 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 19:53:05 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.851 seconds (process running for 2.528)
+2022-07-14 19:53:07 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 19:53:07 [http-nio-9002-exec-2] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 19:53:07 [http-nio-9002-exec-2] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /persons
+Request URL: http://localhost:9002/persons
+Content Type: application/json
+Response Code: 200
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "98c9de60-ab6e-4e2d-82cd-aaaa596d3672", "host": "localhost:9002", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "47"}
+2022-07-14 19:54:36 [http-nio-9002-exec-8] INFO  c.o.n.c.NewSafetyAlertController                   - 204
+Request Method: <[GET]> /persons
+Request URL: http://localhost:9002/persons
+Content Type: application/json
+Response Code: 204
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "bf6a1ca6-383e-4139-9518-b6cd3242d145", "host": "localhost:9002", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "47"}
+2022-07-14 19:55:18 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 23172 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 19:55:18 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 19:55:18 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 19:55:19 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 19:55:20 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 19:55:20 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.146 seconds (process running for 2.728)
+2022-07-14 19:55:22 [http-nio-9002-exec-2] INFO  c.o.n.c.NewSafetyAlertController                   - No Content
+Request Method: <[GET]> /persons
+Request URL: http://localhost:9002/persons
+Content Type: application/json
+Response Code: 204
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "942b6dd7-1b81-4d8e-a127-d23f1124bb11", "host": "localhost:9002", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "47"}
+2022-07-14 19:57:47 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 10872 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 19:57:47 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 19:57:47 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 19:57:48 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 19:57:49 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 19:57:49 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.081 seconds (process running for 2.716)
+2022-07-14 19:57:57 [http-nio-9002-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 19:57:57 [http-nio-9002-exec-1] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 19:57:57 [http-nio-9002-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-07-14 19:57:57 [http-nio-9002-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - No Content. The person does not exist.
+Request Method: <[GET]> /person/jhhjh
+Request URL: http://localhost:9002/person/jhhjh
+Content Type: application/json
+Response Code: 204
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "968db6fa-4ad9-49ef-aa87-3c027cea1806", "host": "localhost:9002", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "47"}
+2022-07-14 19:58:53 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 10524 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 19:58:53 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 19:58:53 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 19:58:54 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 19:58:54 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 19:58:54 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.981 seconds (process running for 2.592)
+2022-07-14 19:59:09 [http-nio-9002-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 19:59:09 [http-nio-9002-exec-1] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 19:59:09 [http-nio-9002-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-07-14 19:59:09 [http-nio-9002-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /person/JohnBoyd
+Request URL: http://localhost:9002/person/JohnBoyd
+Content Type: application/json
+Response Code: 200
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "0894d78f-0580-415f-aec2-f8df95b30ab5", "host": "localhost:9002", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "47"}
+2022-07-14 20:03:07 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 5940 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 20:03:07 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 20:03:07 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 20:03:08 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 20:03:08 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 20:03:08 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.942 seconds (process running for 2.518)
+2022-07-14 20:13:14 [http-nio-9002-exec-10] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 20:13:14 [http-nio-9002-exec-10] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-07-14 20:13:14 [http-nio-9002-exec-10] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /persons
+Request URL: http://localhost:9002/persons
+Content Type: null
+Response Code: 200
+Header Name: {"user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "4c72dba0-caeb-4cff-bcc4-77f8b9b59e40", "host": "localhost:9002", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive"}
+2022-07-14 20:14:09 [http-nio-9002-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - A new person is added successful. The URL is : http://localhost:9002/person/John2Boyd2
+2022-07-14 20:14:09 [http-nio-9002-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - Response status 201:
+Request Method: <[POST]> /person
+Request URL: http://localhost:9002/person
+Content Type: application/json
+Response Code: 201
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "56a1d377-367f-434e-a455-00f7c21e4c23", "host": "localhost:9002", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
+2022-07-14 20:16:54 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 13128 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 20:16:54 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 20:16:54 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 20:16:55 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 20:16:55 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-14 20:16:55 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.963 seconds (process running for 2.628)
+2022-07-14 20:16:59 [http-nio-9002-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - A new person is added successful. The URL is : http://localhost:9002/person/John2Boyd2
+2022-07-14 20:16:59 [http-nio-9002-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - Created 
+Request Method: <[POST]> /person
+Request URL: http://localhost:9002/person
+Content Type: application/json
+Response Code: 201
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "6a7363c2-144f-454c-9701-a87d33c6f1a8", "host": "localhost:9002", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}

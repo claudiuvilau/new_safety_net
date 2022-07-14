@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import com.openclassrooms.new_safety_net.model.Firestations;
 import com.openclassrooms.new_safety_net.model.Persons;
 
 @Repository
@@ -23,9 +24,11 @@ public interface SafetyNetRepository {
      * unique).
      */
 
-    List<Persons> getPerson() throws IOException;
+    List<Persons> getPersons(String elemjson) throws IOException;
 
-    void postPerson(String nomperson);
+    public List<Persons> getAPerson(String firstNamelastName, String elemjson) throws IOException;
+
+    Persons postPerson(Persons persons) throws IOException;;
 
     void putPerson(String nomperson);
 
@@ -40,7 +43,7 @@ public interface SafetyNetRepository {
      * ● supprimer le mapping d'une caserne ou d'une adresse.
      */
 
-    void getFirestation(String firestation);
+    List<Firestations> getFirestations(String firestation);
 
     void postFirestation(String firestation);
 
@@ -68,4 +71,5 @@ public interface SafetyNetRepository {
     void putMedicalRecord(String medicalrecord);
 
     void deleteMedicalRecord(String medicalrecord);
+
 }

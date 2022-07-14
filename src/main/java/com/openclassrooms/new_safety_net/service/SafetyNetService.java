@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import com.jsoniter.JsonIterator;
 import com.jsoniter.any.Any;
+import com.openclassrooms.new_safety_net.model.Firestations;
 import com.openclassrooms.new_safety_net.model.JsonToFile;
 import com.openclassrooms.new_safety_net.model.Persons;
 import com.openclassrooms.new_safety_net.repository.SafetyNetRepository;
@@ -23,42 +24,86 @@ public class SafetyNetService implements SafetyNetRepository {
     // @Autowired
     // pourquoi pas de Autowired ?
     private JsonToFile jsonToFile = new JsonToFile();
-    private Persons persons = new Persons();
+    private Persons personsObj = new Persons();
+    private Firestations firestationsObj = new Firestations();
 
     // Récupération de notre logger.
     private static final Logger LOGGER = LogManager.getLogger(SafetyNetService.class);
 
     // pourquoi Override ?
     @Override
-    public List<Persons> getPerson() {
+    public List<Persons> getPersons(String elemjson) {
         List<Persons> listPersons = new ArrayList<>();
-        byte[] objetfile = null;
-        objetfile = jsonToFile.readJsonFile();
-        if (objetfile != null) {
-            JsonIterator iter = JsonIterator.parse(objetfile);
-            Any any = null;
-            try {
-                any = iter.readAny();
-            } catch (IOException e) {
-                LOGGER.debug("No objet Java from Json !");
-            }
+        Any any = null;
 
-            if (any != null) {
-                Any personsAny = any.get("persons");
-                for (Any element : personsAny) {
-                    // transforming the json in java object
-                    persons = JsonIterator.deserialize(element.toString(), Persons.class);
-                    listPersons.add(persons);
-                }
+        any = anyAny(elemjson, any);
+
+        if (any != null) {
+            Any personsAny = any.get(elemjson);
+            for (Any element : personsAny) {
+                // transforming the json in java object Persons.class
+                personsObj = JsonIterator.deserialize(element.toString(), Persons.class);
+                listPersons.add(personsObj);
             }
+            LOGGER.debug("List persons is created.");
         }
         return listPersons;
     }
 
     @Override
-    public void postPerson(String nomperson) {
-        // TODO Auto-generated method stub
+    public List<Persons> getAPerson(String firstNamelastName, String elemjson) throws IOException {
+        List<Persons> listPersons = new ArrayList<>();
+        List<Persons> listP = listPersons;
+        listPersons = getPersons(elemjson); // here we have a list of objects Persons from json
 
+        for (Persons element : listPersons) {
+            if ((element.getFirstName().trim() + element.getLastName().trim()).equalsIgnoreCase(firstNamelastName)) {
+                listP.add(element);
+            }
+        }
+        LOGGER.debug("Get the person is ok.");
+        return listP;
+    }
+
+    @Override
+    public List<Firestations> getFirestations(String elemjson) {
+        List<Firestations> listFirestations = new ArrayList<>();
+        Any any = null;
+
+        any = anyAny(elemjson, any);
+
+        if (any != null) {
+            Any firestationsAny = any.get(elemjson);
+            for (Any element : firestationsAny) {
+                // transforming the json in java object Firestations.class
+                firestationsObj = JsonIterator.deserialize(element.toString(), Firestations.class);
+                listFirestations.add(firestationsObj);
+            }
+            LOGGER.debug("List firestations is created.");
+        }
+        return listFirestations;
+    }
+
+    private Any anyAny(String elemjson, Any any) {
+        byte[] objetfile = null;
+        objetfile = jsonToFile.readJsonFile();
+        if (objetfile != null) {
+            JsonIterator iter = JsonIterator.parse(objetfile);
+            if (iter.currentBuffer().contains(elemjson)) {
+                try {
+                    any = iter.readAny();
+                    LOGGER.debug("Json iterator is created.");
+                } catch (IOException e) {
+                    LOGGER.debug("No objet Java from Json !");
+                }
+            }
+        }
+        return any;
+    }
+
+    @Override
+    public Persons postPerson(Persons persons) {
+        return persons;
     }
 
     @Override
@@ -69,12 +114,6 @@ public class SafetyNetService implements SafetyNetRepository {
 
     @Override
     public void deletePerson(String nomperson) {
-        // TODO Auto-generated method stub
-
-    }
-
-    @Override
-    public void getFirestation(String firestation) {
         // TODO Auto-generated method stub
 
     }
