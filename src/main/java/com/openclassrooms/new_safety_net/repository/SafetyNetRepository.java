@@ -26,6 +26,8 @@ public interface SafetyNetRepository {
 
     List<Persons> getPersons(String elemjson) throws IOException;
 
+    public List<Persons> getAPerson(String firstNamelastName, String elemjson) throws IOException;
+
     void postPerson(String nomperson);
 
     void putPerson(String nomperson);

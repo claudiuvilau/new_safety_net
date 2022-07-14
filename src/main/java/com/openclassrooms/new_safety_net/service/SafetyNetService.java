@@ -51,6 +51,20 @@ public class SafetyNetService implements SafetyNetRepository {
     }
 
     @Override
+    public List<Persons> getAPerson(String firstNamelastName, String elemjson) throws IOException {
+        List<Persons> listP = new ArrayList<>();
+        List<Persons> listPersons = listP;
+        listP = getPersons(elemjson); // here we have a list of objects Persons from json
+
+        for (Persons element : listP) {
+            if ((element.getFirstName().trim() + element.getLastName().trim()).equalsIgnoreCase(firstNamelastName)) {
+                listPersons.add(element);
+            }
+        }
+        return listPersons;
+    }
+
+    @Override
     public List<Firestations> getFirestations(String elemjson) {
         List<Firestations> listFirestations = new ArrayList<>();
         Any any = null;
