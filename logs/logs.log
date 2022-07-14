@@ -825,3 +825,109 @@ Request URL: http://localhost:9002/person
 Content Type: application/json
 Response Code: 201
 Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "6a7363c2-144f-454c-9701-a87d33c6f1a8", "host": "localhost:9002", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
+2022-07-14 21:54:26 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 10288 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 21:54:26 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 21:54:26 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 21:54:27 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9002 (http)
+2022-07-14 21:54:28 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter             - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 9002 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 9002 or configure this application to listen on another port.
+
+2022-07-14 21:54:39 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 15756 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 21:54:39 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 21:54:39 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 21:54:40 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9003 (http)
+2022-07-14 21:54:41 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9003 (http) with context path ''
+2022-07-14 21:54:41 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.864 seconds (process running for 2.47)
+2022-07-14 21:55:15 [http-nio-9003-exec-4] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 21:55:15 [http-nio-9003-exec-4] DEBUG c.o.n.s.SafetyNetService                           - List medicalrecords is created.
+2022-07-14 21:56:00 [http-nio-9003-exec-6] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 21:56:00 [http-nio-9003-exec-6] DEBUG c.o.n.s.SafetyNetService                           - List medicalrecords is created.
+2022-07-14 21:56:20 [http-nio-9003-exec-3] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 21:56:20 [http-nio-9003-exec-3] DEBUG c.o.n.s.SafetyNetService                           - List medicalrecords is created.
+2022-07-14 21:56:50 [http-nio-9003-exec-7] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 21:56:50 [http-nio-9003-exec-7] DEBUG c.o.n.s.SafetyNetService                           - List medicalrecords is created.
+2022-07-14 21:57:32 [http-nio-9003-exec-8] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 21:57:32 [http-nio-9003-exec-8] DEBUG c.o.n.s.SafetyNetService                           - List medicalrecords is created.
+2022-07-14 21:57:37 [http-nio-9003-exec-9] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 21:57:37 [http-nio-9003-exec-9] DEBUG c.o.n.s.SafetyNetService                           - List medicalrecords is created.
+2022-07-14 21:58:03 [http-nio-9003-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 21:58:03 [http-nio-9003-exec-2] DEBUG c.o.n.s.SafetyNetService                           - List medicalrecords is created.
+2022-07-14 21:58:24 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 7820 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 21:58:24 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 21:58:24 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 21:58:25 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9003 (http)
+2022-07-14 21:58:25 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9003 (http) with context path ''
+2022-07-14 21:58:25 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.903 seconds (process running for 2.61)
+2022-07-14 21:58:33 [http-nio-9003-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 21:58:33 [http-nio-9003-exec-1] DEBUG c.o.n.s.SafetyNetService                           - List medicalrecords is created.
+2022-07-14 22:01:23 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 13196 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 22:01:23 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 22:01:23 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 22:01:24 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9003 (http)
+2022-07-14 22:01:25 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9003 (http) with context path ''
+2022-07-14 22:01:25 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.131 seconds (process running for 2.753)
+2022-07-14 22:01:40 [http-nio-9003-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 22:01:40 [http-nio-9003-exec-2] DEBUG c.o.n.s.SafetyNetService                           - List medicalrecords is created.
+2022-07-14 22:01:40 [http-nio-9003-exec-2] INFO  c.o.n.c.NewSafetyAlertController                   - No Content
+Request Method: <[GET]> /medicalrecords
+Request URL: http://localhost:9003/medicalrecords
+Content Type: null
+Response Code: 204
+Header Name: {"host": "localhost:9003", "connection": "keep-alive", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.49", "sec-ch-ua": "" Not;A Brand";v="99", "Microsoft Edge";v="103", "Chromium";v="103"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6", "cookie": "vid_1912723=1592203843415.6963; tll_1912723=1657571902; nv_1912723=116; or_1912723=1"}
+2022-07-14 22:03:57 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 21920 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 22:03:57 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 22:03:57 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 22:03:58 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9003 (http)
+2022-07-14 22:03:59 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9003 (http) with context path ''
+2022-07-14 22:03:59 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.05 seconds (process running for 2.722)
+2022-07-14 22:04:05 [http-nio-9003-exec-4] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 22:04:05 [http-nio-9003-exec-4] DEBUG c.o.n.s.SafetyNetService                           - List medicalrecords is created.
+2022-07-14 22:07:08 [http-nio-9003-exec-4] INFO  c.o.n.c.NewSafetyAlertController                   - No Content
+Request Method: <[GET]> /medicalrecords
+Request URL: http://localhost:9003/medicalrecords
+Content Type: application/json
+Response Code: 204
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "3bbd5509-0a59-42f5-a2bd-956a24ada284", "host": "localhost:9003", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
+2022-07-14 22:07:52 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 22764 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 22:07:52 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 22:07:52 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 22:07:53 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9003 (http)
+2022-07-14 22:07:54 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9003 (http) with context path ''
+2022-07-14 22:07:54 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.954 seconds (process running for 2.585)
+2022-07-14 22:08:10 [http-nio-9003-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 22:08:10 [http-nio-9003-exec-1] DEBUG c.o.n.s.SafetyNetService                           - List medicalrecords is created.
+2022-07-14 22:08:54 [http-nio-9003-exec-8] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 22:08:54 [http-nio-9003-exec-8] DEBUG c.o.n.s.SafetyNetService                           - List medicalrecords is created.
+2022-07-14 22:10:36 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 8788 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-14 22:10:36 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-14 22:10:36 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 22:10:37 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9003 (http)
+2022-07-14 22:10:38 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9003 (http) with context path ''
+2022-07-14 22:10:38 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.993 seconds (process running for 2.555)
+2022-07-14 22:10:44 [http-nio-9003-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 22:10:44 [http-nio-9003-exec-1] DEBUG c.o.n.s.SafetyNetService                           - List medicalrecords is created.
+2022-07-14 22:10:44 [http-nio-9003-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /medicalrecords
+Request URL: http://localhost:9003/medicalrecords
+Content Type: null
+Response Code: 200
+Header Name: {"host": "localhost:9003", "connection": "keep-alive", "cache-control": "max-age=0", "sec-ch-ua": "" Not;A Brand";v="99", "Microsoft Edge";v="103", "Chromium";v="103"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.49", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6", "cookie": "vid_1912723=1592203843415.6963; tll_1912723=1657571902; nv_1912723=116; or_1912723=1"}
+2022-07-14 22:11:26 [http-nio-9003-exec-3] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-14 22:11:26 [http-nio-9003-exec-3] DEBUG c.o.n.s.SafetyNetService                           - List medicalrecords is created.
+2022-07-14 22:11:26 [http-nio-9003-exec-3] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /medicalrecords
+Request URL: http://localhost:9003/medicalrecords
+Content Type: application/json
+Response Code: 200
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.0", "accept": "*/*", "postman-token": "9b428590-8a15-47bf-99e4-8d94484a21d2", "host": "localhost:9003", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
