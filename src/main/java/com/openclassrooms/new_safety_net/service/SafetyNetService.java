@@ -12,6 +12,7 @@ import com.jsoniter.JsonIterator;
 import com.jsoniter.any.Any;
 import com.openclassrooms.new_safety_net.model.Firestations;
 import com.openclassrooms.new_safety_net.model.JsonToFile;
+import com.openclassrooms.new_safety_net.model.Medicalrecords;
 import com.openclassrooms.new_safety_net.model.Persons;
 import com.openclassrooms.new_safety_net.repository.SafetyNetRepository;
 
@@ -26,6 +27,7 @@ public class SafetyNetService implements SafetyNetRepository {
     private JsonToFile jsonToFile = new JsonToFile();
     private Persons personsObj = new Persons();
     private Firestations firestationsObj = new Firestations();
+    private Medicalrecords medicalrecordsObj = new Medicalrecords();
 
     // Récupération de notre logger.
     private static final Logger LOGGER = LogManager.getLogger(SafetyNetService.class);
@@ -84,6 +86,25 @@ public class SafetyNetService implements SafetyNetRepository {
         return listFirestations;
     }
 
+    @Override
+    public List<Medicalrecords> getMedicalrecords(String elemjson) {
+        List<Medicalrecords> listMedicalrecords = new ArrayList<>();
+        Any any = null;
+
+        any = anyAny(elemjson, any);
+
+        if (any != null) {
+            Any medicalrecordsAny = any.get(elemjson);
+            for (Any element : medicalrecordsAny) {
+                // transforming the json in java object Firestations.class
+                medicalrecordsObj = JsonIterator.deserialize(element.toString(), Medicalrecords.class);
+                listMedicalrecords.add(medicalrecordsObj);
+            }
+            LOGGER.debug("List medicalrecords is created.");
+        }
+        return listMedicalrecords;
+    }
+
     private Any anyAny(String elemjson, Any any) {
         byte[] objetfile = null;
         objetfile = jsonToFile.readJsonFile();
@@ -132,12 +153,6 @@ public class SafetyNetService implements SafetyNetRepository {
 
     @Override
     public void deleteFirestation(String firestation) {
-        // TODO Auto-generated method stub
-
-    }
-
-    @Override
-    public void getMedicalRecord(String medicalrecord) {
         // TODO Auto-generated method stub
 
     }

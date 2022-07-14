@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.openclassrooms.new_safety_net.model.Firestations;
+import com.openclassrooms.new_safety_net.model.Medicalrecords;
 import com.openclassrooms.new_safety_net.model.Persons;
 import com.openclassrooms.new_safety_net.repository.SafetyNetRepository;
 import com.openclassrooms.new_safety_net.service.LoggerApiNewSafetyNet;
@@ -33,6 +34,7 @@ public class NewSafetyAlertController {
 
     List<Persons> listPersons = new ArrayList<>();
     List<Firestations> listFirestations = new ArrayList<>();
+    List<Medicalrecords> listMedicalrecords = new ArrayList<>();
 
     String messagelogger = "";
 
@@ -130,11 +132,34 @@ public class NewSafetyAlertController {
         String elemjson = "firestations";
         listFirestations = repository.getFirestations(elemjson);
 
-        if (listPersons.isEmpty()) {
+        if (listFirestations.isEmpty()) {
             // 204 Requête traitée avec succès mais pas d’information à renvoyer.
             response.setStatus(204);
+            messagelogger = "No Content" + loggerApiNewSafetyNet.loggerInfo(request, response, elemjson);
+            LOGGER.info(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
         }
-        loggerApiNewSafetyNet.loggerInfo(request, response, elemjson);
+        messagelogger = "OK" + loggerApiNewSafetyNet.loggerInfo(request, response, elemjson);
+        LOGGER.info(messagelogger);
         return new ResponseEntity<>(listFirestations, HttpStatus.valueOf(response.getStatus()));
     }
+
+    @GetMapping("/medicalrecords")
+    public ResponseEntity<List<Medicalrecords>> getMedicalrecords(HttpServletResponse response,
+            HttpServletRequest request) {
+        String elemjson = "medicalrecords";
+        listMedicalrecords = repository.getMedicalrecords(elemjson);
+
+        if (listMedicalrecords.isEmpty()) {
+            // 204 Requête traitée avec succès mais pas d’information à renvoyer.
+            response.setStatus(204);
+            messagelogger = "No Content" + loggerApiNewSafetyNet.loggerInfo(request, response, elemjson);
+            LOGGER.info(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+        messagelogger = "OK" + loggerApiNewSafetyNet.loggerInfo(request, response, elemjson);
+        LOGGER.info(messagelogger);
+        return new ResponseEntity<>(listMedicalrecords, HttpStatus.valueOf(response.getStatus()));
+    }
+
 }
