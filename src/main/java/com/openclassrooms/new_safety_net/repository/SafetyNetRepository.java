@@ -28,7 +28,7 @@ public interface SafetyNetRepository {
 
     public List<Persons> getAPerson(String firstNamelastName, String elemjson) throws IOException;
 
-    void postPerson(String nomperson);
+    Persons postPerson(Persons persons) throws IOException;;
 
     void putPerson(String nomperson);
 
@@ -71,4 +71,5 @@ public interface SafetyNetRepository {
     void putMedicalRecord(String medicalrecord);
 
     void deleteMedicalRecord(String medicalrecord);
+
 }

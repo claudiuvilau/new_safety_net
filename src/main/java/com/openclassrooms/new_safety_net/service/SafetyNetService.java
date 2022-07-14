@@ -45,23 +45,24 @@ public class SafetyNetService implements SafetyNetRepository {
                 personsObj = JsonIterator.deserialize(element.toString(), Persons.class);
                 listPersons.add(personsObj);
             }
-            LOGGER.info("List persons is created.");
+            LOGGER.debug("List persons is created.");
         }
         return listPersons;
     }
 
     @Override
     public List<Persons> getAPerson(String firstNamelastName, String elemjson) throws IOException {
-        List<Persons> listP = new ArrayList<>();
-        List<Persons> listPersons = listP;
-        listP = getPersons(elemjson); // here we have a list of objects Persons from json
+        List<Persons> listPersons = new ArrayList<>();
+        List<Persons> listP = listPersons;
+        listPersons = getPersons(elemjson); // here we have a list of objects Persons from json
 
-        for (Persons element : listP) {
+        for (Persons element : listPersons) {
             if ((element.getFirstName().trim() + element.getLastName().trim()).equalsIgnoreCase(firstNamelastName)) {
-                listPersons.add(element);
+                listP.add(element);
             }
         }
-        return listPersons;
+        LOGGER.debug("Get the person is ok.");
+        return listP;
     }
 
     @Override
@@ -78,7 +79,7 @@ public class SafetyNetService implements SafetyNetRepository {
                 firestationsObj = JsonIterator.deserialize(element.toString(), Firestations.class);
                 listFirestations.add(firestationsObj);
             }
-            LOGGER.info("List firestations is created.");
+            LOGGER.debug("List firestations is created.");
         }
         return listFirestations;
     }
@@ -91,7 +92,7 @@ public class SafetyNetService implements SafetyNetRepository {
             if (iter.currentBuffer().contains(elemjson)) {
                 try {
                     any = iter.readAny();
-                    LOGGER.info("Json iterator is created.");
+                    LOGGER.debug("Json iterator is created.");
                 } catch (IOException e) {
                     LOGGER.debug("No objet Java from Json !");
                 }
@@ -101,9 +102,8 @@ public class SafetyNetService implements SafetyNetRepository {
     }
 
     @Override
-    public void postPerson(String nomperson) {
-        // TODO Auto-generated method stub
-
+    public Persons postPerson(Persons persons) {
+        return persons;
     }
 
     @Override
@@ -159,4 +159,5 @@ public class SafetyNetService implements SafetyNetRepository {
         // TODO Auto-generated method stub
 
     }
+
 }
