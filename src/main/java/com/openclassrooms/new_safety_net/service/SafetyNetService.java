@@ -1,5 +1,6 @@
 package com.openclassrooms.new_safety_net.service;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +11,8 @@ import org.springframework.stereotype.Service;
 
 import com.jsoniter.JsonIterator;
 import com.jsoniter.any.Any;
+import com.jsoniter.output.JsonStream;
+import com.openclassrooms.new_safety_net.model.CollectionsRessources;
 import com.openclassrooms.new_safety_net.model.Firestations;
 import com.openclassrooms.new_safety_net.model.JsonToFile;
 import com.openclassrooms.new_safety_net.model.Medicalrecords;
@@ -31,6 +34,10 @@ public class SafetyNetService implements SafetyNetRepository {
 
     // Récupération de notre logger.
     private static final Logger LOGGER = LogManager.getLogger(SafetyNetService.class);
+
+    LoggerApiNewSafetyNet loggerApiNewSafetyNet = new LoggerApiNewSafetyNet();
+
+    private String messageLogger = "";
 
     // pourquoi Override ?
     @Override
@@ -124,6 +131,96 @@ public class SafetyNetService implements SafetyNetRepository {
 
     @Override
     public Persons postPerson(Persons persons) {
+
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug(loggerApiNewSafetyNet.loggerDebug(persons.toString()));
+        }
+
+        // read the Json File
+        List<Persons> listPersons;
+        listPersons = getPersons("persons");
+
+        if (LOGGER.isDebugEnabled()) {
+            messageLogger = "The persons are: " + listPersons;
+            LOGGER.debug(messageLogger);
+        }
+
+        // verify if the persons is exist in the persons if not = add
+        boolean findpersons = false;
+        for (Persons element : listPersons) {
+            if ((element.getFirstName() + element.getLastName())
+                    .equals(persons.getFirstName() + persons.getLastName())) {
+                findpersons = true;
+
+                if (LOGGER.isDebugEnabled()) {
+                    LOGGER.debug("This person is already in the list.");
+                }
+                break;
+            }
+        }
+
+        if (!findpersons) {
+            // create the new file json
+            persons = createdNewFileJson(listPersons, persons);
+            return persons;
+        }
+
+        return null;
+    }
+
+    private Persons createdNewFileJson(List<Persons> listPersons, Persons persons) {
+
+        // add the persons if find_persons is false
+        listPersons.add(persons); // add the body
+
+        if (LOGGER.isDebugEnabled()) {
+            messageLogger = "The person is added in the list: " + listPersons;
+            LOGGER.debug(messageLogger);
+        }
+
+        // create list fire stations
+        List<Firestations> listFirestations;
+        listFirestations = getFirestations("firestations");
+        // create list medical records
+        List<Medicalrecords> listMedicalrecords;
+        listMedicalrecords = getMedicalrecords("medicalrecords");
+
+        CollectionsRessources collectionsRessources = new CollectionsRessources();
+        collectionsRessources.setPersons(listPersons);
+        collectionsRessources.setFirestations(listFirestations);
+        collectionsRessources.setMedicalrecords(listMedicalrecords);
+
+        String jsonstream = JsonStream.serialize(collectionsRessources); // here we transform the list in json
+                                                                         // object
+        FileWriter writer = null;
+        JsonToFile fileJson = new JsonToFile();
+        try {
+            writer = new FileWriter(fileJson.filepathjson);
+        } catch (IOException e) {
+            LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, persons.toString()));
+            return null;
+        }
+        try {
+            writer.write(jsonstream);
+        } catch (IOException e) {
+            LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, persons.toString()));
+        }
+        try {
+            writer.flush();
+        } catch (IOException e) {
+            LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, persons.toString()));
+        }
+        try {
+            writer.close();
+        } catch (IOException e) {
+            LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, persons.toString()));
+            return null;
+        }
+
+        if (LOGGER.isDebugEnabled()) {
+            messageLogger = "The new file is writed: " + jsonstream;
+            LOGGER.debug(messageLogger);
+        }
         return persons;
     }
 

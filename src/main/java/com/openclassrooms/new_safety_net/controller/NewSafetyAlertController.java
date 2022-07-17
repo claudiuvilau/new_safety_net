@@ -95,7 +95,7 @@ public class NewSafetyAlertController {
 
     // add a person
     @PostMapping(value = "/person")
-    public ResponseEntity<Void> addPerson(@RequestBody Persons persons, HttpServletRequest request,
+    public ResponseEntity<Persons> addPerson(@RequestBody Persons persons, HttpServletRequest request,
             HttpServletResponse response) {
 
         Persons newPerson;
@@ -123,7 +123,11 @@ public class NewSafetyAlertController {
         LOGGER.info(messagelogger);
         messagelogger = "Created " + loggerApiNewSafetyNet.loggerInfo(request, response, "");
         LOGGER.info(messagelogger);
-        return ResponseEntity.created(location).build();
+        // c'est quoi la différence entre les 2 lignes suivantes created(location).build
+        // et
+        // https.valuesOf(response.getstatus):
+        // return ResponseEntity.created(location).build();
+        return new ResponseEntity<>(newPerson, HttpStatus.valueOf(response.getStatus()));
     }
 
     @GetMapping("/firestations")
