@@ -9,7 +9,7 @@ import org.apache.logging.log4j.Logger;
 
 public class JsonToFile {
 
-    private String filepathjson = "src\\main\\resources\\jsonFile.json";
+    public String filepathjson = "src\\main\\resources\\jsonFile.json";
 
     private byte[] objetfile;
 
