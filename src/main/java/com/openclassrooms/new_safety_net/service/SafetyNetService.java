@@ -38,6 +38,7 @@ public class SafetyNetService implements SafetyNetRepository {
     LoggerApiNewSafetyNet loggerApiNewSafetyNet = new LoggerApiNewSafetyNet();
 
     private String messageLogger = "";
+    JsonToFile fileJson = new JsonToFile();
 
     // pourquoi Override ?
     @Override
@@ -130,10 +131,10 @@ public class SafetyNetService implements SafetyNetRepository {
     }
 
     @Override
-    public Persons postPerson(Persons persons) {
+    public boolean postPerson(Persons person) {
 
         if (LOGGER.isDebugEnabled()) {
-            LOGGER.debug(loggerApiNewSafetyNet.loggerDebug(persons.toString()));
+            LOGGER.debug(loggerApiNewSafetyNet.loggerDebug(person.toString()));
         }
 
         // read the Json File
@@ -146,11 +147,11 @@ public class SafetyNetService implements SafetyNetRepository {
         }
 
         // verify if the persons is exist in the persons if not = add
-        boolean findpersons = false;
+        boolean findperson = false;
         for (Persons element : listPersons) {
             if ((element.getFirstName() + element.getLastName())
-                    .equals(persons.getFirstName() + persons.getLastName())) {
-                findpersons = true;
+                    .equals(person.getFirstName() + person.getLastName())) {
+                findperson = true;
 
                 if (LOGGER.isDebugEnabled()) {
                     LOGGER.debug("This person is already in the list.");
@@ -159,31 +160,110 @@ public class SafetyNetService implements SafetyNetRepository {
             }
         }
 
-        if (!findpersons) {
+        if (!findperson) {
+
+            Boolean filecreated = false;
+            // add the persons if find_persons is false
+            listPersons.add(person); // add the body
+
+            if (LOGGER.isDebugEnabled()) {
+                messageLogger = "The person is added in the list: " + listPersons;
+                LOGGER.debug(messageLogger);
+            }
+
             // create the new file json
-            persons = createdNewFileJson(listPersons, persons);
-            return persons;
+
+            // create list fire stations
+            List<Firestations> listFirestations;
+            listFirestations = getFirestations("firestations");
+            // create list medical records
+            List<Medicalrecords> listMedicalrecords;
+            listMedicalrecords = getMedicalrecords("medicalrecords");
+            filecreated = createNewFileJson(listPersons, listFirestations, listMedicalrecords, person);
+            return filecreated;
         }
 
-        return null;
+        return false;
     }
 
-    private Persons createdNewFileJson(List<Persons> listPersons, Persons persons) {
+    @Override
+    public boolean updatePerson(Persons person, String firstName, String lastName) {
 
-        // add the persons if find_persons is false
-        listPersons.add(persons); // add the body
+        String elemjson = "persons";
 
         if (LOGGER.isDebugEnabled()) {
-            messageLogger = "The person is added in the list: " + listPersons;
+            LOGGER.debug(loggerApiNewSafetyNet.loggerDebug(firstName + " " + lastName));
+        }
+
+        List<Persons> listPersons;
+        listPersons = getPersons(elemjson);
+
+        if (LOGGER.isDebugEnabled()) {
+            messageLogger = "The list of all persons is: " + listPersons;
             LOGGER.debug(messageLogger);
         }
 
-        // create list fire stations
-        List<Firestations> listFirestations;
-        listFirestations = getFirestations("firestations");
-        // create list medical records
-        List<Medicalrecords> listMedicalrecords;
-        listMedicalrecords = getMedicalrecords("medicalrecords");
+        // find the person and update
+        String firstNamelastName = firstName + lastName;
+        boolean updated;
+
+        updated = updatePersonFinded(person, listPersons, firstNamelastName);
+
+        return updated;
+
+    }
+
+    private boolean updatePersonFinded(Persons person, List<Persons> listPersons, String firstNamelastName) {
+
+        for (Persons element : listPersons) {
+            if ((element.getFirstName() + element.getLastName()).equalsIgnoreCase(firstNamelastName)) {
+                verifyAndUpdate(element, person);
+
+                Boolean filecreated = false;
+
+                if (LOGGER.isDebugEnabled()) {
+                    messageLogger = "The list is updated. This is the list updated: " + listPersons;
+                    LOGGER.debug(messageLogger);
+                    messageLogger = "The person is : " + person;
+                    LOGGER.debug(messageLogger);
+
+                }
+
+                // create the new file json
+                // create list fire stations
+                List<Firestations> listFirestations;
+                listFirestations = getFirestations("firestations");
+                // create list medical records
+                List<Medicalrecords> listMedicalrecords;
+                listMedicalrecords = getMedicalrecords("medicalrecords");
+                filecreated = createNewFileJson(listPersons, listFirestations, listMedicalrecords, person);
+                return filecreated;
+            }
+        }
+        return false;
+    }
+
+    private void verifyAndUpdate(Persons element, Persons persons) {
+        if (persons.getAddress() != null) {
+            element.setAddress(persons.getAddress());
+        }
+        if (persons.getCity() != null) {
+            element.setCity(persons.getCity());
+        }
+        if (persons.getEmail() != null) {
+            element.setEmail(persons.getEmail());
+        }
+        if (persons.getPhone() != null) {
+            element.setPhone(persons.getPhone());
+        }
+        if (persons.getZip() != null) {
+            element.setZip(persons.getZip());
+        }
+
+    }
+
+    private boolean createNewFileJson(List<Persons> listPersons, List<Firestations> listFirestations,
+            List<Medicalrecords> listMedicalrecords, Persons persons) {
 
         CollectionsRessources collectionsRessources = new CollectionsRessources();
         collectionsRessources.setPersons(listPersons);
@@ -193,12 +273,11 @@ public class SafetyNetService implements SafetyNetRepository {
         String jsonstream = JsonStream.serialize(collectionsRessources); // here we transform the list in json
                                                                          // object
         FileWriter writer = null;
-        JsonToFile fileJson = new JsonToFile();
         try {
             writer = new FileWriter(fileJson.filepathjson);
         } catch (IOException e) {
             LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, persons.toString()));
-            return null;
+            return false;
         }
         try {
             writer.write(jsonstream);
@@ -214,26 +293,58 @@ public class SafetyNetService implements SafetyNetRepository {
             writer.close();
         } catch (IOException e) {
             LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, persons.toString()));
-            return null;
+            return false;
         }
 
         if (LOGGER.isDebugEnabled()) {
             messageLogger = "The new file is writed: " + jsonstream;
             LOGGER.debug(messageLogger);
         }
-        return persons;
+        return true;
     }
 
     @Override
-    public void putPerson(String nomperson) {
-        // TODO Auto-generated method stub
+    public boolean deletePerson(String firstName, String lastName) {
 
-    }
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug(loggerApiNewSafetyNet.loggerDebug(firstName + " " + lastName));
+        }
 
-    @Override
-    public void deletePerson(String nomperson) {
-        // TODO Auto-generated method stub
+        String elemjson = "persons";
+        List<Persons> listPersons;
+        listPersons = getPersons(elemjson);
 
+        if (LOGGER.isDebugEnabled()) {
+            messageLogger = "The list of all persons is: " + listPersons;
+            LOGGER.debug(messageLogger);
+        }
+
+        // find the person and delete
+        String firstNamelastName = firstName + lastName;
+        for (Persons element : listPersons) {
+            if ((element.getFirstName() + element.getLastName()).equals(firstNamelastName)) {
+
+                listPersons.remove(element);
+
+                if (LOGGER.isDebugEnabled()) {
+                    messageLogger = "The person is deleted: " + listPersons;
+                    LOGGER.debug(messageLogger);
+                }
+
+                Boolean filecreated = false;
+
+                // create the new file json
+                // create list fire stations
+                List<Firestations> listFirestations;
+                listFirestations = getFirestations("firestations");
+                // create list medical records
+                List<Medicalrecords> listMedicalrecords;
+                listMedicalrecords = getMedicalrecords("medicalrecords");
+                filecreated = createNewFileJson(listPersons, listFirestations, listMedicalrecords, element);
+                return filecreated;
+            }
+        }
+        return false;
     }
 
     @Override

@@ -10,10 +10,13 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
@@ -37,6 +40,7 @@ public class NewSafetyAlertController {
     List<Medicalrecords> listMedicalrecords = new ArrayList<>();
 
     String messagelogger = "";
+    private static final String NOCONTENT = "No Content";
 
     // Récupération de notre logger.
     private static final Logger LOGGER = LogManager.getLogger(NewSafetyAlertController.class);
@@ -57,7 +61,7 @@ public class NewSafetyAlertController {
         if (listPersons.isEmpty()) {
             // 204 Requête traitée avec succès mais pas d’information à renvoyer.
             response.setStatus(204);
-            messagelogger = "No Content" + loggerApiNewSafetyNet.loggerInfo(request, response, elemjson);
+            messagelogger = NOCONTENT + loggerApiNewSafetyNet.loggerInfo(request, response, elemjson);
             LOGGER.info(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
         }
@@ -95,22 +99,16 @@ public class NewSafetyAlertController {
 
     // add a person
     @PostMapping(value = "/person")
-    public ResponseEntity<Persons> addPerson(@RequestBody Persons persons, HttpServletRequest request,
+    public ResponseEntity<Persons> addPerson(@RequestBody Persons person, HttpServletRequest request,
             HttpServletResponse response) {
 
-        Persons newPerson;
+        Boolean addperson = false;
 
-        try {
-            newPerson = repository.postPerson(persons);
-        } catch (IOException e) {
-            response.setStatus(404);
-            LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, ""));
-            return ResponseEntity.status(response.getStatus()).build();
-        }
+        addperson = repository.postPerson(person);
 
-        if (newPerson == null) {
+        if (Boolean.FALSE.equals(addperson)) {
             response.setStatus(404);
-            messagelogger = "The person is empty. No persons added. Response status " + response.getStatus() + ":"
+            messagelogger = "No persons added. Response status " + response.getStatus() + ":"
                     + loggerApiNewSafetyNet.loggerInfo(request, response, "");
             LOGGER.info(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
@@ -118,7 +116,7 @@ public class NewSafetyAlertController {
 
         response.setStatus(201);
         URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{firstName+lastName}")
-                .buildAndExpand(newPerson.getFirstName() + newPerson.getLastName()).toUri();
+                .buildAndExpand(person.getFirstName() + person.getLastName()).toUri();
         messagelogger = "A new person is added successful. The URL is : " + location;
         LOGGER.info(messagelogger);
         messagelogger = "Created " + loggerApiNewSafetyNet.loggerInfo(request, response, "");
@@ -126,8 +124,72 @@ public class NewSafetyAlertController {
         // c'est quoi la différence entre les 2 lignes suivantes created(location).build
         // et
         // https.valuesOf(response.getstatus):
-        // return ResponseEntity.created(location).build();
-        return new ResponseEntity<>(newPerson, HttpStatus.valueOf(response.getStatus()));
+        return new ResponseEntity<>(person, HttpStatus.valueOf(response.getStatus()));
+    }
+
+    // update person
+    // exemple http://localhost:9000/person?firstName=John2&lastName=Boyd2
+    @PutMapping(value = "/person")
+    public ResponseEntity<Persons> updatePerson(@RequestBody Persons person, @RequestParam String firstName,
+            @RequestParam String lastName, HttpServletRequest request, HttpServletResponse response) {
+
+        if (firstName.isBlank() || lastName.isBlank()) {
+            response.setStatus(400);
+            messagelogger = "The params does not exist. Response status " + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, "");
+            LOGGER.warn(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        boolean update = false;
+
+        update = repository.updatePerson(person, firstName, lastName);
+
+        if (!update) {
+            response.setStatus(404);
+            messagelogger = "The person is not updeted. Response status " + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, firstName + " " + lastName);
+            LOGGER.info(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        response.setStatus(200);
+        messagelogger = "Response status " + response.getStatus() + ":"
+                + loggerApiNewSafetyNet.loggerInfo(request, response, firstName + " " + lastName);
+        LOGGER.info(messagelogger);
+        return new ResponseEntity<>(person, HttpStatus.valueOf(response.getStatus()));
+    }
+
+    // delete person
+    @DeleteMapping(value = "/person")
+    public ResponseEntity<Void> deletePerson(@RequestParam String firstName, @RequestParam String lastName,
+            HttpServletRequest request, HttpServletResponse response) {
+
+        if (firstName.isBlank() || lastName.isBlank()) {
+            response.setStatus(400);
+            messagelogger = "The params does not exist. Response status " + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, "");
+            LOGGER.warn(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        boolean del = false;
+
+        del = repository.deletePerson(firstName, lastName);
+
+        if (!del) {
+            response.setStatus(404);
+            messagelogger = "The person is not deleted. Response status " + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, firstName + " " + lastName);
+            LOGGER.info(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        response.setStatus(200);
+        messagelogger = "Response status " + response.getStatus() + ":"
+                + loggerApiNewSafetyNet.loggerInfo(request, response, firstName + " " + lastName);
+        LOGGER.info(messagelogger);
+        return ResponseEntity.status(response.getStatus()).build();
     }
 
     @GetMapping("/firestations")
@@ -139,7 +201,7 @@ public class NewSafetyAlertController {
         if (listFirestations.isEmpty()) {
             // 204 Requête traitée avec succès mais pas d’information à renvoyer.
             response.setStatus(204);
-            messagelogger = "No Content" + loggerApiNewSafetyNet.loggerInfo(request, response, elemjson);
+            messagelogger = NOCONTENT + loggerApiNewSafetyNet.loggerInfo(request, response, elemjson);
             LOGGER.info(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
         }
@@ -157,7 +219,7 @@ public class NewSafetyAlertController {
         if (listMedicalrecords.isEmpty()) {
             // 204 Requête traitée avec succès mais pas d’information à renvoyer.
             response.setStatus(204);
-            messagelogger = "No Content" + loggerApiNewSafetyNet.loggerInfo(request, response, elemjson);
+            messagelogger = NOCONTENT + loggerApiNewSafetyNet.loggerInfo(request, response, elemjson);
             LOGGER.info(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
         }
