@@ -29,11 +29,11 @@ public interface SafetyNetRepository {
 
     public List<Persons> getAPerson(String firstNamelastName, String elemjson) throws IOException;
 
-    Persons postPerson(Persons persons) throws IOException;;
+    boolean postPerson(Persons persons);
 
-    void putPerson(String nomperson);
+    boolean updatePerson(Persons persons, String firstName, String lastName);
 
-    void deletePerson(String nomperson);
+    boolean deletePerson(String firstName, String lastName);
 
     /*
      * http://localhost:8080/firestation
