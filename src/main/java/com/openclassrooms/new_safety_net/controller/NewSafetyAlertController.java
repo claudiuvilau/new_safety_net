@@ -143,7 +143,7 @@ public class NewSafetyAlertController {
 
         boolean update = false;
 
-        update = repository.updatePerson(person, firstName, lastName);
+        update = repository.putPerson(person, firstName, lastName);
 
         if (!update) {
             response.setStatus(404);
@@ -208,6 +208,61 @@ public class NewSafetyAlertController {
         messagelogger = "OK" + loggerApiNewSafetyNet.loggerInfo(request, response, elemjson);
         LOGGER.info(messagelogger);
         return new ResponseEntity<>(listFirestations, HttpStatus.valueOf(response.getStatus()));
+    }
+
+    // add fire station
+    @PostMapping(value = "/firestation")
+    public ResponseEntity<Firestations> addFirestations(@RequestBody Firestations firestation,
+            HttpServletRequest request,
+            HttpServletResponse response) {
+
+        boolean newFirestation = false;
+        newFirestation = repository.postFirestation(firestation);
+        if (!newFirestation) {
+            response.setStatus(404);
+            messagelogger = "No new fire station was added. Response status " + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, "");
+            LOGGER.info(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+        response.setStatus(201);
+        URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{station}")
+                .buildAndExpand(firestation.getStation()).toUri();
+        messagelogger = "A new fire station is added successful. The URL is : " + location;
+        LOGGER.info(messagelogger);
+        messagelogger = "Response status " + response.getStatus() + ":"
+                + loggerApiNewSafetyNet.loggerInfo(request, response, "");
+        LOGGER.info(messagelogger);
+        return new ResponseEntity<>(firestation, HttpStatus.valueOf(response.getStatus()));
+    }
+
+    // update fire station
+    @PutMapping(value = "/firestation")
+    public ResponseEntity<Firestations> updateFirestations(@RequestBody Firestations firestation,
+            @RequestParam String address,
+            HttpServletRequest request, HttpServletResponse response) {
+
+        if (address.isBlank()) {
+            response.setStatus(400);
+            messagelogger = "The param does not exist. Response status " + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, "");
+            LOGGER.warn(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+        boolean updatestation = false;
+        updatestation = repository.putFirestation(firestation, address);
+        if (!updatestation) {
+            response.setStatus(404);
+            messagelogger = "The fire station was not updated. Response status " + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, address);
+            LOGGER.info(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+        response.setStatus(200);
+        messagelogger = "Response status " + response.getStatus() + ":"
+                + loggerApiNewSafetyNet.loggerInfo(request, response, address);
+        LOGGER.info(messagelogger);
+        return new ResponseEntity<>(firestation, HttpStatus.valueOf(response.getStatus()));
     }
 
     @GetMapping("/medicalrecords")
