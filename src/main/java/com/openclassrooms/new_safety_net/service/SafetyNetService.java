@@ -179,7 +179,7 @@ public class SafetyNetService implements SafetyNetRepository {
             // create list medical records
             List<Medicalrecords> listMedicalrecords;
             listMedicalrecords = getMedicalrecords("medicalrecords");
-            filecreated = createNewFileJson(listPersons, listFirestations, listMedicalrecords, person);
+            filecreated = createNewFileJson(listPersons, listFirestations, listMedicalrecords, person.toString());
             return filecreated;
         }
 
@@ -187,7 +187,7 @@ public class SafetyNetService implements SafetyNetRepository {
     }
 
     @Override
-    public boolean updatePerson(Persons person, String firstName, String lastName) {
+    public boolean putPerson(Persons person, String firstName, String lastName) {
 
         String elemjson = "persons";
 
@@ -217,12 +217,12 @@ public class SafetyNetService implements SafetyNetRepository {
 
         for (Persons element : listPersons) {
             if ((element.getFirstName() + element.getLastName()).equalsIgnoreCase(firstNamelastName)) {
-                verifyAndUpdate(element, person);
+                verifyAndUpdatePerson(element, person);
 
                 Boolean filecreated = false;
 
                 if (LOGGER.isDebugEnabled()) {
-                    messageLogger = "The list is updated. This is the list updated: " + listPersons;
+                    messageLogger = "The persons is updateds. This is the list updated: " + listPersons;
                     LOGGER.debug(messageLogger);
                     messageLogger = "The person is : " + person;
                     LOGGER.debug(messageLogger);
@@ -236,34 +236,77 @@ public class SafetyNetService implements SafetyNetRepository {
                 // create list medical records
                 List<Medicalrecords> listMedicalrecords;
                 listMedicalrecords = getMedicalrecords("medicalrecords");
-                filecreated = createNewFileJson(listPersons, listFirestations, listMedicalrecords, person);
+                filecreated = createNewFileJson(listPersons, listFirestations, listMedicalrecords, person.toString());
                 return filecreated;
             }
         }
         return false;
     }
 
-    private void verifyAndUpdate(Persons element, Persons persons) {
-        if (persons.getAddress() != null) {
-            element.setAddress(persons.getAddress());
-        }
-        if (persons.getCity() != null) {
-            element.setCity(persons.getCity());
-        }
-        if (persons.getEmail() != null) {
-            element.setEmail(persons.getEmail());
-        }
-        if (persons.getPhone() != null) {
-            element.setPhone(persons.getPhone());
-        }
-        if (persons.getZip() != null) {
-            element.setZip(persons.getZip());
-        }
+    private void verifyAndUpdatePerson(Persons element, Persons person) {
 
+        // no update for the first and last name :
+        setNamePerson(element, person);
+
+        if (person.getAddress() != null) {
+            setElementAddress(element, person);
+        }
+        if (person.getCity() != null) {
+            setElementCity(element, person);
+        }
+        if (person.getEmail() != null) {
+            setElementEmail(element, person);
+        }
+        if (person.getPhone() != null) {
+            setElementPhone(element, person);
+        }
+        if (person.getZip() != null) {
+            setElementZip(element, person);
+        }
+    }
+
+    private void setNamePerson(Persons element, Persons person) {
+        person.setFirstName("No update for the firsts names ! (" + element.getFirstName() + ")");
+        person.setLastName("No update for the lasts names ! (" + element.getLastName() + ")");
+    }
+
+    private void setElementAddress(Persons element, Persons person) {
+        if (element.getAddress().equals(person.getAddress())) {
+            person.setAddress("No update ! the same address : " + element.getAddress());
+        } else
+            element.setAddress(person.getAddress());
+    }
+
+    private void setElementCity(Persons element, Persons person) {
+        if (element.getCity().equals(person.getCity())) {
+            person.setCity("No update ! the same city : " + element.getCity());
+        } else
+            element.setCity(person.getCity());
+    }
+
+    private void setElementEmail(Persons element, Persons person) {
+        if (element.getEmail().equals(person.getEmail())) {
+            person.setEmail("No update ! the same e-mail : " + element.getEmail());
+        } else
+            element.setEmail(person.getEmail());
+    }
+
+    private void setElementPhone(Persons element, Persons person) {
+        if (element.getPhone().equals(person.getPhone())) {
+            person.setPhone("No update ! the same phone : " + element.getPhone());
+        } else
+            element.setPhone(person.getPhone());
+    }
+
+    private void setElementZip(Persons element, Persons person) {
+        if (element.getZip().equals(person.getZip())) {
+            person.setZip("No update ! the same zip : " + element.getZip());
+        } else
+            element.setZip(person.getZip());
     }
 
     private boolean createNewFileJson(List<Persons> listPersons, List<Firestations> listFirestations,
-            List<Medicalrecords> listMedicalrecords, Persons persons) {
+            List<Medicalrecords> listMedicalrecords, String param) {
 
         CollectionsRessources collectionsRessources = new CollectionsRessources();
         collectionsRessources.setPersons(listPersons);
@@ -276,23 +319,23 @@ public class SafetyNetService implements SafetyNetRepository {
         try {
             writer = new FileWriter(fileJson.filepathjson);
         } catch (IOException e) {
-            LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, persons.toString()));
+            LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, param));
             return false;
         }
         try {
             writer.write(jsonstream);
         } catch (IOException e) {
-            LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, persons.toString()));
+            LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, param));
         }
         try {
             writer.flush();
         } catch (IOException e) {
-            LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, persons.toString()));
+            LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, param));
         }
         try {
             writer.close();
         } catch (IOException e) {
-            LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, persons.toString()));
+            LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, param));
             return false;
         }
 
@@ -340,7 +383,7 @@ public class SafetyNetService implements SafetyNetRepository {
                 // create list medical records
                 List<Medicalrecords> listMedicalrecords;
                 listMedicalrecords = getMedicalrecords("medicalrecords");
-                filecreated = createNewFileJson(listPersons, listFirestations, listMedicalrecords, element);
+                filecreated = createNewFileJson(listPersons, listFirestations, listMedicalrecords, element.toString());
                 return filecreated;
             }
         }
@@ -348,15 +391,114 @@ public class SafetyNetService implements SafetyNetRepository {
     }
 
     @Override
-    public void postFirestation(String firestation) {
-        // TODO Auto-generated method stub
+    public boolean postFirestation(Firestations firestation) {
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug(loggerApiNewSafetyNet.loggerDebug(firestation.toString()));
+        }
+        // read the Json File
+        List<Firestations> listFirestations;
+        listFirestations = getFirestations("firestations");
+        if (LOGGER.isDebugEnabled()) {
+            messageLogger = "The list of all fire stations is: " + listFirestations;
+            LOGGER.debug(messageLogger);
+        }
+        // verify if the findfirestation is exist in the findfirestations if not = add
+        boolean findfirestation = false;
+        for (Firestations element : listFirestations) {
+            if (element.getAddress().equals(firestation.getAddress())) {
+                findfirestation = true;
+                if (LOGGER.isDebugEnabled()) {
+                    LOGGER.debug("This fire station is already in the list.");
+                }
+                break;
+            }
+        }
+        if (!findfirestation) {
+            Boolean filecreated = false;
+            // add the firestation if findfirestation is false
+            listFirestations.add(firestation); // add the body
 
+            if (LOGGER.isDebugEnabled()) {
+                messageLogger = "The fire station is added in the list: " + listFirestations;
+                LOGGER.debug(messageLogger);
+            }
+            // create the new file json
+            // create list fire stations
+            List<Persons> listPersons;
+            listPersons = getPersons("persons");
+            // create list medical records
+            List<Medicalrecords> listMedicalrecords;
+            listMedicalrecords = getMedicalrecords("medicalrecords");
+            filecreated = createNewFileJson(listPersons, listFirestations, listMedicalrecords, firestation.toString());
+            return filecreated;
+        }
+        return false;
     }
 
     @Override
-    public void putFirestation(String firestation) {
-        // TODO Auto-generated method stub
+    public boolean putFirestation(Firestations firestation, String address) {
 
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug(loggerApiNewSafetyNet.loggerDebug(address));
+        }
+
+        List<Firestations> listFirestations;
+        listFirestations = getFirestations("firestations");
+
+        if (LOGGER.isDebugEnabled()) {
+            messageLogger = "The list of all fire stations is: " + listFirestations;
+            LOGGER.debug(messageLogger);
+        }
+        // find the fire station and update
+        boolean updated;
+        updated = updateFirestationFinded(firestation, listFirestations, address);
+
+        return updated;
+
+    }
+
+    private boolean updateFirestationFinded(Firestations firestation, List<Firestations> listFirestations,
+            String address) {
+
+        for (Firestations element : listFirestations) {
+            if (element.getAddress().equalsIgnoreCase(address)) {
+                verifyAndUpdateFirestation(element, firestation);
+
+                Boolean filecreated = false;
+
+                if (LOGGER.isDebugEnabled()) {
+                    messageLogger = "The fire stations is updateds. This is the list updated: " + listFirestations;
+                    LOGGER.debug(messageLogger);
+                    messageLogger = "The fire station is : " + firestation;
+                    LOGGER.debug(messageLogger);
+
+                }
+
+                // create the new file json
+                // create persons
+                List<Persons> listPersons;
+                listPersons = getPersons("persons");
+                // create list medical records
+                List<Medicalrecords> listMedicalrecords;
+                listMedicalrecords = getMedicalrecords("medicalrecords");
+                filecreated = createNewFileJson(listPersons, listFirestations, listMedicalrecords,
+                        firestation.toString());
+                return filecreated;
+            }
+        }
+        return false;
+    }
+
+    private void verifyAndUpdateFirestation(Firestations element, Firestations firestation) {
+
+        firestation.setAddress("No update for the addresses ! (" + element.getAddress() + ")");
+
+        if (firestation.getStation() != null) {
+            if (element.getStation().equals(firestation.getStation())) {
+                firestation.setStation("No update ! the same station : " + element.getStation());
+            } else
+                element.setStation(firestation.getStation());
+        }
     }
 
     @Override

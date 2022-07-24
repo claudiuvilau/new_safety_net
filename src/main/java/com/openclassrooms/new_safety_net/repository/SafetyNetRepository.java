@@ -31,7 +31,7 @@ public interface SafetyNetRepository {
 
     boolean postPerson(Persons persons);
 
-    boolean updatePerson(Persons persons, String firstName, String lastName);
+    boolean putPerson(Persons persons, String firstName, String lastName);
 
     boolean deletePerson(String firstName, String lastName);
 
@@ -46,9 +46,9 @@ public interface SafetyNetRepository {
 
     List<Firestations> getFirestations(String elemjson);
 
-    void postFirestation(String firestation);
+    boolean postFirestation(Firestations firestation);
 
-    void putFirestation(String firestation);
+    boolean putFirestation(Firestations firestation, String address);
 
     void deleteFirestation(String firestation);
 
