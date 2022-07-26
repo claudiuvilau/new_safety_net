@@ -34,6 +34,10 @@ public class SafetyNetService implements SafetyNetRepository {
 
     // Récupération de notre logger.
     private static final Logger LOGGER = LogManager.getLogger(SafetyNetService.class);
+    private static final String MSGLISTFIRESTATION = "The list of all fire stations is: ";
+    private static final String ELEMJSONPERSONS = "persons";
+    private static final String ELEMJSONFIRESTATIONS = "firestations";
+    private static final String ELEMJSONMEDICALRECORDS = "medicalrecords";
 
     LoggerApiNewSafetyNet loggerApiNewSafetyNet = new LoggerApiNewSafetyNet();
 
@@ -89,7 +93,8 @@ public class SafetyNetService implements SafetyNetRepository {
                 firestationsObj = JsonIterator.deserialize(element.toString(), Firestations.class);
                 listFirestations.add(firestationsObj);
             }
-            LOGGER.debug("List firestations is created.");
+            messageLogger = "List firestations is created: " + listFirestations;
+            LOGGER.debug(messageLogger);
         }
         return listFirestations;
     }
@@ -139,7 +144,7 @@ public class SafetyNetService implements SafetyNetRepository {
 
         // read the Json File
         List<Persons> listPersons;
-        listPersons = getPersons("persons");
+        listPersons = createListPersons();
 
         if (LOGGER.isDebugEnabled()) {
             messageLogger = "The persons are: " + listPersons;
@@ -172,13 +177,12 @@ public class SafetyNetService implements SafetyNetRepository {
             }
 
             // create the new file json
-
             // create list fire stations
             List<Firestations> listFirestations;
-            listFirestations = getFirestations("firestations");
+            listFirestations = createListFirestations();
             // create list medical records
             List<Medicalrecords> listMedicalrecords;
-            listMedicalrecords = getMedicalrecords("medicalrecords");
+            listMedicalrecords = createListMedicalrecords();
             filecreated = createNewFileJson(listPersons, listFirestations, listMedicalrecords, person.toString());
             return filecreated;
         }
@@ -186,17 +190,33 @@ public class SafetyNetService implements SafetyNetRepository {
         return false;
     }
 
+    private List<Persons> createListPersons() {
+        List<Persons> listPersons;
+        listPersons = getPersons(ELEMJSONPERSONS);
+        return listPersons;
+    }
+
+    private List<Firestations> createListFirestations() {
+        List<Firestations> listFirestations;
+        listFirestations = getFirestations(ELEMJSONFIRESTATIONS);
+        return listFirestations;
+    }
+
+    private List<Medicalrecords> createListMedicalrecords() {
+        List<Medicalrecords> listMedicalrecords;
+        listMedicalrecords = getMedicalrecords(ELEMJSONMEDICALRECORDS);
+        return listMedicalrecords;
+    }
+
     @Override
     public boolean putPerson(Persons person, String firstName, String lastName) {
-
-        String elemjson = "persons";
 
         if (LOGGER.isDebugEnabled()) {
             LOGGER.debug(loggerApiNewSafetyNet.loggerDebug(firstName + " " + lastName));
         }
 
         List<Persons> listPersons;
-        listPersons = getPersons(elemjson);
+        listPersons = createListPersons();
 
         if (LOGGER.isDebugEnabled()) {
             messageLogger = "The list of all persons is: " + listPersons;
@@ -232,10 +252,10 @@ public class SafetyNetService implements SafetyNetRepository {
                 // create the new file json
                 // create list fire stations
                 List<Firestations> listFirestations;
-                listFirestations = getFirestations("firestations");
+                listFirestations = createListFirestations();
                 // create list medical records
                 List<Medicalrecords> listMedicalrecords;
-                listMedicalrecords = getMedicalrecords("medicalrecords");
+                listMedicalrecords = createListMedicalrecords();
                 filecreated = createNewFileJson(listPersons, listFirestations, listMedicalrecords, person.toString());
                 return filecreated;
             }
@@ -305,6 +325,343 @@ public class SafetyNetService implements SafetyNetRepository {
             element.setZip(person.getZip());
     }
 
+    @Override
+    public boolean deletePerson(String firstName, String lastName) {
+
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug(loggerApiNewSafetyNet.loggerDebug(firstName + " " + lastName));
+        }
+
+        List<Persons> listPersons;
+        listPersons = createListPersons();
+
+        if (LOGGER.isDebugEnabled()) {
+            messageLogger = "The list of all persons is: " + listPersons;
+            LOGGER.debug(messageLogger);
+        }
+
+        // find the person and delete
+        String firstNamelastName = firstName + lastName;
+        for (Persons element : listPersons) {
+            if ((element.getFirstName() + element.getLastName()).equals(firstNamelastName)) {
+
+                listPersons.remove(element);
+
+                if (LOGGER.isDebugEnabled()) {
+                    messageLogger = "The person is deleted: " + listPersons;
+                    LOGGER.debug(messageLogger);
+                }
+
+                Boolean filecreated = false;
+
+                // create the new file json
+                // create list fire stations
+                List<Firestations> listFirestations;
+                listFirestations = createListFirestations();
+                // create list medical records
+                List<Medicalrecords> listMedicalrecords;
+                listMedicalrecords = createListMedicalrecords();
+                filecreated = createNewFileJson(listPersons, listFirestations, listMedicalrecords, element.toString());
+                return filecreated;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public boolean postFirestation(Firestations firestation) {
+
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug(loggerApiNewSafetyNet.loggerDebug(firestation.toString()));
+        }
+        // read the Json File
+        List<Firestations> listFirestations;
+        listFirestations = createListFirestations();
+        if (LOGGER.isDebugEnabled()) {
+            messageLogger = MSGLISTFIRESTATION + listFirestations;
+            LOGGER.debug(messageLogger);
+        }
+        // verify if the findfirestation is exist in the findfirestations if not = add
+        boolean findfirestation = false;
+        for (Firestations element : listFirestations) {
+            if (element.getAddress().equals(firestation.getAddress())) {
+                findfirestation = true;
+                if (LOGGER.isDebugEnabled()) {
+                    LOGGER.debug("This fire station is already in the list.");
+                }
+                break;
+            }
+        }
+        if (!findfirestation) {
+            Boolean filecreated = false;
+            // add the firestation if findfirestation is false
+            listFirestations.add(firestation); // add the body
+
+            if (LOGGER.isDebugEnabled()) {
+                messageLogger = "The fire station is added in the list: " + listFirestations;
+                LOGGER.debug(messageLogger);
+            }
+            // create the new file json
+            // create list fire stations
+            List<Persons> listPersons;
+            listPersons = createListPersons();
+            // create list medical records
+            List<Medicalrecords> listMedicalrecords;
+            listMedicalrecords = createListMedicalrecords();
+            filecreated = createNewFileJson(listPersons, listFirestations, listMedicalrecords, firestation.toString());
+            return filecreated;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean putFirestation(Firestations firestation, String address) {
+
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug(loggerApiNewSafetyNet.loggerDebug(address));
+        }
+
+        List<Firestations> listFirestations;
+        listFirestations = createListFirestations();
+
+        if (LOGGER.isDebugEnabled()) {
+            messageLogger = MSGLISTFIRESTATION + listFirestations;
+            LOGGER.debug(messageLogger);
+        }
+        // find the fire station and update
+        boolean updated;
+        updated = updateFirestationFinded(firestation, listFirestations, address);
+
+        return updated;
+
+    }
+
+    private boolean updateFirestationFinded(Firestations firestation, List<Firestations> listFirestations,
+            String address) {
+
+        for (Firestations element : listFirestations) {
+            if (element.getAddress().equalsIgnoreCase(address)) {
+                verifyAndUpdateFirestation(element, firestation);
+
+                Boolean filecreated = false;
+
+                if (LOGGER.isDebugEnabled()) {
+                    messageLogger = "The fire stations is updateds. This is the list updated: " + listFirestations;
+                    LOGGER.debug(messageLogger);
+                    messageLogger = "The fire station is : " + firestation;
+                    LOGGER.debug(messageLogger);
+
+                }
+
+                // create the new file json
+                // create persons
+                List<Persons> listPersons;
+                listPersons = createListPersons();
+                // create list medical records
+                List<Medicalrecords> listMedicalrecords;
+                listMedicalrecords = createListMedicalrecords();
+                filecreated = createNewFileJson(listPersons, listFirestations, listMedicalrecords,
+                        firestation.toString());
+                return filecreated;
+            }
+        }
+        return false;
+    }
+
+    private void verifyAndUpdateFirestation(Firestations element, Firestations firestation) {
+
+        firestation.setAddress("No update for the addresses ! (" + element.getAddress() + ")");
+
+        if (firestation.getStation() != null) {
+            if (element.getStation().equals(firestation.getStation())) {
+                firestation.setStation("No update ! the same station : " + element.getStation());
+            } else
+                element.setStation(firestation.getStation());
+        }
+    }
+
+    @Override
+    public boolean deleteFirestation(String address, String stationNumber) {
+
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug(loggerApiNewSafetyNet.loggerDebug(stationNumber));
+        }
+
+        // if only one request parameter is used
+        if ((address != null && stationNumber == null) || (address == null && stationNumber != null)) {
+
+            List<Firestations> listF;
+            List<Firestations> listFirestations = new ArrayList<>();
+            listF = createListFirestations();
+
+            if (LOGGER.isDebugEnabled()) {
+                messageLogger = MSGLISTFIRESTATION + listF;
+                LOGGER.debug(messageLogger);
+            }
+
+            // if there are the address in URI
+            if (address != null) {
+                verifyIfAddressInURI(address, listF, listFirestations);
+            }
+            // if there are station number in URI
+            if (stationNumber != null) {
+                verifyIfStationNumberInURI(stationNumber, listF, listFirestations);
+            }
+
+            if (LOGGER.isDebugEnabled()) {
+                messageLogger = "The fire station is deleted: " + listFirestations.toString();
+                LOGGER.debug(messageLogger);
+            }
+
+            // create persons
+            List<Persons> listPersons;
+            listPersons = createListPersons();
+            // create medical records
+            List<Medicalrecords> listMedicalrecords;
+            listMedicalrecords = createListMedicalrecords();
+            Boolean filecreated = false;
+            filecreated = createNewFileJson(listPersons, listFirestations, listMedicalrecords,
+                    address + " " + stationNumber);
+
+            return filecreated;
+        }
+        return false;
+
+    }
+
+    private void verifyIfAddressInURI(String address, List<Firestations> listF, List<Firestations> listFirestations) {
+        Firestations firestations;
+        for (Firestations element : listF) {
+            if (!element.getAddress().equals(address)) {
+                firestations = new Firestations();
+                firestations.setAddress(element.getAddress());
+                firestations.setStation(element.getStation());
+                listFirestations.add(firestations);
+            }
+        }
+    }
+
+    private void verifyIfStationNumberInURI(String stationNumber, List<Firestations> listF,
+            List<Firestations> listFirestations) {
+        Firestations firestations;
+        for (Firestations element : listF) {
+            if (!element.getStation().equals(stationNumber)) {
+                firestations = new Firestations();
+                firestations.setAddress(element.getAddress());
+                firestations.setStation(element.getStation());
+                listFirestations.add(firestations);
+            }
+        }
+
+    }
+
+    @Override
+    public boolean postMedicalRecord(Medicalrecords medicalRecord) {
+
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug(loggerApiNewSafetyNet.loggerDebug(medicalRecord.toString()));
+        }
+
+        List<Medicalrecords> listMedicalrecords;
+        listMedicalrecords = createListMedicalrecords();
+
+        if (LOGGER.isDebugEnabled()) {
+            messageLogger = "The list of all medical records is: " + listMedicalrecords;
+            LOGGER.debug(messageLogger);
+        }
+        // verify if the persons is exist in the medical records if not = add
+        boolean findperson = false;
+        for (Medicalrecords element : listMedicalrecords) {
+            if ((element.getFirstName() + element.getLastName())
+                    .equals(medicalRecord.getFirstName() + medicalRecord.getLastName())) {
+                findperson = true;
+                break;
+            }
+        }
+
+        // add the medical records if findperson is false, so if not in the medical
+        // records
+        if (!findperson) {
+            listMedicalrecords.add(medicalRecord); // add the body
+
+            // create persons
+            List<Persons> listPersons;
+            listPersons = createListPersons();
+            // create fire stations
+            List<Firestations> listFirestations;
+            listFirestations = createListFirestations();
+            Boolean filecreated = false;
+            filecreated = createNewFileJson(listPersons, listFirestations, listMedicalrecords,
+                    medicalRecord.toString());
+            return filecreated;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean putMedicalRecord(Medicalrecords medicalrecords, String firstName, String lastName) {
+
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug(loggerApiNewSafetyNet.loggerDebug(firstName + " " + lastName));
+        }
+
+        List<Medicalrecords> listMedicalrecords;
+        listMedicalrecords = createListMedicalrecords();
+
+        if (LOGGER.isDebugEnabled()) {
+            messageLogger = "The list of all medical records is: " + listMedicalrecords;
+            LOGGER.debug(messageLogger);
+        }
+
+        // find the person in medicalrecords and update
+        String firstNamelastName = firstName + lastName;
+        Boolean filecreated = false;
+        filecreated = findPersonInMedicalrecordsAndUpdate(medicalrecords, listMedicalrecords, firstNamelastName);
+        return filecreated;
+    }
+
+    private boolean findPersonInMedicalrecordsAndUpdate(Medicalrecords medicalrecords,
+            List<Medicalrecords> listMedicalrecords, String firstNamelastName) {
+        for (Medicalrecords element : listMedicalrecords) {
+            if ((element.getFirstName() + element.getLastName()).equals(firstNamelastName)) {
+                if (medicalrecords.getAllergies() != null) {
+                    element.setAllergies(medicalrecords.getAllergies());
+                }
+                if (medicalrecords.getBirthdate() != null) {
+                    element.setBirthdate(medicalrecords.getBirthdate());
+                }
+                if (medicalrecords.getMedications() != null) {
+                    element.setMedications(medicalrecords.getMedications());
+                }
+
+                if (LOGGER.isDebugEnabled()) {
+                    messageLogger = "The medical record is updated. This is the list updated: " + listMedicalrecords;
+                    LOGGER.debug(messageLogger);
+                }
+
+                // create list persons
+                List<Persons> listPersons;
+                listPersons = createListPersons();
+                // create list fire stations
+                List<Firestations> listFirestations;
+                listFirestations = createListFirestations();
+
+                Boolean filecreated = false;
+                filecreated = createNewFileJson(listPersons, listFirestations, listMedicalrecords,
+                        medicalrecords.toString());
+                return filecreated;
+            }
+        }
+        return false;
+
+    }
+
+    @Override
+    public void deleteMedicalRecord(String medicalrecord) {
+        // TODO Auto-generated method stub
+
+    }
+
     private boolean createNewFileJson(List<Persons> listPersons, List<Firestations> listFirestations,
             List<Medicalrecords> listMedicalrecords, String param) {
 
@@ -344,185 +701,6 @@ public class SafetyNetService implements SafetyNetRepository {
             LOGGER.debug(messageLogger);
         }
         return true;
-    }
-
-    @Override
-    public boolean deletePerson(String firstName, String lastName) {
-
-        if (LOGGER.isDebugEnabled()) {
-            LOGGER.debug(loggerApiNewSafetyNet.loggerDebug(firstName + " " + lastName));
-        }
-
-        String elemjson = "persons";
-        List<Persons> listPersons;
-        listPersons = getPersons(elemjson);
-
-        if (LOGGER.isDebugEnabled()) {
-            messageLogger = "The list of all persons is: " + listPersons;
-            LOGGER.debug(messageLogger);
-        }
-
-        // find the person and delete
-        String firstNamelastName = firstName + lastName;
-        for (Persons element : listPersons) {
-            if ((element.getFirstName() + element.getLastName()).equals(firstNamelastName)) {
-
-                listPersons.remove(element);
-
-                if (LOGGER.isDebugEnabled()) {
-                    messageLogger = "The person is deleted: " + listPersons;
-                    LOGGER.debug(messageLogger);
-                }
-
-                Boolean filecreated = false;
-
-                // create the new file json
-                // create list fire stations
-                List<Firestations> listFirestations;
-                listFirestations = getFirestations("firestations");
-                // create list medical records
-                List<Medicalrecords> listMedicalrecords;
-                listMedicalrecords = getMedicalrecords("medicalrecords");
-                filecreated = createNewFileJson(listPersons, listFirestations, listMedicalrecords, element.toString());
-                return filecreated;
-            }
-        }
-        return false;
-    }
-
-    @Override
-    public boolean postFirestation(Firestations firestation) {
-        if (LOGGER.isDebugEnabled()) {
-            LOGGER.debug(loggerApiNewSafetyNet.loggerDebug(firestation.toString()));
-        }
-        // read the Json File
-        List<Firestations> listFirestations;
-        listFirestations = getFirestations("firestations");
-        if (LOGGER.isDebugEnabled()) {
-            messageLogger = "The list of all fire stations is: " + listFirestations;
-            LOGGER.debug(messageLogger);
-        }
-        // verify if the findfirestation is exist in the findfirestations if not = add
-        boolean findfirestation = false;
-        for (Firestations element : listFirestations) {
-            if (element.getAddress().equals(firestation.getAddress())) {
-                findfirestation = true;
-                if (LOGGER.isDebugEnabled()) {
-                    LOGGER.debug("This fire station is already in the list.");
-                }
-                break;
-            }
-        }
-        if (!findfirestation) {
-            Boolean filecreated = false;
-            // add the firestation if findfirestation is false
-            listFirestations.add(firestation); // add the body
-
-            if (LOGGER.isDebugEnabled()) {
-                messageLogger = "The fire station is added in the list: " + listFirestations;
-                LOGGER.debug(messageLogger);
-            }
-            // create the new file json
-            // create list fire stations
-            List<Persons> listPersons;
-            listPersons = getPersons("persons");
-            // create list medical records
-            List<Medicalrecords> listMedicalrecords;
-            listMedicalrecords = getMedicalrecords("medicalrecords");
-            filecreated = createNewFileJson(listPersons, listFirestations, listMedicalrecords, firestation.toString());
-            return filecreated;
-        }
-        return false;
-    }
-
-    @Override
-    public boolean putFirestation(Firestations firestation, String address) {
-
-        if (LOGGER.isDebugEnabled()) {
-            LOGGER.debug(loggerApiNewSafetyNet.loggerDebug(address));
-        }
-
-        List<Firestations> listFirestations;
-        listFirestations = getFirestations("firestations");
-
-        if (LOGGER.isDebugEnabled()) {
-            messageLogger = "The list of all fire stations is: " + listFirestations;
-            LOGGER.debug(messageLogger);
-        }
-        // find the fire station and update
-        boolean updated;
-        updated = updateFirestationFinded(firestation, listFirestations, address);
-
-        return updated;
-
-    }
-
-    private boolean updateFirestationFinded(Firestations firestation, List<Firestations> listFirestations,
-            String address) {
-
-        for (Firestations element : listFirestations) {
-            if (element.getAddress().equalsIgnoreCase(address)) {
-                verifyAndUpdateFirestation(element, firestation);
-
-                Boolean filecreated = false;
-
-                if (LOGGER.isDebugEnabled()) {
-                    messageLogger = "The fire stations is updateds. This is the list updated: " + listFirestations;
-                    LOGGER.debug(messageLogger);
-                    messageLogger = "The fire station is : " + firestation;
-                    LOGGER.debug(messageLogger);
-
-                }
-
-                // create the new file json
-                // create persons
-                List<Persons> listPersons;
-                listPersons = getPersons("persons");
-                // create list medical records
-                List<Medicalrecords> listMedicalrecords;
-                listMedicalrecords = getMedicalrecords("medicalrecords");
-                filecreated = createNewFileJson(listPersons, listFirestations, listMedicalrecords,
-                        firestation.toString());
-                return filecreated;
-            }
-        }
-        return false;
-    }
-
-    private void verifyAndUpdateFirestation(Firestations element, Firestations firestation) {
-
-        firestation.setAddress("No update for the addresses ! (" + element.getAddress() + ")");
-
-        if (firestation.getStation() != null) {
-            if (element.getStation().equals(firestation.getStation())) {
-                firestation.setStation("No update ! the same station : " + element.getStation());
-            } else
-                element.setStation(firestation.getStation());
-        }
-    }
-
-    @Override
-    public void deleteFirestation(String firestation) {
-        // TODO Auto-generated method stub
-
-    }
-
-    @Override
-    public void postMedicalRecord(String medicalrecord) {
-        // TODO Auto-generated method stub
-
-    }
-
-    @Override
-    public void putMedicalRecord(String medicalrecord) {
-        // TODO Auto-generated method stub
-
-    }
-
-    @Override
-    public void deleteMedicalRecord(String medicalrecord) {
-        // TODO Auto-generated method stub
-
     }
 
 }

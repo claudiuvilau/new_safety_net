@@ -44,6 +44,7 @@ public class NewSafetyAlertController {
 
     // Récupération de notre logger.
     private static final Logger LOGGER = LogManager.getLogger(NewSafetyAlertController.class);
+    private static final String RESPONSSTATUS = "Response status ";
 
     LoggerApiNewSafetyNet loggerApiNewSafetyNet = new LoggerApiNewSafetyNet();
 
@@ -108,7 +109,7 @@ public class NewSafetyAlertController {
 
         if (Boolean.FALSE.equals(addperson)) {
             response.setStatus(404);
-            messagelogger = "No persons added. Response status " + response.getStatus() + ":"
+            messagelogger = "No persons added. " + RESPONSSTATUS + response.getStatus() + ":"
                     + loggerApiNewSafetyNet.loggerInfo(request, response, "");
             LOGGER.info(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
@@ -135,7 +136,7 @@ public class NewSafetyAlertController {
 
         if (firstName.isBlank() || lastName.isBlank()) {
             response.setStatus(400);
-            messagelogger = "The params does not exist. Response status " + response.getStatus() + ":"
+            messagelogger = "The params does not exist. " + RESPONSSTATUS + response.getStatus() + ":"
                     + loggerApiNewSafetyNet.loggerInfo(request, response, "");
             LOGGER.warn(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
@@ -147,14 +148,14 @@ public class NewSafetyAlertController {
 
         if (!update) {
             response.setStatus(404);
-            messagelogger = "The person is not updeted. Response status " + response.getStatus() + ":"
+            messagelogger = "The person is not updeted. " + RESPONSSTATUS + response.getStatus() + ":"
                     + loggerApiNewSafetyNet.loggerInfo(request, response, firstName + " " + lastName);
             LOGGER.info(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
         }
 
         response.setStatus(200);
-        messagelogger = "Response status " + response.getStatus() + ":"
+        messagelogger = RESPONSSTATUS + response.getStatus() + ":"
                 + loggerApiNewSafetyNet.loggerInfo(request, response, firstName + " " + lastName);
         LOGGER.info(messagelogger);
         return new ResponseEntity<>(person, HttpStatus.valueOf(response.getStatus()));
@@ -167,7 +168,7 @@ public class NewSafetyAlertController {
 
         if (firstName.isBlank() || lastName.isBlank()) {
             response.setStatus(400);
-            messagelogger = "The params does not exist. Response status " + response.getStatus() + ":"
+            messagelogger = "The params does not exist. " + RESPONSSTATUS + response.getStatus() + ":"
                     + loggerApiNewSafetyNet.loggerInfo(request, response, "");
             LOGGER.warn(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
@@ -179,14 +180,14 @@ public class NewSafetyAlertController {
 
         if (!del) {
             response.setStatus(404);
-            messagelogger = "The person is not deleted. Response status " + response.getStatus() + ":"
+            messagelogger = "The person is not deleted. " + RESPONSSTATUS + response.getStatus() + ":"
                     + loggerApiNewSafetyNet.loggerInfo(request, response, firstName + " " + lastName);
             LOGGER.info(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
         }
 
         response.setStatus(200);
-        messagelogger = "Response status " + response.getStatus() + ":"
+        messagelogger = RESPONSSTATUS + response.getStatus() + ":"
                 + loggerApiNewSafetyNet.loggerInfo(request, response, firstName + " " + lastName);
         LOGGER.info(messagelogger);
         return ResponseEntity.status(response.getStatus()).build();
@@ -220,7 +221,7 @@ public class NewSafetyAlertController {
         newFirestation = repository.postFirestation(firestation);
         if (!newFirestation) {
             response.setStatus(404);
-            messagelogger = "No new fire station was added. Response status " + response.getStatus() + ":"
+            messagelogger = "No new fire station was added. " + RESPONSSTATUS + response.getStatus() + ":"
                     + loggerApiNewSafetyNet.loggerInfo(request, response, "");
             LOGGER.info(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
@@ -230,7 +231,7 @@ public class NewSafetyAlertController {
                 .buildAndExpand(firestation.getStation()).toUri();
         messagelogger = "A new fire station is added successful. The URL is : " + location;
         LOGGER.info(messagelogger);
-        messagelogger = "Response status " + response.getStatus() + ":"
+        messagelogger = RESPONSSTATUS + response.getStatus() + ":"
                 + loggerApiNewSafetyNet.loggerInfo(request, response, "");
         LOGGER.info(messagelogger);
         return new ResponseEntity<>(firestation, HttpStatus.valueOf(response.getStatus()));
@@ -244,7 +245,7 @@ public class NewSafetyAlertController {
 
         if (address.isBlank()) {
             response.setStatus(400);
-            messagelogger = "The param does not exist. Response status " + response.getStatus() + ":"
+            messagelogger = "The param does not exist. " + RESPONSSTATUS + response.getStatus() + ":"
                     + loggerApiNewSafetyNet.loggerInfo(request, response, "");
             LOGGER.warn(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
@@ -253,16 +254,49 @@ public class NewSafetyAlertController {
         updatestation = repository.putFirestation(firestation, address);
         if (!updatestation) {
             response.setStatus(404);
-            messagelogger = "The fire station was not updated. Response status " + response.getStatus() + ":"
+            messagelogger = "The fire station was not updated. " + RESPONSSTATUS + response.getStatus() + ":"
                     + loggerApiNewSafetyNet.loggerInfo(request, response, address);
             LOGGER.info(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
         }
         response.setStatus(200);
-        messagelogger = "Response status " + response.getStatus() + ":"
+        messagelogger = RESPONSSTATUS + response.getStatus() + ":"
                 + loggerApiNewSafetyNet.loggerInfo(request, response, address);
         LOGGER.info(messagelogger);
         return new ResponseEntity<>(firestation, HttpStatus.valueOf(response.getStatus()));
+    }
+
+    // delete fire station
+    @DeleteMapping(value = "/firestation")
+    public ResponseEntity<Void> deleteFirestation(@RequestParam(value = "address", required = false) String address,
+            @RequestParam(value = "stationNumber", required = false) String stationNumber, HttpServletRequest request,
+            HttpServletResponse response) {
+
+        if (address == null && stationNumber == null) {
+            response.setStatus(400);
+            messagelogger = "The param does not exist. " + RESPONSSTATUS + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, "");
+            LOGGER.warn(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        boolean del = false;
+
+        del = repository.deleteFirestation(address, stationNumber);
+
+        if (!del) {
+            response.setStatus(404);
+            messagelogger = "The fire station was not deleted. " + RESPONSSTATUS + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, address + " " + stationNumber);
+            LOGGER.info(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        response.setStatus(200);
+        messagelogger = RESPONSSTATUS + response.getStatus() + ":"
+                + loggerApiNewSafetyNet.loggerInfo(request, response, address + " " + stationNumber);
+        LOGGER.info(messagelogger);
+        return ResponseEntity.status(response.getStatus()).build();
     }
 
     @GetMapping("/medicalrecords")
@@ -281,6 +315,67 @@ public class NewSafetyAlertController {
         messagelogger = "OK" + loggerApiNewSafetyNet.loggerInfo(request, response, elemjson);
         LOGGER.info(messagelogger);
         return new ResponseEntity<>(listMedicalrecords, HttpStatus.valueOf(response.getStatus()));
+    }
+
+    // add a medical records
+    @PostMapping(value = "/medicalrecord")
+    public ResponseEntity<Medicalrecords> addMedicalRecord(@RequestBody Medicalrecords medicalRecord,
+            HttpServletRequest request,
+            HttpServletResponse response) {
+
+        boolean newMedicalRecord = false;
+        newMedicalRecord = repository.postMedicalRecord(medicalRecord);
+
+        if (!newMedicalRecord) {
+            response.setStatus(404);
+            messagelogger = "The medical record was not added. " + RESPONSSTATUS + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, "");
+            LOGGER.info(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        response.setStatus(201);
+        URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{firstName+lastName}")
+                .buildAndExpand(medicalRecord.getFirstName() + medicalRecord.getLastName()).toUri();
+        messagelogger = "A new medical record is added successful. The URL is : " + location;
+        LOGGER.info(messagelogger);
+        messagelogger = RESPONSSTATUS + response.getStatus() + ":"
+                + loggerApiNewSafetyNet.loggerInfo(request, response, "");
+        LOGGER.info(messagelogger);
+        return new ResponseEntity<>(medicalRecord, HttpStatus.valueOf(response.getStatus()));
+    }
+
+    // update medical records
+    @PutMapping(value = "/medicalrecord")
+    public ResponseEntity<Void> updateMedicalRecord(@RequestBody Medicalrecords medicalRecord,
+            @RequestParam String firstName, @RequestParam String lastName, HttpServletRequest request,
+            HttpServletResponse response) {
+
+        if (firstName.isBlank() || lastName.isBlank()) {
+            response.setStatus(400);
+            messagelogger = "The params does not exist. Response status " + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, "");
+            LOGGER.warn(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        boolean update = false;
+
+        update = repository.putMedicalRecord(medicalRecord, firstName, lastName);
+
+        if (!update) {
+            response.setStatus(404);
+            messagelogger = "The medical record was not updated. " + RESPONSSTATUS + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, firstName + " " + lastName);
+            LOGGER.info(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        response.setStatus(200);
+        messagelogger = RESPONSSTATUS + response.getStatus() + ":"
+                + loggerApiNewSafetyNet.loggerInfo(request, response, firstName + " " + lastName);
+        LOGGER.info(messagelogger);
+        return ResponseEntity.status(response.getStatus()).build();
     }
 
 }

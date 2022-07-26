@@ -50,7 +50,7 @@ public interface SafetyNetRepository {
 
     boolean putFirestation(Firestations firestation, String address);
 
-    void deleteFirestation(String firestation);
+    boolean deleteFirestation(String address, String stationNumber);
 
     /*
      * http://localhost:8080/medicalRecord
@@ -67,9 +67,9 @@ public interface SafetyNetRepository {
 
     List<Medicalrecords> getMedicalrecords(String elemjson);
 
-    void postMedicalRecord(String medicalrecord);
+    boolean postMedicalRecord(Medicalrecords medicalRecord);
 
-    void putMedicalRecord(String medicalrecord);
+    boolean putMedicalRecord(Medicalrecords medicalrecords, String firstName, String lastName);
 
     void deleteMedicalRecord(String medicalrecord);
 
