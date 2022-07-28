@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 import com.openclassrooms.new_safety_net.model.Firestations;
+import com.openclassrooms.new_safety_net.model.Medicalrecords;
 import com.openclassrooms.new_safety_net.model.Persons;
 
 @Repository
@@ -28,11 +29,11 @@ public interface SafetyNetRepository {
 
     public List<Persons> getAPerson(String firstNamelastName, String elemjson) throws IOException;
 
-    Persons postPerson(Persons persons) throws IOException;;
+    boolean postPerson(Persons persons);
 
-    void putPerson(String nomperson);
+    boolean putPerson(Persons persons, String firstName, String lastName);
 
-    void deletePerson(String nomperson);
+    boolean deletePerson(String firstName, String lastName);
 
     /*
      * http://localhost:8080/firestation
@@ -43,13 +44,13 @@ public interface SafetyNetRepository {
      * ● supprimer le mapping d'une caserne ou d'une adresse.
      */
 
-    List<Firestations> getFirestations(String firestation);
+    List<Firestations> getFirestations(String elemjson);
 
-    void postFirestation(String firestation);
+    boolean postFirestation(Firestations firestation);
 
-    void putFirestation(String firestation);
+    boolean putFirestation(Firestations firestation, String address);
 
-    void deleteFirestation(String firestation);
+    boolean deleteFirestation(String address, String stationNumber);
 
     /*
      * http://localhost:8080/medicalRecord
@@ -64,12 +65,12 @@ public interface SafetyNetRepository {
      * identificateur unique)
      */
 
-    void getMedicalRecord(String medicalrecord);
+    List<Medicalrecords> getMedicalrecords(String elemjson);
 
-    void postMedicalRecord(String medicalrecord);
+    boolean postMedicalRecord(Medicalrecords medicalRecord);
 
-    void putMedicalRecord(String medicalrecord);
+    boolean putMedicalRecord(Medicalrecords medicalrecords, String firstName, String lastName);
 
-    void deleteMedicalRecord(String medicalrecord);
+    boolean deleteMedicalRecord(String firstName, String lastName);
 
 }
