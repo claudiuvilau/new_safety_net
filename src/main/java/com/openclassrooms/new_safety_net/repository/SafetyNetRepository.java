@@ -71,6 +71,6 @@ public interface SafetyNetRepository {
 
     boolean putMedicalRecord(Medicalrecords medicalrecords, String firstName, String lastName);
 
-    void deleteMedicalRecord(String medicalrecord);
+    boolean deleteMedicalRecord(String firstName, String lastName);
 
 }

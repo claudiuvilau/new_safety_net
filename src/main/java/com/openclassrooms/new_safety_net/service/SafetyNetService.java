@@ -657,8 +657,50 @@ public class SafetyNetService implements SafetyNetRepository {
     }
 
     @Override
-    public void deleteMedicalRecord(String medicalrecord) {
-        // TODO Auto-generated method stub
+    public boolean deleteMedicalRecord(String firstName, String lastName) {
+
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug(loggerApiNewSafetyNet.loggerDebug(firstName + " " + lastName));
+        }
+
+        List<Medicalrecords> listMedicalrecords;
+        listMedicalrecords = createListMedicalrecords();
+
+        if (LOGGER.isDebugEnabled()) {
+            messageLogger = "The all medical records are: " + listMedicalrecords;
+            LOGGER.debug(messageLogger);
+        }
+
+        // find the person and delete
+        String firstNamelastName = firstName + lastName;
+        for (Medicalrecords element : listMedicalrecords) {
+            if ((element.getFirstName() + element.getLastName()).equals(firstNamelastName)) {
+                listMedicalrecords.remove(element);
+
+                if (LOGGER.isDebugEnabled()) {
+                    messageLogger = "The medical record is deleted: " + listMedicalrecords;
+                    LOGGER.debug(messageLogger);
+                }
+
+                if (LOGGER.isDebugEnabled()) {
+                    messageLogger = "The medical record is deleted: " + listMedicalrecords;
+                    LOGGER.debug(messageLogger);
+                }
+
+                // create persons
+                List<Persons> listPersons;
+                listPersons = createListPersons();
+                // create fire stations
+                List<Firestations> listFirestations;
+                listFirestations = createListFirestations();
+
+                Boolean filecreated = false;
+                filecreated = createNewFileJson(listPersons, listFirestations, listMedicalrecords,
+                        firstName + " " + lastName);
+                return filecreated;
+            }
+        }
+        return false;
 
     }
 
