@@ -378,4 +378,36 @@ public class NewSafetyAlertController {
         return ResponseEntity.status(response.getStatus()).build();
     }
 
+    // delete medical records
+    @DeleteMapping(value = "/medicalrecord")
+    public ResponseEntity<Void> deleteMedicalRecord(@RequestParam String firstName, @RequestParam String lastName,
+            HttpServletRequest request, HttpServletResponse response) {
+
+        if (firstName.isEmpty() || lastName.isEmpty()) {
+            response.setStatus(400);
+            messagelogger = "The params does not exist. Response status " + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, "");
+            LOGGER.warn(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        boolean del = false;
+
+        del = repository.deleteMedicalRecord(firstName, lastName);
+
+        if (!del) {
+            response.setStatus(404);
+            messagelogger = "The medical record is not deleted. " + RESPONSSTATUS + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, firstName + " " + lastName);
+            LOGGER.info(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        response.setStatus(200);
+        messagelogger = RESPONSSTATUS + response.getStatus() + ":"
+                + loggerApiNewSafetyNet.loggerInfo(request, response, firstName + " " + lastName);
+        LOGGER.info(messagelogger);
+        return ResponseEntity.status(response.getStatus()).build();
+    }
+
 }
