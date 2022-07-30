@@ -2,6 +2,7 @@ package com.openclassrooms.new_safety_net.controller;
 
 import java.io.IOException;
 import java.net.URI;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.openclassrooms.new_safety_net.model.ChildAlert;
 import com.openclassrooms.new_safety_net.model.Firestations;
 import com.openclassrooms.new_safety_net.model.Foyer;
 import com.openclassrooms.new_safety_net.model.FoyerChildrenAdultsToFireStation;
@@ -437,8 +439,8 @@ public class NewSafetyAlertController {
             LOGGER.error(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
         } else {
-            if (listFoyerChildrenAdultsToFireStation.get(0).getDecompte().equals("0")
-                    && listFoyerChildrenAdultsToFireStation.get(0).getDecompte().equals("0")) {
+            if (listFoyerChildrenAdultsToFireStation.get(0).getlistPersonsOfFireStations().isEmpty()
+                    && listFoyerChildrenAdultsToFireStation.get(1).getlistPersonsOfFireStations().isEmpty()) {
                 response.setStatus(404);
                 messagelogger = "The list is empty. No children and no adult. " + RESPONSSTATUS + response.getStatus()
                         + ":"
@@ -455,4 +457,39 @@ public class NewSafetyAlertController {
         return new ResponseEntity<>(listFoyerChildrenAdultsToFireStation, HttpStatus.valueOf(response.getStatus()));
     }
 
+    @GetMapping("childAlert")
+    public ResponseEntity<List<ChildAlert>> childAlert(@RequestParam String address, HttpServletRequest request,
+            HttpServletResponse response) {
+
+        if (address.isBlank()) {
+            response.setStatus(400);
+            messagelogger = "The param does not exist. " + RESPONSSTATUS + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, "");
+            LOGGER.warn(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        List<ChildAlert> listChildren = new ArrayList<>();
+        try {
+            listChildren = repository.childPersonsAlertAddress(address);
+        } catch (IOException | ParseException e) {
+            response.setStatus(404);
+            LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, address));
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+        if (listChildren == null) {
+            response.setStatus(404);
+            messagelogger = "The list is null. " + RESPONSSTATUS + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, address);
+            LOGGER.info(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        response.setStatus(200);
+        messagelogger = RESPONSSTATUS + response.getStatus() + ":"
+                + loggerApiNewSafetyNet.loggerInfo(request, response, address);
+        LOGGER.info(messagelogger);
+        return new ResponseEntity<>(listChildren, HttpStatus.valueOf(response.getStatus()));
+
+    }
 }
