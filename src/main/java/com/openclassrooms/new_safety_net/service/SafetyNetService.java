@@ -21,6 +21,7 @@ import com.jsoniter.JsonIterator;
 import com.jsoniter.any.Any;
 import com.jsoniter.output.JsonStream;
 import com.openclassrooms.new_safety_net.model.ChildAlert;
+import com.openclassrooms.new_safety_net.model.ChildrenOrAdults;
 import com.openclassrooms.new_safety_net.model.CollectionsRessources;
 import com.openclassrooms.new_safety_net.model.CommunityEmail;
 import com.openclassrooms.new_safety_net.model.FireAddress;
@@ -54,6 +55,7 @@ public class SafetyNetService implements SafetyNetRepository {
     private static final String ELEMJSONPERSONS = "persons";
     private static final String ELEMJSONFIRESTATIONS = "firestations";
     private static final String ELEMJSONMEDICALRECORDS = "medicalrecords";
+    private static final int CHILDOLD = 17; // 17 max age for the children.
 
     LoggerApiNewSafetyNet loggerApiNewSafetyNet = new LoggerApiNewSafetyNet();
 
@@ -768,8 +770,6 @@ public class SafetyNetService implements SafetyNetRepository {
             LOGGER.debug(loggerApiNewSafetyNet.loggerDebug(stationNumber));
         }
 
-        int childold = 17; // 17 max age for the children.
-
         List<Firestations> listFirestations;
         List<Firestations> listF;
         List<Persons> listPersons;
@@ -786,51 +786,31 @@ public class SafetyNetService implements SafetyNetRepository {
 
         // make the list Foyer after finded the persons in medical records = persons of
         // list persons of fire station
-        listFoyerChildrenAdults = checkMedicalrecordsFromThisListPAndMakeListFoyer(listP, childold);
+        listFoyerChildrenAdults = checkMedicalrecordsFromThisListPAndMakeListFoyer(listP);
 
         return listFoyerChildrenAdults;
     }
 
-    private List<FoyerChildrenAdultsToFireStation> checkMedicalrecordsFromThisListPAndMakeListFoyer(List<Persons> listP,
-            int childold) {
+    private List<FoyerChildrenAdultsToFireStation> checkMedicalrecordsFromThisListPAndMakeListFoyer(
+            List<Persons> listP) {
 
-        List<PersonsOfFireStation> listPersonsChildren = new ArrayList<>();
-        List<PersonsOfFireStation> listPersonsAdults = new ArrayList<>();
-        PersonsOfFireStation personsOfFireStation;
+        List<ChildrenOrAdults> listChildren;
+        List<ChildrenOrAdults> listAdults;
+        List<PersonsOfFireStation> listPersonsChildren;
+        List<PersonsOfFireStation> listPersonsAdults;
         List<Medicalrecords> listMedicalrecords;
         List<FoyerChildrenAdultsToFireStation> listFoyerChildrenAdults = new ArrayList<>();
         FoyerChildrenAdultsToFireStation foyerChildrenAdultsToFireStation = new FoyerChildrenAdultsToFireStation();
 
         listMedicalrecords = createListMedicalrecords();
 
-        String lastfirstnameperson = "";
-        String lastfirstnamemedicalrecords = "";
-        Period periode;
-        for (Persons elementpersons : listP) {
-            lastfirstnameperson = (elementpersons.getFirstName() + elementpersons.getLastName()).toLowerCase();
-            for (Medicalrecords elementmedicalrecords : listMedicalrecords) {
-                lastfirstnamemedicalrecords = (elementmedicalrecords.getFirstName()
-                        + elementmedicalrecords.getLastName()).toLowerCase();
-                if (lastfirstnameperson.equals(lastfirstnamemedicalrecords)) {
-                    periode = extractDateFromText(elementmedicalrecords.getBirthdate());
-                    if (periode == null) {
-                        return Collections.emptyList();
-                    }
-                    if (periode.getYears() <= childold) {
-                        personsOfFireStation = new PersonsOfFireStation(
-                                Integer.toString(listPersonsChildren.size() + 1),
-                                elementpersons.getFirstName(), elementpersons.getLastName(),
-                                elementpersons.getAddress(), elementpersons.getPhone());
-                        listPersonsChildren.add(personsOfFireStation);
-                    } else {
-                        personsOfFireStation = new PersonsOfFireStation(Integer.toString(listPersonsAdults.size() + 1),
-                                elementpersons.getFirstName(), elementpersons.getLastName(),
-                                elementpersons.getAddress(), elementpersons.getPhone());
-                        listPersonsAdults.add(personsOfFireStation);
-                    }
-                }
-            }
-        }
+        boolean childboolean = true;
+        listChildren = getChildrenOrAdults(listP, listMedicalrecords, childboolean);
+        listPersonsChildren = getListPersonsChildren(listP, listChildren);
+
+        childboolean = false;
+        listAdults = getChildrenOrAdults(listP, listMedicalrecords, childboolean);
+        listPersonsAdults = getListPersonsChildren(listP, listAdults);
 
         String personsstringchild = "";
         if (listPersonsChildren.size() > 1) {
@@ -844,8 +824,8 @@ public class SafetyNetService implements SafetyNetRepository {
         } else
             personsstringadult = "person";
 
-        String childolddmax = personsstringchild + " < " + (childold + 1) + " years old.";
-        String adultoldmin = personsstringadult + " >= " + (childold + 1) + " years old.";
+        String childolddmax = personsstringchild + " < " + (CHILDOLD + 1) + " years old.";
+        String adultoldmin = personsstringadult + " >= " + (CHILDOLD + 1) + " years old.";
         // add in list foyer the list of children and the list of adults
         foyerChildrenAdultsToFireStation.setDecompte(Integer.toString(listPersonsChildren.size()) + " " + childolddmax);
         foyerChildrenAdultsToFireStation.setlistPersonsOfFireStations(listPersonsChildren);
@@ -856,6 +836,74 @@ public class SafetyNetService implements SafetyNetRepository {
         listFoyerChildrenAdults.add(foyerChildrenAdultsToFireStation);
 
         return listFoyerChildrenAdults;
+    }
+
+    private List<PersonsOfFireStation> getListPersonsChildren(List<Persons> listP,
+            List<ChildrenOrAdults> listChildren) {
+
+        List<PersonsOfFireStation> listPersonsChildren = new ArrayList<>();
+        PersonsOfFireStation personsOfFireStation;
+        String lastfirstnamepersons = "";
+        String lastfirstnamechildrenoradults = "";
+        for (ChildrenOrAdults elementchildrenoradults : listChildren) {
+            lastfirstnamechildrenoradults = (elementchildrenoradults.getFirstName()
+                    + elementchildrenoradults.getLastName()).toLowerCase();
+            for (Persons elementpersons : listP) {
+                lastfirstnamepersons = (elementpersons.getFirstName() + elementpersons.getLastName()).toLowerCase();
+                if (lastfirstnamepersons.equals(lastfirstnamechildrenoradults)) {
+                    personsOfFireStation = new PersonsOfFireStation(
+                            Integer.toString(listPersonsChildren.size() + 1),
+                            elementpersons.getFirstName(), elementpersons.getLastName(),
+                            elementpersons.getAddress(), elementpersons.getPhone());
+                    listPersonsChildren.add(personsOfFireStation);
+                }
+            }
+
+        }
+        return listPersonsChildren;
+    }
+
+    private List<ChildrenOrAdults> getChildrenOrAdults(List<Persons> listP, List<Medicalrecords> listMedicalrecords,
+            boolean childboolean) {
+
+        List<ChildrenOrAdults> listchildrenOrAdults = new ArrayList<>();
+        ChildrenOrAdults childrenOrAdults = new ChildrenOrAdults();
+        String lastfirstnameperson = "";
+        String lastfirstnamemedicalrecords = "";
+        Period periode;
+        for (Persons elementpersons : listP) {
+            lastfirstnameperson = (elementpersons.getFirstName() + elementpersons.getLastName()).toLowerCase();
+            for (Medicalrecords elementmedicalrecords : listMedicalrecords) {
+                lastfirstnamemedicalrecords = (elementmedicalrecords.getFirstName()
+                        + elementmedicalrecords.getLastName()).toLowerCase();
+                if (lastfirstnameperson.equals(lastfirstnamemedicalrecords)) {
+                    periode = extractDateFromText(elementmedicalrecords.getBirthdate());
+                    if (periode == null) {
+                        return Collections.emptyList();
+                    }
+                    childrenOrAdults = makeTheListChildrenOrAdult(childboolean, periode, childrenOrAdults,
+                            listchildrenOrAdults, elementpersons);
+                }
+            }
+        }
+        return listchildrenOrAdults;
+    }
+
+    private ChildrenOrAdults makeTheListChildrenOrAdult(boolean childboolean, Period periode,
+            ChildrenOrAdults childrenOrAdults, List<ChildrenOrAdults> listchildrenOrAdults, Persons elementpersons) {
+
+        if (childboolean && periode.getYears() <= CHILDOLD) {
+            childrenOrAdults = new ChildrenOrAdults(elementpersons.getFirstName(),
+                    elementpersons.getLastName(), Integer.toString(periode.getYears()));
+            listchildrenOrAdults.add(childrenOrAdults);
+        }
+        if (!childboolean && periode.getYears() > CHILDOLD) {
+            childrenOrAdults = new ChildrenOrAdults(elementpersons.getFirstName(),
+                    elementpersons.getLastName(), Integer.toString(periode.getYears()));
+            listchildrenOrAdults.add(childrenOrAdults);
+        }
+
+        return childrenOrAdults;
     }
 
     private Period extractDateFromText(String elementtext) {
@@ -933,7 +981,7 @@ public class SafetyNetService implements SafetyNetRepository {
 
     @Override
     public List<ChildAlert> childPersonsAlertAddress(String address) throws IOException, ParseException {
-        // TODO Auto-generated method stub
+
         return null;
     }
 

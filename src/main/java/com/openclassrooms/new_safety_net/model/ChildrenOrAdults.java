@@ -1,30 +1,20 @@
 package com.openclassrooms.new_safety_net.model;
 
-public class Children {
+public class ChildrenOrAdults {
 
-    private String decompte;
     private String firstName;
     private String lastName;
     private String old;
 
-    public Children() {
+    public ChildrenOrAdults() {
 
     }
 
-    public Children(String decompte, String firstName, String lastName, String old) {
+    public ChildrenOrAdults(String firstName, String lastName, String old) {
         super();
-        this.decompte = decompte;
         this.firstName = firstName;
         this.lastName = lastName;
         this.old = old;
-    }
-
-    public String getDecompte() {
-        return decompte;
-    }
-
-    public void setDecompte(String decompte) {
-        this.decompte = decompte;
     }
 
     public String getFirstName() {
@@ -53,7 +43,7 @@ public class Children {
 
     @Override
     public String toString() {
-        return "Children [decompte=" + decompte + ", firstName=" + firstName + ", lastName=" + lastName + ", old=" + old
+        return "ChildrenOrAdults [firstName=" + firstName + ", lastName=" + lastName + ", old=" + old
                 + "]";
     }
 
