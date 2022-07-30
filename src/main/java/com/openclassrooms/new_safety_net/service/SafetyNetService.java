@@ -2,7 +2,15 @@ package com.openclassrooms.new_safety_net.service;
 
 import java.io.FileWriter;
 import java.io.IOException;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Collections;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
@@ -12,11 +20,19 @@ import org.springframework.stereotype.Service;
 import com.jsoniter.JsonIterator;
 import com.jsoniter.any.Any;
 import com.jsoniter.output.JsonStream;
+import com.openclassrooms.new_safety_net.model.ChildAlert;
 import com.openclassrooms.new_safety_net.model.CollectionsRessources;
+import com.openclassrooms.new_safety_net.model.CommunityEmail;
+import com.openclassrooms.new_safety_net.model.FireAddress;
 import com.openclassrooms.new_safety_net.model.Firestations;
+import com.openclassrooms.new_safety_net.model.FoyerChildrenAdultsToFireStation;
 import com.openclassrooms.new_safety_net.model.JsonToFile;
 import com.openclassrooms.new_safety_net.model.Medicalrecords;
+import com.openclassrooms.new_safety_net.model.PersonInfo;
 import com.openclassrooms.new_safety_net.model.Persons;
+import com.openclassrooms.new_safety_net.model.PersonsFireStation;
+import com.openclassrooms.new_safety_net.model.PersonsOfFireStation;
+import com.openclassrooms.new_safety_net.model.PhoneAlert;
 import com.openclassrooms.new_safety_net.repository.SafetyNetRepository;
 
 import lombok.Data;
@@ -743,6 +759,212 @@ public class SafetyNetService implements SafetyNetRepository {
             LOGGER.debug(messageLogger);
         }
         return true;
+    }
+
+    @Override
+    public List<FoyerChildrenAdultsToFireStation> personsOfStationAdultsAndChild(String stationNumber) {
+
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug(loggerApiNewSafetyNet.loggerDebug(stationNumber));
+        }
+
+        int childold = 17; // 17 max age for the children.
+
+        List<Firestations> listFirestations;
+        List<Firestations> listF;
+        List<Persons> listPersons;
+        List<Persons> listP;
+        List<FoyerChildrenAdultsToFireStation> listFoyerChildrenAdults;
+
+        // find the list of the persons from number of fire station = listF
+        listFirestations = createListFirestations();
+        listF = checkFirestationWithThisStation(stationNumber, listFirestations);
+
+        // find the persons in persons = address of list fire station
+        listPersons = createListPersons();
+        listP = checkPersonsFromThisAddressStation(listPersons, listF, stationNumber);
+
+        // make the list Foyer after finded the persons in medical records = persons of
+        // list persons of fire station
+        listFoyerChildrenAdults = checkMedicalrecordsFromThisListPAndMakeListFoyer(listP, childold);
+
+        return listFoyerChildrenAdults;
+    }
+
+    private List<FoyerChildrenAdultsToFireStation> checkMedicalrecordsFromThisListPAndMakeListFoyer(List<Persons> listP,
+            int childold) {
+
+        List<PersonsOfFireStation> listPersonsChildren = new ArrayList<>();
+        List<PersonsOfFireStation> listPersonsAdults = new ArrayList<>();
+        PersonsOfFireStation personsOfFireStation;
+        List<Medicalrecords> listMedicalrecords;
+        List<FoyerChildrenAdultsToFireStation> listFoyerChildrenAdults = new ArrayList<>();
+        FoyerChildrenAdultsToFireStation foyerChildrenAdultsToFireStation = new FoyerChildrenAdultsToFireStation();
+
+        listMedicalrecords = createListMedicalrecords();
+
+        String lastfirstnameperson = "";
+        String lastfirstnamemedicalrecords = "";
+        Period periode;
+        for (Persons elementpersons : listP) {
+            lastfirstnameperson = (elementpersons.getFirstName() + elementpersons.getLastName()).toLowerCase();
+            for (Medicalrecords elementmedicalrecords : listMedicalrecords) {
+                lastfirstnamemedicalrecords = (elementmedicalrecords.getFirstName()
+                        + elementmedicalrecords.getLastName()).toLowerCase();
+                if (lastfirstnameperson.equals(lastfirstnamemedicalrecords)) {
+                    periode = extractDateFromText(elementmedicalrecords.getBirthdate());
+                    if (periode == null) {
+                        return Collections.emptyList();
+                    }
+                    if (periode.getYears() <= childold) {
+                        personsOfFireStation = new PersonsOfFireStation(
+                                Integer.toString(listPersonsChildren.size() + 1),
+                                elementpersons.getFirstName(), elementpersons.getLastName(),
+                                elementpersons.getAddress(), elementpersons.getPhone());
+                        listPersonsChildren.add(personsOfFireStation);
+                    } else {
+                        personsOfFireStation = new PersonsOfFireStation(Integer.toString(listPersonsAdults.size() + 1),
+                                elementpersons.getFirstName(), elementpersons.getLastName(),
+                                elementpersons.getAddress(), elementpersons.getPhone());
+                        listPersonsAdults.add(personsOfFireStation);
+                    }
+                }
+            }
+        }
+
+        String personsstringchild = "";
+        if (listPersonsChildren.size() > 1) {
+            personsstringchild = "persons";
+        } else
+            personsstringchild = "person";
+
+        String personsstringadult = "";
+        if (listPersonsAdults.size() > 1) {
+            personsstringadult = "persons";
+        } else
+            personsstringadult = "person";
+
+        String childolddmax = personsstringchild + " < " + (childold + 1) + " years old.";
+        String adultoldmin = personsstringadult + " >= " + (childold + 1) + " years old.";
+        // add in list foyer the list of children and the list of adults
+        foyerChildrenAdultsToFireStation.setDecompte(Integer.toString(listPersonsChildren.size()) + " " + childolddmax);
+        foyerChildrenAdultsToFireStation.setlistPersonsOfFireStations(listPersonsChildren);
+        listFoyerChildrenAdults.add(foyerChildrenAdultsToFireStation);
+        foyerChildrenAdultsToFireStation = new FoyerChildrenAdultsToFireStation();
+        foyerChildrenAdultsToFireStation.setDecompte(Integer.toString(listPersonsAdults.size()) + " " + adultoldmin);
+        foyerChildrenAdultsToFireStation.setlistPersonsOfFireStations(listPersonsAdults);
+        listFoyerChildrenAdults.add(foyerChildrenAdultsToFireStation);
+
+        return listFoyerChildrenAdults;
+    }
+
+    private Period extractDateFromText(String elementtext) {
+
+        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+        Calendar calendar = new GregorianCalendar();
+        LocalDate now = LocalDate.now();
+        java.util.Date datebirthday;
+        LocalDate birthdate;
+        Period periode;
+        try {
+            datebirthday = sdf.parse(elementtext);
+        } catch (ParseException e) {
+            return null;
+        }
+        calendar.setTime(datebirthday);
+        birthdate = LocalDate.of(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH) + 1,
+                calendar.get(Calendar.DAY_OF_MONTH));
+        periode = Period.between(birthdate, now);
+
+        return periode;
+    }
+
+    private List<Persons> checkPersonsFromThisAddressStation(List<Persons> listPersons, List<Firestations> listF,
+            String stationNumber) {
+
+        List<Persons> listP = new ArrayList<>();
+
+        for (Firestations elementfirestation : listF) {
+            for (Persons elementperson : listPersons) {
+                if (elementfirestation.getAddress().equals(elementperson.getAddress())) {
+                    personsObj = new Persons(elementperson.getFirstName(), elementperson.getLastName(),
+                            elementperson.getAddress(),
+                            elementperson.getCity(), elementperson.getZip(), elementperson.getPhone(),
+                            elementperson.getEmail());
+                    listP.add(personsObj);
+                }
+            }
+        }
+        if (LOGGER.isDebugEnabled()) {
+            if (listP.isEmpty()) {
+                messageLogger = "The list is empty. No person with this number station " + stationNumber + ".";
+            } else {
+                messageLogger = "The list of persons with the station number " + stationNumber + " is: "
+                        + listP.toString();
+            }
+            LOGGER.debug(messageLogger);
+        }
+
+        return listP;
+    }
+
+    private List<Firestations> checkFirestationWithThisStation(String stationNumber,
+            List<Firestations> listFirestations) {
+
+        List<Firestations> listF = new ArrayList<>();
+
+        for (Firestations element : listFirestations) {
+            if (element.getStation().equals(stationNumber)) {
+                firestationsObj = new Firestations(element.getAddress(), element.getStation());
+                listF.add(firestationsObj);
+            }
+        }
+        if (LOGGER.isDebugEnabled()) {
+            if (listF.isEmpty()) {
+                messageLogger = "The list is empty. No fire station with this number " + stationNumber + ".";
+            } else {
+                messageLogger = "The list of the station number " + stationNumber + " is: " + listF.toString();
+            }
+            LOGGER.debug(messageLogger);
+        }
+
+        return listF;
+    }
+
+    @Override
+    public List<ChildAlert> childPersonsAlertAddress(String address) throws IOException, ParseException {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public List<PhoneAlert> phoneAlertFirestation(String stationNumber) throws IOException {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public List<FireAddress> fireAddress(String address) throws IOException, ParseException {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public List<PersonsFireStation> stationListFirestation(List<String> station) throws IOException, ParseException {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public List<PersonInfo> personInfo(String firstName, String lastName) throws IOException, ParseException {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public List<CommunityEmail> communityEmail(String city) throws IOException {
+        // TODO Auto-generated method stub
+        return null;
     }
 
 }

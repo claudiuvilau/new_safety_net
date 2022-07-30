@@ -21,6 +21,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.openclassrooms.new_safety_net.model.Firestations;
+import com.openclassrooms.new_safety_net.model.Foyer;
+import com.openclassrooms.new_safety_net.model.FoyerChildrenAdultsToFireStation;
 import com.openclassrooms.new_safety_net.model.Medicalrecords;
 import com.openclassrooms.new_safety_net.model.Persons;
 import com.openclassrooms.new_safety_net.repository.SafetyNetRepository;
@@ -408,6 +410,49 @@ public class NewSafetyAlertController {
                 + loggerApiNewSafetyNet.loggerInfo(request, response, firstName + " " + lastName);
         LOGGER.info(messagelogger);
         return ResponseEntity.status(response.getStatus()).build();
+    }
+
+    @GetMapping("firestation")
+    public ResponseEntity<List<FoyerChildrenAdultsToFireStation>> firestationStationNumber(
+            @RequestParam String stationNumber,
+            HttpServletRequest request, HttpServletResponse response) {
+
+        if (stationNumber.isBlank()) {
+            response.setStatus(400);
+            messagelogger = "The param does not exist. " + RESPONSSTATUS + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, "");
+            LOGGER.warn(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        List<FoyerChildrenAdultsToFireStation> listFoyerChildrenAdultsToFireStation;
+        listFoyerChildrenAdultsToFireStation = repository.personsOfStationAdultsAndChild(stationNumber);
+
+        // if we have 0 adult 0 children or list is empty"
+
+        if (listFoyerChildrenAdultsToFireStation == null) {
+            response.setStatus(404);
+            messagelogger = "The list is null. " + RESPONSSTATUS + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, stationNumber);
+            LOGGER.error(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        } else {
+            if (listFoyerChildrenAdultsToFireStation.get(0).getDecompte().equals("0")
+                    && listFoyerChildrenAdultsToFireStation.get(0).getDecompte().equals("0")) {
+                response.setStatus(404);
+                messagelogger = "The list is empty. No children and no adult. " + RESPONSSTATUS + response.getStatus()
+                        + ":"
+                        + loggerApiNewSafetyNet.loggerInfo(request, response, stationNumber);
+                LOGGER.info(messagelogger);
+                return ResponseEntity.status(response.getStatus()).build();
+            }
+        }
+
+        response.setStatus(200);
+        messagelogger = RESPONSSTATUS + response.getStatus() + ":"
+                + loggerApiNewSafetyNet.loggerInfo(request, response, stationNumber);
+        LOGGER.info(messagelogger);
+        return new ResponseEntity<>(listFoyerChildrenAdultsToFireStation, HttpStatus.valueOf(response.getStatus()));
     }
 
 }

@@ -1,0 +1,217 @@
+2022-07-29 20:57:44 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 20108 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-29 20:57:44 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-29 20:57:44 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-29 20:57:45 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9000 (http)
+2022-07-29 20:57:47 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-29 20:57:47 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 3.351 seconds (process running for 4.477)
+2022-07-29 20:58:23 [http-nio-9000-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Request URL: http://localhost:9000/firestation?stationNumber=8892
+2022-07-29 20:58:23 [http-nio-9000-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-29 20:58:23 [http-nio-9000-exec-2] DEBUG c.o.n.s.SafetyNetService                           - List firestations is created: [Firestations [address=1509 Culver St, station=3], Firestations [address=29 15th St, station=2], Firestations [address=834 Binoc Ave, station=3], Firestations [address=644 Gershwin Cir, station=1], Firestations [address=748 Townings Dr, station=3], Firestations [address=112 Steppes Pl, station=3], Firestations [address=489 Manchester St, station=4], Firestations [address=892 Downing Ct, station=2], Firestations [address=908 73rd St, station=1], Firestations [address=112 Steppes Pl, station=4], Firestations [address=947 E. Rose Dr, station=1], Firestations [address=748 Townings Dr, station=3], Firestations [address=951 LoneTree Rd, station=2]]
+2022-07-29 20:59:49 [http-nio-9000-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Request URL: http://localhost:9000/firestation?stationNumber=8892
+2022-07-29 20:59:49 [http-nio-9000-exec-2] ERROR c.o.n.c.NewSafetyAlertController                   - The list is null. Response status 404:
+Request Method: <[GET]> /firestation
+Request URL: http://localhost:9000/firestation?stationNumber=8892
+Content Type: application/json
+Response Code: 404
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.2", "accept": "*/*", "postman-token": "4000cce6-1702-4257-92ad-b6c06434fdc9", "host": "localhost:9000", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
+2022-07-29 21:00:00 [http-nio-9000-exec-5] DEBUG c.o.n.s.SafetyNetService                           - Request URL: http://localhost:9000/firestation?stationNumber=3
+2022-07-29 21:00:00 [http-nio-9000-exec-5] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-29 21:00:00 [http-nio-9000-exec-5] DEBUG c.o.n.s.SafetyNetService                           - List firestations is created: [Firestations [address=1509 Culver St, station=3], Firestations [address=29 15th St, station=2], Firestations [address=834 Binoc Ave, station=3], Firestations [address=644 Gershwin Cir, station=1], Firestations [address=748 Townings Dr, station=3], Firestations [address=112 Steppes Pl, station=3], Firestations [address=489 Manchester St, station=4], Firestations [address=892 Downing Ct, station=2], Firestations [address=908 73rd St, station=1], Firestations [address=112 Steppes Pl, station=4], Firestations [address=947 E. Rose Dr, station=1], Firestations [address=748 Townings Dr, station=3], Firestations [address=951 LoneTree Rd, station=2]]
+2022-07-29 21:00:10 [http-nio-9000-exec-5] DEBUG c.o.n.s.SafetyNetService                           - Request URL: http://localhost:9000/firestation?stationNumber=3
+2022-07-29 21:00:10 [http-nio-9000-exec-5] ERROR c.o.n.c.NewSafetyAlertController                   - The list is null. Response status 404:
+Request Method: <[GET]> /firestation
+Request URL: http://localhost:9000/firestation?stationNumber=3
+Content Type: application/json
+Response Code: 404
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.2", "accept": "*/*", "postman-token": "f2530ddd-4f6d-443b-91e8-f2b376fd088d", "host": "localhost:9000", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
+2022-07-29 21:53:48 [http-nio-9000-exec-10] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-29 21:53:48 [http-nio-9000-exec-10] DEBUG c.o.n.s.SafetyNetService                           - List firestations is created: [Firestations [address=1509 Culver St, station=3], Firestations [address=29 15th St, station=2], Firestations [address=834 Binoc Ave, station=3], Firestations [address=644 Gershwin Cir, station=1], Firestations [address=748 Townings Dr, station=3], Firestations [address=112 Steppes Pl, station=3], Firestations [address=489 Manchester St, station=4], Firestations [address=892 Downing Ct, station=2], Firestations [address=908 73rd St, station=1], Firestations [address=112 Steppes Pl, station=4], Firestations [address=947 E. Rose Dr, station=1], Firestations [address=748 Townings Dr, station=3], Firestations [address=951 LoneTree Rd, station=2]]
+2022-07-29 21:53:48 [http-nio-9000-exec-10] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /firestations
+Request URL: http://localhost:9000/firestations
+Content Type: application/json
+Response Code: 200
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.2", "accept": "*/*", "postman-token": "b5ad80c2-075a-4d8e-8b2e-9a9cf5e35771", "host": "localhost:9000", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
+2022-07-29 21:54:14 [http-nio-9000-exec-3] DEBUG c.o.n.s.SafetyNetService                           - Request URL: http://localhost:9000/firestation?stationNumber=3
+2022-07-29 21:54:14 [http-nio-9000-exec-3] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-29 21:54:14 [http-nio-9000-exec-3] DEBUG c.o.n.s.SafetyNetService                           - List firestations is created: [Firestations [address=1509 Culver St, station=3], Firestations [address=29 15th St, station=2], Firestations [address=834 Binoc Ave, station=3], Firestations [address=644 Gershwin Cir, station=1], Firestations [address=748 Townings Dr, station=3], Firestations [address=112 Steppes Pl, station=3], Firestations [address=489 Manchester St, station=4], Firestations [address=892 Downing Ct, station=2], Firestations [address=908 73rd St, station=1], Firestations [address=112 Steppes Pl, station=4], Firestations [address=947 E. Rose Dr, station=1], Firestations [address=748 Townings Dr, station=3], Firestations [address=951 LoneTree Rd, station=2]]
+2022-07-29 21:54:14 [http-nio-9000-exec-3] DEBUG c.o.n.s.SafetyNetService                           - Request URL: http://localhost:9000/firestation?stationNumber=3
+2022-07-29 21:54:14 [http-nio-9000-exec-3] ERROR c.o.n.c.NewSafetyAlertController                   - The list is null. Response status 404:
+Request Method: <[GET]> /firestation
+Request URL: http://localhost:9000/firestation?stationNumber=3
+Content Type: application/json
+Response Code: 404
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.2", "accept": "*/*", "postman-token": "5bef1680-9167-43c0-bb57-78bf22ad8dbf", "host": "localhost:9000", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
+2022-07-29 21:54:31 [http-nio-9000-exec-4] DEBUG c.o.n.s.SafetyNetService                           - Request URL: http://localhost:9000/firestation?stationNumber=3
+2022-07-29 21:54:31 [http-nio-9000-exec-4] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-29 21:54:31 [http-nio-9000-exec-4] DEBUG c.o.n.s.SafetyNetService                           - List firestations is created: [Firestations [address=1509 Culver St, station=3], Firestations [address=29 15th St, station=2], Firestations [address=834 Binoc Ave, station=3], Firestations [address=644 Gershwin Cir, station=1], Firestations [address=748 Townings Dr, station=3], Firestations [address=112 Steppes Pl, station=3], Firestations [address=489 Manchester St, station=4], Firestations [address=892 Downing Ct, station=2], Firestations [address=908 73rd St, station=1], Firestations [address=112 Steppes Pl, station=4], Firestations [address=947 E. Rose Dr, station=1], Firestations [address=748 Townings Dr, station=3], Firestations [address=951 LoneTree Rd, station=2]]
+2022-07-29 21:55:18 [http-nio-9000-exec-4] DEBUG c.o.n.s.SafetyNetService                           - Request URL: http://localhost:9000/firestation?stationNumber=3
+2022-07-29 21:55:18 [http-nio-9000-exec-4] ERROR c.o.n.c.NewSafetyAlertController                   - The list is null. Response status 404:
+Request Method: <[GET]> /firestation
+Request URL: http://localhost:9000/firestation?stationNumber=3
+Content Type: application/json
+Response Code: 404
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.2", "accept": "*/*", "postman-token": "f1fff472-e7a3-42ac-ac58-327e3f3d3f7c", "host": "localhost:9000", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
+2022-07-29 21:55:26 [http-nio-9000-exec-7] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-29 21:55:26 [http-nio-9000-exec-7] DEBUG c.o.n.s.SafetyNetService                           - List firestations is created: [Firestations [address=1509 Culver St, station=3], Firestations [address=29 15th St, station=2], Firestations [address=834 Binoc Ave, station=3], Firestations [address=644 Gershwin Cir, station=1], Firestations [address=748 Townings Dr, station=3], Firestations [address=112 Steppes Pl, station=3], Firestations [address=489 Manchester St, station=4], Firestations [address=892 Downing Ct, station=2], Firestations [address=908 73rd St, station=1], Firestations [address=112 Steppes Pl, station=4], Firestations [address=947 E. Rose Dr, station=1], Firestations [address=748 Townings Dr, station=3], Firestations [address=951 LoneTree Rd, station=2]]
+2022-07-29 21:55:26 [http-nio-9000-exec-7] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /firestations
+Request URL: http://localhost:9000/firestations
+Content Type: application/json
+Response Code: 200
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.2", "accept": "*/*", "postman-token": "0e05e243-8ca3-4e9c-8514-c1d11de4cb75", "host": "localhost:9000", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
+2022-07-29 21:59:40 [http-nio-9000-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Request URL: http://localhost:9000/firestation?stationNumber=3
+2022-07-29 21:59:40 [http-nio-9000-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-29 21:59:40 [http-nio-9000-exec-2] DEBUG c.o.n.s.SafetyNetService                           - List firestations is created: [Firestations [address=1509 Culver St, station=3], Firestations [address=29 15th St, station=2], Firestations [address=834 Binoc Ave, station=3], Firestations [address=644 Gershwin Cir, station=1], Firestations [address=748 Townings Dr, station=3], Firestations [address=112 Steppes Pl, station=3], Firestations [address=489 Manchester St, station=4], Firestations [address=892 Downing Ct, station=2], Firestations [address=908 73rd St, station=1], Firestations [address=112 Steppes Pl, station=4], Firestations [address=947 E. Rose Dr, station=1], Firestations [address=748 Townings Dr, station=3], Firestations [address=951 LoneTree Rd, station=2]]
+2022-07-29 22:00:07 [http-nio-9000-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Request URL: http://localhost:9000/firestation?stationNumber=3
+2022-07-29 22:00:07 [http-nio-9000-exec-2] ERROR c.o.n.c.NewSafetyAlertController                   - The list is null. Response status 404:
+Request Method: <[GET]> /firestation
+Request URL: http://localhost:9000/firestation?stationNumber=3
+Content Type: application/json
+Response Code: 404
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.2", "accept": "*/*", "postman-token": "6912bca3-906e-45fd-8d76-938d6453c644", "host": "localhost:9000", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
+2022-07-29 22:00:10 [http-nio-9000-exec-5] DEBUG c.o.n.s.SafetyNetService                           - Request URL: http://localhost:9000/firestation?stationNumber=3
+2022-07-29 22:00:10 [http-nio-9000-exec-5] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-29 22:00:10 [http-nio-9000-exec-5] DEBUG c.o.n.s.SafetyNetService                           - List firestations is created: [Firestations [address=1509 Culver St, station=3], Firestations [address=29 15th St, station=2], Firestations [address=834 Binoc Ave, station=3], Firestations [address=644 Gershwin Cir, station=1], Firestations [address=748 Townings Dr, station=3], Firestations [address=112 Steppes Pl, station=3], Firestations [address=489 Manchester St, station=4], Firestations [address=892 Downing Ct, station=2], Firestations [address=908 73rd St, station=1], Firestations [address=112 Steppes Pl, station=4], Firestations [address=947 E. Rose Dr, station=1], Firestations [address=748 Townings Dr, station=3], Firestations [address=951 LoneTree Rd, station=2]]
+2022-07-29 22:01:21 [http-nio-9000-exec-5] DEBUG c.o.n.s.SafetyNetService                           - Request URL: http://localhost:9000/firestation?stationNumber=3
+2022-07-29 22:01:21 [http-nio-9000-exec-5] ERROR c.o.n.c.NewSafetyAlertController                   - The list is null. Response status 404:
+Request Method: <[GET]> /firestation
+Request URL: http://localhost:9000/firestation?stationNumber=3
+Content Type: application/json
+Response Code: 404
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.2", "accept": "*/*", "postman-token": "d29cfed5-96ce-4141-9c43-b6edcfbbd690", "host": "localhost:9000", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
+2022-07-29 22:01:38 [http-nio-9000-exec-6] DEBUG c.o.n.s.SafetyNetService                           - Request URL: http://localhost:9000/firestation?stationNumber=3
+2022-07-29 22:01:38 [http-nio-9000-exec-6] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-29 22:01:38 [http-nio-9000-exec-6] DEBUG c.o.n.s.SafetyNetService                           - List firestations is created: [Firestations [address=1509 Culver St, station=3], Firestations [address=29 15th St, station=2], Firestations [address=834 Binoc Ave, station=3], Firestations [address=644 Gershwin Cir, station=1], Firestations [address=748 Townings Dr, station=3], Firestations [address=112 Steppes Pl, station=3], Firestations [address=489 Manchester St, station=4], Firestations [address=892 Downing Ct, station=2], Firestations [address=908 73rd St, station=1], Firestations [address=112 Steppes Pl, station=4], Firestations [address=947 E. Rose Dr, station=1], Firestations [address=748 Townings Dr, station=3], Firestations [address=951 LoneTree Rd, station=2]]
+2022-07-29 22:03:56 [http-nio-9000-exec-6] DEBUG c.o.n.s.SafetyNetService                           - Request URL: http://localhost:9000/firestation?stationNumber=3
+2022-07-29 22:03:56 [http-nio-9000-exec-6] ERROR c.o.n.c.NewSafetyAlertController                   - The list is null. Response status 404:
+Request Method: <[GET]> /firestation
+Request URL: http://localhost:9000/firestation?stationNumber=3
+Content Type: application/json
+Response Code: 404
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.2", "accept": "*/*", "postman-token": "c16b65ca-011c-4e72-af44-eb3d4fd57b10", "host": "localhost:9000", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
+2022-07-29 22:05:34 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 5188 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-29 22:05:34 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-29 22:05:34 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-29 22:05:35 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9000 (http)
+2022-07-29 22:05:35 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-29 22:05:35 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.899 seconds (process running for 2.561)
+2022-07-29 22:05:43 [http-nio-9000-exec-3] DEBUG c.o.n.s.SafetyNetService                           - Request URL: http://localhost:9000/firestation?stationNumber=3
+2022-07-29 22:05:43 [http-nio-9000-exec-3] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-29 22:05:43 [http-nio-9000-exec-3] DEBUG c.o.n.s.SafetyNetService                           - List firestations is created: [Firestations [address=1509 Culver St, station=3], Firestations [address=29 15th St, station=2], Firestations [address=834 Binoc Ave, station=3], Firestations [address=644 Gershwin Cir, station=1], Firestations [address=748 Townings Dr, station=3], Firestations [address=112 Steppes Pl, station=3], Firestations [address=489 Manchester St, station=4], Firestations [address=892 Downing Ct, station=2], Firestations [address=908 73rd St, station=1], Firestations [address=112 Steppes Pl, station=4], Firestations [address=947 E. Rose Dr, station=1], Firestations [address=748 Townings Dr, station=3], Firestations [address=951 LoneTree Rd, station=2]]
+2022-07-29 22:07:53 [http-nio-9000-exec-3] DEBUG c.o.n.s.SafetyNetService                           - Request URL: http://localhost:9000/firestation?stationNumber=3
+2022-07-29 22:07:53 [http-nio-9000-exec-3] ERROR c.o.n.c.NewSafetyAlertController                   - The list is null. Response status 404:
+Request Method: <[GET]> /firestation
+Request URL: http://localhost:9000/firestation?stationNumber=3
+Content Type: application/json
+Response Code: 404
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.2", "accept": "*/*", "postman-token": "ed97a10c-20e4-4e61-ae5d-bd3ff77990ba", "host": "localhost:9000", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
+2022-07-29 22:08:00 [http-nio-9000-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Request URL: http://localhost:9000/firestation?stationNumber=3
+2022-07-29 22:08:00 [http-nio-9000-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-29 22:08:00 [http-nio-9000-exec-1] DEBUG c.o.n.s.SafetyNetService                           - List firestations is created: [Firestations [address=1509 Culver St, station=3], Firestations [address=29 15th St, station=2], Firestations [address=834 Binoc Ave, station=3], Firestations [address=644 Gershwin Cir, station=1], Firestations [address=748 Townings Dr, station=3], Firestations [address=112 Steppes Pl, station=3], Firestations [address=489 Manchester St, station=4], Firestations [address=892 Downing Ct, station=2], Firestations [address=908 73rd St, station=1], Firestations [address=112 Steppes Pl, station=4], Firestations [address=947 E. Rose Dr, station=1], Firestations [address=748 Townings Dr, station=3], Firestations [address=951 LoneTree Rd, station=2]]
+2022-07-29 22:08:08 [http-nio-9000-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Request URL: http://localhost:9000/firestation?stationNumber=3
+2022-07-29 22:08:08 [http-nio-9000-exec-1] ERROR c.o.n.c.NewSafetyAlertController                   - The list is null. Response status 404:
+Request Method: <[GET]> /firestation
+Request URL: http://localhost:9000/firestation?stationNumber=3
+Content Type: application/json
+Response Code: 404
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.2", "accept": "*/*", "postman-token": "8dd2c47b-9819-4714-b292-a78ef77da3b4", "host": "localhost:9000", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
+2022-07-29 22:10:00 [http-nio-9000-exec-8] DEBUG c.o.n.s.SafetyNetService                           - Request URL: http://localhost:9000/firestation?stationNumber=3
+2022-07-29 22:10:00 [http-nio-9000-exec-8] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-29 22:10:00 [http-nio-9000-exec-8] DEBUG c.o.n.s.SafetyNetService                           - List firestations is created: [Firestations [address=1509 Culver St, station=3], Firestations [address=29 15th St, station=2], Firestations [address=834 Binoc Ave, station=3], Firestations [address=644 Gershwin Cir, station=1], Firestations [address=748 Townings Dr, station=3], Firestations [address=112 Steppes Pl, station=3], Firestations [address=489 Manchester St, station=4], Firestations [address=892 Downing Ct, station=2], Firestations [address=908 73rd St, station=1], Firestations [address=112 Steppes Pl, station=4], Firestations [address=947 E. Rose Dr, station=1], Firestations [address=748 Townings Dr, station=3], Firestations [address=951 LoneTree Rd, station=2]]
+2022-07-29 22:11:09 [http-nio-9000-exec-8] DEBUG c.o.n.s.SafetyNetService                           - Request URL: http://localhost:9000/firestation?stationNumber=3
+2022-07-29 22:11:09 [http-nio-9000-exec-8] ERROR c.o.n.c.NewSafetyAlertController                   - The list is null. Response status 404:
+Request Method: <[GET]> /firestation
+Request URL: http://localhost:9000/firestation?stationNumber=3
+Content Type: application/json
+Response Code: 404
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.2", "accept": "*/*", "postman-token": "2103a71d-7786-461c-8b5b-619c2acd1fe5", "host": "localhost:9000", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
+2022-07-29 22:17:45 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 21376 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-29 22:17:45 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-29 22:17:45 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-29 22:17:46 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9000 (http)
+2022-07-29 22:17:47 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-29 22:17:47 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.071 seconds (process running for 2.728)
+2022-07-29 22:17:50 [http-nio-9000-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Request URL: http://localhost:9000/firestation?stationNumber=3
+2022-07-29 22:17:50 [http-nio-9000-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-29 22:17:50 [http-nio-9000-exec-1] DEBUG c.o.n.s.SafetyNetService                           - List firestations is created: [Firestations [address=1509 Culver St, station=3], Firestations [address=29 15th St, station=2], Firestations [address=834 Binoc Ave, station=3], Firestations [address=644 Gershwin Cir, station=1], Firestations [address=748 Townings Dr, station=3], Firestations [address=112 Steppes Pl, station=3], Firestations [address=489 Manchester St, station=4], Firestations [address=892 Downing Ct, station=2], Firestations [address=908 73rd St, station=1], Firestations [address=112 Steppes Pl, station=4], Firestations [address=947 E. Rose Dr, station=1], Firestations [address=748 Townings Dr, station=3], Firestations [address=951 LoneTree Rd, station=2]]
+2022-07-29 22:17:56 [http-nio-9000-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Request URL: http://localhost:9000/firestation?stationNumber=3
+2022-07-29 22:17:56 [http-nio-9000-exec-1] ERROR c.o.n.c.NewSafetyAlertController                   - The list is null. Response status 404:
+Request Method: <[GET]> /firestation
+Request URL: http://localhost:9000/firestation?stationNumber=3
+Content Type: application/json
+Response Code: 404
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.2", "accept": "*/*", "postman-token": "dfd564e7-8242-491e-ab71-b51074139c73", "host": "localhost:9000", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
+2022-07-29 22:20:24 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 14736 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-29 22:20:24 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-29 22:20:24 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-29 22:20:25 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9000 (http)
+2022-07-29 22:20:25 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-29 22:20:25 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.875 seconds (process running for 2.489)
+2022-07-29 22:20:34 [http-nio-9000-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Request URL: http://localhost:9000/firestation?stationNumber=3
+2022-07-29 22:20:34 [http-nio-9000-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-29 22:20:34 [http-nio-9000-exec-1] DEBUG c.o.n.s.SafetyNetService                           - List firestations is created: [Firestations [address=1509 Culver St, station=3], Firestations [address=29 15th St, station=2], Firestations [address=834 Binoc Ave, station=3], Firestations [address=644 Gershwin Cir, station=1], Firestations [address=748 Townings Dr, station=3], Firestations [address=112 Steppes Pl, station=3], Firestations [address=489 Manchester St, station=4], Firestations [address=892 Downing Ct, station=2], Firestations [address=908 73rd St, station=1], Firestations [address=112 Steppes Pl, station=4], Firestations [address=947 E. Rose Dr, station=1], Firestations [address=748 Townings Dr, station=3], Firestations [address=951 LoneTree Rd, station=2]]
+2022-07-29 22:20:37 [http-nio-9000-exec-1] DEBUG c.o.n.s.SafetyNetService                           - The list of the station number 3 is: [Firestations [address=1509 Culver St, station=3], Firestations [address=834 Binoc Ave, station=3], Firestations [address=748 Townings Dr, station=3], Firestations [address=112 Steppes Pl, station=3], Firestations [address=748 Townings Dr, station=3]]
+2022-07-29 22:20:38 [http-nio-9000-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Request URL: http://localhost:9000/firestation?stationNumber=3
+2022-07-29 22:20:38 [http-nio-9000-exec-1] ERROR c.o.n.c.NewSafetyAlertController                   - The list is null. Response status 404:
+Request Method: <[GET]> /firestation
+Request URL: http://localhost:9000/firestation?stationNumber=3
+Content Type: application/json
+Response Code: 404
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.2", "accept": "*/*", "postman-token": "b8852d6a-49da-4948-8a4a-95391eb7aab2", "host": "localhost:9000", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
+2022-07-29 22:21:57 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 8820 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-29 22:21:57 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-29 22:21:57 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-29 22:21:58 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9000 (http)
+2022-07-29 22:21:58 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-29 22:21:58 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 1.785 seconds (process running for 2.404)
+2022-07-29 22:22:00 [http-nio-9000-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Request URL: http://localhost:9000/firestation?stationNumber=3
+2022-07-29 22:22:00 [http-nio-9000-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-29 22:22:00 [http-nio-9000-exec-1] DEBUG c.o.n.s.SafetyNetService                           - List firestations is created: [Firestations [address=1509 Culver St, station=3], Firestations [address=29 15th St, station=2], Firestations [address=834 Binoc Ave, station=3], Firestations [address=644 Gershwin Cir, station=1], Firestations [address=748 Townings Dr, station=3], Firestations [address=112 Steppes Pl, station=3], Firestations [address=489 Manchester St, station=4], Firestations [address=892 Downing Ct, station=2], Firestations [address=908 73rd St, station=1], Firestations [address=112 Steppes Pl, station=4], Firestations [address=947 E. Rose Dr, station=1], Firestations [address=748 Townings Dr, station=3], Firestations [address=951 LoneTree Rd, station=2]]
+2022-07-29 22:22:02 [http-nio-9000-exec-1] DEBUG c.o.n.s.SafetyNetService                           - The list of the station number 3 is: [Firestations [address=1509 Culver St, station=3], Firestations [address=834 Binoc Ave, station=3], Firestations [address=748 Townings Dr, station=3], Firestations [address=112 Steppes Pl, station=3], Firestations [address=748 Townings Dr, station=3]]
+2022-07-29 22:22:03 [http-nio-9000-exec-1] ERROR c.o.n.c.NewSafetyAlertController                   - The list is null. Response status 404:
+Request Method: <[GET]> /firestation
+Request URL: http://localhost:9000/firestation?stationNumber=3
+Content Type: application/json
+Response Code: 404
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.2", "accept": "*/*", "postman-token": "c2da1c8e-a983-42f6-abcd-706570e3a456", "host": "localhost:9000", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
+2022-07-29 22:30:04 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 19720 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-29 22:30:04 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-29 22:30:04 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-29 22:30:05 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9000 (http)
+2022-07-29 22:30:06 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-29 22:30:06 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.014 seconds (process running for 2.626)
+2022-07-29 22:30:08 [http-nio-9000-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Request URL: http://localhost:9000/firestation?stationNumber=3
+2022-07-29 22:30:08 [http-nio-9000-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-29 22:30:08 [http-nio-9000-exec-2] DEBUG c.o.n.s.SafetyNetService                           - List firestations is created: [Firestations [address=1509 Culver St, station=3], Firestations [address=29 15th St, station=2], Firestations [address=834 Binoc Ave, station=3], Firestations [address=644 Gershwin Cir, station=1], Firestations [address=748 Townings Dr, station=3], Firestations [address=112 Steppes Pl, station=3], Firestations [address=489 Manchester St, station=4], Firestations [address=892 Downing Ct, station=2], Firestations [address=908 73rd St, station=1], Firestations [address=112 Steppes Pl, station=4], Firestations [address=947 E. Rose Dr, station=1], Firestations [address=748 Townings Dr, station=3], Firestations [address=951 LoneTree Rd, station=2]]
+2022-07-29 22:30:13 [http-nio-9000-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Request URL: http://localhost:9000/firestation?stationNumber=3 The list of the station number 3 is: [Firestations [address=1509 Culver St, station=3], Firestations [address=834 Binoc Ave, station=3], Firestations [address=748 Townings Dr, station=3], Firestations [address=112 Steppes Pl, station=3], Firestations [address=748 Townings Dr, station=3]]
+2022-07-29 22:30:13 [http-nio-9000-exec-2] ERROR c.o.n.c.NewSafetyAlertController                   - The list is null. Response status 404:
+Request Method: <[GET]> /firestation
+Request URL: http://localhost:9000/firestation?stationNumber=3
+Content Type: application/json
+Response Code: 404
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.2", "accept": "*/*", "postman-token": "b604fb9f-2097-4498-971f-0eff94503f7f", "host": "localhost:9000", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
+2022-07-29 22:31:54 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 14928 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-07-29 22:31:54 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-07-29 22:31:54 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-07-29 22:31:55 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9000 (http)
+2022-07-29 22:31:56 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-29 22:31:56 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.096 seconds (process running for 2.697)
+2022-07-29 22:32:01 [http-nio-9000-exec-1] DEBUG c.o.n.s.SafetyNetService                           - TEST Request URL: http://localhost:9000/firestation?stationNumber=3
+2022-07-29 22:32:01 [http-nio-9000-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-29 22:32:01 [http-nio-9000-exec-1] DEBUG c.o.n.s.SafetyNetService                           - List firestations is created: [Firestations [address=1509 Culver St, station=3], Firestations [address=29 15th St, station=2], Firestations [address=834 Binoc Ave, station=3], Firestations [address=644 Gershwin Cir, station=1], Firestations [address=748 Townings Dr, station=3], Firestations [address=112 Steppes Pl, station=3], Firestations [address=489 Manchester St, station=4], Firestations [address=892 Downing Ct, station=2], Firestations [address=908 73rd St, station=1], Firestations [address=112 Steppes Pl, station=4], Firestations [address=947 E. Rose Dr, station=1], Firestations [address=748 Townings Dr, station=3], Firestations [address=951 LoneTree Rd, station=2]]
+2022-07-29 22:32:01 [http-nio-9000-exec-1] DEBUG c.o.n.s.SafetyNetService                           - The list of the station number 3 is: [Firestations [address=1509 Culver St, station=3], Firestations [address=834 Binoc Ave, station=3], Firestations [address=748 Townings Dr, station=3], Firestations [address=112 Steppes Pl, station=3], Firestations [address=748 Townings Dr, station=3]]
+2022-07-29 22:32:01 [http-nio-9000-exec-1] ERROR c.o.n.c.NewSafetyAlertController                   - The list is null. Response status 404:
+Request Method: <[GET]> /firestation
+Request URL: http://localhost:9000/firestation?stationNumber=3
+Content Type: application/json
+Response Code: 404
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.2", "accept": "*/*", "postman-token": "6c8ab8a2-faf0-4ace-8093-d7a07fc2cdf1", "host": "localhost:9000", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
+2022-07-29 23:02:38 [http-nio-9000-exec-5] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-07-29 23:02:38 [http-nio-9000-exec-5] DEBUG c.o.n.s.SafetyNetService                           - List medicalrecords is created.
+2022-07-29 23:02:38 [http-nio-9000-exec-5] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /medicalrecords
+Request URL: http://localhost:9000/medicalrecords
+Content Type: application/json
+Response Code: 200
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.2", "accept": "*/*", "postman-token": "df1d103a-c544-4d5e-b0f7-56e796674183", "host": "localhost:9000", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
