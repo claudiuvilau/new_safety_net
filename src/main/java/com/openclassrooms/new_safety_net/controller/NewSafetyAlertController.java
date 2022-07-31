@@ -27,6 +27,7 @@ import com.openclassrooms.new_safety_net.model.Foyer;
 import com.openclassrooms.new_safety_net.model.FoyerChildrenAdultsToFireStation;
 import com.openclassrooms.new_safety_net.model.Medicalrecords;
 import com.openclassrooms.new_safety_net.model.Persons;
+import com.openclassrooms.new_safety_net.model.PhoneAlert;
 import com.openclassrooms.new_safety_net.repository.SafetyNetRepository;
 import com.openclassrooms.new_safety_net.service.LoggerApiNewSafetyNet;
 
@@ -491,5 +492,41 @@ public class NewSafetyAlertController {
         LOGGER.info(messagelogger);
         return new ResponseEntity<>(listChildren, HttpStatus.valueOf(response.getStatus()));
 
+    }
+
+    @GetMapping("phoneAlert")
+    public ResponseEntity<List<PhoneAlert>> phoneAlertStationNumber(@RequestParam String firestation,
+            HttpServletRequest request, HttpServletResponse response) {
+
+        if (firestation.isBlank()) {
+            response.setStatus(400);
+            messagelogger = "The param does not exist. " + RESPONSSTATUS + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, "");
+            LOGGER.warn(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        List<PhoneAlert> listPhoneAlert = new ArrayList<>();
+        try {
+            listPhoneAlert = repository.phoneAlertFirestation(firestation);
+        } catch (IOException e) {
+            response.setStatus(404);
+            LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, firestation));
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        if (listPhoneAlert.get(0).getListPhones().isEmpty()) {
+            response.setStatus(404);
+            messagelogger = "No phone for the alerts. " + RESPONSSTATUS + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, firestation);
+            LOGGER.info(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        response.setStatus(200);
+        messagelogger = RESPONSSTATUS + response.getStatus() + ":"
+                + loggerApiNewSafetyNet.loggerInfo(request, response, firestation);
+        LOGGER.info(messagelogger);
+        return new ResponseEntity<>(listPhoneAlert, HttpStatus.valueOf(response.getStatus()));
     }
 }

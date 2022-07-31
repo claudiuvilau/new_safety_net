@@ -10,7 +10,6 @@ import com.openclassrooms.new_safety_net.model.ChildAlert;
 import com.openclassrooms.new_safety_net.model.CommunityEmail;
 import com.openclassrooms.new_safety_net.model.FireAddress;
 import com.openclassrooms.new_safety_net.model.Firestations;
-import com.openclassrooms.new_safety_net.model.Foyer;
 import com.openclassrooms.new_safety_net.model.FoyerChildrenAdultsToFireStation;
 import com.openclassrooms.new_safety_net.model.Medicalrecords;
 import com.openclassrooms.new_safety_net.model.PersonInfo;

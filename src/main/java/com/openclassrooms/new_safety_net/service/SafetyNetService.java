@@ -982,13 +982,86 @@ public class SafetyNetService implements SafetyNetRepository {
     @Override
     public List<ChildAlert> childPersonsAlertAddress(String address) throws IOException, ParseException {
 
-        return null;
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug(loggerApiNewSafetyNet.loggerDebug(address));
+        }
+
+        List<Persons> listPersons;
+        listPersons = createListPersons();
+        // find the list of persons from address
+        List<Persons> listP = new ArrayList<>();
+        int indexpersons = 0;
+        for (Persons elementpersons : listPersons) {
+            if (elementpersons.getAddress().equalsIgnoreCase(address)) {
+                listP.add(indexpersons, elementpersons);
+                indexpersons += 1;
+            }
+        }
+
+        List<Medicalrecords> listMedicalrecords;
+        listMedicalrecords = createListMedicalrecords();
+        List<ChildrenOrAdults> listChildren;
+        List<ChildrenOrAdults> listAdults;
+        boolean childboolean = true; // get the list of children
+        listChildren = getChildrenOrAdults(listP, listMedicalrecords, childboolean);
+        childboolean = false; // get the list of adults
+        listAdults = getChildrenOrAdults(listP, listMedicalrecords, childboolean);
+
+        List<ChildAlert> listChildAlert = new ArrayList<>();
+        if (!listChildren.isEmpty()) {
+            ChildAlert childAlertobj = new ChildAlert(listChildren, listAdults);
+            listChildAlert.add(childAlertobj);
+        }
+
+        return listChildAlert;
     }
 
     @Override
     public List<PhoneAlert> phoneAlertFirestation(String stationNumber) throws IOException {
-        // TODO Auto-generated method stub
-        return null;
+
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug(loggerApiNewSafetyNet.loggerDebug(stationNumber));
+        }
+
+        List<Firestations> listFirestations;
+        List<Firestations> listF;
+        // find the list of the persons from number of fire station = listF
+        listFirestations = createListFirestations();
+        listF = checkFirestationWithThisStation(stationNumber, listFirestations);
+
+        // find the persons in persons = address of list fire station
+        List<Persons> listPersons;
+        List<Persons> listP;
+        listPersons = createListPersons();
+        listP = checkPersonsFromThisAddressStation(listPersons, listF, stationNumber);
+
+        PhoneAlert phoneAlertObj = new PhoneAlert();
+        List<String> listPhones = new ArrayList<>();
+        for (Persons element : listP) {
+            listPhones.add(element.getPhone());
+        }
+        // find the duplicate. If duplicate make ""
+        for (int i = 0; i < listPhones.size(); i++) {
+            for (int j = i + 1; j < listPhones.size(); j++) {
+                if (listPhones.get(i).equals(listPhones.get(j))) {
+                    listPhones.set(j, "");
+                }
+            }
+        }
+        // make a new list without ""
+        List<String> listPhonesNoDuplicate = new ArrayList<>();
+        int index = 0;
+        for (int i = 0; i < listPhones.size(); i++) {
+            if (!listPhones.get(i).isEmpty()) {
+                listPhonesNoDuplicate.add(index, listPhones.get(i));
+                index++;
+            }
+        }
+        List<PhoneAlert> listPhoneAlerts = new ArrayList<>();
+        phoneAlertObj.setListPhones(listPhonesNoDuplicate);
+        listPhoneAlerts.add(phoneAlertObj);
+
+        return listPhoneAlerts;
     }
 
     @Override
