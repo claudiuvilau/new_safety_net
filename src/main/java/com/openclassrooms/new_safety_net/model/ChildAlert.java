@@ -5,32 +5,32 @@ import java.util.List;
 
 public class ChildAlert {
 
-	private List<Children> listChildren = new ArrayList<>();
-	private List<Children> listAdult = new ArrayList<>();
+	private List<ChildrenOrAdults> listChildren = new ArrayList<>();
+	private List<ChildrenOrAdults> listAdult = new ArrayList<>();
 
 	public ChildAlert() {
 		super();
 	}
 
-	public ChildAlert(List<Children> listChildren, List<Children> listAdult) {
+	public ChildAlert(List<ChildrenOrAdults> listChildren, List<ChildrenOrAdults> listAdult) {
 		super();
 		this.listChildren = listChildren;
 		this.listAdult = listAdult;
 	}
 
-	public List<Children> getListChildren() {
+	public List<ChildrenOrAdults> getListChildren() {
 		return listChildren;
 	}
 
-	public void setListChildren(List<Children> listChildren) {
+	public void setListChildren(List<ChildrenOrAdults> listChildren) {
 		this.listChildren = listChildren;
 	}
 
-	public List<Children> getListAdult() {
+	public List<ChildrenOrAdults> getListAdult() {
 		return listAdult;
 	}
 
-	public void setListAdult(List<Children> listAdult) {
+	public void setListAdult(List<ChildrenOrAdults> listAdult) {
 		this.listAdult = listAdult;
 	}
 
