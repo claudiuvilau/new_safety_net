@@ -165,4 +165,9 @@ public interface SafetyNetRepository {
      */
     public List<CommunityEmail> communityEmail(String city) throws IOException;
 
+    boolean createNewFileJson(List<Persons> listPersons, List<Firestations> listFirestations,
+            List<Medicalrecords> listMedicalrecords, String param);
+
+    void verifyAndUpdatePerson(Persons element, Persons person);
+
 }
