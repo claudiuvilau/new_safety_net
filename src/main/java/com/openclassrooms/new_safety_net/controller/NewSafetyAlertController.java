@@ -22,11 +22,12 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.openclassrooms.new_safety_net.model.ChildAlert;
+import com.openclassrooms.new_safety_net.model.FireAddress;
 import com.openclassrooms.new_safety_net.model.Firestations;
-import com.openclassrooms.new_safety_net.model.Foyer;
 import com.openclassrooms.new_safety_net.model.FoyerChildrenAdultsToFireStation;
 import com.openclassrooms.new_safety_net.model.Medicalrecords;
 import com.openclassrooms.new_safety_net.model.Persons;
+import com.openclassrooms.new_safety_net.model.PersonsFireStation;
 import com.openclassrooms.new_safety_net.model.PhoneAlert;
 import com.openclassrooms.new_safety_net.repository.SafetyNetRepository;
 import com.openclassrooms.new_safety_net.service.LoggerApiNewSafetyNet;
@@ -50,6 +51,7 @@ public class NewSafetyAlertController {
     // Récupération de notre logger.
     private static final Logger LOGGER = LogManager.getLogger(NewSafetyAlertController.class);
     private static final String RESPONSSTATUS = "Response status ";
+    private static final String PARAMNOTEXIST = "The param does not exist. ";
 
     LoggerApiNewSafetyNet loggerApiNewSafetyNet = new LoggerApiNewSafetyNet();
 
@@ -250,7 +252,7 @@ public class NewSafetyAlertController {
 
         if (address.isBlank()) {
             response.setStatus(400);
-            messagelogger = "The param does not exist. " + RESPONSSTATUS + response.getStatus() + ":"
+            messagelogger = PARAMNOTEXIST + RESPONSSTATUS + response.getStatus() + ":"
                     + loggerApiNewSafetyNet.loggerInfo(request, response, "");
             LOGGER.warn(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
@@ -279,7 +281,7 @@ public class NewSafetyAlertController {
 
         if (address == null && stationNumber == null) {
             response.setStatus(400);
-            messagelogger = "The param does not exist. " + RESPONSSTATUS + response.getStatus() + ":"
+            messagelogger = PARAMNOTEXIST + RESPONSSTATUS + response.getStatus() + ":"
                     + loggerApiNewSafetyNet.loggerInfo(request, response, "");
             LOGGER.warn(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
@@ -422,7 +424,7 @@ public class NewSafetyAlertController {
 
         if (stationNumber.isBlank()) {
             response.setStatus(400);
-            messagelogger = "The param does not exist. " + RESPONSSTATUS + response.getStatus() + ":"
+            messagelogger = PARAMNOTEXIST + RESPONSSTATUS + response.getStatus() + ":"
                     + loggerApiNewSafetyNet.loggerInfo(request, response, "");
             LOGGER.warn(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
@@ -464,7 +466,7 @@ public class NewSafetyAlertController {
 
         if (address.isBlank()) {
             response.setStatus(400);
-            messagelogger = "The param does not exist. " + RESPONSSTATUS + response.getStatus() + ":"
+            messagelogger = PARAMNOTEXIST + RESPONSSTATUS + response.getStatus() + ":"
                     + loggerApiNewSafetyNet.loggerInfo(request, response, "");
             LOGGER.warn(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
@@ -500,7 +502,7 @@ public class NewSafetyAlertController {
 
         if (firestation.isBlank()) {
             response.setStatus(400);
-            messagelogger = "The param does not exist. " + RESPONSSTATUS + response.getStatus() + ":"
+            messagelogger = PARAMNOTEXIST + RESPONSSTATUS + response.getStatus() + ":"
                     + loggerApiNewSafetyNet.loggerInfo(request, response, "");
             LOGGER.warn(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
@@ -529,4 +531,75 @@ public class NewSafetyAlertController {
         LOGGER.info(messagelogger);
         return new ResponseEntity<>(listPhoneAlert, HttpStatus.valueOf(response.getStatus()));
     }
+
+    @GetMapping("fire")
+    public ResponseEntity<List<FireAddress>> fireAddress(@RequestParam String address, HttpServletRequest request,
+            HttpServletResponse response) {
+
+        if (address.isBlank()) {
+            response.setStatus(400);
+            messagelogger = PARAMNOTEXIST + RESPONSSTATUS + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, "");
+            LOGGER.warn(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        List<FireAddress> listFireAddress = new ArrayList<>();
+        try {
+            listFireAddress = repository.fireAddress(address);
+        } catch (IOException | ParseException e) {
+            response.setStatus(404);
+            LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, address));
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        if (listFireAddress.isEmpty()) {
+            response.setStatus(404);
+            messagelogger = "No fire station for this address. " + RESPONSSTATUS + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, address);
+            LOGGER.info(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+        response.setStatus(200);
+        messagelogger = RESPONSSTATUS + response.getStatus() + ":"
+                + loggerApiNewSafetyNet.loggerInfo(request, response, address);
+        LOGGER.info(messagelogger);
+        return new ResponseEntity<>(listFireAddress, HttpStatus.valueOf(response.getStatus()));
+    }
+
+    @GetMapping("flood/station")
+    public ResponseEntity<List<PersonsFireStation>> fireAddressListFireStation(@RequestParam List<String> station,
+            HttpServletRequest request, HttpServletResponse response) {
+
+        if (station.isEmpty()) {
+            response.setStatus(400);
+            messagelogger = PARAMNOTEXIST + RESPONSSTATUS + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, "");
+            LOGGER.warn(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        List<PersonsFireStation> listPersonsFireStation = new ArrayList<>();
+        try {
+            listPersonsFireStation = repository.stationListFirestation(station);
+        } catch (IOException | ParseException e) {
+            response.setStatus(404);
+            LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, station.toString()));
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        if (listPersonsFireStation.isEmpty()) {
+            response.setStatus(404);
+            messagelogger = "No person in theses fire stations. " + RESPONSSTATUS + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, station.toString());
+            LOGGER.info(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+        response.setStatus(200);
+        messagelogger = RESPONSSTATUS + response.getStatus() + ":"
+                + loggerApiNewSafetyNet.loggerInfo(request, response, station.toString());
+        LOGGER.info(messagelogger);
+        return new ResponseEntity<>(listPersonsFireStation, HttpStatus.valueOf(response.getStatus()));
+    }
+
 }
