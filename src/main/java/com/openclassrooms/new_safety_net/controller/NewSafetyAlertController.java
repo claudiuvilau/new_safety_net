@@ -22,10 +22,12 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.openclassrooms.new_safety_net.model.ChildAlert;
+import com.openclassrooms.new_safety_net.model.CommunityEmail;
 import com.openclassrooms.new_safety_net.model.FireAddress;
 import com.openclassrooms.new_safety_net.model.Firestations;
 import com.openclassrooms.new_safety_net.model.FoyerChildrenAdultsToFireStation;
 import com.openclassrooms.new_safety_net.model.Medicalrecords;
+import com.openclassrooms.new_safety_net.model.PersonInfo;
 import com.openclassrooms.new_safety_net.model.Persons;
 import com.openclassrooms.new_safety_net.model.PersonsFireStation;
 import com.openclassrooms.new_safety_net.model.PhoneAlert;
@@ -600,6 +602,78 @@ public class NewSafetyAlertController {
                 + loggerApiNewSafetyNet.loggerInfo(request, response, station.toString());
         LOGGER.info(messagelogger);
         return new ResponseEntity<>(listPersonsFireStation, HttpStatus.valueOf(response.getStatus()));
+    }
+
+    @GetMapping("personInfo")
+    public ResponseEntity<List<PersonInfo>> personInfo(@RequestParam String firstName, @RequestParam String lastName,
+            HttpServletRequest request, HttpServletResponse response) {
+
+        if (firstName.isBlank() || lastName.isBlank()) {
+            response.setStatus(400);
+            messagelogger = PARAMNOTEXIST + RESPONSSTATUS + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, "");
+            LOGGER.warn(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        List<PersonInfo> listPeronInfo = new ArrayList<>();
+        try {
+            listPeronInfo = repository.personInfo(firstName, lastName);
+        } catch (IOException | ParseException e) {
+            response.setStatus(404);
+            LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, firstName + " " + lastName));
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+        if (listPeronInfo.isEmpty()) {
+            response.setStatus(404);
+            messagelogger = "No person with this name. " + RESPONSSTATUS + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, firstName + " " + lastName);
+            LOGGER.info(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        response.setStatus(200);
+        messagelogger = RESPONSSTATUS + response.getStatus() + ":"
+                + loggerApiNewSafetyNet.loggerInfo(request, response, firstName + " " + lastName);
+        LOGGER.info(messagelogger);
+        return new ResponseEntity<>(listPeronInfo, HttpStatus.valueOf(response.getStatus()));
+    }
+
+    @GetMapping("communityEmail")
+    public ResponseEntity<List<CommunityEmail>> communityEmail(@RequestParam String city, HttpServletRequest request,
+            HttpServletResponse response) {
+
+        if (city.isBlank()) {
+            response.setStatus(400);
+            messagelogger = PARAMNOTEXIST + RESPONSSTATUS + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, "");
+            LOGGER.warn(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        List<CommunityEmail> listCommunityEmail = new ArrayList<>();
+        try {
+            listCommunityEmail = repository.communityEmail(city);
+        } catch (IOException e) {
+            response.setStatus(404);
+            LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, city));
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        if (listCommunityEmail.get(0).getListEmails().isEmpty()) {
+            response.setStatus(404);
+            messagelogger = "No emails for this city. " + RESPONSSTATUS + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, city);
+            LOGGER.info(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+
+        }
+
+        response.setStatus(200);
+        messagelogger = RESPONSSTATUS + response.getStatus() + ":"
+                + loggerApiNewSafetyNet.loggerInfo(request, response, city);
+        LOGGER.info(messagelogger);
+        return new ResponseEntity<>(listCommunityEmail, HttpStatus.valueOf(response.getStatus()));
     }
 
 }
