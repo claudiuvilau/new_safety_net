@@ -1106,14 +1106,149 @@ public class SafetyNetService implements SafetyNetRepository {
 
     @Override
     public List<PersonInfo> personInfo(String firstName, String lastName) throws IOException, ParseException {
-        // TODO Auto-generated method stub
-        return null;
+
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug(loggerApiNewSafetyNet.loggerDebug(firstName + " " + lastName));
+        }
+
+        List<PersonInfo> listPersonInfo = createNewListPersonInfoArrayList();
+
+        // create a list of persons
+        List<Persons> listP = createNewPersonsArrayList();
+        List<Persons> listPersons;
+        listPersons = createListPersons();
+
+        if (LOGGER.isDebugEnabled()) {
+            messageLogger = "The list of persons: " + listPersons;
+            LOGGER.debug(messageLogger);
+        }
+
+        // create a list of medical records
+        List<Medicalrecords> listMedicalrecords;
+        listMedicalrecords = createListMedicalrecords();
+
+        if (LOGGER.isDebugEnabled()) {
+            messageLogger = "The list of medical records is: " + listMedicalrecords;
+            LOGGER.debug(messageLogger);
+        }
+
+        // add person with the first and last name from end point
+        boolean findPerson = false;
+        for (Persons elementPersons : listPersons) {
+            if (elementPersons.getFirstName().equalsIgnoreCase(firstName)
+                    && elementPersons.getLastName().equalsIgnoreCase(lastName)) {
+                listP.add(elementPersons);
+                findPerson = true;
+                break;
+            }
+        }
+        // add all persons with the same name if we have a person
+        if (findPerson) {
+            for (Persons elementPersons : listPersons) {
+                if (!elementPersons.getFirstName().equalsIgnoreCase(firstName)
+                        && elementPersons.getLastName().equalsIgnoreCase(lastName)) {
+                    listP.add(elementPersons);
+                }
+            }
+        }
+
+        listPersonInfo = addAgeAndMedicalRecords(listP, listMedicalrecords, listPersonInfo);
+
+        return listPersonInfo;
+    }
+
+    private List<PersonInfo> addAgeAndMedicalRecords(List<Persons> listP, List<Medicalrecords> listMedicalrecords,
+            List<PersonInfo> listPersonInfo) {
+
+        // add the age and medical records
+        PersonInfo personInfo;
+        String firstAndLastNamePersons = "";
+        String firstAndLastNameMedicalrecords = "";
+        Period periode;
+        for (Persons elementPersons : listP) {
+            firstAndLastNamePersons = elementPersons.getFirstName() + elementPersons.getLastName();
+            for (Medicalrecords elementMedicalrecords : listMedicalrecords) {
+                firstAndLastNameMedicalrecords = elementMedicalrecords.getFirstName()
+                        + elementMedicalrecords.getLastName();
+                if (firstAndLastNamePersons.equalsIgnoreCase(firstAndLastNameMedicalrecords)) {
+                    personInfo = new PersonInfo();
+                    personInfo.setFirstName(elementPersons.getFirstName());
+                    personInfo.setLastName(elementPersons.getLastName());
+                    periode = extractDateFromText(elementMedicalrecords.getBirthdate());
+                    if (periode == null) {
+                        return Collections.emptyList();
+                    }
+                    personInfo.setOld(Integer.toString(periode.getYears()));
+                    personInfo.setAddress(elementPersons.getAddress());
+                    personInfo.setEmail(elementPersons.getEmail());
+                    personInfo.setListAllergies(elementMedicalrecords.getAllergies());
+                    personInfo.setListMedications(elementMedicalrecords.getMedications());
+                    listPersonInfo.add(personInfo);
+                }
+            }
+        }
+
+        return listPersonInfo;
     }
 
     @Override
     public List<CommunityEmail> communityEmail(String city) throws IOException {
-        // TODO Auto-generated method stub
-        return null;
+
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug(loggerApiNewSafetyNet.loggerDebug(city));
+        }
+
+        // create a list of persons
+        List<Persons> listPersons;
+        listPersons = createListPersons();
+
+        if (LOGGER.isDebugEnabled()) {
+            messageLogger = "The list of persons: " + listPersons;
+            LOGGER.debug(messageLogger);
+        }
+
+        CommunityEmail communityEmail;
+        List<String> listEmail = createNewStringArrayList();
+        for (Persons elementPersons : listPersons) {
+            if (elementPersons.getCity().equals(city)) {
+                listEmail.add(elementPersons.getEmail());
+            }
+        }
+
+        if (LOGGER.isDebugEnabled()) {
+            messageLogger = "The list of emails is created(before remove the duplicate): " + listEmail;
+            LOGGER.debug(messageLogger);
+        }
+
+        // remove the the duplicate email
+        List<String> listEmailNoDuplicate;
+        listEmailNoDuplicate = removeDuplicateEmail(listEmail);
+
+        List<CommunityEmail> listCommunityEmail = createNewCommunityEmail();
+        communityEmail = new CommunityEmail();
+        communityEmail.setListEmails(listEmailNoDuplicate);
+        listCommunityEmail.add(communityEmail);
+
+        return listCommunityEmail;
+
+    }
+
+    private List<String> removeDuplicateEmail(List<String> listEmail) {
+
+        List<String> listEmailNoDuplicate = createNewStringArrayList();
+
+        for (int i = 0; i < listEmail.size(); i++) {
+            if (!listEmail.get(i).isEmpty()) { // if empty it was duplicate
+                for (int j = i + 1; j < listEmail.size(); j++) {
+                    if (listEmail.get(i).equals(listEmail.get(j))) {
+                        listEmail.set(j, ""); // if duplicate set to empty
+                    }
+                }
+                listEmailNoDuplicate.add(listEmail.get(i)); // we create the new list without duplicate
+            }
+        }
+
+        return listEmailNoDuplicate;
     }
 
     @Override
@@ -1256,6 +1391,14 @@ public class SafetyNetService implements SafetyNetRepository {
     }
 
     private List<PersonsFireStation> createNewPersonsFireStationArrayList() {
+        return new ArrayList<>();
+    }
+
+    private List<PersonInfo> createNewListPersonInfoArrayList() {
+        return new ArrayList<>();
+    }
+
+    private List<CommunityEmail> createNewCommunityEmail() {
         return new ArrayList<>();
     }
 
