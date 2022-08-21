@@ -2,6 +2,7 @@ package com.openclassrooms.new_safety_net.controller;
 
 import java.io.IOException;
 import java.net.URI;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,9 +21,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.openclassrooms.new_safety_net.model.ChildAlert;
+import com.openclassrooms.new_safety_net.model.CommunityEmail;
+import com.openclassrooms.new_safety_net.model.FireAddress;
 import com.openclassrooms.new_safety_net.model.Firestations;
+import com.openclassrooms.new_safety_net.model.FoyerChildrenAdultsToFireStation;
 import com.openclassrooms.new_safety_net.model.Medicalrecords;
+import com.openclassrooms.new_safety_net.model.PersonInfo;
 import com.openclassrooms.new_safety_net.model.Persons;
+import com.openclassrooms.new_safety_net.model.PersonsFireStation;
+import com.openclassrooms.new_safety_net.model.PhoneAlert;
 import com.openclassrooms.new_safety_net.repository.SafetyNetRepository;
 import com.openclassrooms.new_safety_net.service.LoggerApiNewSafetyNet;
 
@@ -45,6 +53,7 @@ public class NewSafetyAlertController {
     // Récupération de notre logger.
     private static final Logger LOGGER = LogManager.getLogger(NewSafetyAlertController.class);
     private static final String RESPONSSTATUS = "Response status ";
+    private static final String PARAMNOTEXIST = "The param does not exist. ";
 
     LoggerApiNewSafetyNet loggerApiNewSafetyNet = new LoggerApiNewSafetyNet();
 
@@ -245,7 +254,7 @@ public class NewSafetyAlertController {
 
         if (address.isBlank()) {
             response.setStatus(400);
-            messagelogger = "The param does not exist. " + RESPONSSTATUS + response.getStatus() + ":"
+            messagelogger = PARAMNOTEXIST + RESPONSSTATUS + response.getStatus() + ":"
                     + loggerApiNewSafetyNet.loggerInfo(request, response, "");
             LOGGER.warn(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
@@ -274,7 +283,7 @@ public class NewSafetyAlertController {
 
         if (address == null && stationNumber == null) {
             response.setStatus(400);
-            messagelogger = "The param does not exist. " + RESPONSSTATUS + response.getStatus() + ":"
+            messagelogger = PARAMNOTEXIST + RESPONSSTATUS + response.getStatus() + ":"
                     + loggerApiNewSafetyNet.loggerInfo(request, response, "");
             LOGGER.warn(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
@@ -408,6 +417,263 @@ public class NewSafetyAlertController {
                 + loggerApiNewSafetyNet.loggerInfo(request, response, firstName + " " + lastName);
         LOGGER.info(messagelogger);
         return ResponseEntity.status(response.getStatus()).build();
+    }
+
+    @GetMapping("firestation")
+    public ResponseEntity<List<FoyerChildrenAdultsToFireStation>> firestationStationNumber(
+            @RequestParam String stationNumber,
+            HttpServletRequest request, HttpServletResponse response) {
+
+        if (stationNumber.isBlank()) {
+            response.setStatus(400);
+            messagelogger = PARAMNOTEXIST + RESPONSSTATUS + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, "");
+            LOGGER.warn(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        List<FoyerChildrenAdultsToFireStation> listFoyerChildrenAdultsToFireStation;
+        listFoyerChildrenAdultsToFireStation = repository.personsOfStationAdultsAndChild(stationNumber);
+
+        // if we have 0 adult 0 children or list is empty"
+
+        if (listFoyerChildrenAdultsToFireStation == null) {
+            response.setStatus(404);
+            messagelogger = "The list is null. " + RESPONSSTATUS + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, stationNumber);
+            LOGGER.error(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        } else {
+            if (listFoyerChildrenAdultsToFireStation.get(0).getlistPersonsOfFireStations().isEmpty()
+                    && listFoyerChildrenAdultsToFireStation.get(1).getlistPersonsOfFireStations().isEmpty()) {
+                response.setStatus(404);
+                messagelogger = "The list is empty. No children and no adult. " + RESPONSSTATUS + response.getStatus()
+                        + ":"
+                        + loggerApiNewSafetyNet.loggerInfo(request, response, stationNumber);
+                LOGGER.info(messagelogger);
+                return ResponseEntity.status(response.getStatus()).build();
+            }
+        }
+
+        response.setStatus(200);
+        messagelogger = RESPONSSTATUS + response.getStatus() + ":"
+                + loggerApiNewSafetyNet.loggerInfo(request, response, stationNumber);
+        LOGGER.info(messagelogger);
+        return new ResponseEntity<>(listFoyerChildrenAdultsToFireStation, HttpStatus.valueOf(response.getStatus()));
+    }
+
+    @GetMapping("childAlert")
+    public ResponseEntity<List<ChildAlert>> childAlert(@RequestParam String address, HttpServletRequest request,
+            HttpServletResponse response) {
+
+        if (address.isBlank()) {
+            response.setStatus(400);
+            messagelogger = PARAMNOTEXIST + RESPONSSTATUS + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, "");
+            LOGGER.warn(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        List<ChildAlert> listChildren = new ArrayList<>();
+        try {
+            listChildren = repository.childPersonsAlertAddress(address);
+        } catch (IOException | ParseException e) {
+            response.setStatus(404);
+            LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, address));
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+        if (listChildren == null) {
+            response.setStatus(404);
+            messagelogger = "The list is null. " + RESPONSSTATUS + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, address);
+            LOGGER.info(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        response.setStatus(200);
+        messagelogger = RESPONSSTATUS + response.getStatus() + ":"
+                + loggerApiNewSafetyNet.loggerInfo(request, response, address);
+        LOGGER.info(messagelogger);
+        return new ResponseEntity<>(listChildren, HttpStatus.valueOf(response.getStatus()));
+
+    }
+
+    @GetMapping("phoneAlert")
+    public ResponseEntity<List<PhoneAlert>> phoneAlertStationNumber(@RequestParam String firestation,
+            HttpServletRequest request, HttpServletResponse response) {
+
+        if (firestation.isBlank()) {
+            response.setStatus(400);
+            messagelogger = PARAMNOTEXIST + RESPONSSTATUS + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, "");
+            LOGGER.warn(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        List<PhoneAlert> listPhoneAlert = new ArrayList<>();
+        try {
+            listPhoneAlert = repository.phoneAlertFirestation(firestation);
+        } catch (IOException e) {
+            response.setStatus(404);
+            LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, firestation));
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        if (listPhoneAlert.get(0).getListPhones().isEmpty()) {
+            response.setStatus(404);
+            messagelogger = "No phone for the alerts. " + RESPONSSTATUS + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, firestation);
+            LOGGER.info(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        response.setStatus(200);
+        messagelogger = RESPONSSTATUS + response.getStatus() + ":"
+                + loggerApiNewSafetyNet.loggerInfo(request, response, firestation);
+        LOGGER.info(messagelogger);
+        return new ResponseEntity<>(listPhoneAlert, HttpStatus.valueOf(response.getStatus()));
+    }
+
+    @GetMapping("fire")
+    public ResponseEntity<List<FireAddress>> fireAddress(@RequestParam String address, HttpServletRequest request,
+            HttpServletResponse response) {
+
+        if (address.isBlank()) {
+            response.setStatus(400);
+            messagelogger = PARAMNOTEXIST + RESPONSSTATUS + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, "");
+            LOGGER.warn(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        List<FireAddress> listFireAddress = new ArrayList<>();
+        try {
+            listFireAddress = repository.fireAddress(address);
+        } catch (IOException | ParseException e) {
+            response.setStatus(404);
+            LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, address));
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        if (listFireAddress.isEmpty()) {
+            response.setStatus(404);
+            messagelogger = "No fire station for this address. " + RESPONSSTATUS + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, address);
+            LOGGER.info(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+        response.setStatus(200);
+        messagelogger = RESPONSSTATUS + response.getStatus() + ":"
+                + loggerApiNewSafetyNet.loggerInfo(request, response, address);
+        LOGGER.info(messagelogger);
+        return new ResponseEntity<>(listFireAddress, HttpStatus.valueOf(response.getStatus()));
+    }
+
+    @GetMapping("flood/station")
+    public ResponseEntity<List<PersonsFireStation>> fireAddressListFireStation(@RequestParam List<String> station,
+            HttpServletRequest request, HttpServletResponse response) {
+
+        if (station.isEmpty()) {
+            response.setStatus(400);
+            messagelogger = PARAMNOTEXIST + RESPONSSTATUS + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, "");
+            LOGGER.warn(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        List<PersonsFireStation> listPersonsFireStation = new ArrayList<>();
+        try {
+            listPersonsFireStation = repository.stationListFirestation(station);
+        } catch (IOException | ParseException e) {
+            response.setStatus(404);
+            LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, station.toString()));
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        if (listPersonsFireStation.isEmpty()) {
+            response.setStatus(404);
+            messagelogger = "No person in theses fire stations. " + RESPONSSTATUS + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, station.toString());
+            LOGGER.info(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+        response.setStatus(200);
+        messagelogger = RESPONSSTATUS + response.getStatus() + ":"
+                + loggerApiNewSafetyNet.loggerInfo(request, response, station.toString());
+        LOGGER.info(messagelogger);
+        return new ResponseEntity<>(listPersonsFireStation, HttpStatus.valueOf(response.getStatus()));
+    }
+
+    @GetMapping("personInfo")
+    public ResponseEntity<List<PersonInfo>> personInfo(@RequestParam String firstName, @RequestParam String lastName,
+            HttpServletRequest request, HttpServletResponse response) {
+
+        if (firstName.isBlank() || lastName.isBlank()) {
+            response.setStatus(400);
+            messagelogger = PARAMNOTEXIST + RESPONSSTATUS + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, "");
+            LOGGER.warn(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        List<PersonInfo> listPeronInfo = new ArrayList<>();
+        try {
+            listPeronInfo = repository.personInfo(firstName, lastName);
+        } catch (IOException | ParseException e) {
+            response.setStatus(404);
+            LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, firstName + " " + lastName));
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+        if (listPeronInfo.isEmpty()) {
+            response.setStatus(404);
+            messagelogger = "No person with this name. " + RESPONSSTATUS + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, firstName + " " + lastName);
+            LOGGER.info(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        response.setStatus(200);
+        messagelogger = RESPONSSTATUS + response.getStatus() + ":"
+                + loggerApiNewSafetyNet.loggerInfo(request, response, firstName + " " + lastName);
+        LOGGER.info(messagelogger);
+        return new ResponseEntity<>(listPeronInfo, HttpStatus.valueOf(response.getStatus()));
+    }
+
+    @GetMapping("communityEmail")
+    public ResponseEntity<List<CommunityEmail>> communityEmail(@RequestParam String city, HttpServletRequest request,
+            HttpServletResponse response) {
+
+        if (city.isBlank()) {
+            response.setStatus(400);
+            messagelogger = PARAMNOTEXIST + RESPONSSTATUS + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, "");
+            LOGGER.warn(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        List<CommunityEmail> listCommunityEmail = new ArrayList<>();
+        try {
+            listCommunityEmail = repository.communityEmail(city);
+        } catch (IOException e) {
+            response.setStatus(404);
+            LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, city));
+            return ResponseEntity.status(response.getStatus()).build();
+        }
+
+        if (listCommunityEmail.get(0).getListEmails().isEmpty()) {
+            response.setStatus(404);
+            messagelogger = "No emails for this city. " + RESPONSSTATUS + response.getStatus() + ":"
+                    + loggerApiNewSafetyNet.loggerInfo(request, response, city);
+            LOGGER.info(messagelogger);
+            return ResponseEntity.status(response.getStatus()).build();
+
+        }
+
+        response.setStatus(200);
+        messagelogger = RESPONSSTATUS + response.getStatus() + ":"
+                + loggerApiNewSafetyNet.loggerInfo(request, response, city);
+        LOGGER.info(messagelogger);
+        return new ResponseEntity<>(listCommunityEmail, HttpStatus.valueOf(response.getStatus()));
     }
 
 }

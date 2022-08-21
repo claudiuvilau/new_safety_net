@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Allergies {
 
-    private List<String> allergies = new ArrayList<>();
+    private List<String> allergie = new ArrayList<>();
 
     public Allergies() {
 
@@ -13,20 +13,20 @@ public class Allergies {
 
     public Allergies(List<String> allergies) {
         super();
-        this.allergies = allergies;
+        this.allergie = allergies;
     }
 
     public List<String> getAllergies() {
-        return allergies;
+        return allergie;
     }
 
     public void setAllergies(List<String> allergies) {
-        this.allergies = allergies;
+        this.allergie = allergies;
     }
 
     @Override
     public String toString() {
-        return "Allergies [allergies=" + allergies + "]";
+        return "Allergies [allergies=" + allergie + "]";
     }
 
 }
