@@ -1,0 +1,145 @@
+2022-08-24 21:25:57 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Starting NewSafetyNetApplicationTests using Java 17.0.3 on Claudiu-Dell with PID 13928 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-24 21:25:57 [main] DEBUG c.o.n.NewSafetyNetApplicationTests                 - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-24 21:25:57 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - No active profile set, falling back to 1 default profile: "default"
+2022-08-24 21:25:58 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Started NewSafetyNetApplicationTests in 1.613 seconds (process running for 2.582)
+2022-08-24 21:25:58 [main] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-08-24 21:25:58 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-24 21:52:23 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Starting NewSafetyNetApplicationTests using Java 17.0.3.1 on Claudiu-Dell with PID 2460 (started by kls_k in c:\WorkJavaVisualCode\new_safety_net)
+2022-08-24 21:52:23 [main] DEBUG c.o.n.NewSafetyNetApplicationTests                 - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-24 21:52:23 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - No active profile set, falling back to 1 default profile: "default"
+2022-08-24 21:52:26 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Started NewSafetyNetApplicationTests in 3.408 seconds (process running for 12.922)
+2022-08-24 21:52:27 [main] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-08-24 21:52:27 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-24 21:57:21 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Starting NewSafetyNetApplicationTests using Java 17.0.3.1 on Claudiu-Dell with PID 17232 (started by kls_k in c:\WorkJavaVisualCode\new_safety_net)
+2022-08-24 21:57:21 [main] DEBUG c.o.n.NewSafetyNetApplicationTests                 - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-24 21:57:21 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - No active profile set, falling back to 1 default profile: "default"
+2022-08-24 21:57:23 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Started NewSafetyNetApplicationTests in 1.643 seconds (process running for 6.992)
+2022-08-24 21:57:23 [main] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-08-24 21:57:23 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-24 21:59:09 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Starting NewSafetyNetApplicationTests using Java 17.0.3.1 on Claudiu-Dell with PID 4588 (started by kls_k in c:\WorkJavaVisualCode\new_safety_net)
+2022-08-24 21:59:09 [main] DEBUG c.o.n.NewSafetyNetApplicationTests                 - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-24 21:59:09 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - No active profile set, falling back to 1 default profile: "default"
+2022-08-24 21:59:10 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Started NewSafetyNetApplicationTests in 1.593 seconds (process running for 7.089)
+2022-08-24 21:59:11 [main] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-08-24 21:59:11 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-24 22:16:12 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Starting NewSafetyNetApplicationTests using Java 17.0.3.1 on Claudiu-Dell with PID 8316 (started by kls_k in c:\WorkJavaVisualCode\new_safety_net)
+2022-08-24 22:16:12 [main] DEBUG c.o.n.NewSafetyNetApplicationTests                 - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-24 22:16:12 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - No active profile set, falling back to 1 default profile: "default"
+2022-08-24 22:16:59 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Started NewSafetyNetApplicationTests in 52.72 seconds (process running for 62.336)
+2022-08-24 22:17:01 [main] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-08-24 22:17:01 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-24 22:17:35 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Starting NewSafetyNetApplicationTests using Java 17.0.3.1 on Claudiu-Dell with PID 12784 (started by kls_k in c:\WorkJavaVisualCode\new_safety_net)
+2022-08-24 22:17:35 [main] DEBUG c.o.n.NewSafetyNetApplicationTests                 - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-24 22:17:35 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - No active profile set, falling back to 1 default profile: "default"
+2022-08-24 22:17:43 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Started NewSafetyNetApplicationTests in 8.501 seconds (process running for 10.116)
+2022-08-24 22:17:45 [main] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-08-24 22:17:45 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-24 22:18:23 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Starting NewSafetyNetApplicationTests using Java 17.0.3.1 on Claudiu-Dell with PID 10824 (started by kls_k in c:\WorkJavaVisualCode\new_safety_net)
+2022-08-24 22:18:23 [main] DEBUG c.o.n.NewSafetyNetApplicationTests                 - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-24 22:18:23 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - No active profile set, falling back to 1 default profile: "default"
+2022-08-24 22:18:27 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Started NewSafetyNetApplicationTests in 5.3 seconds (process running for 8.951)
+2022-08-24 22:18:28 [main] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-08-24 22:18:28 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-24 22:22:27 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Starting NewSafetyNetApplicationTests using Java 17.0.3.1 on Claudiu-Dell with PID 16568 (started by kls_k in c:\WorkJavaVisualCode\new_safety_net)
+2022-08-24 22:22:27 [main] DEBUG c.o.n.NewSafetyNetApplicationTests                 - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-24 22:22:27 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - No active profile set, falling back to 1 default profile: "default"
+2022-08-24 22:22:29 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Started NewSafetyNetApplicationTests in 2.389 seconds (process running for 4.06)
+2022-08-24 22:22:29 [main] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-08-24 22:22:29 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-24 22:23:13 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Starting NewSafetyNetApplicationTests using Java 17.0.3.1 on Claudiu-Dell with PID 4460 (started by kls_k in c:\WorkJavaVisualCode\new_safety_net)
+2022-08-24 22:23:13 [main] DEBUG c.o.n.NewSafetyNetApplicationTests                 - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-24 22:23:13 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - No active profile set, falling back to 1 default profile: "default"
+2022-08-24 22:23:15 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Started NewSafetyNetApplicationTests in 2.317 seconds (process running for 3.893)
+2022-08-24 22:23:16 [main] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-08-24 22:23:16 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-24 22:25:00 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Starting NewSafetyNetApplicationTests using Java 17.0.3.1 on Claudiu-Dell with PID 8600 (started by kls_k in c:\WorkJavaVisualCode\new_safety_net)
+2022-08-24 22:25:00 [main] DEBUG c.o.n.NewSafetyNetApplicationTests                 - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-24 22:25:00 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - No active profile set, falling back to 1 default profile: "default"
+2022-08-24 22:25:02 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Started NewSafetyNetApplicationTests in 2.299 seconds (process running for 3.885)
+2022-08-24 22:25:02 [main] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-08-24 22:25:02 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-24 22:29:53 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Starting NewSafetyNetApplicationTests using Java 17.0.3 on Claudiu-Dell with PID 18936 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-24 22:29:53 [main] DEBUG c.o.n.NewSafetyNetApplicationTests                 - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-24 22:29:53 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - No active profile set, falling back to 1 default profile: "default"
+2022-08-24 22:29:54 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Started NewSafetyNetApplicationTests in 1.501 seconds (process running for 2.32)
+2022-08-24 22:29:55 [main] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-08-24 22:29:55 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-24 22:29:55 [main] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-08-24 22:29:55 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-24 22:29:55 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-08-24 22:31:41 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Starting NewSafetyNetApplicationTests using Java 17.0.3 on Claudiu-Dell with PID 18408 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-24 22:31:41 [main] DEBUG c.o.n.NewSafetyNetApplicationTests                 - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-24 22:31:41 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - No active profile set, falling back to 1 default profile: "default"
+2022-08-24 22:31:42 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Started NewSafetyNetApplicationTests in 1.527 seconds (process running for 2.348)
+2022-08-24 22:31:42 [main] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-08-24 22:31:42 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-24 22:31:42 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-08-24 22:32:05 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Starting NewSafetyNetApplicationTests using Java 17.0.3 on Claudiu-Dell with PID 24296 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-24 22:32:05 [main] DEBUG c.o.n.NewSafetyNetApplicationTests                 - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-24 22:32:05 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - No active profile set, falling back to 1 default profile: "default"
+2022-08-24 22:32:06 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Started NewSafetyNetApplicationTests in 1.552 seconds (process running for 2.636)
+2022-08-24 22:32:07 [main] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-08-24 22:32:07 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-24 22:32:07 [main] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-08-24 22:32:07 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-24 22:32:07 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-08-24 22:33:36 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Starting NewSafetyNetApplicationTests using Java 17.0.3 on Claudiu-Dell with PID 2384 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-24 22:33:36 [main] DEBUG c.o.n.NewSafetyNetApplicationTests                 - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-24 22:33:36 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - No active profile set, falling back to 1 default profile: "default"
+2022-08-24 22:33:37 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Started NewSafetyNetApplicationTests in 1.634 seconds (process running for 2.629)
+2022-08-24 22:33:37 [main] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-08-24 22:33:37 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-24 22:33:37 [main] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-08-24 22:33:37 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-24 22:33:37 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-08-24 22:34:45 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 22448 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-24 22:34:45 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-24 22:34:45 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-08-24 22:34:46 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9001 (http)
+2022-08-24 22:34:47 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9001 (http) with context path ''
+2022-08-24 22:34:47 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.102 seconds (process running for 2.747)
+2022-08-24 22:35:05 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Starting NewSafetyNetApplicationTests using Java 17.0.3 on Claudiu-Dell with PID 18560 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-24 22:35:05 [main] DEBUG c.o.n.NewSafetyNetApplicationTests                 - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-24 22:35:05 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - No active profile set, falling back to 1 default profile: "default"
+2022-08-24 22:35:07 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Started NewSafetyNetApplicationTests in 1.632 seconds (process running for 2.631)
+2022-08-24 22:35:07 [main] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-08-24 22:35:07 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-24 22:35:07 [main] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-08-24 22:35:07 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-24 22:35:07 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-08-24 22:36:07 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Starting NewSafetyNetApplicationTests using Java 17.0.3 on Claudiu-Dell with PID 21764 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-24 22:36:07 [main] DEBUG c.o.n.NewSafetyNetApplicationTests                 - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-24 22:36:07 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - No active profile set, falling back to 1 default profile: "default"
+2022-08-24 22:36:08 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Started NewSafetyNetApplicationTests in 1.662 seconds (process running for 2.643)
+2022-08-24 22:36:08 [main] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-08-24 22:36:09 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-24 22:36:09 [main] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-08-24 22:36:09 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-24 22:37:57 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-08-24 22:39:10 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Starting NewSafetyNetApplicationTests using Java 17.0.3 on Claudiu-Dell with PID 23260 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-24 22:39:10 [main] DEBUG c.o.n.NewSafetyNetApplicationTests                 - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-24 22:39:10 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - No active profile set, falling back to 1 default profile: "default"
+2022-08-24 22:39:12 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Started NewSafetyNetApplicationTests in 1.463 seconds (process running for 2.278)
+2022-08-24 22:39:12 [main] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-08-24 22:39:12 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-24 22:39:12 [main] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-08-24 22:39:12 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-24 22:39:12 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-08-24 22:39:48 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Starting NewSafetyNetApplicationTests using Java 17.0.3.1 on Claudiu-Dell with PID 25220 (started by kls_k in c:\WorkJavaVisualCode\new_safety_net)
+2022-08-24 22:39:48 [main] DEBUG c.o.n.NewSafetyNetApplicationTests                 - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-24 22:39:48 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - No active profile set, falling back to 1 default profile: "default"
+2022-08-24 22:39:50 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Started NewSafetyNetApplicationTests in 2.477 seconds (process running for 4.116)
+2022-08-24 22:39:51 [main] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-08-24 22:39:51 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-24 22:39:51 [main] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-08-24 22:39:51 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-24 22:39:51 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-08-24 22:41:18 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Starting NewSafetyNetApplicationTests using Java 17.0.3.1 on Claudiu-Dell with PID 6300 (started by kls_k in c:\WorkJavaVisualCode\new_safety_net)
+2022-08-24 22:41:18 [main] DEBUG c.o.n.NewSafetyNetApplicationTests                 - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-24 22:41:18 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - No active profile set, falling back to 1 default profile: "default"
+2022-08-24 22:41:20 [main] INFO  c.o.n.NewSafetyNetApplicationTests                 - Started NewSafetyNetApplicationTests in 2.443 seconds (process running for 3.985)
+2022-08-24 22:41:21 [main] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-08-24 22:41:21 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-24 22:41:21 [main] DEBUG c.o.n.s.SafetyNetService                           - Json iterator is created.
+2022-08-24 22:41:21 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-24 22:41:21 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
