@@ -9,7 +9,7 @@ import org.apache.logging.log4j.Logger;
 
 public class JsonToFile {
 
-    public String filepathjson = "src\\main\\resources\\jsonFile.json";
+    public static final String FILEPATHJSON = "src\\main\\resources\\jsonFile.json";
 
     private byte[] objetfile;
 
@@ -34,7 +34,7 @@ public class JsonToFile {
 
     public byte[] readJsonFile() {
 
-        fileInPath = new File(filepathjson);
+        fileInPath = new File(FILEPATHJSON);
 
         if (!fileInPath.exists()) {
             LOGGER.debug("Fichier introuvable. Vérifier le chemin du fichier .json");
@@ -42,7 +42,7 @@ public class JsonToFile {
         }
 
         try {
-            objetfile = Files.readAllBytes(new File(filepathjson).toPath());
+            objetfile = Files.readAllBytes(new File(FILEPATHJSON).toPath());
         } catch (IOException e) {
             LOGGER.debug("Erreur création objet JAVA à partir du fichier .json");
         }
