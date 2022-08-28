@@ -31,6 +31,7 @@ import com.openclassrooms.new_safety_net.model.PersonInfo;
 import com.openclassrooms.new_safety_net.model.Persons;
 import com.openclassrooms.new_safety_net.model.PersonsFireStation;
 import com.openclassrooms.new_safety_net.model.PhoneAlert;
+import com.openclassrooms.new_safety_net.repository.GetListsElementsJsonRepository;
 import com.openclassrooms.new_safety_net.repository.SafetyNetRepository;
 import com.openclassrooms.new_safety_net.service.LoggerApiNewSafetyNet;
 
@@ -42,6 +43,9 @@ public class NewSafetyAlertController {
 
     @Autowired
     private SafetyNetRepository repository;
+
+    @Autowired
+    private GetListsElementsJsonRepository repositoryElementJson;
 
     List<Persons> listPersons = new ArrayList<>();
     List<Firestations> listFirestations = new ArrayList<>();
@@ -63,7 +67,7 @@ public class NewSafetyAlertController {
     public ResponseEntity<List<Persons>> getPersons(HttpServletResponse response, HttpServletRequest request) {
         String elemjson = "persons";
         try {
-            listPersons = repository.getPersons(elemjson);
+            listPersons = repositoryElementJson.getPersons(elemjson);
         } catch (IOException e) {
             response.setStatus(404);
         }
@@ -206,7 +210,7 @@ public class NewSafetyAlertController {
     public ResponseEntity<List<Firestations>> getFirestations(HttpServletResponse response,
             HttpServletRequest request) {
         String elemjson = "firestations";
-        listFirestations = repository.getFirestations(elemjson);
+        listFirestations = repositoryElementJson.getFirestations(elemjson);
 
         if (listFirestations.isEmpty()) {
             // 204 Requête traitée avec succès mais pas d’information à renvoyer.
@@ -312,7 +316,7 @@ public class NewSafetyAlertController {
     public ResponseEntity<List<Medicalrecords>> getMedicalrecords(HttpServletResponse response,
             HttpServletRequest request) {
         String elemjson = "medicalrecords";
-        listMedicalrecords = repository.getMedicalrecords(elemjson);
+        listMedicalrecords = repositoryElementJson.getMedicalrecords(elemjson);
 
         if (listMedicalrecords.isEmpty()) {
             // 204 Requête traitée avec succès mais pas d’information à renvoyer.

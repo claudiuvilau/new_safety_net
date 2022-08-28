@@ -1,6 +1,5 @@
 package com.openclassrooms.new_safety_net.service;
 
-import java.io.FileWriter;
 import java.io.IOException;
 
 import java.text.ParseException;
@@ -17,18 +16,13 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
 
-import com.jsoniter.JsonIterator;
-import com.jsoniter.any.Any;
-import com.jsoniter.output.JsonStream;
 import com.openclassrooms.new_safety_net.model.AddressListFirestation;
 import com.openclassrooms.new_safety_net.model.ChildAlert;
 import com.openclassrooms.new_safety_net.model.ChildrenOrAdults;
-import com.openclassrooms.new_safety_net.model.CollectionsRessources;
 import com.openclassrooms.new_safety_net.model.CommunityEmail;
 import com.openclassrooms.new_safety_net.model.FireAddress;
 import com.openclassrooms.new_safety_net.model.Firestations;
 import com.openclassrooms.new_safety_net.model.FoyerChildrenAdultsToFireStation;
-import com.openclassrooms.new_safety_net.model.JsonToFile;
 import com.openclassrooms.new_safety_net.model.Medicalrecords;
 import com.openclassrooms.new_safety_net.model.PersonInfo;
 import com.openclassrooms.new_safety_net.model.Persons;
@@ -45,7 +39,7 @@ public class SafetyNetService implements SafetyNetRepository {
 
     // @Autowired
     // pourquoi pas de Autowired ?
-    private JsonToFile jsonToFile = createClasseJsonToFile();
+
     private Persons personsObj = createClassePersons();
     private Firestations firestationsObj = createClassFirestations();
     private Medicalrecords medicalrecordsObj = createClassMedicalrecords();
@@ -61,31 +55,17 @@ public class SafetyNetService implements SafetyNetRepository {
     private static final int CHILDOLD = 17; // 17 max age for the children.
     private String messageLogger = "";
 
+    private ObjetFromJson objetFromJson = createObjetFromJson();
+    private NewFileJson newFileJson = createNewFileJson();
+    private GetListsElementsJson getListsElementsJsonRepository = createGetListsElementsJson();
+
     // pourquoi Override ?
-    @Override
-    public List<Persons> getPersons(String elemjson) {
-        List<Persons> listPersons = new ArrayList<>();
-        Any any = null;
-
-        any = anyAny(elemjson, any);
-
-        if (any != null) {
-            Any personsAny = any.get(elemjson);
-            for (Any element : personsAny) {
-                // transforming the json in java object Persons.class
-                personsObj = JsonIterator.deserialize(element.toString(), Persons.class);
-                listPersons.add(personsObj);
-            }
-            LOGGER.debug("List persons is created.");
-        }
-        return listPersons;
-    }
-
     @Override
     public List<Persons> getAPerson(String firstNamelastName, String elemjson) throws IOException {
         List<Persons> listPersons = new ArrayList<>();
         List<Persons> listP = listPersons;
-        listPersons = getPersons(elemjson); // here we have a list of objects Persons from json
+        listPersons = getListsElementsJsonRepository.getPersons(elemjson); // here we have a list of objects Persons
+                                                                           // from json
 
         for (Persons element : listPersons) {
             if ((element.getFirstName().trim() + element.getLastName().trim()).equalsIgnoreCase(firstNamelastName)) {
@@ -94,62 +74,6 @@ public class SafetyNetService implements SafetyNetRepository {
         }
         LOGGER.debug("Get the person is ok.");
         return listP;
-    }
-
-    @Override
-    public List<Firestations> getFirestations(String elemjson) {
-        List<Firestations> listFirestations = new ArrayList<>();
-        Any any = null;
-
-        any = anyAny(elemjson, any);
-
-        if (any != null) {
-            Any firestationsAny = any.get(elemjson);
-            for (Any element : firestationsAny) {
-                // transforming the json in java object Firestations.class
-                firestationsObj = JsonIterator.deserialize(element.toString(), Firestations.class);
-                listFirestations.add(firestationsObj);
-            }
-            messageLogger = "List firestations is created: " + listFirestations;
-            LOGGER.debug(messageLogger);
-        }
-        return listFirestations;
-    }
-
-    @Override
-    public List<Medicalrecords> getMedicalrecords(String elemjson) {
-        List<Medicalrecords> listMedicalrecords = new ArrayList<>();
-        Any any = null;
-
-        any = anyAny(elemjson, any);
-
-        if (any != null) {
-            Any medicalrecordsAny = any.get(elemjson);
-            for (Any element : medicalrecordsAny) {
-                // transforming the json in java object Firestations.class
-                medicalrecordsObj = JsonIterator.deserialize(element.toString(), Medicalrecords.class);
-                listMedicalrecords.add(medicalrecordsObj);
-            }
-            LOGGER.debug("List medicalrecords is created.");
-        }
-        return listMedicalrecords;
-    }
-
-    private Any anyAny(String elemjson, Any any) {
-        byte[] objetfile = null;
-        objetfile = jsonToFile.readJsonFile();
-        if (objetfile != null) {
-            JsonIterator iter = JsonIterator.parse(objetfile);
-            if (iter.currentBuffer().contains(elemjson)) {
-                try {
-                    any = iter.readAny();
-                    LOGGER.debug("Json iterator is created.");
-                } catch (IOException e) {
-                    LOGGER.debug("No objet Java from Json !");
-                }
-            }
-        }
-        return any;
     }
 
     @Override
@@ -199,30 +123,12 @@ public class SafetyNetService implements SafetyNetRepository {
             // create list medical records
             List<Medicalrecords> listMedicalrecords;
             listMedicalrecords = createListMedicalrecords();
-            filecreated = createNewFileJson(listPersons, listFirestations,
-                    listMedicalrecords, person.toString());
+            newFileJson.createNewFileJson(listPersons, listFirestations, listMedicalrecords, person.toString());
+            filecreated = newFileJson.isFileCreated();
             return filecreated;
         }
 
         return false;
-    }
-
-    private List<Persons> createListPersons() {
-        List<Persons> listPersons;
-        listPersons = getPersons(ELEMJSONPERSONS);
-        return listPersons;
-    }
-
-    private List<Firestations> createListFirestations() {
-        List<Firestations> listFirestations;
-        listFirestations = getFirestations(ELEMJSONFIRESTATIONS);
-        return listFirestations;
-    }
-
-    private List<Medicalrecords> createListMedicalrecords() {
-        List<Medicalrecords> listMedicalrecords;
-        listMedicalrecords = getMedicalrecords(ELEMJSONMEDICALRECORDS);
-        return listMedicalrecords;
     }
 
     @Override
@@ -273,8 +179,8 @@ public class SafetyNetService implements SafetyNetRepository {
                 // create list medical records
                 List<Medicalrecords> listMedicalrecords;
                 listMedicalrecords = createListMedicalrecords();
-                filecreated = createNewFileJson(listPersons, listFirestations,
-                        listMedicalrecords, person.toString());
+                newFileJson.createNewFileJson(listPersons, listFirestations, listMedicalrecords, person.toString());
+                filecreated = newFileJson.isFileCreated();
                 return filecreated;
             }
         }
@@ -317,8 +223,8 @@ public class SafetyNetService implements SafetyNetRepository {
                 // create list medical records
                 List<Medicalrecords> listMedicalrecords;
                 listMedicalrecords = createListMedicalrecords();
-                filecreated = createNewFileJson(listPersons, listFirestations,
-                        listMedicalrecords, element.toString());
+                newFileJson.createNewFileJson(listPersons, listFirestations, listMedicalrecords, element.toString());
+                filecreated = newFileJson.isFileCreated();
                 return filecreated;
             }
         }
@@ -365,8 +271,8 @@ public class SafetyNetService implements SafetyNetRepository {
             // create list medical records
             List<Medicalrecords> listMedicalrecords;
             listMedicalrecords = createListMedicalrecords();
-            filecreated = createNewFileJson(listPersons, listFirestations,
-                    listMedicalrecords, firestation.toString());
+            newFileJson.createNewFileJson(listPersons, listFirestations, listMedicalrecords, firestation.toString());
+            filecreated = newFileJson.isFileCreated();
             return filecreated;
         }
         return false;
@@ -418,9 +324,9 @@ public class SafetyNetService implements SafetyNetRepository {
                 // create list medical records
                 List<Medicalrecords> listMedicalrecords;
                 listMedicalrecords = createListMedicalrecords();
-                filecreated = createNewFileJson(listPersons, listFirestations,
-                        listMedicalrecords,
+                newFileJson.createNewFileJson(listPersons, listFirestations, listMedicalrecords,
                         firestation.toString());
+                filecreated = newFileJson.isFileCreated();
                 return filecreated;
             }
         }
@@ -479,10 +385,9 @@ public class SafetyNetService implements SafetyNetRepository {
             List<Medicalrecords> listMedicalrecords;
             listMedicalrecords = createListMedicalrecords();
             Boolean filecreated = false;
-            filecreated = createNewFileJson(listPersons, listFirestations,
-                    listMedicalrecords,
+            newFileJson.createNewFileJson(listPersons, listFirestations, listMedicalrecords,
                     address + " " + stationNumber);
-
+            filecreated = newFileJson.isFileCreated();
             return filecreated;
         }
         return false;
@@ -551,9 +456,8 @@ public class SafetyNetService implements SafetyNetRepository {
             List<Firestations> listFirestations;
             listFirestations = createListFirestations();
             Boolean filecreated = false;
-            filecreated = createNewFileJson(listPersons, listFirestations,
-                    listMedicalrecords,
-                    medicalRecord.toString());
+            newFileJson.createNewFileJson(listPersons, listFirestations, listMedicalrecords, medicalRecord.toString());
+            filecreated = newFileJson.isFileCreated();
             return filecreated;
         }
         return false;
@@ -583,6 +487,7 @@ public class SafetyNetService implements SafetyNetRepository {
 
     private boolean findPersonInMedicalrecordsAndUpdate(Medicalrecords medicalrecords,
             List<Medicalrecords> listMedicalrecords, String firstNamelastName) {
+
         for (Medicalrecords element : listMedicalrecords) {
             if ((element.getFirstName() + element.getLastName()).equals(firstNamelastName)) {
                 if (medicalrecords.getAllergies() != null) {
@@ -608,9 +513,9 @@ public class SafetyNetService implements SafetyNetRepository {
                 listFirestations = createListFirestations();
 
                 Boolean filecreated = false;
-                filecreated = createNewFileJson(listPersons, listFirestations,
-                        listMedicalrecords,
+                newFileJson.createNewFileJson(listPersons, listFirestations, listMedicalrecords,
                         medicalrecords.toString());
+                filecreated = newFileJson.isFileCreated();
                 return filecreated;
             }
         }
@@ -657,9 +562,9 @@ public class SafetyNetService implements SafetyNetRepository {
                 listFirestations = createListFirestations();
 
                 Boolean filecreated = false;
-                filecreated = createNewFileJson(listPersons, listFirestations,
-                        listMedicalrecords,
+                newFileJson.createNewFileJson(listPersons, listFirestations, listMedicalrecords,
                         firstName + " " + lastName);
+                filecreated = newFileJson.isFileCreated();
                 return filecreated;
             }
         }
@@ -1251,49 +1156,7 @@ public class SafetyNetService implements SafetyNetRepository {
         return listEmailNoDuplicate;
     }
 
-    @Override
-    public boolean createNewFileJson(List<Persons> listPersons, List<Firestations> listFirestations,
-            List<Medicalrecords> listMedicalrecords, String param) {
-        CollectionsRessources collectionsRessources = new CollectionsRessources();
-        collectionsRessources.setPersons(listPersons);
-        collectionsRessources.setFirestations(listFirestations);
-        collectionsRessources.setMedicalrecords(listMedicalrecords);
-
-        String jsonstream = JsonStream.serialize(collectionsRessources); // here we transform the list in json
-                                                                         // object
-        FileWriter writer = null;
-        try {
-            writer = new FileWriter(jsonToFile.filepathjson);
-        } catch (IOException e) {
-            LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, param));
-            return false;
-        }
-        try {
-            writer.write(jsonstream);
-        } catch (IOException e) {
-            LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, param));
-        }
-        try {
-            writer.flush();
-        } catch (IOException e) {
-            LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, param));
-        }
-        try {
-            writer.close();
-        } catch (IOException e) {
-            LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, param));
-            return false;
-        }
-
-        if (LOGGER.isDebugEnabled()) {
-            messageLogger = "The new file is writed: " + jsonstream;
-            LOGGER.debug(messageLogger);
-        }
-        return true;
-    }
-
-    @Override
-    public void verifyAndUpdatePerson(Persons element, Persons person) {
+    private void verifyAndUpdatePerson(Persons element, Persons person) {
         // no update for the first and last name :
         setNamePerson(element, person);
 
@@ -1354,10 +1217,6 @@ public class SafetyNetService implements SafetyNetRepository {
             element.setZip(person.getZip());
     }
 
-    private JsonToFile createClasseJsonToFile() {
-        return new JsonToFile();
-    }
-
     private Medicalrecords createClassMedicalrecords() {
         return new Medicalrecords();
     }
@@ -1404,6 +1263,36 @@ public class SafetyNetService implements SafetyNetRepository {
 
     private LoggerApiNewSafetyNet createLoggerApiNewSafetyNet() {
         return new LoggerApiNewSafetyNet();
+    }
+
+    private ObjetFromJson createObjetFromJson() {
+        return new ObjetFromJson();
+    }
+
+    private NewFileJson createNewFileJson() {
+        return new NewFileJson();
+    }
+
+    private GetListsElementsJson createGetListsElementsJson() {
+        return new GetListsElementsJson();
+    }
+
+    private List<Persons> createListPersons() {
+        List<Persons> listPersons;
+        listPersons = getListsElementsJsonRepository.getPersons(ELEMJSONPERSONS);
+        return listPersons;
+    }
+
+    private List<Firestations> createListFirestations() {
+        List<Firestations> listFirestations;
+        listFirestations = getListsElementsJsonRepository.getFirestations(ELEMJSONFIRESTATIONS);
+        return listFirestations;
+    }
+
+    private List<Medicalrecords> createListMedicalrecords() {
+        List<Medicalrecords> listMedicalrecords;
+        listMedicalrecords = getListsElementsJsonRepository.getMedicalrecords(ELEMJSONMEDICALRECORDS);
+        return listMedicalrecords;
     }
 
 }
