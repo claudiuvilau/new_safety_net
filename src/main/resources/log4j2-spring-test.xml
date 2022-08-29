@@ -19,7 +19,7 @@
     </Appenders>
 
     <Loggers>
-        
+   
         <Root level="info">
 
             <AppenderRef ref="stdout" />
@@ -28,6 +28,5 @@
         </Root>
         
     </Loggers>
-
 
 </Configuration>

@@ -14,7 +14,7 @@ public class LoggerApiNewSafetyNet {
     private static final String CONFIGFILELOG4J = "log4j.configurationFile";
     private static final String STRINGREQUESTURL = "Request URL: ";
 
-    public static void setLoggerForTests() {
+    public void setLoggerForTests() {
         System.setProperty(CONFIGFILELOG4J, FILELOG4J2XMLTEST);
     }
 
