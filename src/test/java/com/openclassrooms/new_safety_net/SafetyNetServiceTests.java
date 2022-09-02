@@ -20,10 +20,12 @@ import org.mockito.Mock;
 
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import com.openclassrooms.new_safety_net.model.ChildAlert;
 import com.openclassrooms.new_safety_net.model.Firestations;
 import com.openclassrooms.new_safety_net.model.FoyerChildrenAdultsToFireStation;
 import com.openclassrooms.new_safety_net.model.Medicalrecords;
 import com.openclassrooms.new_safety_net.model.Persons;
+import com.openclassrooms.new_safety_net.model.PhoneAlert;
 import com.openclassrooms.new_safety_net.service.GetListsElementsJson;
 import com.openclassrooms.new_safety_net.service.LoggerApiNewSafetyNet;
 import com.openclassrooms.new_safety_net.service.NewFileJson;
@@ -490,7 +492,7 @@ public class SafetyNetServiceTests {
         List<Medicalrecords> listMedicalrecords;
         Medicalrecords medicalrecords;
         medicalrecords = createMedicalrecords(firstName, lastName, listAllergies, listMedications);
-        listMedicalrecords = createListMedicalrecordsTest(firstName, lastName, medicalrecords);
+        listMedicalrecords = createListMedicalrecordsTest(medicalrecords);
 
         Medicalrecords medicalrecordsAdd = new Medicalrecords();
         medicalrecordsAdd.setFirstName(firstName + "AddedFirstName");
@@ -522,7 +524,7 @@ public class SafetyNetServiceTests {
         List<Medicalrecords> listMedicalrecords;
         Medicalrecords medicalrecords;
         medicalrecords = createMedicalrecords(firstName, lastName, listAllergies, listMedications);
-        listMedicalrecords = createListMedicalrecordsTest(firstName, lastName, medicalrecords);
+        listMedicalrecords = createListMedicalrecordsTest(medicalrecords);
 
         Medicalrecords medicalrecordsAdd = new Medicalrecords();
         medicalrecordsAdd = medicalrecords; // add the same person
@@ -549,7 +551,7 @@ public class SafetyNetServiceTests {
         List<Medicalrecords> listMedicalrecords;
         Medicalrecords medicalrecords;
         medicalrecords = createMedicalrecords(firstName, lastName, listAllergies, listMedications);
-        listMedicalrecords = createListMedicalrecordsTest(firstName, lastName, medicalrecords);
+        listMedicalrecords = createListMedicalrecordsTest(medicalrecords);
 
         String elemjson = "medicalrecords";
         boolean fileCreated = false;
@@ -575,7 +577,7 @@ public class SafetyNetServiceTests {
         List<Medicalrecords> listMedicalrecords;
         Medicalrecords medicalrecords;
         medicalrecords = createMedicalrecords(firstName, lastName, listAllergies, listMedications);
-        listMedicalrecords = createListMedicalrecordsTest(firstName, lastName, medicalrecords);
+        listMedicalrecords = createListMedicalrecordsTest(medicalrecords);
 
         String elemjson = "medicalrecords";
         boolean fileCreated = false;
@@ -601,7 +603,7 @@ public class SafetyNetServiceTests {
         List<Medicalrecords> listMedicalrecords;
         Medicalrecords medicalrecords;
         medicalrecords = createMedicalrecords(firstName, lastName, listAllergies, listMedications);
-        listMedicalrecords = createListMedicalrecordsTest(firstName, lastName, medicalrecords);
+        listMedicalrecords = createListMedicalrecordsTest(medicalrecords);
 
         String elemjson = "medicalrecords";
         boolean fileCreated = false;
@@ -630,7 +632,7 @@ public class SafetyNetServiceTests {
         List<Medicalrecords> listMedicalrecords;
         Medicalrecords medicalrecords;
         medicalrecords = createMedicalrecords(firstName, lastName, listAllergies, listMedications);
-        listMedicalrecords = createListMedicalrecordsTest(firstName, lastName, medicalrecords);
+        listMedicalrecords = createListMedicalrecordsTest(medicalrecords);
 
         String elemjson = "medicalrecords";
         boolean fileCreated = false;
@@ -656,7 +658,7 @@ public class SafetyNetServiceTests {
         List<Medicalrecords> listMedicalrecords;
         Medicalrecords medicalrecords;
         medicalrecords = createMedicalrecords(firstName, lastName, listAllergies, listMedications);
-        listMedicalrecords = createListMedicalrecordsTest(firstName, lastName, medicalrecords);
+        listMedicalrecords = createListMedicalrecordsTest(medicalrecords);
 
         String elemjson = "medicalrecords";
         boolean fileCreated = false;
@@ -711,7 +713,7 @@ public class SafetyNetServiceTests {
             String birthday = "01/01/" + (now.getYear() - 30); // make adult
             medicalrecords.setBirthdate(birthday);
         }
-        listMedicalrecords = createListMedicalrecordsTest(firstName, lastName, medicalrecords);
+        listMedicalrecords = createListMedicalrecordsTest(medicalrecords);
 
         String elemjsonFirestation = "firestations";
         String elemjsonPerson = "persons";
@@ -725,6 +727,330 @@ public class SafetyNetServiceTests {
 
         assertEquals(true, !listFoyerChildrenAdults.isEmpty());
 
+    }
+
+    @Test
+    void testPersonsOfStationAdultsAndChildChildBirthday() {
+        String addressStation = "TEST999_address";
+        String noStation = "999";
+        List<Firestations> listFirestations;
+        Firestations firestation;
+        firestation = createFirestation(addressStation, noStation);
+        listFirestations = createListFirestationsTest(addressStation, noStation, firestation);
+        String firstName = "TEST999_FirstName";
+        String lastName = "TEST999_LastName";
+        List<Persons> listPersons;
+        Persons person;
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+        List<String> listAllergies;
+        listAllergies = createListAllergiesTest();
+        List<String> listMedications;
+        listMedications = createListMedicationsTest();
+        List<Medicalrecords> listMedicalrecords;
+        Medicalrecords medicalrecords;
+        medicalrecords = createMedicalrecords(firstName, lastName, listAllergies, listMedications);
+
+        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+        Calendar calendar = new GregorianCalendar();
+        LocalDate now = LocalDate.now();
+        java.util.Date datebirthday;
+        LocalDate birthdate;
+        Period periode;
+        try {
+            datebirthday = sdf.parse(medicalrecords.getBirthdate());
+        } catch (ParseException e) {
+            return;
+        }
+        calendar.setTime(datebirthday);
+        birthdate = LocalDate.of(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH) + 1,
+                calendar.get(Calendar.DAY_OF_MONTH));
+        periode = Period.between(birthdate, now);
+        if (periode.getYears() < 18) { // child
+            String birthday = "01/01/" + (now.getYear() + 30);
+            medicalrecords.setBirthdate(birthday);
+        }
+        listMedicalrecords = createListMedicalrecordsTest(medicalrecords);
+
+        String elemjsonFirestation = "firestations";
+        String elemjsonPerson = "persons";
+        String elemjsonMedicalrecord = "medicalrecords";
+        when(getListsElementsJson.getFirestations(elemjsonFirestation)).thenReturn(listFirestations);
+        when(getListsElementsJson.getPersons(elemjsonPerson)).thenReturn(listPersons);
+        when(getListsElementsJson.getMedicalrecords(elemjsonMedicalrecord)).thenReturn(listMedicalrecords);
+
+        List<FoyerChildrenAdultsToFireStation> listFoyerChildrenAdults;
+        listFoyerChildrenAdults = safetyNetService.personsOfStationAdultsAndChild(noStation);
+
+        assertEquals(true, !listFoyerChildrenAdults.isEmpty());
+
+    }
+
+    @Test
+    void testPersonsOfStationAdultsAndChildPersonStationNoExist() {
+        String addressStation = "TEST999_address";
+        String noStation = "999";
+        List<Firestations> listFirestations;
+        Firestations firestation;
+        firestation = createFirestation(addressStation, noStation);
+        listFirestations = createListFirestationsTest(addressStation, noStation, firestation);
+        String firstName = "TEST999_FirstName";
+        String lastName = "TEST999_LastName";
+        List<Persons> listPersons;
+        Persons person;
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+        List<String> listAllergies;
+        listAllergies = createListAllergiesTest();
+        List<String> listMedications;
+        listMedications = createListMedicationsTest();
+        List<Medicalrecords> listMedicalrecords;
+        Medicalrecords medicalrecords;
+        medicalrecords = createMedicalrecords(firstName, lastName, listAllergies, listMedications);
+
+        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+        Calendar calendar = new GregorianCalendar();
+        LocalDate now = LocalDate.now();
+        java.util.Date datebirthday;
+        LocalDate birthdate;
+        Period periode;
+        try {
+            datebirthday = sdf.parse(medicalrecords.getBirthdate());
+        } catch (ParseException e) {
+            return;
+        }
+        calendar.setTime(datebirthday);
+        birthdate = LocalDate.of(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH) + 1,
+                calendar.get(Calendar.DAY_OF_MONTH));
+        periode = Period.between(birthdate, now);
+        if (periode.getYears() < 18) { // child
+            String birthday = "01/01/" + (now.getYear() + 30); // make child
+            medicalrecords.setBirthdate(birthday);
+        }
+        listMedicalrecords = createListMedicalrecordsTest(medicalrecords);
+
+        String elemjsonFirestation = "firestations";
+        String elemjsonPerson = "persons";
+        String elemjsonMedicalrecord = "medicalrecords";
+        when(getListsElementsJson.getFirestations(elemjsonFirestation)).thenReturn(listFirestations);
+        when(getListsElementsJson.getPersons(elemjsonPerson)).thenReturn(listPersons);
+        when(getListsElementsJson.getMedicalrecords(elemjsonMedicalrecord)).thenReturn(listMedicalrecords);
+
+        List<FoyerChildrenAdultsToFireStation> listFoyerChildrenAdults;
+        listFoyerChildrenAdults = safetyNetService.personsOfStationAdultsAndChild(noStation + "99");
+
+        assertEquals(true, !listFoyerChildrenAdults.isEmpty());
+
+    }
+
+    @Test
+    void testPersonsOfStationAdultsAndChildPersonStationPersonNoExistInMedicalrecords() {
+        String addressStation = "TEST999_address";
+        String noStation = "999";
+        List<Firestations> listFirestations;
+        Firestations firestation;
+        firestation = createFirestation(addressStation, noStation);
+        listFirestations = createListFirestationsTest(addressStation, noStation, firestation);
+        String firstName = "TEST999_FirstName";
+        String lastName = "TEST999_LastName";
+        List<Persons> listPersons;
+        Persons person;
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+        List<String> listAllergies;
+        listAllergies = createListAllergiesTest();
+        List<String> listMedications;
+        listMedications = createListMedicationsTest();
+        List<Medicalrecords> listMedicalrecords;
+        Medicalrecords medicalrecords;
+        medicalrecords = createMedicalrecords(firstName, lastName, listAllergies, listMedications);
+
+        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+        Calendar calendar = new GregorianCalendar();
+        LocalDate now = LocalDate.now();
+        java.util.Date datebirthday;
+        LocalDate birthdate;
+        Period periode;
+        try {
+            datebirthday = sdf.parse(medicalrecords.getBirthdate());
+        } catch (ParseException e) {
+            return;
+        }
+        calendar.setTime(datebirthday);
+        birthdate = LocalDate.of(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH) + 1,
+                calendar.get(Calendar.DAY_OF_MONTH));
+        periode = Period.between(birthdate, now);
+        if (periode.getYears() < 18) { // child
+            String birthday = "01/01/" + (now.getYear() - 30);
+            medicalrecords.setBirthdate(birthday);
+        }
+        medicalrecords.setFirstName(firstName + "AnotherFirstName");
+        medicalrecords.setLastName(lastName + "AnotherLastName");
+        listMedicalrecords = createListMedicalrecordsTest(medicalrecords);
+
+        String elemjsonFirestation = "firestations";
+        String elemjsonPerson = "persons";
+        String elemjsonMedicalrecord = "medicalrecords";
+        when(getListsElementsJson.getFirestations(elemjsonFirestation)).thenReturn(listFirestations);
+        when(getListsElementsJson.getPersons(elemjsonPerson)).thenReturn(listPersons);
+        when(getListsElementsJson.getMedicalrecords(elemjsonMedicalrecord)).thenReturn(listMedicalrecords);
+
+        List<FoyerChildrenAdultsToFireStation> listFoyerChildrenAdults;
+        listFoyerChildrenAdults = safetyNetService.personsOfStationAdultsAndChild(noStation);
+
+        assertEquals(true, !listFoyerChildrenAdults.isEmpty());
+
+    }
+
+    @Test
+    void testChildPersonsAlertAddress() throws IOException, ParseException {
+        String firstName = "TEST999_FirstName";
+        String lastName = "TEST999_LastName";
+        List<Persons> listPersons;
+        Persons person;
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+
+        List<String> listAllergies;
+        listAllergies = createListAllergiesTest();
+        List<String> listMedications;
+        listMedications = createListMedicationsTest();
+        List<Medicalrecords> listMedicalrecords;
+        Medicalrecords medicalrecords;
+        medicalrecords = createMedicalrecords(firstName, lastName, listAllergies, listMedications);
+        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+        Calendar calendar = new GregorianCalendar();
+        LocalDate now = LocalDate.now();
+        java.util.Date datebirthday;
+        LocalDate birthdate;
+        Period periode;
+        try {
+            datebirthday = sdf.parse(medicalrecords.getBirthdate());
+        } catch (ParseException e) {
+            return;
+        }
+        calendar.setTime(datebirthday);
+        birthdate = LocalDate.of(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH) + 1,
+                calendar.get(Calendar.DAY_OF_MONTH));
+        periode = Period.between(birthdate, now);
+        if (periode.getYears() < 18) { // child
+            String birthday = "01/01/" + (now.getYear() + 30);
+            medicalrecords.setBirthdate(birthday);
+        }
+        listMedicalrecords = createListMedicalrecordsTest(medicalrecords);
+
+        String elemjsonPerson = "persons";
+        String elemjsonMedicalrecord = "medicalrecords";
+        when(getListsElementsJson.getPersons(elemjsonPerson)).thenReturn(listPersons);
+        when(getListsElementsJson.getMedicalrecords(elemjsonMedicalrecord)).thenReturn(listMedicalrecords);
+
+        List<ChildAlert> listChildAlert = new ArrayList<>();
+        listChildAlert = safetyNetService.childPersonsAlertAddress(person.getAddress());
+
+        assertEquals(true, !listChildAlert.isEmpty());
+    }
+
+    @Test
+    void testChildPersonsAlertAddressNoExist() throws IOException, ParseException {
+        String firstName = "TEST999_FirstName";
+        String lastName = "TEST999_LastName";
+        List<Persons> listPersons;
+        Persons person;
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+
+        List<String> listAllergies;
+        listAllergies = createListAllergiesTest();
+        List<String> listMedications;
+        listMedications = createListMedicationsTest();
+        List<Medicalrecords> listMedicalrecords;
+        Medicalrecords medicalrecords;
+        medicalrecords = createMedicalrecords(firstName, lastName, listAllergies, listMedications);
+        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+        Calendar calendar = new GregorianCalendar();
+        LocalDate now = LocalDate.now();
+        java.util.Date datebirthday;
+        LocalDate birthdate;
+        Period periode;
+        try {
+            datebirthday = sdf.parse(medicalrecords.getBirthdate());
+        } catch (ParseException e) {
+            return;
+        }
+        calendar.setTime(datebirthday);
+        birthdate = LocalDate.of(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH) + 1,
+                calendar.get(Calendar.DAY_OF_MONTH));
+        periode = Period.between(birthdate, now);
+        if (periode.getYears() < 18) { // child
+            String birthday = "01/01/" + (now.getYear() + 30);
+            medicalrecords.setBirthdate(birthday);
+        }
+        listMedicalrecords = createListMedicalrecordsTest(medicalrecords);
+
+        String elemjsonPerson = "persons";
+        String elemjsonMedicalrecord = "medicalrecords";
+        when(getListsElementsJson.getPersons(elemjsonPerson)).thenReturn(listPersons);
+        when(getListsElementsJson.getMedicalrecords(elemjsonMedicalrecord)).thenReturn(listMedicalrecords);
+
+        List<ChildAlert> listChildAlert = new ArrayList<>();
+        listChildAlert = safetyNetService.childPersonsAlertAddress(person.getAddress() + "TestNoAddressExist");
+
+        assertEquals(true, listChildAlert.isEmpty());
+    }
+
+    @Test
+    void testPhoneAlertFirestation() throws IOException {
+        String addressStation = "TEST999_address";
+        String noStation = "999";
+        List<Firestations> listFirestations;
+        Firestations firestation;
+        firestation = createFirestation(addressStation, noStation);
+        listFirestations = createListFirestationsTest(addressStation, noStation, firestation);
+        String firstName = "TEST999_FirstName";
+        String lastName = "TEST999_LastName";
+        List<Persons> listPersons;
+        Persons person;
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+
+        String elemjsonFirestation = "firestations";
+        String elemjsonPerson = "persons";
+        when(getListsElementsJson.getFirestations(elemjsonFirestation)).thenReturn(listFirestations);
+        when(getListsElementsJson.getPersons(elemjsonPerson)).thenReturn(listPersons);
+
+        List<PhoneAlert> listPhoneAlerts = new ArrayList<>();
+        listPhoneAlerts = safetyNetService.phoneAlertFirestation(noStation);
+
+        assertEquals(true, !listPhoneAlerts.isEmpty());
+    }
+
+    @Test
+    void testPhoneAlertFirestationMorePersons() throws IOException {
+        String addressStation = "TEST999_address";
+        String noStation = "999";
+        List<Firestations> listFirestations;
+        Firestations firestation;
+        firestation = createFirestation(addressStation, noStation);
+        listFirestations = createListFirestationsTest(addressStation, noStation, firestation);
+
+        String firstName = "TEST999_FirstName";
+        String lastName = "TEST999_LastName";
+        List<Persons> listPersons;
+        Persons person;
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+
+        String elemjsonFirestation = "firestations";
+        String elemjsonPerson = "persons";
+        when(getListsElementsJson.getFirestations(elemjsonFirestation)).thenReturn(listFirestations);
+        when(getListsElementsJson.getPersons(elemjsonPerson)).thenReturn(listPersons);
+
+        List<PhoneAlert> listPhoneAlerts = new ArrayList<>();
+        listPhoneAlerts = safetyNetService.phoneAlertFirestation(noStation);
+
+        assertEquals(true, !listPhoneAlerts.isEmpty());
     }
 
     private List<String> createListMedicationsTest() {
@@ -743,8 +1069,7 @@ public class SafetyNetServiceTests {
         return listAllergies;
     }
 
-    private List<Medicalrecords> createListMedicalrecordsTest(String firstName, String lastName,
-            Medicalrecords medicalrecords) {
+    private List<Medicalrecords> createListMedicalrecordsTest(Medicalrecords medicalrecords) {
         List<Medicalrecords> listMedicalrecords = new ArrayList<>();
         listMedicalrecords.add(medicalrecords);
         return listMedicalrecords;
@@ -785,7 +1110,7 @@ public class SafetyNetServiceTests {
         Persons person = new Persons();
         person.setFirstName(firstName);
         person.setLastName(lastName);
-        person.setAddress("address");
+        person.setAddress("TEST999_address");
         person.setCity("city");
         person.setEmail("email");
         person.setPhone("phone");
