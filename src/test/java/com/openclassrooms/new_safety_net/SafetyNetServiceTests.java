@@ -21,10 +21,14 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import com.openclassrooms.new_safety_net.model.ChildAlert;
+import com.openclassrooms.new_safety_net.model.CommunityEmail;
+import com.openclassrooms.new_safety_net.model.FireAddress;
 import com.openclassrooms.new_safety_net.model.Firestations;
 import com.openclassrooms.new_safety_net.model.FoyerChildrenAdultsToFireStation;
 import com.openclassrooms.new_safety_net.model.Medicalrecords;
+import com.openclassrooms.new_safety_net.model.PersonInfo;
 import com.openclassrooms.new_safety_net.model.Persons;
+import com.openclassrooms.new_safety_net.model.PersonsFireStation;
 import com.openclassrooms.new_safety_net.model.PhoneAlert;
 import com.openclassrooms.new_safety_net.service.GetListsElementsJson;
 import com.openclassrooms.new_safety_net.service.LoggerApiNewSafetyNet;
@@ -694,25 +698,8 @@ public class SafetyNetServiceTests {
         Medicalrecords medicalrecords;
         medicalrecords = createMedicalrecords(firstName, lastName, listAllergies, listMedications);
 
-        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
-        Calendar calendar = new GregorianCalendar();
-        LocalDate now = LocalDate.now();
-        java.util.Date datebirthday;
-        LocalDate birthdate;
-        Period periode;
-        try {
-            datebirthday = sdf.parse(medicalrecords.getBirthdate());
-        } catch (ParseException e) {
-            return;
-        }
-        calendar.setTime(datebirthday);
-        birthdate = LocalDate.of(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH) + 1,
-                calendar.get(Calendar.DAY_OF_MONTH));
-        periode = Period.between(birthdate, now);
-        if (periode.getYears() < 18) { // child
-            String birthday = "01/01/" + (now.getYear() - 30); // make adult
-            medicalrecords.setBirthdate(birthday);
-        }
+        boolean childOrAdult = false; // true = child
+        medicalrecords = setBirthdayIfAdult(childOrAdult, medicalrecords);
         listMedicalrecords = createListMedicalrecordsTest(medicalrecords);
 
         String elemjsonFirestation = "firestations";
@@ -751,25 +738,8 @@ public class SafetyNetServiceTests {
         Medicalrecords medicalrecords;
         medicalrecords = createMedicalrecords(firstName, lastName, listAllergies, listMedications);
 
-        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
-        Calendar calendar = new GregorianCalendar();
-        LocalDate now = LocalDate.now();
-        java.util.Date datebirthday;
-        LocalDate birthdate;
-        Period periode;
-        try {
-            datebirthday = sdf.parse(medicalrecords.getBirthdate());
-        } catch (ParseException e) {
-            return;
-        }
-        calendar.setTime(datebirthday);
-        birthdate = LocalDate.of(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH) + 1,
-                calendar.get(Calendar.DAY_OF_MONTH));
-        periode = Period.between(birthdate, now);
-        if (periode.getYears() < 18) { // child
-            String birthday = "01/01/" + (now.getYear() + 30);
-            medicalrecords.setBirthdate(birthday);
-        }
+        boolean childOrAdult = true; // true = child
+        medicalrecords = setBirthdayIfAdult(childOrAdult, medicalrecords);
         listMedicalrecords = createListMedicalrecordsTest(medicalrecords);
 
         String elemjsonFirestation = "firestations";
@@ -808,25 +778,8 @@ public class SafetyNetServiceTests {
         Medicalrecords medicalrecords;
         medicalrecords = createMedicalrecords(firstName, lastName, listAllergies, listMedications);
 
-        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
-        Calendar calendar = new GregorianCalendar();
-        LocalDate now = LocalDate.now();
-        java.util.Date datebirthday;
-        LocalDate birthdate;
-        Period periode;
-        try {
-            datebirthday = sdf.parse(medicalrecords.getBirthdate());
-        } catch (ParseException e) {
-            return;
-        }
-        calendar.setTime(datebirthday);
-        birthdate = LocalDate.of(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH) + 1,
-                calendar.get(Calendar.DAY_OF_MONTH));
-        periode = Period.between(birthdate, now);
-        if (periode.getYears() < 18) { // child
-            String birthday = "01/01/" + (now.getYear() + 30); // make child
-            medicalrecords.setBirthdate(birthday);
-        }
+        boolean childOrAdult = true; // true = child
+        medicalrecords = setBirthdayIfAdult(childOrAdult, medicalrecords);
         listMedicalrecords = createListMedicalrecordsTest(medicalrecords);
 
         String elemjsonFirestation = "firestations";
@@ -865,25 +818,8 @@ public class SafetyNetServiceTests {
         Medicalrecords medicalrecords;
         medicalrecords = createMedicalrecords(firstName, lastName, listAllergies, listMedications);
 
-        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
-        Calendar calendar = new GregorianCalendar();
-        LocalDate now = LocalDate.now();
-        java.util.Date datebirthday;
-        LocalDate birthdate;
-        Period periode;
-        try {
-            datebirthday = sdf.parse(medicalrecords.getBirthdate());
-        } catch (ParseException e) {
-            return;
-        }
-        calendar.setTime(datebirthday);
-        birthdate = LocalDate.of(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH) + 1,
-                calendar.get(Calendar.DAY_OF_MONTH));
-        periode = Period.between(birthdate, now);
-        if (periode.getYears() < 18) { // child
-            String birthday = "01/01/" + (now.getYear() - 30);
-            medicalrecords.setBirthdate(birthday);
-        }
+        boolean childOrAdult = true; // true = child
+        medicalrecords = setBirthdayIfAdult(childOrAdult, medicalrecords);
         medicalrecords.setFirstName(firstName + "AnotherFirstName");
         medicalrecords.setLastName(lastName + "AnotherLastName");
         listMedicalrecords = createListMedicalrecordsTest(medicalrecords);
@@ -918,25 +854,8 @@ public class SafetyNetServiceTests {
         List<Medicalrecords> listMedicalrecords;
         Medicalrecords medicalrecords;
         medicalrecords = createMedicalrecords(firstName, lastName, listAllergies, listMedications);
-        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
-        Calendar calendar = new GregorianCalendar();
-        LocalDate now = LocalDate.now();
-        java.util.Date datebirthday;
-        LocalDate birthdate;
-        Period periode;
-        try {
-            datebirthday = sdf.parse(medicalrecords.getBirthdate());
-        } catch (ParseException e) {
-            return;
-        }
-        calendar.setTime(datebirthday);
-        birthdate = LocalDate.of(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH) + 1,
-                calendar.get(Calendar.DAY_OF_MONTH));
-        periode = Period.between(birthdate, now);
-        if (periode.getYears() < 18) { // child
-            String birthday = "01/01/" + (now.getYear() + 30);
-            medicalrecords.setBirthdate(birthday);
-        }
+        boolean childOrAdult = true; // true = child
+        medicalrecords = setBirthdayIfAdult(childOrAdult, medicalrecords);
         listMedicalrecords = createListMedicalrecordsTest(medicalrecords);
 
         String elemjsonPerson = "persons";
@@ -966,25 +885,9 @@ public class SafetyNetServiceTests {
         List<Medicalrecords> listMedicalrecords;
         Medicalrecords medicalrecords;
         medicalrecords = createMedicalrecords(firstName, lastName, listAllergies, listMedications);
-        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
-        Calendar calendar = new GregorianCalendar();
-        LocalDate now = LocalDate.now();
-        java.util.Date datebirthday;
-        LocalDate birthdate;
-        Period periode;
-        try {
-            datebirthday = sdf.parse(medicalrecords.getBirthdate());
-        } catch (ParseException e) {
-            return;
-        }
-        calendar.setTime(datebirthday);
-        birthdate = LocalDate.of(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH) + 1,
-                calendar.get(Calendar.DAY_OF_MONTH));
-        periode = Period.between(birthdate, now);
-        if (periode.getYears() < 18) { // child
-            String birthday = "01/01/" + (now.getYear() + 30);
-            medicalrecords.setBirthdate(birthday);
-        }
+
+        boolean childOrAdult = true; // true = child
+        medicalrecords = setBirthdayIfAdult(childOrAdult, medicalrecords);
         listMedicalrecords = createListMedicalrecordsTest(medicalrecords);
 
         String elemjsonPerson = "persons";
@@ -1032,6 +935,8 @@ public class SafetyNetServiceTests {
         Firestations firestation;
         firestation = createFirestation(addressStation, noStation);
         listFirestations = createListFirestationsTest(addressStation, noStation, firestation);
+        firestation = createFirestation(addressStation, noStation);
+        listFirestations.add(firestation);
 
         String firstName = "TEST999_FirstName";
         String lastName = "TEST999_LastName";
@@ -1041,6 +946,11 @@ public class SafetyNetServiceTests {
         listPersons = createListPersonsTest(firstName, lastName, person);
         person = createPerson(firstName, lastName);
         listPersons = createListPersonsTest(firstName, lastName, person);
+        person = createPerson(firstName, lastName);
+        person.setFirstName(firstName + "AnotherPersonFirstName");
+        person.setLastName(firstName + "AnotherPersonLastName");
+        person.setPhone("000999");
+        listPersons.add(person);
 
         String elemjsonFirestation = "firestations";
         String elemjsonPerson = "persons";
@@ -1051,6 +961,634 @@ public class SafetyNetServiceTests {
         listPhoneAlerts = safetyNetService.phoneAlertFirestation(noStation);
 
         assertEquals(true, !listPhoneAlerts.isEmpty());
+    }
+
+    @Test
+    void testFireAddress() throws IOException, ParseException {
+        String addressStation = "TEST999_address";
+        String noStation = "999";
+        List<Firestations> listFirestations;
+        Firestations firestation;
+        firestation = createFirestation(addressStation, noStation);
+        listFirestations = createListFirestationsTest(addressStation, noStation, firestation);
+
+        String firstName = "TEST999_FirstName";
+        String lastName = "TEST999_LastName";
+
+        List<String> listAllergies;
+        listAllergies = createListAllergiesTest();
+        List<String> listMedications;
+        listMedications = createListMedicationsTest();
+        List<Medicalrecords> listMedicalrecords;
+        Medicalrecords medicalrecords;
+        medicalrecords = createMedicalrecords(firstName, lastName, listAllergies, listMedications);
+        listMedicalrecords = createListMedicalrecordsTest(medicalrecords);
+        String elemjsonMedicalrecord = "medicalrecords";
+        String elemjsonFirestation = "firestations";
+        String elemjsonPerson = "persons";
+        List<FireAddress> listFireAddress = new ArrayList<>();
+
+        List<Persons> listPersons;
+        Persons person;
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+
+        when(getListsElementsJson.getPersons(elemjsonPerson)).thenReturn(listPersons);
+        when(getListsElementsJson.getMedicalrecords(elemjsonMedicalrecord)).thenReturn(listMedicalrecords);
+        when(getListsElementsJson.getFirestations(elemjsonFirestation)).thenReturn(listFirestations);
+
+        listFireAddress = safetyNetService.fireAddress(addressStation);
+
+        assertEquals(true, !listFireAddress.isEmpty());
+    }
+
+    @Test
+    void testFireAddressAddressNoExist() throws IOException, ParseException {
+        String addressStation = "TEST999_address";
+        String noStation = "999";
+        List<Firestations> listFirestations;
+        Firestations firestation;
+        firestation = createFirestation(addressStation, noStation);
+        listFirestations = createListFirestationsTest(addressStation, noStation, firestation);
+
+        String firstName = "TEST999_FirstName";
+        String lastName = "TEST999_LastName";
+
+        List<String> listAllergies;
+        listAllergies = createListAllergiesTest();
+        List<String> listMedications;
+        listMedications = createListMedicationsTest();
+        List<Medicalrecords> listMedicalrecords;
+        Medicalrecords medicalrecords;
+        medicalrecords = createMedicalrecords(firstName, lastName, listAllergies, listMedications);
+        listMedicalrecords = createListMedicalrecordsTest(medicalrecords);
+        String elemjsonMedicalrecord = "medicalrecords";
+        String elemjsonFirestation = "firestations";
+        String elemjsonPerson = "persons";
+        List<FireAddress> listFireAddress = new ArrayList<>();
+
+        List<Persons> listPersons;
+        Persons person;
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+
+        when(getListsElementsJson.getPersons(elemjsonPerson)).thenReturn(listPersons);
+        when(getListsElementsJson.getMedicalrecords(elemjsonMedicalrecord)).thenReturn(listMedicalrecords);
+        when(getListsElementsJson.getFirestations(elemjsonFirestation)).thenReturn(listFirestations);
+
+        listFireAddress = safetyNetService.fireAddress(addressStation + "AnotherAddress");
+
+        assertEquals(true, listFireAddress.isEmpty());
+    }
+
+    @Test
+    void testFireAddressAddressPersonNoExist() throws IOException, ParseException {
+        String addressStation = "TEST999_address";
+        String noStation = "999";
+        List<Firestations> listFirestations;
+        Firestations firestation;
+        firestation = createFirestation(addressStation, noStation);
+        listFirestations = createListFirestationsTest(addressStation, noStation, firestation);
+
+        String firstName = "TEST999_FirstName";
+        String lastName = "TEST999_LastName";
+
+        List<String> listAllergies;
+        listAllergies = createListAllergiesTest();
+        List<String> listMedications;
+        listMedications = createListMedicationsTest();
+        List<Medicalrecords> listMedicalrecords;
+        Medicalrecords medicalrecords;
+        medicalrecords = createMedicalrecords(firstName + "AnotherFirstName", lastName + "AnotherLastName",
+                listAllergies, listMedications);
+
+        listMedicalrecords = createListMedicalrecordsTest(medicalrecords);
+        String elemjsonMedicalrecord = "medicalrecords";
+        String elemjsonFirestation = "firestations";
+        String elemjsonPerson = "persons";
+        List<FireAddress> listFireAddress = new ArrayList<>();
+
+        List<Persons> listPersons;
+        Persons person;
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+
+        when(getListsElementsJson.getPersons(elemjsonPerson)).thenReturn(listPersons);
+        when(getListsElementsJson.getMedicalrecords(elemjsonMedicalrecord)).thenReturn(listMedicalrecords);
+        when(getListsElementsJson.getFirestations(elemjsonFirestation)).thenReturn(listFirestations);
+
+        listFireAddress = safetyNetService.fireAddress(addressStation);
+
+        assertEquals(true, listFireAddress.isEmpty());
+    }
+
+    @Test
+    void testStationListFirestation() throws IOException, ParseException {
+        String addressStation = "TEST999_address";
+        String noStation = "999";
+        List<Firestations> listFirestations;
+        Firestations firestation;
+        firestation = createFirestation(addressStation, noStation);
+        listFirestations = createListFirestationsTest(addressStation, noStation, firestation);
+
+        String firstName = "TEST999_FirstName";
+        String lastName = "TEST999_LastName";
+
+        String elemjsonFirestation = "firestations";
+        String elemjsonPerson = "persons";
+        String elemjsonMedicalrecord = "medicalrecords";
+
+        List<Persons> listPersons;
+        Persons person;
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+
+        List<String> listAllergies;
+        listAllergies = createListAllergiesTest();
+        List<String> listMedications;
+        listMedications = createListMedicationsTest();
+        List<Medicalrecords> listMedicalrecords;
+        Medicalrecords medicalrecords;
+        medicalrecords = createMedicalrecords(firstName, lastName, listAllergies, listMedications);
+
+        listMedicalrecords = createListMedicalrecordsTest(medicalrecords);
+
+        List<PersonsFireStation> listPersonsFireStations = new ArrayList<>();
+
+        when(getListsElementsJson.getPersons(elemjsonPerson)).thenReturn(listPersons);
+        when(getListsElementsJson.getFirestations(elemjsonFirestation)).thenReturn(listFirestations);
+        when(getListsElementsJson.getMedicalrecords(elemjsonMedicalrecord)).thenReturn(listMedicalrecords);
+
+        List<String> station = new ArrayList<>();
+        station.add(0, noStation);
+        listPersonsFireStations = safetyNetService.stationListFirestation(station);
+
+        assertEquals(true, !listPersonsFireStations.isEmpty());
+    }
+
+    @Test
+    void testStationListFirestationNoStation() throws IOException, ParseException {
+        String addressStation = "TEST999_address";
+        String noStation = "999";
+        List<Firestations> listFirestations;
+        Firestations firestation;
+        firestation = createFirestation(addressStation, noStation);
+        listFirestations = createListFirestationsTest(addressStation, noStation, firestation);
+
+        String firstName = "TEST999_FirstName";
+        String lastName = "TEST999_LastName";
+
+        String elemjsonFirestation = "firestations";
+        String elemjsonPerson = "persons";
+
+        List<Persons> listPersons;
+        Persons person;
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+
+        List<PersonsFireStation> listPersonsFireStations = new ArrayList<>();
+
+        when(getListsElementsJson.getPersons(elemjsonPerson)).thenReturn(listPersons);
+        when(getListsElementsJson.getFirestations(elemjsonFirestation)).thenReturn(listFirestations);
+
+        List<String> station = new ArrayList<>();
+        station.add(0, noStation + "99");
+        listPersonsFireStations = safetyNetService.stationListFirestation(station);
+
+        assertEquals(true, listPersonsFireStations.isEmpty());
+    }
+
+    @Test
+    void testStationListFirestationAddressNotExist() throws IOException, ParseException {
+        String addressStation = "TEST999_address";
+        String noStation = "999";
+        List<Firestations> listFirestations;
+        Firestations firestation;
+        firestation = createFirestation(addressStation, noStation);
+        listFirestations = createListFirestationsTest(addressStation, noStation, firestation);
+
+        String firstName = "TEST999_FirstName";
+        String lastName = "TEST999_LastName";
+
+        String elemjsonFirestation = "firestations";
+        String elemjsonPerson = "persons";
+        String elemjsonMedicalrecord = "medicalrecords";
+
+        List<Persons> listPersons;
+        Persons person;
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+        person = createPerson(firstName, lastName);
+        person.setAddress(addressStation + "AnotherAddress");
+        listPersons = createListPersonsTest(firstName, lastName, person);
+
+        List<String> listAllergies;
+        listAllergies = createListAllergiesTest();
+        List<String> listMedications;
+        listMedications = createListMedicationsTest();
+        List<Medicalrecords> listMedicalrecords;
+        Medicalrecords medicalrecords;
+        medicalrecords = createMedicalrecords(firstName, lastName, listAllergies, listMedications);
+
+        listMedicalrecords = createListMedicalrecordsTest(medicalrecords);
+
+        List<PersonsFireStation> listPersonsFireStations = new ArrayList<>();
+
+        when(getListsElementsJson.getPersons(elemjsonPerson)).thenReturn(listPersons);
+        when(getListsElementsJson.getFirestations(elemjsonFirestation)).thenReturn(listFirestations);
+        when(getListsElementsJson.getMedicalrecords(elemjsonMedicalrecord)).thenReturn(listMedicalrecords);
+
+        List<String> station = new ArrayList<>();
+        station.add(0, noStation);
+        listPersonsFireStations = safetyNetService.stationListFirestation(station);
+
+        assertEquals(true, !listPersonsFireStations.isEmpty());
+    }
+
+    @Test
+    void testStationListFirestationAddressNotMedicalRecords() throws IOException, ParseException {
+        String addressStation = "TEST999_address";
+        String noStation = "999";
+        List<Firestations> listFirestations;
+        Firestations firestation;
+        firestation = createFirestation(addressStation, noStation);
+        listFirestations = createListFirestationsTest(addressStation, noStation, firestation);
+
+        String firstName = "TEST999_FirstName";
+        String lastName = "TEST999_LastName";
+
+        String elemjsonFirestation = "firestations";
+        String elemjsonPerson = "persons";
+        String elemjsonMedicalrecord = "medicalrecords";
+
+        List<Persons> listPersons;
+        Persons person;
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+
+        List<String> listAllergies;
+        listAllergies = createListAllergiesTest();
+        List<String> listMedications;
+        listMedications = createListMedicationsTest();
+        List<Medicalrecords> listMedicalrecords;
+        Medicalrecords medicalrecords;
+        medicalrecords = createMedicalrecords(firstName + "AnotherFirstName", lastName + "AnotherLastName",
+                listAllergies, listMedications);
+        listMedicalrecords = createListMedicalrecordsTest(medicalrecords);
+
+        List<PersonsFireStation> listPersonsFireStations = new ArrayList<>();
+
+        when(getListsElementsJson.getPersons(elemjsonPerson)).thenReturn(listPersons);
+        when(getListsElementsJson.getFirestations(elemjsonFirestation)).thenReturn(listFirestations);
+        when(getListsElementsJson.getMedicalrecords(elemjsonMedicalrecord)).thenReturn(listMedicalrecords);
+
+        List<String> station = new ArrayList<>();
+        station.add(0, noStation);
+        listPersonsFireStations = safetyNetService.stationListFirestation(station);
+
+        assertEquals(true, !listPersonsFireStations.isEmpty());
+    }
+
+    @Test
+    void testPersonInfo() throws IOException, ParseException {
+        String firstName = "TEST999_FirstName";
+        String lastName = "TEST999_LastName";
+
+        String elemjsonPerson = "persons";
+        String elemjsonMedicalrecord = "medicalrecords";
+
+        List<Persons> listPersons;
+        Persons person;
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+
+        List<String> listAllergies;
+        listAllergies = createListAllergiesTest();
+        List<String> listMedications;
+        listMedications = createListMedicationsTest();
+        List<Medicalrecords> listMedicalrecords;
+        Medicalrecords medicalrecords;
+        medicalrecords = createMedicalrecords(firstName, lastName, listAllergies, listMedications);
+
+        listMedicalrecords = createListMedicalrecordsTest(medicalrecords);
+
+        List<PersonInfo> listPersonInfo = new ArrayList<>();
+
+        when(getListsElementsJson.getPersons(elemjsonPerson)).thenReturn(listPersons);
+        when(getListsElementsJson.getMedicalrecords(elemjsonMedicalrecord)).thenReturn(listMedicalrecords);
+
+        listPersonInfo = safetyNetService.personInfo(firstName, lastName);
+
+        assertEquals(true, !listPersonInfo.isEmpty());
+    }
+
+    @Test
+    void testPersonInfoPersonNotExist() throws IOException, ParseException {
+        String firstName = "TEST999_FirstName";
+        String lastName = "TEST999_LastName";
+
+        String elemjsonPerson = "persons";
+        String elemjsonMedicalrecord = "medicalrecords";
+
+        List<Persons> listPersons;
+        Persons person;
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+
+        List<String> listAllergies;
+        listAllergies = createListAllergiesTest();
+        List<String> listMedications;
+        listMedications = createListMedicationsTest();
+        List<Medicalrecords> listMedicalrecords;
+        Medicalrecords medicalrecords;
+        medicalrecords = createMedicalrecords(firstName, lastName, listAllergies, listMedications);
+
+        listMedicalrecords = createListMedicalrecordsTest(medicalrecords);
+
+        List<PersonInfo> listPersonInfo = new ArrayList<>();
+
+        when(getListsElementsJson.getPersons(elemjsonPerson)).thenReturn(listPersons);
+        when(getListsElementsJson.getMedicalrecords(elemjsonMedicalrecord)).thenReturn(listMedicalrecords);
+
+        listPersonInfo = safetyNetService.personInfo(firstName + "AnotherPerson", lastName + "AnotherPerson");
+
+        assertEquals(true, listPersonInfo.isEmpty());
+    }
+
+    @Test
+    void testPersonInfoPersonFirstNameNotExist() throws IOException, ParseException {
+        String firstName = "TEST999_FirstName";
+        String lastName = "TEST999_LastName";
+
+        String elemjsonPerson = "persons";
+        String elemjsonMedicalrecord = "medicalrecords";
+
+        List<Persons> listPersons;
+        Persons person;
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+
+        List<String> listAllergies;
+        listAllergies = createListAllergiesTest();
+        List<String> listMedications;
+        listMedications = createListMedicationsTest();
+        List<Medicalrecords> listMedicalrecords;
+        Medicalrecords medicalrecords;
+        medicalrecords = createMedicalrecords(firstName, lastName, listAllergies, listMedications);
+
+        listMedicalrecords = createListMedicalrecordsTest(medicalrecords);
+
+        List<PersonInfo> listPersonInfo = new ArrayList<>();
+
+        when(getListsElementsJson.getPersons(elemjsonPerson)).thenReturn(listPersons);
+        when(getListsElementsJson.getMedicalrecords(elemjsonMedicalrecord)).thenReturn(listMedicalrecords);
+
+        listPersonInfo = safetyNetService.personInfo(firstName + "AnotherPerson", lastName);
+
+        assertEquals(true, listPersonInfo.isEmpty());
+    }
+
+    @Test
+    void testPersonInfoPersonLastNameNotExist() throws IOException, ParseException {
+        String firstName = "TEST999_FirstName";
+        String lastName = "TEST999_LastName";
+
+        String elemjsonPerson = "persons";
+        String elemjsonMedicalrecord = "medicalrecords";
+
+        List<Persons> listPersons;
+        Persons person;
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+
+        List<String> listAllergies;
+        listAllergies = createListAllergiesTest();
+        List<String> listMedications;
+        listMedications = createListMedicationsTest();
+        List<Medicalrecords> listMedicalrecords;
+        Medicalrecords medicalrecords;
+        medicalrecords = createMedicalrecords(firstName, lastName, listAllergies, listMedications);
+
+        listMedicalrecords = createListMedicalrecordsTest(medicalrecords);
+
+        List<PersonInfo> listPersonInfo = new ArrayList<>();
+
+        when(getListsElementsJson.getPersons(elemjsonPerson)).thenReturn(listPersons);
+        when(getListsElementsJson.getMedicalrecords(elemjsonMedicalrecord)).thenReturn(listMedicalrecords);
+
+        listPersonInfo = safetyNetService.personInfo(firstName, lastName + "AnotherPerson");
+
+        assertEquals(true, listPersonInfo.isEmpty());
+    }
+
+    @Test
+    void testPersonInfoAndAnotherFirstNamePerson() throws IOException, ParseException {
+        String firstName = "TEST999_FirstName";
+        String lastName = "TEST999_LastName";
+
+        String elemjsonPerson = "persons";
+        String elemjsonMedicalrecord = "medicalrecords";
+
+        List<Persons> listPersons;
+        Persons person;
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+        person = createPerson(firstName + "AnotherFirstName", lastName);
+        listPersons.add(person);
+
+        List<String> listAllergies;
+        listAllergies = createListAllergiesTest();
+        List<String> listMedications;
+        listMedications = createListMedicationsTest();
+        List<Medicalrecords> listMedicalrecords;
+        Medicalrecords medicalrecords;
+        medicalrecords = createMedicalrecords(firstName, lastName, listAllergies, listMedications);
+
+        listMedicalrecords = createListMedicalrecordsTest(medicalrecords);
+
+        List<PersonInfo> listPersonInfo = new ArrayList<>();
+
+        when(getListsElementsJson.getPersons(elemjsonPerson)).thenReturn(listPersons);
+        when(getListsElementsJson.getMedicalrecords(elemjsonMedicalrecord)).thenReturn(listMedicalrecords);
+
+        listPersonInfo = safetyNetService.personInfo(firstName, lastName);
+
+        assertEquals(true, !listPersonInfo.isEmpty());
+    }
+
+    @Test
+    void testPersonInfoAndAnotherFirstAndLastNamePerson() throws IOException, ParseException {
+        String firstName = "TEST999_FirstName";
+        String lastName = "TEST999_LastName";
+
+        String elemjsonPerson = "persons";
+        String elemjsonMedicalrecord = "medicalrecords";
+
+        List<Persons> listPersons;
+        Persons person;
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+        person = createPerson(firstName + "AnotherFirstName", lastName + "AnotherLastName");
+        listPersons.add(person);
+
+        List<String> listAllergies;
+        listAllergies = createListAllergiesTest();
+        List<String> listMedications;
+        listMedications = createListMedicationsTest();
+        List<Medicalrecords> listMedicalrecords;
+        Medicalrecords medicalrecords;
+        medicalrecords = createMedicalrecords(firstName, lastName, listAllergies, listMedications);
+
+        listMedicalrecords = createListMedicalrecordsTest(medicalrecords);
+
+        List<PersonInfo> listPersonInfo = new ArrayList<>();
+
+        when(getListsElementsJson.getPersons(elemjsonPerson)).thenReturn(listPersons);
+        when(getListsElementsJson.getMedicalrecords(elemjsonMedicalrecord)).thenReturn(listMedicalrecords);
+
+        listPersonInfo = safetyNetService.personInfo(firstName, lastName);
+
+        assertEquals(true, !listPersonInfo.isEmpty());
+    }
+
+    @Test
+    void testCommunityEmail() throws IOException, ParseException {
+        String firstName = "TEST999_FirstName";
+        String lastName = "TEST999_LastName";
+
+        String elemjsonPerson = "persons";
+
+        List<Persons> listPersons;
+        Persons person;
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+        List<CommunityEmail> listCommunityEmail = new ArrayList<>();
+
+        when(getListsElementsJson.getPersons(elemjsonPerson)).thenReturn(listPersons);
+        listCommunityEmail = safetyNetService.communityEmail(person.getCity());
+
+        assertEquals(true, !listCommunityEmail.isEmpty());
+    }
+
+    @Test
+    void testCommunityEmailCityNotExist() throws IOException, ParseException {
+        String firstName = "TEST999_FirstName";
+        String lastName = "TEST999_LastName";
+
+        String elemjsonPerson = "persons";
+
+        List<Persons> listPersons;
+        Persons person;
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+        List<CommunityEmail> listCommunityEmail = new ArrayList<>();
+
+        when(getListsElementsJson.getPersons(elemjsonPerson)).thenReturn(listPersons);
+        listCommunityEmail = safetyNetService.communityEmail(person.getCity() + "OtherCity");
+
+        assertEquals(true, !listCommunityEmail.isEmpty());
+    }
+
+    @Test
+    void testCommunityEmailOtheSameEmail() throws IOException, ParseException {
+        String firstName = "TEST999_FirstName";
+        String lastName = "TEST999_LastName";
+
+        String elemjsonPerson = "persons";
+
+        List<Persons> listPersons;
+        Persons person;
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+        person = createPerson(firstName, lastName);
+        listPersons.add(person);
+        List<CommunityEmail> listCommunityEmail = new ArrayList<>();
+
+        when(getListsElementsJson.getPersons(elemjsonPerson)).thenReturn(listPersons);
+        listCommunityEmail = safetyNetService.communityEmail(person.getCity());
+
+        assertEquals(true, !listCommunityEmail.isEmpty());
+    }
+
+    @Test
+    void testCommunityEmailOtheNotSameEmail() throws IOException, ParseException {
+        String firstName = "TEST999_FirstName";
+        String lastName = "TEST999_LastName";
+
+        String elemjsonPerson = "persons";
+
+        List<Persons> listPersons;
+        Persons person;
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+        person = createPerson(firstName, lastName);
+        listPersons = createListPersonsTest(firstName, lastName, person);
+        person = createPerson(firstName, lastName);
+        person.setEmail("otherEmail@Test");
+        listPersons.add(person);
+        List<CommunityEmail> listCommunityEmail = new ArrayList<>();
+
+        when(getListsElementsJson.getPersons(elemjsonPerson)).thenReturn(listPersons);
+        listCommunityEmail = safetyNetService.communityEmail(person.getCity());
+
+        assertEquals(true, !listCommunityEmail.isEmpty());
+    }
+
+    private Medicalrecords setBirthdayIfAdult(boolean childOrAdult, Medicalrecords medicalrecords) {
+        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+        Calendar calendar = new GregorianCalendar();
+        LocalDate now = LocalDate.now();
+        java.util.Date datebirthday;
+        LocalDate birthdate;
+        Period periode;
+        try {
+            datebirthday = sdf.parse(medicalrecords.getBirthdate());
+        } catch (ParseException e) {
+            return null;
+        }
+
+        int adult = 18;
+        calendar.setTime(datebirthday);
+        birthdate = LocalDate.of(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH) + 1,
+                calendar.get(Calendar.DAY_OF_MONTH));
+        periode = Period.between(birthdate, now);
+        if (periode.getYears() < 18) { // child
+            if (!childOrAdult) {
+                String birthday = "01/01/" + (birthdate.getYear() - (adult - periode.getYears()));
+                medicalrecords.setBirthdate(birthday);
+            }
+        }
+        return medicalrecords;
     }
 
     private List<String> createListMedicationsTest() {
@@ -1117,4 +1655,5 @@ public class SafetyNetServiceTests {
         person.setZip("zip");
         return person;
     }
+
 }
