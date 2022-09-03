@@ -168,9 +168,9 @@ dÃ©compte du nombre dâ€™adultes (>18 ans) et du nombre dâ€™enfants (<=18 ans)
 Request Method: <[GET]> /firestations
 Request URL: http://localhost/firestations @Param/Path: [stationNumber]=[firestations]
 Response Code: 200
-2022-09-03 14:08:02 [main] INFO  c.o.n.c.NewSafetyAlertController                   - Fin test : Le système RETOURNE une liste des personnes (prénom, nom, adresse, numéro de
-téléphone) couvertes par la caserne de pompiers correspondante ainsi qu’un
-décompte du nombre d’adultes (>18 ans) et du nombre d’enfants (<=18 ans)
+2022-09-03 14:08:02 [main] INFO  c.o.n.c.NewSafetyAlertController                   - Fin test : Le systï¿½me RETOURNE une liste des personnes (prï¿½nom, nom, adresse, numï¿½ro de
+tï¿½lï¿½phone) couvertes par la caserne de pompiers correspondante ainsi quï¿½un
+dï¿½compte du nombre dï¿½adultes (>18 ans) et du nombre dï¿½enfants (<=18 ans)
 2022-09-03 14:08:02 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
 2022-09-03 14:08:02 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
 2022-09-03 14:12:38 [main] INFO  c.o.n.NewSafetyAlertControllerTest                 - Starting NewSafetyAlertControllerTest using Java 17.0.3.1 on Claudiu-Dell with PID 22776 (started by kls_k in c:\WorkJavaVisualCode\new_safety_net)
@@ -181,9 +181,9 @@ décompte du nombre d’adultes (>18 ans) et du nombre d’enfants (<=18 ans)
 Request Method: <[GET]> /firestations
 Request URL: http://localhost/firestations @Param/Path: [stationNumber]=[firestations]
 Response Code: 200
-2022-09-03 14:12:40 [main] INFO  c.o.n.c.NewSafetyAlertController                   - Fin test : Le système RETOURNE une liste des personnes (prénom, nom, adresse, numéro de
-téléphone) couvertes par la caserne de pompiers correspondante ainsi qu’un
-décompte du nombre d’adultes (>18 ans) et du nombre d’enfants (<=18 ans)
+2022-09-03 14:12:40 [main] INFO  c.o.n.c.NewSafetyAlertController                   - Fin test : Le systï¿½me RETOURNE une liste des personnes (prï¿½nom, nom, adresse, numï¿½ro de
+tï¿½lï¿½phone) couvertes par la caserne de pompiers correspondante ainsi quï¿½un
+dï¿½compte du nombre dï¿½adultes (>18 ans) et du nombre dï¿½enfants (<=18 ans)
 2022-09-03 14:12:40 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
 2022-09-03 14:12:40 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
 2022-09-03 14:14:26 [main] INFO  c.o.n.NewSafetyAlertControllerTest                 - Starting NewSafetyAlertControllerTest using Java 17.0.3.1 on Claudiu-Dell with PID 8436 (started by kls_k in c:\WorkJavaVisualCode\new_safety_net)
@@ -194,9 +194,9 @@ décompte du nombre d’adultes (>18 ans) et du nombre d’enfants (<=18 ans)
 Request Method: <[GET]> /firestations
 Request URL: http://localhost/firestations @Param/Path: [stationNumber]=[firestations]
 Response Code: 200
-2022-09-03 14:14:28 [main] INFO  c.o.n.c.NewSafetyAlertController                   - Fin test : Le système RETOURNE une liste des personnes (prénom, nom, adresse, numéro de
-téléphone) couvertes par la caserne de pompiers correspondante ainsi qu’un
-décompte du nombre d’adultes (>18 ans) et du nombre d’enfants (<=18 ans)
+2022-09-03 14:14:28 [main] INFO  c.o.n.c.NewSafetyAlertController                   - Fin test : Le systï¿½me RETOURNE une liste des personnes (prï¿½nom, nom, adresse, numï¿½ro de
+tï¿½lï¿½phone) couvertes par la caserne de pompiers correspondante ainsi quï¿½un
+dï¿½compte du nombre dï¿½adultes (>18 ans) et du nombre dï¿½enfants (<=18 ans)
 2022-09-03 14:14:28 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
 2022-09-03 14:14:29 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
 2022-09-03 14:17:14 [main] INFO  c.o.n.NewSafetyAlertControllerTest                 - Starting NewSafetyAlertControllerTest using Java 17.0.3.1 on Claudiu-Dell with PID 22280 (started by kls_k in c:\WorkJavaVisualCode\new_safety_net)
@@ -207,9 +207,9 @@ décompte du nombre d’adultes (>18 ans) et du nombre d’enfants (<=18 ans)
 Request Method: <[GET]> /firestations
 Request URL: http://localhost/firestations @Param/Path: [stationNumber]=[firestations]
 Response Code: 200
-2022-09-03 14:17:16 [main] INFO  c.o.n.c.NewSafetyAlertController                   - Fin test : Le système RETOURNE une liste des personnes (prénom, nom, adresse, numéro de
-téléphone) couvertes par la caserne de pompiers correspondante ainsi qu’un
-décompte du nombre d’adultes (>18 ans) et du nombre d’enfants (<=18 ans)
+2022-09-03 14:17:16 [main] INFO  c.o.n.c.NewSafetyAlertController                   - Fin test : Le systï¿½me RETOURNE une liste des personnes (prï¿½nom, nom, adresse, numï¿½ro de
+tï¿½lï¿½phone) couvertes par la caserne de pompiers correspondante ainsi quï¿½un
+dï¿½compte du nombre dï¿½adultes (>18 ans) et du nombre dï¿½enfants (<=18 ans)
 2022-09-03 14:17:16 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
 2022-09-03 14:17:16 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
 2022-09-03 14:19:10 [main] INFO  c.o.n.NewSafetyAlertControllerTest                 - Starting NewSafetyAlertControllerTest using Java 17.0.3 on Claudiu-Dell with PID 14972 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
@@ -242,9 +242,9 @@ dÃ©compte du nombre dâ€™adultes (>18 ans) et du nombre dâ€™enfants (<=18 ans)
 Request Method: <[GET]> /firestations
 Request URL: http://localhost/firestations @Param/Path: [stationNumber]=[firestations]
 Response Code: 200
-2022-09-03 14:22:41 [main] INFO  c.o.n.c.NewSafetyAlertController                   - Fin test : Le système RETOURNE une liste des personnes (prénom, nom, adresse, numéro de
-téléphone) couvertes par la caserne de pompiers correspondante ainsi qu’un
-décompte du nombre d’adultes (>18 ans) et du nombre d’enfants (<=18 ans)
+2022-09-03 14:22:41 [main] INFO  c.o.n.c.NewSafetyAlertController                   - Fin test : Le systï¿½me RETOURNE une liste des personnes (prï¿½nom, nom, adresse, numï¿½ro de
+tï¿½lï¿½phone) couvertes par la caserne de pompiers correspondante ainsi quï¿½un
+dï¿½compte du nombre dï¿½adultes (>18 ans) et du nombre dï¿½enfants (<=18 ans)
 2022-09-03 14:22:41 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
 2022-09-03 14:22:41 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
 2022-09-03 14:24:54 [main] INFO  c.o.n.NewSafetyAlertControllerTest                 - Starting NewSafetyAlertControllerTest using Java 17.0.3 on Claudiu-Dell with PID 9708 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
@@ -277,9 +277,9 @@ dÃ©compte du nombre dâ€™adultes (>18 ans) et du nombre dâ€™enfants (<=18 ans)
 Request Method: <[GET]> /firestations
 Request URL: http://localhost/firestations @Param/Path: [stationNumber]=[firestations]
 Response Code: 200
-2022-09-03 14:25:22 [main] INFO  c.o.n.c.NewSafetyAlertController                   - Fin test : Le système RETOURNE une liste des personnes (prénom, nom, adresse, numéro de
-téléphone) couvertes par la caserne de pompiers correspondante ainsi qu’un
-décompte du nombre d’adultes (>18 ans) et du nombre d’enfants (<=18 ans)
+2022-09-03 14:25:22 [main] INFO  c.o.n.c.NewSafetyAlertController                   - Fin test : Le systï¿½me RETOURNE une liste des personnes (prï¿½nom, nom, adresse, numï¿½ro de
+tï¿½lï¿½phone) couvertes par la caserne de pompiers correspondante ainsi quï¿½un
+dï¿½compte du nombre dï¿½adultes (>18 ans) et du nombre dï¿½enfants (<=18 ans)
 2022-09-03 14:25:22 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
 2022-09-03 14:25:22 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
 2022-09-03 14:27:53 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3.1 on Claudiu-Dell with PID 18932 (started by kls_k in c:\WorkJavaVisualCode\new_safety_net)
@@ -849,9 +849,9 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 Request Method: <[GET]> /firestations
 Request URL: http://localhost/firestations @Param/Path: [stationNumber]=[firestations]
 Response Code: 200
-2022-09-03 14:31:04 [main] INFO  c.o.n.c.NewSafetyAlertController                   - Fin test : Le système RETOURNE une liste des personnes (prénom, nom, adresse, numéro de
-téléphone) couvertes par la caserne de pompiers correspondante ainsi qu’un
-décompte du nombre d’adultes (>18 ans) et du nombre d’enfants (<=18 ans)
+2022-09-03 14:31:04 [main] INFO  c.o.n.c.NewSafetyAlertController                   - Fin test : Le systï¿½me RETOURNE une liste des personnes (prï¿½nom, nom, adresse, numï¿½ro de
+tï¿½lï¿½phone) couvertes par la caserne de pompiers correspondante ainsi quï¿½un
+dï¿½compte du nombre dï¿½adultes (>18 ans) et du nombre dï¿½enfants (<=18 ans)
 2022-09-03 14:31:05 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
 2022-09-03 14:31:05 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
 2022-09-03 14:32:37 [main] INFO  c.o.n.NewSafetyAlertControllerTest                 - Starting NewSafetyAlertControllerTest using Java 17.0.3.1 on Claudiu-Dell with PID 18808 (started by kls_k in c:\WorkJavaVisualCode\new_safety_net)
@@ -874,9 +874,9 @@ décompte du nombre d’adultes (>18 ans) et du nombre d’enfants (<=18 ans)
 Request Method: <[GET]> /firestations
 Request URL: http://localhost/firestations @Param/Path: [stationNumber]=[firestations]
 Response Code: 200
-2022-09-03 14:34:09 [main] INFO  c.o.n.c.NewSafetyAlertController                   - Fin test : Le système RETOURNE une liste des personnes (prénom, nom, adresse, numéro de
-téléphone) couvertes par la caserne de pompiers correspondante ainsi qu’un
-décompte du nombre d’adultes (>18 ans) et du nombre d’enfants (<=18 ans)
+2022-09-03 14:34:09 [main] INFO  c.o.n.c.NewSafetyAlertController                   - Fin test : Le systï¿½me RETOURNE une liste des personnes (prï¿½nom, nom, adresse, numï¿½ro de
+tï¿½lï¿½phone) couvertes par la caserne de pompiers correspondante ainsi quï¿½un
+dï¿½compte du nombre dï¿½adultes (>18 ans) et du nombre dï¿½enfants (<=18 ans)
 2022-09-03 14:34:09 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
 2022-09-03 14:34:09 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
 2022-09-03 14:41:08 [main] INFO  c.o.n.NewSafetyAlertControllerTest                 - Starting NewSafetyAlertControllerTest using Java 17.0.3.1 on Claudiu-Dell with PID 8728 (started by kls_k in c:\WorkJavaVisualCode\new_safety_net)
@@ -887,9 +887,9 @@ décompte du nombre d’adultes (>18 ans) et du nombre d’enfants (<=18 ans)
 Request Method: <[GET]> /firestations
 Request URL: http://localhost/firestations @Param/Path: [stationNumber]=[firestations]
 Response Code: 200
-2022-09-03 14:41:10 [main] INFO  c.o.n.c.NewSafetyAlertController                   - Fin test : Le système RETOURNE une liste des personnes (prénom, nom, adresse, numéro de
-téléphone) couvertes par la caserne de pompiers correspondante ainsi qu’un
-décompte du nombre d’adultes (>18 ans) et du nombre d’enfants (<=18 ans)
+2022-09-03 14:41:10 [main] INFO  c.o.n.c.NewSafetyAlertController                   - Fin test : Le systï¿½me RETOURNE une liste des personnes (prï¿½nom, nom, adresse, numï¿½ro de
+tï¿½lï¿½phone) couvertes par la caserne de pompiers correspondante ainsi quï¿½un
+dï¿½compte du nombre dï¿½adultes (>18 ans) et du nombre dï¿½enfants (<=18 ans)
 2022-09-03 14:41:10 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
 2022-09-03 14:41:10 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
 2022-09-03 14:41:32 [main] INFO  c.o.n.NewSafetyAlertControllerTest                 - Starting NewSafetyAlertControllerTest using Java 17.0.3.1 on Claudiu-Dell with PID 8564 (started by kls_k in c:\WorkJavaVisualCode\new_safety_net)
@@ -900,9 +900,9 @@ décompte du nombre d’adultes (>18 ans) et du nombre d’enfants (<=18 ans)
 Request Method: <[GET]> /firestations
 Request URL: http://localhost/firestations @Param/Path: [stationNumber]=[firestations]
 Response Code: 200
-2022-09-03 14:41:34 [main] INFO  c.o.n.c.NewSafetyAlertController                   - Fin test : Le système RETOURNE une liste des personnes (prénom, nom, adresse, numéro de
-téléphone) couvertes par la caserne de pompiers correspondante ainsi qu’un
-décompte du nombre d’adultes (>18 ans) et du nombre d’enfants (<=18 ans)
+2022-09-03 14:41:34 [main] INFO  c.o.n.c.NewSafetyAlertController                   - Fin test : Le systï¿½me RETOURNE une liste des personnes (prï¿½nom, nom, adresse, numï¿½ro de
+tï¿½lï¿½phone) couvertes par la caserne de pompiers correspondante ainsi quï¿½un
+dï¿½compte du nombre dï¿½adultes (>18 ans) et du nombre dï¿½enfants (<=18 ans)
 2022-09-03 14:41:34 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
 2022-09-03 14:41:34 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
 2022-09-03 14:43:03 [main] INFO  c.o.n.NewSafetyAlertControllerTest                 - Starting NewSafetyAlertControllerTest using Java 17.0.3.1 on Claudiu-Dell with PID 21040 (started by kls_k in c:\WorkJavaVisualCode\new_safety_net)
@@ -930,8 +930,21 @@ dÃ©compte du nombre dâ€™adultes (>18 ans) et du nombre dâ€™enfants (<=18 ans)
 Request Method: <[GET]> /firestations
 Request URL: http://localhost/firestations @Param/Path: [stationNumber]=[firestations]
 Response Code: 200
-2022-09-03 14:49:12 [main] INFO  c.o.n.c.NewSafetyAlertController                   - Fin test : Le système RETOURNE une liste des personnes (prénom, nom, adresse, numéro de
-téléphone) couvertes par la caserne de pompiers correspondante ainsi qu’un
-décompte du nombre d’adultes (>18 ans) et du nombre d’enfants (<=18 ans)
+2022-09-03 14:49:12 [main] INFO  c.o.n.c.NewSafetyAlertController                   - Fin test : Le systï¿½me RETOURNE une liste des personnes (prï¿½nom, nom, adresse, numï¿½ro de
+tï¿½lï¿½phone) couvertes par la caserne de pompiers correspondante ainsi quï¿½un
+dï¿½compte du nombre dï¿½adultes (>18 ans) et du nombre dï¿½enfants (<=18 ans)
 2022-09-03 14:49:12 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
 2022-09-03 14:49:12 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-09-03 15:40:51 [main] INFO  c.o.n.NewSafetyAlertControllerTest                 - Starting NewSafetyAlertControllerTest using Java 17.0.3.1 on Claudiu-Dell with PID 8864 (started by kls_k in c:\WorkJavaVisualCode\new_safety_net)
+2022-09-03 15:40:51 [main] DEBUG c.o.n.NewSafetyAlertControllerTest                 - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-09-03 15:40:51 [main] INFO  c.o.n.NewSafetyAlertControllerTest                 - No active profile set, falling back to 1 default profile: "default"
+2022-09-03 15:40:52 [main] NFO  c.o.n.NewSafetyAlertControllerTest                 - Started NewSafetyAlertControllerTest in 1.743 seconds (process running for 4.182)
+2022-09-03 15:40:52 [main] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /firestations
+Request URL: http://localhost/firestations @Param/Path: [stationNumber]=[firestations]
+Response Code: 200
+2022-09-03 15:40:52 [main] INFO  c.o.n.c.NewSafetyAlertController                   - Fin test : Le systï¿½me RETOURNE une liste des personnes (prï¿½nom, nom, adresse, numï¿½ro de
+tï¿½lï¿½phone) couvertes par la caserne de pompiers correspondante ainsi quï¿½un
+dï¿½compte du nombre dï¿½adultes (>18 ans) et du nombre dï¿½enfants (<=18 ans)
+2022-09-03 15:40:52 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-09-03 15:40:52 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
