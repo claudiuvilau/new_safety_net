@@ -12,7 +12,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -48,14 +47,11 @@ public class SafetyNetServiceTests {
     @Mock
     NewFileJson newFileJson;
 
+    @Mock
+    LoggerApiNewSafetyNet loggerApiNewSafetyNet;
+
     @InjectMocks
     SafetyNetService safetyNetService;
-
-    @BeforeAll
-    private static void activateLoggerForTests() {
-        LoggerApiNewSafetyNet loggerApiNewSafetyNet = new LoggerApiNewSafetyNet();
-        loggerApiNewSafetyNet.setLoggerForTests();
-    }
 
     @Test
     void testGetAPerson() throws IOException {

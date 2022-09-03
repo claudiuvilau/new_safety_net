@@ -68,20 +68,25 @@ public class NewSafetyAlertController {
         String elemjson = "persons";
         try {
             listPersons = repositoryElementJson.getPersons(elemjson);
+            if (listPersons.isEmpty()) {
+                // 204 Requête traitée avec succès mais pas d’information à renvoyer.
+                response.setStatus(204);
+                messagelogger = NOCONTENT + loggerApiNewSafetyNet.loggerInfo(request, response, elemjson);
+                LOGGER.info(messagelogger);
+                return ResponseEntity.status(response.getStatus()).build();
+            }
+            messagelogger = "OK" + loggerApiNewSafetyNet.loggerInfo(request, response, elemjson);
+            LOGGER.info(messagelogger);
+            return new ResponseEntity<>(listPersons, HttpStatus.valueOf(response.getStatus()));
         } catch (IOException e) {
             response.setStatus(404);
-        }
-
-        if (listPersons.isEmpty()) {
-            // 204 Requête traitée avec succès mais pas d’information à renvoyer.
-            response.setStatus(204);
-            messagelogger = NOCONTENT + loggerApiNewSafetyNet.loggerInfo(request, response, elemjson);
+            return null;
+        } catch (NullPointerException nulle) {
+            response.setStatus(404);
+            messagelogger = "Null List !" + loggerApiNewSafetyNet.loggerInfo(request, response, elemjson);
             LOGGER.info(messagelogger);
-            return ResponseEntity.status(response.getStatus()).build();
+            return null;
         }
-        messagelogger = "OK" + loggerApiNewSafetyNet.loggerInfo(request, response, elemjson);
-        LOGGER.info(messagelogger);
-        return new ResponseEntity<>(listPersons, HttpStatus.valueOf(response.getStatus()));
     }
 
     // get a person
