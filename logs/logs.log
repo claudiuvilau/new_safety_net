@@ -935,3 +935,25 @@ téléphone) couvertes par la caserne de pompiers correspondante ainsi qu’un
 décompte du nombre d’adultes (>18 ans) et du nombre d’enfants (<=18 ans)
 2022-09-03 14:49:12 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
 2022-09-03 14:49:12 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-09-03 15:35:27 [main] INFO  c.o.n.NewSafetyAlertControllerTest                 - Starting NewSafetyAlertControllerTest using Java 17.0.3 on Claudiu-Dell with PID 14396 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-09-03 15:35:27 [main] DEBUG c.o.n.NewSafetyAlertControllerTest                 - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-09-03 15:35:27 [main] INFO  c.o.n.NewSafetyAlertControllerTest                 - No active profile set, falling back to 1 default profile: "default"
+2022-09-03 15:35:28 [main] INFO  c.o.n.NewSafetyAlertControllerTest                 - Started NewSafetyAlertControllerTest in 1.426 seconds (process running for 2.291)
+2022-09-03 15:35:28 [main] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /firestations
+Request URL: http://localhost/firestations @Param/Path: [stationNumber]=[firestations]
+Response Code: 200
+2022-09-03 15:35:28 [main] INFO  c.o.n.c.NewSafetyAlertController                   - Fin test : Le systÃ¨me RETOURNE une liste des personnes (prÃ©nom, nom, adresse, numÃ©ro de
+tÃ©lÃ©phone) couvertes par la caserne de pompiers correspondante ainsi quâ€™un
+dÃ©compte du nombre dâ€™adultes (>18 ans) et du nombre dâ€™enfants (<=18 ans)
+2022-09-03 15:36:01 [main] INFO  c.o.n.NewSafetyAlertControllerTest                 - Starting NewSafetyAlertControllerTest using Java 17.0.3.1 on Claudiu-Dell with PID 1764 (started by kls_k in c:\WorkJavaVisualCode\new_safety_net)
+2022-09-03 15:36:01 [main] DEBUG c.o.n.NewSafetyAlertControllerTest                 - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-09-03 15:36:01 [main] INFO  c.o.n.NewSafetyAlertControllerTest                 - No active profile set, falling back to 1 default profile: "default"
+2022-09-03 15:36:02 [main] INFO  c.o.n.NewSafetyAlertControllerTest                 - Started NewSafetyAlertControllerTest in 2.302 seconds (process running for 3.856)
+2022-09-03 15:36:03 [main] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /firestations
+Request URL: http://localhost/firestations @Param/Path: [stationNumber]=[firestations]
+Response Code: 200
+2022-09-03 15:36:03 [main] INFO  c.o.n.c.NewSafetyAlertController                   - Fin test : Le système RETOURNE une liste des personnes (prénom, nom, adresse, numéro de
+téléphone) couvertes par la caserne de pompiers correspondante ainsi qu’un
+décompte du nombre d’adultes (>18 ans) et du nombre d’enfants (<=18 ans)
