@@ -33,8 +33,6 @@ public interface SafetyNetRepository {
      * unique).
      */
 
-    List<Persons> getPersons(String elemjson) throws IOException;
-
     public List<Persons> getAPerson(String firstNamelastName, String elemjson) throws IOException;
 
     boolean postPerson(Persons persons);
@@ -51,8 +49,6 @@ public interface SafetyNetRepository {
      * ● mettre à jour le numéro de la caserne de pompiers d'une adresse
      * ● supprimer le mapping d'une caserne ou d'une adresse.
      */
-
-    List<Firestations> getFirestations(String elemjson);
 
     boolean postFirestation(Firestations firestation);
 
@@ -72,8 +68,6 @@ public interface SafetyNetRepository {
      * comme
      * identificateur unique)
      */
-
-    List<Medicalrecords> getMedicalrecords(String elemjson);
 
     boolean postMedicalRecord(Medicalrecords medicalRecord);
 
@@ -164,10 +158,5 @@ public interface SafetyNetRepository {
      * 
      */
     public List<CommunityEmail> communityEmail(String city) throws IOException;
-
-    boolean createNewFileJson(List<Persons> listPersons, List<Firestations> listFirestations,
-            List<Medicalrecords> listMedicalrecords, String param);
-
-    void verifyAndUpdatePerson(Persons element, Persons person);
 
 }

@@ -1,0 +1,735 @@
+2022-08-26 21:52:40 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 22188 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 21:52:40 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 21:52:40 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 21:52:42 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.999 seconds (process running for 2.954)
+2022-08-26 21:52:43 [main] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 21:52:43 [main] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 21:52:44 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-26 21:52:44 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-08-26 21:57:04 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3.1 on Claudiu-Dell with PID 12532 (started by kls_k in c:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 21:57:05 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 21:57:05 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 21:57:08 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 4.535 seconds (process running for 8.707)
+2022-08-26 21:57:09 [main] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 21:57:10 [main] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 21:57:10 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-26 21:57:10 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-08-26 22:01:22 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 16628 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 22:01:22 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 22:01:22 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 22:01:24 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.536 seconds (process running for 2.459)
+2022-08-26 22:01:24 [main] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 22:01:24 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-26 22:01:24 [main] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 22:01:24 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-26 22:01:24 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-08-26 22:03:12 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 25372 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 22:03:12 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 22:03:12 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 22:03:14 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.724 seconds (process running for 2.554)
+2022-08-26 22:05:06 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 6980 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 22:05:06 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 22:05:06 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 22:05:08 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.577 seconds (process running for 2.777)
+2022-08-26 22:07:31 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 17048 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 22:07:31 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 22:07:31 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 22:07:32 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.485 seconds (process running for 2.422)
+2022-08-26 22:07:33 [main] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 22:07:33 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-26 22:07:33 [main] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 22:07:33 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-26 22:07:33 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-08-26 22:08:00 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 10084 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 22:08:00 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 22:08:00 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 22:08:01 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.613 seconds (process running for 2.696)
+2022-08-26 22:08:17 [main] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 22:08:18 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-26 22:08:42 [main] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 22:09:10 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-26 22:09:10 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-08-26 22:09:47 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 25324 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 22:09:47 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 22:09:47 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 22:09:48 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.526 seconds (process running for 2.552)
+2022-08-26 22:10:12 [main] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 22:11:07 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-26 22:11:15 [main] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 22:11:21 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-26 22:11:21 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-08-26 22:14:08 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 2140 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 22:14:08 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 22:14:08 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 22:14:09 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.427 seconds (process running for 2.296)
+2022-08-26 22:14:33 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 21008 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 22:14:33 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 22:14:33 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 22:14:34 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.592 seconds (process running for 2.666)
+2022-08-26 22:15:21 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 15528 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 22:15:21 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 22:15:21 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 22:15:22 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.545 seconds (process running for 2.641)
+2022-08-26 22:18:22 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 5628 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 22:18:22 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 22:18:22 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 22:18:24 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.826 seconds (process running for 3.22)
+2022-08-26 22:20:25 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 23988 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 22:20:25 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 22:20:25 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 22:20:26 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.388 seconds (process running for 2.245)
+2022-08-26 22:24:36 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 15068 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 22:24:36 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 22:24:36 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 22:24:37 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter             - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+   newSafetyAlertController (field private com.openclassrooms.new_safety_net.repository.SafetyNetRepository com.openclassrooms.new_safety_net.controller.NewSafetyAlertController.repository)
+┌─────┐
+|  safetyNetService defined in file [C:\WorkJavaVisualCode\new_safety_net\target\classes\com\openclassrooms\new_safety_net\service\SafetyNetService.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2022-08-26 22:24:37 [main] ERROR o.s.t.c.TestContextManager                         - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@7eb200ce] to prepare test instance [com.openclassrooms.new_safety_net.SafetyNetServiceTests@2ee83775]
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@9efcd90 testClass = SafetyNetServiceTests, locations = '{}', classes = '{class com.openclassrooms.new_safety_net.NewSafetyNetApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@324a0017, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@487db668, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@126945f9, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@9da1, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@25bfcafd, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@20398b7c], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:114) ~[spring-test-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124) ~[spring-test-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189) ~[spring-test-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131) ~[spring-test-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:249) ~[spring-test-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138) ~[spring-test-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$8(ClassBasedTestDescriptor.java:363) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:368) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$9(ClassBasedTestDescriptor.java:363) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[?:?]
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[?:?]
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[?:?]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[?:?]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[?:?]
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[?:?]
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[?:?]
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[?:?]
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[?:?]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:362) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:283) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:282) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:272) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at java.util.Optional.orElseGet(Optional.java:364) ~[?:?]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:271) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:102) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:101) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:66) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:95) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:91) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:60) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:98) ~[.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40) ~[.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529) ~[.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756) ~[.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452) ~[.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210) ~[.cp/:?]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'newSafetyAlertController': Unsatisfied dependency expressed through field 'repository': Error creating bean with name 'safetyNetService' defined in file [C:\WorkJavaVisualCode\new_safety_net\target\classes\com\openclassrooms\new_safety_net\service\SafetyNetService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'safetyNetService': Requested bean is currently in creation: Is there an unresolvable circular reference?
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:746) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:726) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:127) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:485) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1402) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:931) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:926) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:592) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:430) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:132) ~[spring-boot-test-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:156) ~[spring-test-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:105) ~[spring-test-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	... 71 more
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'safetyNetService' defined in file [C:\WorkJavaVisualCode\new_safety_net\target\classes\com\openclassrooms\new_safety_net\service\SafetyNetService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'safetyNetService': Requested bean is currently in creation: Is there an unresolvable circular reference?
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:774) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:227) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1344) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1188) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1375) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1295) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:743) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:726) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:127) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:485) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1402) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:931) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:926) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:592) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:430) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:132) ~[spring-boot-test-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:156) ~[spring-test-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:105) ~[spring-test-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	... 71 more
+Caused by: org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'safetyNetService': Requested bean is currently in creation: Is there an unresolvable circular reference?
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.beforeSingletonCreation(DefaultSingletonBeanRegistry.java:355) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:227) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1375) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1295) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:861) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:765) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:227) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1344) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1188) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1375) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1295) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:743) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:726) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:127) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:485) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1402) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:931) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:926) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:592) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:430) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:132) ~[spring-boot-test-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:156) ~[spring-test-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:105) ~[spring-test-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	... 71 more
+2022-08-26 22:24:37 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 15068 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 22:24:37 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 22:24:37 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 22:24:37 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter             - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+   newSafetyAlertController (field private com.openclassrooms.new_safety_net.repository.SafetyNetRepository com.openclassrooms.new_safety_net.controller.NewSafetyAlertController.repository)
+┌─────┐
+|  safetyNetService defined in file [C:\WorkJavaVisualCode\new_safety_net\target\classes\com\openclassrooms\new_safety_net\service\SafetyNetService.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2022-08-26 22:24:37 [main] ERROR o.s.t.c.TestContextManager                         - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@7eb200ce] to prepare test instance [com.openclassrooms.new_safety_net.SafetyNetServiceTests@51a651c1]
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@9efcd90 testClass = SafetyNetServiceTests, locations = '{}', classes = '{class com.openclassrooms.new_safety_net.NewSafetyNetApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@324a0017, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@487db668, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@126945f9, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@9da1, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@25bfcafd, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@20398b7c], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:114) ~[spring-test-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124) ~[spring-test-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189) ~[spring-test-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131) ~[spring-test-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:249) ~[spring-test-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138) ~[spring-test-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$8(ClassBasedTestDescriptor.java:363) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:368) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$9(ClassBasedTestDescriptor.java:363) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[?:?]
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[?:?]
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[?:?]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[?:?]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[?:?]
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[?:?]
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[?:?]
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[?:?]
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[?:?]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:362) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:283) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:282) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:272) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at java.util.Optional.orElseGet(Optional.java:364) ~[?:?]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:271) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:102) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:101) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:66) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:95) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:91) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:60) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:98) ~[.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40) ~[.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529) ~[.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756) ~[.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452) ~[.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210) ~[.cp/:?]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'newSafetyAlertController': Unsatisfied dependency expressed through field 'repository': Error creating bean with name 'safetyNetService' defined in file [C:\WorkJavaVisualCode\new_safety_net\target\classes\com\openclassrooms\new_safety_net\service\SafetyNetService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'safetyNetService': Requested bean is currently in creation: Is there an unresolvable circular reference?
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:746) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:726) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:127) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:485) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1402) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:931) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:926) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:592) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:430) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:132) ~[spring-boot-test-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:156) ~[spring-test-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:105) ~[spring-test-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	... 71 more
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'safetyNetService' defined in file [C:\WorkJavaVisualCode\new_safety_net\target\classes\com\openclassrooms\new_safety_net\service\SafetyNetService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'safetyNetService': Requested bean is currently in creation: Is there an unresolvable circular reference?
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:774) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:227) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1344) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1188) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1375) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1295) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:743) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:726) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:127) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:485) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1402) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:931) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:926) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:592) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:430) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:132) ~[spring-boot-test-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:156) ~[spring-test-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:105) ~[spring-test-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	... 71 more
+Caused by: org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'safetyNetService': Requested bean is currently in creation: Is there an unresolvable circular reference?
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.beforeSingletonCreation(DefaultSingletonBeanRegistry.java:355) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:227) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1375) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1295) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:861) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:765) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:227) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1344) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1188) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1375) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1295) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:743) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:726) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:127) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:485) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1402) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:931) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:926) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:592) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:430) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:132) ~[spring-boot-test-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:156) ~[spring-test-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:105) ~[spring-test-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	... 71 more
+2022-08-26 22:41:19 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 8476 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 22:41:19 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 22:41:19 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 22:41:20 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.425 seconds (process running for 2.309)
+2022-08-26 22:41:21 [main] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 22:41:21 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-26 22:41:21 [main] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 22:41:21 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-26 22:41:21 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-08-26 22:42:40 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 3984 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 22:42:40 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 22:42:40 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 22:42:41 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.403 seconds (process running for 2.319)
+2022-08-26 22:42:42 [main] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 22:42:42 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-26 22:42:42 [main] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 22:42:42 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-26 22:42:42 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-08-26 22:43:01 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 21716 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 22:43:01 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 22:43:01 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 22:43:02 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.55 seconds (process running for 2.648)
+2022-08-26 22:43:15 [main] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 22:43:23 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-26 22:43:47 [main] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 22:43:47 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-26 22:43:47 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-08-26 22:44:27 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 25456 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 22:44:27 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 22:44:27 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 22:44:28 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.404 seconds (process running for 2.262)
+2022-08-26 22:44:28 [main] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 22:44:28 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-26 22:44:28 [main] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 22:44:28 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-26 22:44:28 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-08-26 22:48:51 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 22072 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 22:48:51 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 22:48:51 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 22:48:52 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.463 seconds (process running for 2.298)
+2022-08-26 22:48:53 [main] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 22:48:53 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-26 22:48:53 [main] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 22:48:53 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-26 22:48:53 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-08-26 22:49:05 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 11840 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 22:49:05 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 22:49:05 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 22:49:06 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.619 seconds (process running for 2.676)
+2022-08-26 22:49:28 [main] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 22:49:34 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-26 22:50:04 [main] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 22:50:22 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-26 22:50:22 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-08-26 22:50:46 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 23188 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 22:50:46 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 22:50:46 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 22:50:47 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.517 seconds (process running for 2.667)
+2022-08-26 22:51:09 [main] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 22:51:28 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-26 22:51:28 [main] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 22:51:28 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-26 22:51:28 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2022-08-26 22:55:12 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 13632 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 22:55:12 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 22:55:12 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 22:55:13 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.393 seconds (process running for 2.255)
+2022-08-26 22:58:45 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 15200 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 22:58:45 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 22:58:45 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 22:58:46 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.721 seconds (process running for 2.716)
+2022-08-26 22:59:17 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 3584 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 22:59:17 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 22:59:17 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 22:59:18 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.506 seconds (process running for 2.484)
+2022-08-26 22:59:18 [main] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 23:00:23 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 10684 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 23:00:23 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 23:00:23 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 23:00:24 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.671 seconds (process running for 2.864)
+2022-08-26 23:02:38 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 22508 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 23:02:38 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 23:02:38 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 23:02:39 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.676 seconds (process running for 2.794)
+2022-08-26 23:03:46 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 23816 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 23:03:46 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 23:03:46 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 23:03:47 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.756 seconds (process running for 2.811)
+2022-08-26 23:05:04 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 18420 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 23:05:04 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 23:05:04 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 23:05:06 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.808 seconds (process running for 2.974)
+2022-08-26 23:06:55 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 13780 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 23:06:55 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 23:06:55 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 23:06:56 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.816 seconds (process running for 2.956)
+2022-08-26 23:07:52 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 17524 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 23:07:52 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 23:07:52 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 23:07:53 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.645 seconds (process running for 2.771)
+2022-08-26 23:09:40 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 13896 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 23:09:40 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 23:09:40 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 23:09:41 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9001 (http)
+2022-08-26 23:09:42 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9001 (http) with context path ''
+2022-08-26 23:09:42 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.086 seconds (process running for 2.772)
+2022-08-26 23:11:27 [http-nio-9001-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]                - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.openclassrooms.new_safety_net.model.ObjetFromJson.anyAny(String)" because "this.objetFromJson" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "com.openclassrooms.new_safety_net.model.ObjetFromJson.anyAny(String)" because "this.objetFromJson" is null
+	at com.openclassrooms.new_safety_net.service.SafetyNetService.getPersons(SafetyNetService.java:67) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:755) ~[spring-aop-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:755) ~[spring-aop-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:706) ~[spring-aop-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at com.openclassrooms.new_safety_net.service.SafetyNetService$$SpringCGLIB$$0.getPersons(<generated>) ~[classes/:?]
+	at com.openclassrooms.new_safety_net.controller.NewSafetyAlertController.getPersons(NewSafetyAlertController.java:66) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1068) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:895) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:668) ~[tomcat-embed-core-10.0.22.jar:5.0.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880) ~[spring-webmvc-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:777) ~[tomcat-embed-core-10.0.22.jar:5.0.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.0.22.jar:10.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.0.22.jar:10.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.0.22.jar:10.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.0.22.jar:10.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.0.22.jar:10.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.0.22.jar:10.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.0.22.jar:10.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.0.22.jar:10.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.0.22.jar:10.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.0.22.jar:10.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.0.22.jar:10.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-10.0.22.jar:10.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.0.22.jar:10.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.0.22.jar:10.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.0.22.jar:10.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.0.22.jar:10.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.0.22.jar:10.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:356) ~[tomcat-embed-core-10.0.22.jar:10.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-10.0.22.jar:10.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.0.22.jar:10.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:867) ~[tomcat-embed-core-10.0.22.jar:10.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1760) ~[tomcat-embed-core-10.0.22.jar:10.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-10.0.22.jar:10.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.0.22.jar:10.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.0.22.jar:10.0.22]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.0.22.jar:10.0.22]
+	at java.lang.Thread.run(Thread.java:833) ~[?:?]
+2022-08-26 23:12:42 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 18632 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 23:12:42 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 23:12:42 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 23:12:43 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9001 (http)
+2022-08-26 23:12:44 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9001 (http) with context path ''
+2022-08-26 23:12:44 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.245 seconds (process running for 2.951)
+2022-08-26 23:13:02 [http-nio-9001-exec-2] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 23:13:11 [http-nio-9001-exec-2] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-26 23:13:12 [http-nio-9001-exec-2] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /persons
+Request URL: http://localhost:9001/persons
+Content Type: application/json
+Response Code: 200
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.2", "accept": "*/*", "postman-token": "fd1de7fb-3890-44b5-a7b5-91b5fb8174c6", "host": "localhost:9001", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
+2022-08-26 23:13:44 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 22596 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 23:13:44 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 23:13:44 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 23:13:45 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.448 seconds (process running for 2.294)
+2022-08-26 23:13:46 [main] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 23:13:46 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-26 23:14:11 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 14392 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 23:14:11 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 23:14:11 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 23:14:12 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.592 seconds (process running for 2.582)
+2022-08-26 23:14:35 [main] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 23:14:37 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-26 23:16:44 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 13520 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 23:16:44 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 23:16:44 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 23:16:45 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9001 (http)
+2022-08-26 23:16:46 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter             - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 9001 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 9001 or configure this application to listen on another port.
+
+2022-08-26 23:17:12 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3 on Claudiu-Dell with PID 1676 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 23:17:12 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 23:17:12 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 23:17:13 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 9000 (http)
+2022-08-26 23:17:14 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 9000 (http) with context path ''
+2022-08-26 23:17:14 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.195 seconds (process running for 2.867)
+2022-08-26 23:17:24 [http-nio-9000-exec-1] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 23:17:25 [http-nio-9000-exec-1] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-26 23:17:26 [http-nio-9000-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /persons
+Request URL: http://localhost:9000/persons
+Content Type: application/json
+Response Code: 200
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.2", "accept": "*/*", "postman-token": "2067516c-f0e9-4504-8c16-834d0a6f94cf", "host": "localhost:9000", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
+2022-08-26 23:17:47 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 5792 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 23:17:47 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 23:17:47 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 23:17:48 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.67 seconds (process running for 2.674)
+2022-08-26 23:17:49 [main] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 23:17:49 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-26 23:17:59 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 16328 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 23:17:59 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 23:17:59 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 23:18:01 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.628 seconds (process running for 2.707)
+2022-08-26 23:18:16 [main] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 23:18:17 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-26 23:18:56 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 11824 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 23:18:56 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 23:18:56 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 23:18:57 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.542 seconds (process running for 2.61)
+2022-08-26 23:20:35 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 2596 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 23:20:35 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 23:20:35 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 23:20:36 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.614 seconds (process running for 2.519)
+2022-08-26 23:20:37 [main] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 23:20:37 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-26 23:21:23 [main] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 23:21:23 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
+2022-08-26 23:21:33 [main] INFO  c.o.n.SafetyNetServiceTests                        - Starting SafetyNetServiceTests using Java 17.0.3 on Claudiu-Dell with PID 21296 (started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-08-26 23:21:33 [main] DEBUG c.o.n.SafetyNetServiceTests                        - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
+2022-08-26 23:21:33 [main] INFO  c.o.n.SafetyNetServiceTests                        - No active profile set, falling back to 1 default profile: "default"
+2022-08-26 23:21:35 [main] INFO  c.o.n.SafetyNetServiceTests                        - Started SafetyNetServiceTests in 1.611 seconds (process running for 2.688)
+2022-08-26 23:21:50 [main] DEBUG c.o.n.m.ObjetFromJson                              - Json iterator is created.
+2022-08-26 23:21:51 [main] DEBUG c.o.n.s.SafetyNetService                           - List persons is created.
