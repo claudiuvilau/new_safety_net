@@ -934,7 +934,7 @@ Response Code: 200
 t�l�phone) couvertes par la caserne de pompiers correspondante ainsi qu�un
 d�compte du nombre d�adultes (>18 ans) et du nombre d�enfants (<=18 ans)
 2022-09-03 14:49:12 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
-2022-09-03 14:49:12 [main] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+                        - Get the person is ok.<<<<<<< HEAD
 2022-09-03 15:40:51 [main] INFO  c.o.n.NewSafetyAlertControllerTest                 - Starting NewSafetyAlertControllerTest using Java 17.0.3.1 on Claudiu-Dell with PID 8864 (started by kls_k in c:\WorkJavaVisualCode\new_safety_net)
 2022-09-03 15:40:51 [main] DEBUG c.o.n.NewSafetyAlertControllerTest                 - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.0-SNAPSHOT
 2022-09-03 15:40:51 [main] INFO  c.o.n.NewSafetyAlertControllerTest                 - No active profile set, falling back to 1 default profile: "default"
