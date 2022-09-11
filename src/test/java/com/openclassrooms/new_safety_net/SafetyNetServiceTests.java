@@ -109,14 +109,14 @@ public class SafetyNetServiceTests {
         person.setPhone("phone");
         person.setZip("zip");
         String elemjson = "persons";
-        boolean fileCreated = false;
 
         when(getListsElementsJson.getPersons(elemjson)).thenReturn(listPersons);
         when(newFileJson.isFileCreated()).thenReturn(true);
 
-        fileCreated = safetyNetService.postPerson(person);
+        List<Persons> listP;
+        listP = safetyNetService.postPerson(person);
 
-        assertEquals(true, fileCreated);
+        assertEquals(true, !listP.isEmpty());
 
     }
 
@@ -124,7 +124,6 @@ public class SafetyNetServiceTests {
     void testPostPersonExistInList() {
 
         String elemjson = "persons";
-        boolean fileCreated = false;
 
         List<Persons> listPersons = new ArrayList<>();
         String firstName = "TEST999_FirstName";
@@ -135,9 +134,10 @@ public class SafetyNetServiceTests {
 
         when(getListsElementsJson.getPersons(elemjson)).thenReturn(listPersons);
 
-        fileCreated = safetyNetService.postPerson(person);
+        List<Persons> listP;
+        listP = safetyNetService.postPerson(person);
 
-        assertEquals(false, fileCreated);
+        assertEquals(true, listP.isEmpty());
     }
 
     @Test
