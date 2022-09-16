@@ -32,7 +32,7 @@ import com.openclassrooms.new_safety_net.model.Persons;
 import com.openclassrooms.new_safety_net.model.PersonsFireStation;
 import com.openclassrooms.new_safety_net.model.PhoneAlert;
 import com.openclassrooms.new_safety_net.repository.GetListsElementsJsonRepository;
-import com.openclassrooms.new_safety_net.repository.SafetyNetRepository;
+import com.openclassrooms.new_safety_net.repository.SafetyNetInterface;
 import com.openclassrooms.new_safety_net.service.LoggerApiNewSafetyNet;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -42,7 +42,7 @@ import jakarta.servlet.http.HttpServletResponse;
 public class NewSafetyAlertController {
 
     @Autowired
-    private SafetyNetRepository repository;
+    private SafetyNetInterface repositorySafetyNetInterface;
 
     @Autowired
     private GetListsElementsJsonRepository repositoryElementJson;
@@ -97,20 +97,22 @@ public class NewSafetyAlertController {
         String elemjson = "persons";
         List<Persons> listP = new ArrayList<>();
         try {
-            listP = repository.getAPerson(firstNamelastName, elemjson);
+            listP = repositorySafetyNetInterface.getAPerson(firstNamelastName, elemjson);
+            if (listP.isEmpty()) {
+                response.setStatus(204);
+                messagelogger = "No Content. The person does not exist."
+                        + loggerApiNewSafetyNet.loggerInfo(request, response, firstNamelastName);
+                LOGGER.info(messagelogger);
+                return ResponseEntity.status(response.getStatus()).build();
+            }
         } catch (IOException e) {
             response.setStatus(404);
-
             return ResponseEntity.status(response.getStatus()).build();
+        } catch (NullPointerException nulle) {
+            response.setStatus(404);
+            return null;
         }
 
-        if (listP.isEmpty()) {
-            response.setStatus(204);
-            messagelogger = "No Content. The person does not exist."
-                    + loggerApiNewSafetyNet.loggerInfo(request, response, firstNamelastName);
-            LOGGER.info(messagelogger);
-            return ResponseEntity.status(response.getStatus()).build();
-        }
         messagelogger = "OK" + loggerApiNewSafetyNet.loggerInfo(request, response, firstNamelastName);
         LOGGER.info(messagelogger);
         return new ResponseEntity<>(listP, HttpStatus.valueOf(response.getStatus()));
@@ -121,11 +123,10 @@ public class NewSafetyAlertController {
     public ResponseEntity<Persons> addPerson(@RequestBody Persons person, HttpServletRequest request,
             HttpServletResponse response) {
 
-        Boolean addperson = false;
+        List<Persons> listP;
+        listP = repositorySafetyNetInterface.postPerson(person);
 
-        addperson = repository.postPerson(person);
-
-        if (Boolean.FALSE.equals(addperson)) {
+        if (listP.isEmpty()) {
             response.setStatus(404);
             messagelogger = "No persons added. " + RESPONSSTATUS + response.getStatus() + ":"
                     + loggerApiNewSafetyNet.loggerInfo(request, response, "");
@@ -162,7 +163,7 @@ public class NewSafetyAlertController {
 
         boolean update = false;
 
-        update = repository.putPerson(person, firstName, lastName);
+        update = repositorySafetyNetInterface.putPerson(person, firstName, lastName);
 
         if (!update) {
             response.setStatus(404);
@@ -194,7 +195,7 @@ public class NewSafetyAlertController {
 
         boolean del = false;
 
-        del = repository.deletePerson(firstName, lastName);
+        del = repositorySafetyNetInterface.deletePerson(firstName, lastName);
 
         if (!del) {
             response.setStatus(404);
@@ -236,7 +237,7 @@ public class NewSafetyAlertController {
             HttpServletResponse response) {
 
         boolean newFirestation = false;
-        newFirestation = repository.postFirestation(firestation);
+        newFirestation = repositorySafetyNetInterface.postFirestation(firestation);
         if (!newFirestation) {
             response.setStatus(404);
             messagelogger = "No new fire station was added. " + RESPONSSTATUS + response.getStatus() + ":"
@@ -269,7 +270,7 @@ public class NewSafetyAlertController {
             return ResponseEntity.status(response.getStatus()).build();
         }
         boolean updatestation = false;
-        updatestation = repository.putFirestation(firestation, address);
+        updatestation = repositorySafetyNetInterface.putFirestation(firestation, address);
         if (!updatestation) {
             response.setStatus(404);
             messagelogger = "The fire station was not updated. " + RESPONSSTATUS + response.getStatus() + ":"
@@ -300,7 +301,7 @@ public class NewSafetyAlertController {
 
         boolean del = false;
 
-        del = repository.deleteFirestation(address, stationNumber);
+        del = repositorySafetyNetInterface.deleteFirestation(address, stationNumber);
 
         if (!del) {
             response.setStatus(404);
@@ -342,7 +343,7 @@ public class NewSafetyAlertController {
             HttpServletResponse response) {
 
         boolean newMedicalRecord = false;
-        newMedicalRecord = repository.postMedicalRecord(medicalRecord);
+        newMedicalRecord = repositorySafetyNetInterface.postMedicalRecord(medicalRecord);
 
         if (!newMedicalRecord) {
             response.setStatus(404);
@@ -379,7 +380,7 @@ public class NewSafetyAlertController {
 
         boolean update = false;
 
-        update = repository.putMedicalRecord(medicalRecord, firstName, lastName);
+        update = repositorySafetyNetInterface.putMedicalRecord(medicalRecord, firstName, lastName);
 
         if (!update) {
             response.setStatus(404);
@@ -411,7 +412,7 @@ public class NewSafetyAlertController {
 
         boolean del = false;
 
-        del = repository.deleteMedicalRecord(firstName, lastName);
+        del = repositorySafetyNetInterface.deleteMedicalRecord(firstName, lastName);
 
         if (!del) {
             response.setStatus(404);
@@ -442,7 +443,8 @@ public class NewSafetyAlertController {
         }
 
         List<FoyerChildrenAdultsToFireStation> listFoyerChildrenAdultsToFireStation;
-        listFoyerChildrenAdultsToFireStation = repository.personsOfStationAdultsAndChild(stationNumber);
+        listFoyerChildrenAdultsToFireStation = repositorySafetyNetInterface
+                .personsOfStationAdultsAndChild(stationNumber);
 
         // if we have 0 adult 0 children or list is empty"
 
@@ -453,9 +455,8 @@ public class NewSafetyAlertController {
             LOGGER.error(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
         } else {
-            if (listFoyerChildrenAdultsToFireStation.get(0).getlistPersonsOfFireStations().isEmpty()
-                    && listFoyerChildrenAdultsToFireStation.get(1).getlistPersonsOfFireStations().isEmpty()) {
-                response.setStatus(404);
+            if (listFoyerChildrenAdultsToFireStation.get(0).getlistPersonsOfFireStations().isEmpty()) {
+                response.setStatus(204);
                 messagelogger = "The list is empty. No children and no adult. " + RESPONSSTATUS + response.getStatus()
                         + ":"
                         + loggerApiNewSafetyNet.loggerInfo(request, response, stationNumber);
@@ -485,7 +486,7 @@ public class NewSafetyAlertController {
 
         List<ChildAlert> listChildren = new ArrayList<>();
         try {
-            listChildren = repository.childPersonsAlertAddress(address);
+            listChildren = repositorySafetyNetInterface.childPersonsAlertAddress(address);
         } catch (IOException | ParseException e) {
             response.setStatus(404);
             LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, address));
@@ -521,7 +522,7 @@ public class NewSafetyAlertController {
 
         List<PhoneAlert> listPhoneAlert = new ArrayList<>();
         try {
-            listPhoneAlert = repository.phoneAlertFirestation(firestation);
+            listPhoneAlert = repositorySafetyNetInterface.phoneAlertFirestation(firestation);
         } catch (IOException e) {
             response.setStatus(404);
             LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, firestation));
@@ -557,7 +558,7 @@ public class NewSafetyAlertController {
 
         List<FireAddress> listFireAddress = new ArrayList<>();
         try {
-            listFireAddress = repository.fireAddress(address);
+            listFireAddress = repositorySafetyNetInterface.fireAddress(address);
         } catch (IOException | ParseException e) {
             response.setStatus(404);
             LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, address));
@@ -592,7 +593,7 @@ public class NewSafetyAlertController {
 
         List<PersonsFireStation> listPersonsFireStation = new ArrayList<>();
         try {
-            listPersonsFireStation = repository.stationListFirestation(station);
+            listPersonsFireStation = repositorySafetyNetInterface.stationListFirestation(station);
         } catch (IOException | ParseException e) {
             response.setStatus(404);
             LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, station.toString()));
@@ -627,7 +628,7 @@ public class NewSafetyAlertController {
 
         List<PersonInfo> listPeronInfo = new ArrayList<>();
         try {
-            listPeronInfo = repository.personInfo(firstName, lastName);
+            listPeronInfo = repositorySafetyNetInterface.personInfo(firstName, lastName);
         } catch (IOException | ParseException e) {
             response.setStatus(404);
             LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, firstName + " " + lastName));
@@ -662,7 +663,7 @@ public class NewSafetyAlertController {
 
         List<CommunityEmail> listCommunityEmail = new ArrayList<>();
         try {
-            listCommunityEmail = repository.communityEmail(city);
+            listCommunityEmail = repositorySafetyNetInterface.communityEmail(city);
         } catch (IOException e) {
             response.setStatus(404);
             LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, city));

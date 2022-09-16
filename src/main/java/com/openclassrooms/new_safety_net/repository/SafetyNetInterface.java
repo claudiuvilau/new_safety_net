@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.util.List;
 
-import org.springframework.stereotype.Repository;
-
 import com.openclassrooms.new_safety_net.model.ChildAlert;
 import com.openclassrooms.new_safety_net.model.CommunityEmail;
 import com.openclassrooms.new_safety_net.model.FireAddress;
@@ -17,8 +15,7 @@ import com.openclassrooms.new_safety_net.model.Persons;
 import com.openclassrooms.new_safety_net.model.PersonsFireStation;
 import com.openclassrooms.new_safety_net.model.PhoneAlert;
 
-@Repository
-public interface SafetyNetRepository {
+public interface SafetyNetInterface {
 
     /*
      * http://localhost:8080/person
@@ -35,11 +32,11 @@ public interface SafetyNetRepository {
 
     public List<Persons> getAPerson(String firstNamelastName, String elemjson) throws IOException;
 
-    boolean postPerson(Persons persons);
+    public List<Persons> postPerson(Persons persons);
 
-    boolean putPerson(Persons persons, String firstName, String lastName);
+    public boolean putPerson(Persons persons, String firstName, String lastName);
 
-    boolean deletePerson(String firstName, String lastName);
+    public boolean deletePerson(String firstName, String lastName);
 
     /*
      * http://localhost:8080/firestation

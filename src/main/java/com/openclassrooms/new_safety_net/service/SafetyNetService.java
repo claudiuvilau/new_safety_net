@@ -29,16 +29,13 @@ import com.openclassrooms.new_safety_net.model.Persons;
 import com.openclassrooms.new_safety_net.model.PersonsFireStation;
 import com.openclassrooms.new_safety_net.model.PersonsOfFireStation;
 import com.openclassrooms.new_safety_net.model.PhoneAlert;
-import com.openclassrooms.new_safety_net.repository.SafetyNetRepository;
+import com.openclassrooms.new_safety_net.repository.SafetyNetInterface;
 
 import lombok.Data;
 
 @Data
 @Service
-public class SafetyNetService implements SafetyNetRepository {
-
-    // @Autowired
-    // pourquoi pas de Autowired ?
+public class SafetyNetService implements SafetyNetInterface {
 
     private Persons personsObj = createClassePersons();
     private Firestations firestationsObj = createClassFirestations();
@@ -77,7 +74,7 @@ public class SafetyNetService implements SafetyNetRepository {
     }
 
     @Override
-    public boolean postPerson(Persons person) {
+    public List<Persons> postPerson(Persons person) {
 
         if (LOGGER.isDebugEnabled()) {
             LOGGER.debug(loggerApiNewSafetyNet.loggerDebug(person.toString()));
@@ -125,10 +122,26 @@ public class SafetyNetService implements SafetyNetRepository {
             listMedicalrecords = createListMedicalrecords();
             newFileJson.createNewFileJson(listPersons, listFirestations, listMedicalrecords, person.toString());
             filecreated = newFileJson.isFileCreated();
-            return filecreated;
+            if (Boolean.TRUE.equals(filecreated)) { // return the person from file
+                List<Persons> listP;
+                listP = verifyIfTheNewPersonInTheFile(person);
+                return listP;
+            }
         }
+        return Collections.emptyList();
+    }
 
-        return false;
+    private List<Persons> verifyIfTheNewPersonInTheFile(Persons person) {
+        List<Persons> listP = new ArrayList<>();
+        try {
+            listP = getAPerson(person.getFirstName() + person.getLastName(), ELEMJSONPERSONS);
+            if (!listP.isEmpty()) {
+                return listP;
+            }
+        } catch (IOException e) {
+            return Collections.emptyList();
+        }
+        return Collections.emptyList();
     }
 
     @Override
