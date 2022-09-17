@@ -19,6 +19,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -33,6 +35,7 @@ import com.openclassrooms.new_safety_net.model.FoyerChildrenAdultsToFireStation;
 import com.openclassrooms.new_safety_net.model.Medicalrecords;
 import com.openclassrooms.new_safety_net.model.Persons;
 import com.openclassrooms.new_safety_net.model.PersonsOfFireStation;
+import com.openclassrooms.new_safety_net.model.PhoneAlert;
 import com.openclassrooms.new_safety_net.service.GetListsElementsJson;
 import com.openclassrooms.new_safety_net.service.LoggerApiNewSafetyNet;
 import com.openclassrooms.new_safety_net.service.SafetyNetService;
@@ -300,14 +303,9 @@ public class NewSafetyAlertControllerTests {
         String firstName = "TEST999_FirstName";
         String lastName = "TEST999_LastName";
 
-        String body = "{\r\n" + "\"firstName\": \"" + firstName + "\",\r\n" + "\"lastName\": \"" + lastName
-                + "\",\r\n" + "\"address\": \"1509 Culver St\",\r\n" + "\"city\": \"Culver\",\r\n"
-                + "\"zip\": \"97451\",\r\n" + "\"phone\": \"841-874-6512\",\r\n" + "\"email\": \"jaboyd@email.com\"\r\n"
-                + "}";
-
         when(safetyNetServiceInterface.deletePerson(firstName, lastName)).thenReturn(true);
 
-        mockMvc.perform(delete("/person").content(body).param("firstName", firstName).param("lastName", lastName)
+        mockMvc.perform(delete("/person").param("firstName", firstName).param("lastName", lastName)
                 .contentType(MediaType.APPLICATION_JSON)).andExpect(status().is(200));
 
     }
@@ -317,44 +315,28 @@ public class NewSafetyAlertControllerTests {
         String firstName = "TEST999_FirstName";
         String lastName = "TEST999_LastName";
 
-        String body = "{\r\n" + "\"firstName\": \"" + firstName + "\",\r\n" + "\"lastName\": \"" + lastName
-                + "\",\r\n" + "\"address\": \"1509 Culver St\",\r\n" + "\"city\": \"Culver\",\r\n"
-                + "\"zip\": \"97451\",\r\n" + "\"phone\": \"841-874-6512\",\r\n" + "\"email\": \"jaboyd@email.com\"\r\n"
-                + "}";
-
         when(safetyNetServiceInterface.deletePerson(firstName, lastName)).thenReturn(false);
 
-        mockMvc.perform(delete("/person").content(body).param("firstName", firstName).param("lastName", lastName)
+        mockMvc.perform(delete("/person").param("firstName", firstName).param("lastName", lastName)
                 .contentType(MediaType.APPLICATION_JSON)).andExpect(status().is(404));
 
     }
 
-    @Test
-    void testDeletePersonNoFirstNameAndLastName() throws Exception {
-        String firstName = "TEST999_FirstName";
-        String lastName = "TEST999_LastName";
+    @ParameterizedTest
+    @ValueSource(strings = { "", "" })
+    void testDeletePersonNoFirstNameAndLastName(String arg) throws Exception {
 
-        String body = "{\r\n" + "\"firstName\": \"" + firstName + "\",\r\n" + "\"lastName\": \"" + lastName
-                + "\",\r\n" + "\"address\": \"1509 Culver St\",\r\n" + "\"city\": \"Culver\",\r\n"
-                + "\"zip\": \"97451\",\r\n" + "\"phone\": \"841-874-6512\",\r\n" + "\"email\": \"jaboyd@email.com\"\r\n"
-                + "}";
-
-        mockMvc.perform(delete("/person").content(body).param("firstName", "").param("lastName", "")
+        mockMvc.perform(delete("/person").param("firstName", arg).param("lastName", arg)
                 .contentType(MediaType.APPLICATION_JSON)).andExpect(status().is(400));
 
     }
 
     @Test
     void testDeletePersonNoFirstName() throws Exception {
-        String firstName = "TEST999_FirstName";
+        String firstName = "";
         String lastName = "TEST999_LastName";
 
-        String body = "{\r\n" + "\"firstName\": \"" + firstName + "\",\r\n" + "\"lastName\": \"" + lastName
-                + "\",\r\n" + "\"address\": \"1509 Culver St\",\r\n" + "\"city\": \"Culver\",\r\n"
-                + "\"zip\": \"97451\",\r\n" + "\"phone\": \"841-874-6512\",\r\n" + "\"email\": \"jaboyd@email.com\"\r\n"
-                + "}";
-
-        mockMvc.perform(delete("/person").content(body).param("firstName", "").param("lastName", lastName)
+        mockMvc.perform(delete("/person").param("firstName", firstName).param("lastName", lastName)
                 .contentType(MediaType.APPLICATION_JSON)).andExpect(status().is(400));
 
     }
@@ -362,14 +344,9 @@ public class NewSafetyAlertControllerTests {
     @Test
     void testDeletePersonNoLastName() throws Exception {
         String firstName = "TEST999_FirstName";
-        String lastName = "TEST999_LastName";
+        String lastName = "";
 
-        String body = "{\r\n" + "\"firstName\": \"" + firstName + "\",\r\n" + "\"lastName\": \"" + lastName
-                + "\",\r\n" + "\"address\": \"1509 Culver St\",\r\n" + "\"city\": \"Culver\",\r\n"
-                + "\"zip\": \"97451\",\r\n" + "\"phone\": \"841-874-6512\",\r\n" + "\"email\": \"jaboyd@email.com\"\r\n"
-                + "}";
-
-        mockMvc.perform(delete("/person").content(body).param("firstName", firstName).param("lastName", "")
+        mockMvc.perform(delete("/person").param("firstName", firstName).param("lastName", lastName)
                 .contentType(MediaType.APPLICATION_JSON)).andExpect(status().is(400));
 
     }
@@ -476,6 +453,66 @@ public class NewSafetyAlertControllerTests {
     }
 
     @Test
+    void testDeleteFirestation() throws Exception {
+        String addressStation = "addressStation";
+        String noStation = "999";
+
+        when(safetyNetServiceInterface.deleteFirestation(addressStation, noStation)).thenReturn(true);
+
+        mockMvc.perform(
+                delete("/firestation").param("address", addressStation).param("stationNumber", noStation)
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().is(200));
+
+    }
+
+    @Test
+    void testDeleteFirestationNotDeleted() throws Exception {
+        String addressStation = "addressStation";
+        String noStation = "999";
+
+        when(safetyNetServiceInterface.deleteFirestation(addressStation, noStation)).thenReturn(false);
+
+        mockMvc.perform(
+                delete("/firestation").param("address", addressStation).param("stationNumber", noStation)
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().is(404));
+
+    }
+
+    @Test
+    void testDeleteFirestationNoParam() throws Exception {
+        mockMvc.perform(
+                delete("/firestation").contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().is(400));
+
+    }
+
+    @Test
+    void testDeleteFirestationNoParam1() throws Exception {
+        String addressStation = "addressStation";
+        String noStation = "999";
+
+        when(safetyNetServiceInterface.deleteFirestation(addressStation, noStation)).thenReturn(false);
+        mockMvc.perform(
+                delete("/firestation").param("address", addressStation).contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().is(404));
+
+    }
+
+    @Test
+    void testDeleteFirestationNoParam2() throws Exception {
+        String addressStation = "addressStation";
+        String noStation = "999";
+
+        when(safetyNetServiceInterface.deleteFirestation(addressStation, noStation)).thenReturn(false);
+        mockMvc.perform(
+                delete("/firestation").param("stationNumber", noStation).contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().is(404));
+
+    }
+
+    @Test
     void testGetMedicalrecords() throws Exception {
         String firstName = "TEST999_FirstName";
         String lastName = "TEST999_LastName";
@@ -506,6 +543,180 @@ public class NewSafetyAlertControllerTests {
         mockMvc.perform(get("/medicalrecords")).andExpect(status().is(204));
 
         LOGGER.info("Fin test : Le système ne RETOURNE pas une liste de tous les medicalrecords");
+    }
+
+    @Test
+    void testAddMedicalRecord() throws Exception {
+        String firstName = "TEST999_FirstName";
+        String lastName = "TEST999_LastName";
+
+        String body = "{\r\n" + "\"firstName\": \"" + firstName + "\",\r\n"
+                + "\"lastName\": \"" + lastName + "\",\r\n" + "\"birthdate\": \"03/06/1984\",\r\n"
+                + "\"medications\": [\r\n" + "\"Testaznol:350mg\",\r\n" + "\"hydrapermazol:100mg\"\r\n" + "],\r\n"
+                + "\"allergies\": [\r\n" + "\"nillacilan\"\r\n" + "]\r\n" + "}";
+
+        when(safetyNetServiceInterface.postMedicalRecord(any(Medicalrecords.class))).thenReturn(true);
+
+        mockMvc.perform(post("/medicalrecord").content(body).contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().is(201));
+
+    }
+
+    @Test
+    void testAddMedicalRecordNotAdded() throws Exception {
+        String firstName = "TEST999_FirstName";
+        String lastName = "TEST999_LastName";
+
+        String body = "{\r\n" + "\"firstName\": \"" + firstName + "\",\r\n"
+                + "\"lastName\": \"" + lastName + "\",\r\n" + "\"birthdate\": \"03/06/1984\",\r\n"
+                + "\"medications\": [\r\n" + "\"Testaznol:350mg\",\r\n" + "\"hydrapermazol:100mg\"\r\n" + "],\r\n"
+                + "\"allergies\": [\r\n" + "\"nillacilan\"\r\n" + "]\r\n" + "}";
+
+        when(safetyNetServiceInterface.postMedicalRecord(any(Medicalrecords.class))).thenReturn(false);
+
+        mockMvc.perform(post("/medicalrecord").content(body).contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().is(404));
+
+    }
+
+    @Test
+    void testUpdateMedicalRecord() throws Exception {
+        String firstName = "TEST999_FirstName";
+        String lastName = "TEST999_LastName";
+
+        String body = "{\r\n" + "\"firstName\": \"" + firstName + "\",\r\n"
+                + "\"lastName\": \"" + lastName + "\",\r\n" + "\"birthdate\": \"03/06/1984\",\r\n"
+                + "\"medications\": [\r\n" + "\"Testaznol:350mg\",\r\n" + "\"hydrapermazol:100mg\"\r\n" + "],\r\n"
+                + "\"allergies\": [\r\n" + "\"nillacilan\"\r\n" + "]\r\n" + "}";
+
+        when(safetyNetServiceInterface.putMedicalRecord(any(Medicalrecords.class), eq(firstName), eq(lastName)))
+                .thenReturn(true);
+
+        mockMvc.perform(put("/medicalrecord").content(body).param("firstName", firstName).param("lastName", lastName)
+                .contentType(MediaType.APPLICATION_JSON)).andExpect(status().is(200));
+    }
+
+    @Test
+    void testUpdateMedicalRecordNoUpdate() throws Exception {
+        String firstName = "TEST999_FirstName";
+        String lastName = "TEST999_LastName";
+
+        String body = "{\r\n" + "\"firstName\": \"" + firstName + "\",\r\n"
+                + "\"lastName\": \"" + lastName + "\",\r\n" + "\"birthdate\": \"03/06/1984\",\r\n"
+                + "\"medications\": [\r\n" + "\"Testaznol:350mg\",\r\n" + "\"hydrapermazol:100mg\"\r\n" + "],\r\n"
+                + "\"allergies\": [\r\n" + "\"nillacilan\"\r\n" + "]\r\n" + "}";
+
+        when(safetyNetServiceInterface.putMedicalRecord(any(Medicalrecords.class), eq(firstName), eq(lastName)))
+                .thenReturn(false);
+
+        mockMvc.perform(put("/medicalrecord").content(body).param("firstName", firstName).param("lastName", lastName)
+                .contentType(MediaType.APPLICATION_JSON)).andExpect(status().is(404));
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = { "", "" })
+    void testUpdateMedicalRecordBlankParam(String arg) throws Exception {
+        String firstName = "";
+        String lastName = "";
+
+        String body = "{\r\n" + "\"firstName\": \"" + firstName + "\",\r\n"
+                + "\"lastName\": \"" + lastName + "\",\r\n" + "\"birthdate\": \"03/06/1984\",\r\n"
+                + "\"medications\": [\r\n" + "\"Testaznol:350mg\",\r\n" + "\"hydrapermazol:100mg\"\r\n" + "],\r\n"
+                + "\"allergies\": [\r\n" + "\"nillacilan\"\r\n" + "]\r\n" + "}";
+
+        mockMvc.perform(put("/medicalrecord").content(body).param("firstName", arg).param("lastName", arg)
+                .contentType(MediaType.APPLICATION_JSON)).andExpect(status().is(400));
+    }
+
+    @Test
+    void testUpdateMedicalRecordBlankParam1() throws Exception {
+        String firstName = "";
+        String lastName = "TEST999_LastName";
+
+        String body = "{\r\n" + "\"firstName\": \"" + firstName + "\",\r\n"
+                + "\"lastName\": \"" + lastName + "\",\r\n" + "\"birthdate\": \"03/06/1984\",\r\n"
+                + "\"medications\": [\r\n" + "\"Testaznol:350mg\",\r\n" + "\"hydrapermazol:100mg\"\r\n" + "],\r\n"
+                + "\"allergies\": [\r\n" + "\"nillacilan\"\r\n" + "]\r\n" + "}";
+
+        mockMvc.perform(put("/medicalrecord").content(body).param("firstName", firstName).param("lastName", lastName)
+                .contentType(MediaType.APPLICATION_JSON)).andExpect(status().is(400));
+    }
+
+    @Test
+    void testUpdateMedicalRecordBlankParam2() throws Exception {
+        String firstName = "TEST999_FirstName";
+        String lastName = "";
+
+        String body = "{\r\n" + "\"firstName\": \"" + firstName + "\",\r\n"
+                + "\"lastName\": \"" + lastName + "\",\r\n" + "\"birthdate\": \"03/06/1984\",\r\n"
+                + "\"medications\": [\r\n" + "\"Testaznol:350mg\",\r\n" + "\"hydrapermazol:100mg\"\r\n" + "],\r\n"
+                + "\"allergies\": [\r\n" + "\"nillacilan\"\r\n" + "]\r\n" + "}";
+
+        mockMvc.perform(put("/medicalrecord").content(body).param("firstName", firstName).param("lastName", lastName)
+                .contentType(MediaType.APPLICATION_JSON)).andExpect(status().is(400));
+    }
+
+    @Test
+    void testDeleteMedicalRecord() throws Exception {
+        String firstName = "TEST999_FirstName";
+        String lastName = "TEST999_LastName";
+
+        when(safetyNetServiceInterface.deleteMedicalRecord(firstName, lastName)).thenReturn(true);
+
+        mockMvc.perform(
+                delete("/medicalrecord").param("firstName", firstName).param("lastName", lastName)
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().is(200));
+
+    }
+
+    @Test
+    void testDeleteMedicalRecordNoDeleted() throws Exception {
+        String firstName = "TEST999_FirstName";
+        String lastName = "TEST999_LastName";
+
+        when(safetyNetServiceInterface.deleteMedicalRecord(firstName, lastName)).thenReturn(false);
+
+        mockMvc.perform(
+                delete("/medicalrecord").param("firstName", firstName).param("lastName", lastName)
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().is(404));
+    }
+
+    @Test
+    void testDeleteMedicalRecordEmptyParam1() throws Exception {
+        String firstName = "";
+        String lastName = "TEST999_LastName";
+
+        mockMvc.perform(
+                delete("/medicalrecord").param("firstName", firstName).param("lastName", lastName)
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().is(400));
+
+    }
+
+    @Test
+    void testDeleteMedicalRecordEmptyParam2() throws Exception {
+        String firstName = "TEST999_FirstName";
+        String lastName = "";
+
+        mockMvc.perform(
+                delete("/medicalrecord").param("firstName", firstName).param("lastName", lastName)
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().is(400));
+
+    }
+
+    @Test
+    void testDeleteMedicalRecordEmptyParam() throws Exception {
+        String firstName = "";
+        String lastName = "";
+
+        mockMvc.perform(
+                delete("/medicalrecord").param("firstName", firstName).param("lastName", lastName)
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().is(400));
+
     }
 
     /*
@@ -671,6 +882,63 @@ public class NewSafetyAlertControllerTests {
 
         mockMvc.perform(get("/childAlert").param("address", address)).andExpect(status().is(404));
 
+    }
+
+    @Test
+    void testPhoneAlertStationNumber() throws Exception {
+        String firestation = "999";
+        List<String> listPhonesString = new ArrayList<>();
+        listPhonesString.add(0, "01-001001");
+        listPhonesString.add(1, "01-001001");
+        listPhonesString.add(2, "01-001001");
+        List<PhoneAlert> listPhoneAlert = createListPhone(listPhonesString);
+
+        when(safetyNetServiceInterface.phoneAlertFirestation(firestation)).thenReturn(listPhoneAlert);
+
+        mockMvc.perform(get("/phoneAlert").param("firestation", firestation)).andExpect(status().is(200));
+
+    }
+
+    @Test
+    void testPhoneAlertStationNumberNoListPhone() throws Exception {
+        String firestation = "999";
+        List<String> listPhonesString = new ArrayList<>();
+        List<PhoneAlert> listPhoneAlert = createListPhone(listPhonesString);
+
+        when(safetyNetServiceInterface.phoneAlertFirestation(firestation)).thenReturn(listPhoneAlert);
+
+        mockMvc.perform(get("/phoneAlert").param("firestation", firestation)).andExpect(status().is(404));
+
+    }
+
+    @Test
+    void testPhoneAlertStationNumberException() throws Exception {
+        String firestation = "999";
+
+        when(safetyNetServiceInterface.phoneAlertFirestation(firestation)).thenThrow(IOException.class);
+
+        mockMvc.perform(get("/phoneAlert").param("firestation", firestation)).andExpect(status().is(404));
+
+    }
+
+    @Test
+    void testPhoneAlertStationNumberBlankFirestation() throws Exception {
+        String firestation = "";
+        List<String> listPhonesString = new ArrayList<>();
+        List<PhoneAlert> listPhoneAlert = createListPhone(listPhonesString);
+
+        when(safetyNetServiceInterface.phoneAlertFirestation(firestation)).thenReturn(listPhoneAlert);
+
+        mockMvc.perform(get("/phoneAlert").param("firestation", firestation)).andExpect(status().is(400));
+
+    }
+
+    private List<PhoneAlert> createListPhone(List<String> listPhonesString) {
+        List<PhoneAlert> listPhones = new ArrayList<>();
+        PhoneAlert phoneAlert = new PhoneAlert();
+        phoneAlert.setListPhones(listPhonesString);
+        listPhones.add(phoneAlert);
+        return listPhones;
     }
 
     private List<Persons> createListPersonsTest(String firstName, String lastName, Persons person) {
