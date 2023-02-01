@@ -1,0 +1,30 @@
+2022-11-23 21:28:07 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 6864 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2022-11-23 21:28:07 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.0-SNAPSHOT, Spring v6.0.1
+2022-11-23 21:28:07 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2022-11-23 21:28:08 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
+2022-11-23 21:28:09 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-23 21:28:09 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 3.16 seconds (process running for 4.076)
+2022-11-23 21:32:18 [http-nio-8080-exec-7] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2022-11-23 21:32:18 [http-nio-8080-exec-7] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2022-11-23 21:32:18 [http-nio-8080-exec-7] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /persons
+Request URL: http://localhost:8080/persons
+Content Type: application/json
+Response Code: 200
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.2", "accept": "*/*", "postman-token": "64bd61e2-c710-448a-b1a0-bc253f9a253a", "host": "localhost:8080", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
+2022-11-23 21:33:33 [http-nio-8080-exec-4] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2022-11-23 21:33:33 [http-nio-8080-exec-4] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2022-11-23 21:33:33 [http-nio-8080-exec-4] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /persons
+Request URL: http://localhost:8080/persons
+Content Type: application/json
+Response Code: 200
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.2", "accept": "*/*", "postman-token": "1155d4b3-2f82-4629-bb0e-4790b1461e43", "host": "localhost:8080", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
+2022-11-23 21:40:33 [http-nio-8080-exec-1] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2022-11-23 21:40:33 [http-nio-8080-exec-1] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2022-11-23 21:40:33 [http-nio-8080-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /persons
+Request URL: http://localhost:8080/persons
+Content Type: application/json
+Response Code: 200
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.29.2", "accept": "*/*", "postman-token": "3aa0c4d9-a6f3-405d-b02b-5621f3b0415b", "host": "localhost:8080", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
