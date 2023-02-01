@@ -32,6 +32,7 @@ import com.openclassrooms.new_safety_net.controller.NewSafetyAlertController;
 import com.openclassrooms.new_safety_net.model.AddressListFirestation;
 import com.openclassrooms.new_safety_net.model.ChildAlert;
 import com.openclassrooms.new_safety_net.model.ChildrenOrAdults;
+import com.openclassrooms.new_safety_net.model.CommunityEmail;
 import com.openclassrooms.new_safety_net.model.FireAddress;
 import com.openclassrooms.new_safety_net.model.Firestations;
 import com.openclassrooms.new_safety_net.model.FoyerChildrenAdultsToFireStation;
@@ -1232,6 +1233,51 @@ public class NewSafetyAlertControllerTests {
                 mockMvc.perform(get("/personInfo").param("firstName", arg).param("lastName", arg))
                                 .andExpect(status().is(400));
 
+        }
+
+        @Test
+        void testCommunityEmail() throws Exception {
+                String city = "CITY_TEST";
+                List<String> listEmails = new ArrayList<>();
+                listEmails.add(0, "email@test.com");
+                CommunityEmail communityEmail = new CommunityEmail();
+                communityEmail.setListEmails(listEmails);
+                List<CommunityEmail> listCommunityEmail = new ArrayList<>();
+                listCommunityEmail.add(communityEmail);
+
+                when(safetyNetServiceInterface.communityEmail(city)).thenReturn(listCommunityEmail);
+
+                mockMvc.perform(get("/communityEmail").param("city", city)).andExpect(status().is(200));
+        }
+
+        @Test
+        void testCommunityEmailNoListEmail() throws Exception {
+                String city = "CITY_TEST";
+                List<String> listEmails = new ArrayList<>();
+                CommunityEmail communityEmail = new CommunityEmail();
+                communityEmail.setListEmails(listEmails);
+                List<CommunityEmail> listCommunityEmail = new ArrayList<>();
+                listCommunityEmail.add(communityEmail);
+
+                when(safetyNetServiceInterface.communityEmail(city)).thenReturn(listCommunityEmail);
+
+                mockMvc.perform(get("/communityEmail").param("city", city)).andExpect(status().is(404));
+        }
+
+        @Test
+        void testCommunityEmailIOException() throws Exception {
+                String city = "CITY_TEST";
+
+                when(safetyNetServiceInterface.communityEmail(city)).thenThrow(IOException.class);
+
+                mockMvc.perform(get("/communityEmail").param("city", city)).andExpect(status().is(404));
+        }
+
+        @Test
+        void testCommunityEmailNoParam() throws Exception {
+                String city = "";
+
+                mockMvc.perform(get("/communityEmail").param("city", city)).andExpect(status().is(400));
         }
 
         private List<PhoneAlert> createListPhone(List<String> listPhonesString) {
