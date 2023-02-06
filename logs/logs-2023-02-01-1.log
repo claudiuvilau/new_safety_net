@@ -1,0 +1,90 @@
+2023-02-01 19:26:45 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 9988 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2023-02-01 19:26:45 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-02-01 19:26:45 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2023-02-01 19:26:46 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8083 (http)
+2023-02-01 19:26:47 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 8083 (http) with context path ''
+2023-02-01 19:26:47 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 3.224 seconds (process running for 3.95)
+2023-02-01 19:27:54 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 10708 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2023-02-01 19:27:54 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-02-01 19:27:54 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2023-02-01 19:27:55 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
+2023-02-01 19:27:57 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-01 19:27:57 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 3.136 seconds (process running for 3.872)
+2023-02-01 19:28:01 [http-nio-8080-exec-1] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2023-02-01 19:28:01 [http-nio-8080-exec-1] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2023-02-01 19:28:01 [http-nio-8080-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /persons
+Request URL: http://localhost:8080/persons
+Content Type: application/json
+Response Code: 200
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.30.0", "accept": "*/*", "postman-token": "aa402843-8489-419d-9ac1-8b3ccc6f0cd1", "host": "localhost:8080", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
+2023-02-01 19:32:01 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 840 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2023-02-01 19:32:01 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-02-01 19:32:01 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2023-02-01 19:32:02 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
+2023-02-01 19:32:03 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter             - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2023-02-01 19:32:38 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 17316 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2023-02-01 19:32:38 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-02-01 19:32:38 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2023-02-01 19:32:39 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8081 (http)
+2023-02-01 19:32:40 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 8081 (http) with context path ''
+2023-02-01 19:32:40 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.714 seconds (process running for 3.353)
+2023-02-01 19:33:13 [http-nio-8080-exec-5] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2023-02-01 19:33:13 [http-nio-8080-exec-5] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2023-02-01 19:33:13 [http-nio-8080-exec-5] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /persons
+Request URL: http://localhost:8080/persons
+Content Type: application/json
+Response Code: 200
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.30.0", "accept": "*/*", "postman-token": "70c79a77-f8a5-4316-8176-5b9fffb73104", "host": "localhost:8080", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
+2023-02-01 19:33:23 [http-nio-8081-exec-2] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2023-02-01 19:33:23 [http-nio-8081-exec-2] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2023-02-01 19:33:23 [http-nio-8081-exec-2] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /persons
+Request URL: http://localhost:8081/persons
+Content Type: application/json
+Response Code: 200
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.30.0", "accept": "*/*", "postman-token": "f99dc01b-c6b7-4788-9f79-624be2b80af1", "host": "localhost:8081", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
+2023-02-01 21:15:35 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 7748 (C:\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\WorkJavaVisualCode\new_safety_net)
+2023-02-01 21:15:35 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-02-01 21:15:35 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2023-02-01 21:15:36 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8081 (http)
+2023-02-01 21:15:37 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 8081 (http) with context path ''
+2023-02-01 21:15:37 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 2.844 seconds (process running for 3.554)
+2023-02-01 21:16:13 [http-nio-8081-exec-2] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2023-02-01 21:16:13 [http-nio-8081-exec-2] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2023-02-01 21:16:13 [http-nio-8081-exec-2] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /persons
+Request URL: http://localhost:8081/persons
+Content Type: application/json
+Response Code: 200
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.30.0", "accept": "*/*", "postman-token": "6bf86641-4445-44e1-9362-2eb34eb7934a", "host": "localhost:8081", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
+2023-02-01 21:16:31 [http-nio-8081-exec-4] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2023-02-01 21:16:31 [http-nio-8081-exec-4] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2023-02-01 21:16:31 [http-nio-8081-exec-4] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /persons
+Request URL: http://localhost:8081/persons
+Content Type: application/json
+Response Code: 200
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.30.0", "accept": "*/*", "postman-token": "fbe924f4-4cd4-46cb-886a-35ad3c9420ea", "host": "localhost:8081", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
+2023-02-01 21:17:01 [http-nio-8081-exec-5] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2023-02-01 21:17:01 [http-nio-8081-exec-5] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2023-02-01 21:17:01 [http-nio-8081-exec-5] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /persons
+Request URL: http://localhost:8081/persons
+Content Type: application/json
+Response Code: 200
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.30.0", "accept": "*/*", "postman-token": "1f426ace-23fc-4d51-aa3b-9b4c682ab2bf", "host": "localhost:8081", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
