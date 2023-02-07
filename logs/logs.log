@@ -4192,3 +4192,17 @@ Request URL: http://localhost:8080/persons
 Content Type: application/json
 Response Code: 200
 Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.30.1", "accept": "*/*", "postman-token": "b2cdc38a-d2d5-406b-8f7b-5c17857a25b0", "host": "localhost:8080", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
+2023-02-07 21:54:50 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 19400 (C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net)
+2023-02-07 21:54:50 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-02-07 21:54:50 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2023-02-07 21:54:52 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
+2023-02-07 21:54:53 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-07 21:54:53 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 3.157 seconds (process running for 3.976)
+2023-02-07 21:55:26 [http-nio-8080-exec-2] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2023-02-07 21:55:26 [http-nio-8080-exec-2] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2023-02-07 21:55:26 [http-nio-8080-exec-2] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /persons
+Request URL: http://localhost:8080/persons
+Content Type: application/json
+Response Code: 200
+Header Name: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.30.1", "accept": "*/*", "postman-token": "dc627133-88f2-4d1a-94ca-aad314d0dd57", "host": "localhost:8080", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "240"}
