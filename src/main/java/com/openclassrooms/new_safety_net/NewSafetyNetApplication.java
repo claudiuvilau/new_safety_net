@@ -11,6 +11,9 @@ import com.openclassrooms.new_safety_net.service.LoggerApiNewSafetyNet;
 @SpringBootApplication
 public class NewSafetyNetApplication {
 
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		SpringApplication.run(NewSafetyNetApplication.class, args);
 		setLogger();
@@ -20,6 +23,9 @@ public class NewSafetyNetApplication {
 		LoggerApiNewSafetyNet.setLogger();
 	}
 
+	/**
+	 * @return HttpExchangeRepository
+	 */
 	@Bean
 	public HttpExchangeRepository httpTraceRepository() {
 		return new InMemoryHttpExchangeRepository();
