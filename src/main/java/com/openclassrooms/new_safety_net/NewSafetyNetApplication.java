@@ -1,7 +1,10 @@
 package com.openclassrooms.new_safety_net;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.actuate.web.exchanges.HttpExchangeRepository;
+import org.springframework.boot.actuate.web.exchanges.InMemoryHttpExchangeRepository;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 import com.openclassrooms.new_safety_net.service.LoggerApiNewSafetyNet;
 
@@ -15,6 +18,11 @@ public class NewSafetyNetApplication {
 
 	private static void setLogger() {
 		LoggerApiNewSafetyNet.setLogger();
+	}
+
+	@Bean
+	public HttpExchangeRepository httpTraceRepository() {
+		return new InMemoryHttpExchangeRepository();
 	}
 
 }
