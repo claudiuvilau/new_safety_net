@@ -29,7 +29,7 @@ public class ObjetFromJson implements ObjetFromJsonRepository {
         return jsonFromFile;
     }
 
-    public void setJsonToFile(JsonFromFile jsonToFile) {
+    public void setJsonFromFile(JsonFromFile jsonToFile) {
         this.jsonFromFile = jsonToFile;
     }
 
