@@ -7,7 +7,7 @@ import org.apache.logging.log4j.Logger;
 
 import com.jsoniter.JsonIterator;
 import com.jsoniter.any.Any;
-import com.openclassrooms.new_safety_net.model.JsonToFile;
+import com.openclassrooms.new_safety_net.model.JsonFromFile;
 import com.openclassrooms.new_safety_net.repository.ObjetFromJsonRepository;
 
 public class ObjetFromJson implements ObjetFromJsonRepository {
@@ -15,7 +15,7 @@ public class ObjetFromJson implements ObjetFromJsonRepository {
     // Récupération de notre logger.
     private static final Logger LOGGER = LogManager.getLogger(ObjetFromJson.class);
 
-    private JsonToFile jsonToFile = createClasseJsonToFile();
+    private JsonFromFile jsonToFile = createClasseJsonToFile();
 
     private LoggerApiNewSafetyNet loggerApiNewSafetyNet = createLoggerApiNewSafetyNet();
 
@@ -25,11 +25,11 @@ public class ObjetFromJson implements ObjetFromJsonRepository {
         return LOGGER;
     }
 
-    public JsonToFile getJsonToFile() {
+    public JsonFromFile getJsonToFile() {
         return jsonToFile;
     }
 
-    public void setJsonToFile(JsonToFile jsonToFile) {
+    public void setJsonToFile(JsonFromFile jsonToFile) {
         this.jsonToFile = jsonToFile;
     }
 
@@ -52,7 +52,7 @@ public class ObjetFromJson implements ObjetFromJsonRepository {
     public ObjetFromJson() {
     }
 
-    public ObjetFromJson(JsonToFile jsonToFile, LoggerApiNewSafetyNet loggerApiNewSafetyNet, Any any) {
+    public ObjetFromJson(JsonFromFile jsonToFile, LoggerApiNewSafetyNet loggerApiNewSafetyNet, Any any) {
         this.jsonToFile = jsonToFile;
         this.loggerApiNewSafetyNet = loggerApiNewSafetyNet;
         this.any = any;
@@ -83,8 +83,8 @@ public class ObjetFromJson implements ObjetFromJsonRepository {
         }
     }
 
-    private JsonToFile createClasseJsonToFile() {
-        return new JsonToFile();
+    private JsonFromFile createClasseJsonToFile() {
+        return new JsonFromFile();
     }
 
     private LoggerApiNewSafetyNet createLoggerApiNewSafetyNet() {

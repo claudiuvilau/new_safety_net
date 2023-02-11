@@ -8,7 +8,7 @@ import java.util.List;
 
 import com.openclassrooms.new_safety_net.model.CollectionsRessources;
 import com.openclassrooms.new_safety_net.model.Firestations;
-import com.openclassrooms.new_safety_net.model.JsonToFile;
+import com.openclassrooms.new_safety_net.model.JsonFromFile;
 import com.openclassrooms.new_safety_net.model.Medicalrecords;
 import com.openclassrooms.new_safety_net.model.Persons;
 
@@ -57,7 +57,7 @@ public class NewFileJson implements NewFileJsonRepository {
                                                                          // object
         FileWriter writer = null;
         try {
-            writer = new FileWriter(JsonToFile.FILEPATHJSON);
+            writer = new FileWriter(JsonFromFile.FILEPATHJSON);
         } catch (IOException e) {
             LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, param));
             setFileCreated(false);
