@@ -61,11 +61,6 @@ public class NewSafetyAlertController {
 
     LoggerApiNewSafetyNet loggerApiNewSafetyNet = new LoggerApiNewSafetyNet();
 
-    /**
-     * @param response
-     * @param request
-     * @return ResponseEntity<List<Persons>>
-     */
     // pourquoi si on met l'objet JSON il est mal affiché dans le postman, mais en
     // list cela va bien
     @GetMapping("/persons")
@@ -94,12 +89,6 @@ public class NewSafetyAlertController {
         }
     }
 
-    /**
-     * @param firstNamelastName
-     * @param request
-     * @param response
-     * @return ResponseEntity<List<Persons>>
-     */
     // get a person
     @GetMapping(value = "person/{firstNamelastName}")
     public ResponseEntity<List<Persons>> getAPerson(@PathVariable String firstNamelastName, HttpServletRequest request,
@@ -129,12 +118,6 @@ public class NewSafetyAlertController {
         return new ResponseEntity<>(listP, HttpStatus.valueOf(response.getStatus()));
     }
 
-    /**
-     * @param person
-     * @param request
-     * @param response
-     * @return ResponseEntity<Persons>
-     */
     // add a person
     @PostMapping(value = "/person")
     public ResponseEntity<Persons> addPerson(@RequestBody Persons person, HttpServletRequest request,
@@ -164,10 +147,6 @@ public class NewSafetyAlertController {
         return new ResponseEntity<>(person, HttpStatus.valueOf(response.getStatus()));
     }
 
-    /**
-     * @param updatePerson(
-     * @return ResponseEntity<Persons>
-     */
     // update person
     // exemple http://localhost:9000/person?firstName=John2&lastName=Boyd2
     @PutMapping(value = "/person")
@@ -201,13 +180,6 @@ public class NewSafetyAlertController {
         return new ResponseEntity<>(person, HttpStatus.valueOf(response.getStatus()));
     }
 
-    /**
-     * @param firstName
-     * @param lastName
-     * @param request
-     * @param response
-     * @return ResponseEntity<Void>
-     */
     // delete person
     @DeleteMapping(value = "/person")
     public ResponseEntity<Void> deletePerson(@RequestParam String firstName, @RequestParam String lastName,
@@ -240,11 +212,6 @@ public class NewSafetyAlertController {
         return ResponseEntity.status(response.getStatus()).build();
     }
 
-    /**
-     * @param response
-     * @param request
-     * @return ResponseEntity<List<Firestations>>
-     */
     @GetMapping("/firestations")
     public ResponseEntity<List<Firestations>> getFirestations(HttpServletResponse response,
             HttpServletRequest request) {
@@ -263,12 +230,6 @@ public class NewSafetyAlertController {
         return new ResponseEntity<>(listFirestations, HttpStatus.valueOf(response.getStatus()));
     }
 
-    /**
-     * @param firestation
-     * @param request
-     * @param response
-     * @return ResponseEntity<Firestations>
-     */
     // add fire station
     @PostMapping(value = "/firestation")
     public ResponseEntity<Firestations> addFirestations(@RequestBody Firestations firestation,
@@ -295,12 +256,6 @@ public class NewSafetyAlertController {
         return new ResponseEntity<>(firestation, HttpStatus.valueOf(response.getStatus()));
     }
 
-    /**
-     * @param firestation
-     * @param request
-     * @param response
-     * @return ResponseEntity<Firestations>
-     */
     // update fire station
     @PutMapping(value = "/firestation")
     public ResponseEntity<Firestations> updateFirestations(@RequestBody Firestations firestation,
@@ -330,12 +285,6 @@ public class NewSafetyAlertController {
         return new ResponseEntity<>(firestation, HttpStatus.valueOf(response.getStatus()));
     }
 
-    /**
-     * @param "address"
-     * @param address
-     * @param response
-     * @return ResponseEntity<Void>
-     */
     // delete fire station
     @DeleteMapping(value = "/firestation")
     public ResponseEntity<Void> deleteFirestation(@RequestParam(value = "address", required = false) String address,
@@ -369,11 +318,6 @@ public class NewSafetyAlertController {
         return ResponseEntity.status(response.getStatus()).build();
     }
 
-    /**
-     * @param response
-     * @param request
-     * @return ResponseEntity<List<Medicalrecords>>
-     */
     @GetMapping("/medicalrecords")
     public ResponseEntity<List<Medicalrecords>> getMedicalrecords(HttpServletResponse response,
             HttpServletRequest request) {
@@ -392,12 +336,6 @@ public class NewSafetyAlertController {
         return new ResponseEntity<>(listMedicalrecords, HttpStatus.valueOf(response.getStatus()));
     }
 
-    /**
-     * @param medicalRecord
-     * @param request
-     * @param response
-     * @return ResponseEntity<Medicalrecords>
-     */
     // add a medical records
     @PostMapping(value = "/medicalrecord")
     public ResponseEntity<Medicalrecords> addMedicalRecord(@RequestBody Medicalrecords medicalRecord,
@@ -426,11 +364,6 @@ public class NewSafetyAlertController {
         return new ResponseEntity<>(medicalRecord, HttpStatus.valueOf(response.getStatus()));
     }
 
-    /**
-     * @param medicalRecord
-     * @param response
-     * @return ResponseEntity<Void>
-     */
     // update medical records
     @PutMapping(value = "/medicalrecord")
     public ResponseEntity<Void> updateMedicalRecord(@RequestBody Medicalrecords medicalRecord,
@@ -464,13 +397,6 @@ public class NewSafetyAlertController {
         return ResponseEntity.status(response.getStatus()).build();
     }
 
-    /**
-     * @param firstName
-     * @param lastName
-     * @param request
-     * @param response
-     * @return ResponseEntity<Void>
-     */
     // delete medical records
     @DeleteMapping(value = "/medicalrecord")
     public ResponseEntity<Void> deleteMedicalRecord(@RequestParam String firstName, @RequestParam String lastName,
@@ -503,11 +429,6 @@ public class NewSafetyAlertController {
         return ResponseEntity.status(response.getStatus()).build();
     }
 
-    /**
-     * @param request
-     * @param response
-     * @return ResponseEntity<List<FoyerChildrenAdultsToFireStation>>
-     */
     @GetMapping("firestation")
     public ResponseEntity<List<FoyerChildrenAdultsToFireStation>> firestationStationNumber(
             @RequestParam String stationNumber,
@@ -551,12 +472,6 @@ public class NewSafetyAlertController {
         return new ResponseEntity<>(listFoyerChildrenAdultsToFireStation, HttpStatus.valueOf(response.getStatus()));
     }
 
-    /**
-     * @param address
-     * @param request
-     * @param response
-     * @return ResponseEntity<List<ChildAlert>>
-     */
     @GetMapping("childAlert")
     public ResponseEntity<List<ChildAlert>> childAlert(@RequestParam String address, HttpServletRequest request,
             HttpServletResponse response) {
@@ -593,12 +508,6 @@ public class NewSafetyAlertController {
 
     }
 
-    /**
-     * @param firestation
-     * @param request
-     * @param response
-     * @return ResponseEntity<List<PhoneAlert>>
-     */
     @GetMapping("phoneAlert")
     public ResponseEntity<List<PhoneAlert>> phoneAlertStationNumber(@RequestParam String firestation,
             HttpServletRequest request, HttpServletResponse response) {
@@ -635,12 +544,6 @@ public class NewSafetyAlertController {
         return new ResponseEntity<>(listPhoneAlert, HttpStatus.valueOf(response.getStatus()));
     }
 
-    /**
-     * @param address
-     * @param request
-     * @param response
-     * @return ResponseEntity<List<FireAddress>>
-     */
     @GetMapping("fire")
     public ResponseEntity<List<FireAddress>> fireAddress(@RequestParam String address, HttpServletRequest request,
             HttpServletResponse response) {
@@ -676,12 +579,6 @@ public class NewSafetyAlertController {
         return new ResponseEntity<>(listFireAddress, HttpStatus.valueOf(response.getStatus()));
     }
 
-    /**
-     * @param station
-     * @param request
-     * @param response
-     * @return ResponseEntity<List<PersonsFireStation>>
-     */
     @GetMapping("flood/station")
     public ResponseEntity<List<PersonsFireStation>> fireAddressListFireStation(@RequestParam List<String> station,
             HttpServletRequest request, HttpServletResponse response) {
@@ -717,13 +614,6 @@ public class NewSafetyAlertController {
         return new ResponseEntity<>(listPersonsFireStation, HttpStatus.valueOf(response.getStatus()));
     }
 
-    /**
-     * @param firstName
-     * @param lastName
-     * @param request
-     * @param response
-     * @return ResponseEntity<List<PersonInfo>>
-     */
     @GetMapping("personInfo")
     public ResponseEntity<List<PersonInfo>> personInfo(@RequestParam String firstName, @RequestParam String lastName,
             HttpServletRequest request, HttpServletResponse response) {
@@ -759,12 +649,6 @@ public class NewSafetyAlertController {
         return new ResponseEntity<>(listPeronInfo, HttpStatus.valueOf(response.getStatus()));
     }
 
-    /**
-     * @param city
-     * @param request
-     * @param response
-     * @return ResponseEntity<List<CommunityEmail>>
-     */
     @GetMapping("communityEmail")
     public ResponseEntity<List<CommunityEmail>> communityEmail(@RequestParam String city, HttpServletRequest request,
             HttpServletResponse response) {
