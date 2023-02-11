@@ -15,7 +15,7 @@ public class ObjetFromJson implements ObjetFromJsonRepository {
     // Récupération de notre logger.
     private static final Logger LOGGER = LogManager.getLogger(ObjetFromJson.class);
 
-    private JsonFromFile jsonToFile = createClasseJsonToFile();
+    private JsonFromFile jsonFromFile = createClasseJsonFromFile();
 
     private LoggerApiNewSafetyNet loggerApiNewSafetyNet = createLoggerApiNewSafetyNet();
 
@@ -25,12 +25,12 @@ public class ObjetFromJson implements ObjetFromJsonRepository {
         return LOGGER;
     }
 
-    public JsonFromFile getJsonToFile() {
-        return jsonToFile;
+    public JsonFromFile getJsonFromFile() {
+        return jsonFromFile;
     }
 
     public void setJsonToFile(JsonFromFile jsonToFile) {
-        this.jsonToFile = jsonToFile;
+        this.jsonFromFile = jsonToFile;
     }
 
     public LoggerApiNewSafetyNet getLoggerApiNewSafetyNet() {
@@ -53,14 +53,14 @@ public class ObjetFromJson implements ObjetFromJsonRepository {
     }
 
     public ObjetFromJson(JsonFromFile jsonToFile, LoggerApiNewSafetyNet loggerApiNewSafetyNet, Any any) {
-        this.jsonToFile = jsonToFile;
+        this.jsonFromFile = jsonToFile;
         this.loggerApiNewSafetyNet = loggerApiNewSafetyNet;
         this.any = any;
     }
 
     @Override
     public String toString() {
-        return "ObjetFromJson [any=" + any + ", jsonToFile=" + jsonToFile + ", loggerApiNewSafetyNet="
+        return "ObjetFromJson [any=" + any + ", jsonFromFile=" + jsonFromFile + ", loggerApiNewSafetyNet="
                 + loggerApiNewSafetyNet + "]";
     }
 
@@ -68,7 +68,7 @@ public class ObjetFromJson implements ObjetFromJsonRepository {
         any = null;
         setAny(any);
         byte[] objetfile = null;
-        objetfile = jsonToFile.readJsonFile();
+        objetfile = jsonFromFile.readJsonFile();
         if (objetfile != null) {
             JsonIterator iter = JsonIterator.parse(objetfile);
             if (iter.currentBuffer().contains(elemjson)) {
@@ -83,7 +83,7 @@ public class ObjetFromJson implements ObjetFromJsonRepository {
         }
     }
 
-    private JsonFromFile createClasseJsonToFile() {
+    private JsonFromFile createClasseJsonFromFile() {
         return new JsonFromFile();
     }
 
