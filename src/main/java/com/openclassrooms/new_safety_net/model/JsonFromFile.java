@@ -7,7 +7,7 @@ import java.nio.file.Files;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class JsonToFile {
+public class JsonFromFile {
 
     public static final String FILEPATHJSON = "src\\main\\resources\\jsonFile.json";
 
@@ -16,7 +16,7 @@ public class JsonToFile {
     File fileInPath;
 
     // Récupération de notre logger.
-    private static final Logger LOGGER = LogManager.getLogger(JsonToFile.class);
+    private static final Logger LOGGER = LogManager.getLogger(JsonFromFile.class);
 
     /**
      * @return String return the objetjson
