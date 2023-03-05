@@ -61,15 +61,13 @@ public class NewSafetyAlertController {
 
     LoggerApiNewSafetyNet loggerApiNewSafetyNet = new LoggerApiNewSafetyNet();
 
-    // pourquoi si on met l'objet JSON il est mal affiché dans le postman, mais en
-    // list cela va bien
     @GetMapping("/persons")
     public ResponseEntity<List<Persons>> getPersons(HttpServletResponse response, HttpServletRequest request) {
         String elemjson = "persons";
         try {
             listPersons = repositoryElementJson.getPersons(elemjson);
             if (listPersons.isEmpty()) {
-                // 204 Requête traitée avec succès mais pas d’information à renvoyer.
+                // 204 Requête traitée avec succès, mais pas d’information à renvoyer.
                 response.setStatus(204);
                 messagelogger = NOCONTENT + loggerApiNewSafetyNet.loggerInfo(request, response, elemjson);
                 LOGGER.info(messagelogger);
@@ -80,11 +78,13 @@ public class NewSafetyAlertController {
             return new ResponseEntity<>(listPersons, HttpStatus.valueOf(response.getStatus()));
         } catch (IOException e) {
             response.setStatus(404);
+            messagelogger = loggerApiNewSafetyNet.loggerErr(e, response + " " + request);
+            LOGGER.error(messagelogger);
             return null;
         } catch (NullPointerException nulle) {
             response.setStatus(404);
             messagelogger = "Null List !" + loggerApiNewSafetyNet.loggerInfo(request, response, elemjson);
-            LOGGER.info(messagelogger);
+            LOGGER.error(messagelogger);
             return null;
         }
     }
@@ -107,9 +107,12 @@ public class NewSafetyAlertController {
             }
         } catch (IOException e) {
             response.setStatus(404);
+            LOGGER.error(loggerApiNewSafetyNet.loggerErr(e, firstNamelastName));
             return ResponseEntity.status(response.getStatus()).build();
         } catch (NullPointerException nulle) {
             response.setStatus(404);
+            messagelogger = "Null List !" + loggerApiNewSafetyNet.loggerInfo(request, response, elemjson);
+            LOGGER.error(messagelogger);
             return null;
         }
 
@@ -130,7 +133,7 @@ public class NewSafetyAlertController {
             response.setStatus(404);
             messagelogger = "No persons added. " + RESPONSSTATUS + response.getStatus() + ":"
                     + loggerApiNewSafetyNet.loggerInfo(request, response, "");
-            LOGGER.info(messagelogger);
+            LOGGER.error(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
         }
 
@@ -141,9 +144,6 @@ public class NewSafetyAlertController {
         LOGGER.info(messagelogger);
         messagelogger = "Created " + loggerApiNewSafetyNet.loggerInfo(request, response, "");
         LOGGER.info(messagelogger);
-        // c'est quoi la différence entre les 2 lignes suivantes created(location).build
-        // et
-        // https.valuesOf(response.getstatus):
         return new ResponseEntity<>(person, HttpStatus.valueOf(response.getStatus()));
     }
 
@@ -169,7 +169,7 @@ public class NewSafetyAlertController {
             response.setStatus(404);
             messagelogger = "The person is not updeted. " + RESPONSSTATUS + response.getStatus() + ":"
                     + loggerApiNewSafetyNet.loggerInfo(request, response, firstName + " " + lastName);
-            LOGGER.info(messagelogger);
+            LOGGER.error(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
         }
 
@@ -201,7 +201,7 @@ public class NewSafetyAlertController {
             response.setStatus(404);
             messagelogger = "The person is not deleted. " + RESPONSSTATUS + response.getStatus() + ":"
                     + loggerApiNewSafetyNet.loggerInfo(request, response, firstName + " " + lastName);
-            LOGGER.info(messagelogger);
+            LOGGER.error(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
         }
 
@@ -242,7 +242,7 @@ public class NewSafetyAlertController {
             response.setStatus(404);
             messagelogger = "No new fire station was added. " + RESPONSSTATUS + response.getStatus() + ":"
                     + loggerApiNewSafetyNet.loggerInfo(request, response, "");
-            LOGGER.info(messagelogger);
+            LOGGER.error(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
         }
         response.setStatus(201);
@@ -275,7 +275,7 @@ public class NewSafetyAlertController {
             response.setStatus(404);
             messagelogger = "The fire station was not updated. " + RESPONSSTATUS + response.getStatus() + ":"
                     + loggerApiNewSafetyNet.loggerInfo(request, response, address);
-            LOGGER.info(messagelogger);
+            LOGGER.error(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
         }
         response.setStatus(200);
@@ -307,7 +307,7 @@ public class NewSafetyAlertController {
             response.setStatus(404);
             messagelogger = "The fire station was not deleted. " + RESPONSSTATUS + response.getStatus() + ":"
                     + loggerApiNewSafetyNet.loggerInfo(request, response, address + " " + stationNumber);
-            LOGGER.info(messagelogger);
+            LOGGER.error(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
         }
 
@@ -349,7 +349,7 @@ public class NewSafetyAlertController {
             response.setStatus(404);
             messagelogger = "The medical record was not added. " + RESPONSSTATUS + response.getStatus() + ":"
                     + loggerApiNewSafetyNet.loggerInfo(request, response, "");
-            LOGGER.info(messagelogger);
+            LOGGER.error(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
         }
 
@@ -386,7 +386,7 @@ public class NewSafetyAlertController {
             response.setStatus(404);
             messagelogger = "The medical record was not updated. " + RESPONSSTATUS + response.getStatus() + ":"
                     + loggerApiNewSafetyNet.loggerInfo(request, response, firstName + " " + lastName);
-            LOGGER.info(messagelogger);
+            LOGGER.error(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
         }
 
@@ -418,7 +418,7 @@ public class NewSafetyAlertController {
             response.setStatus(404);
             messagelogger = "The medical record is not deleted. " + RESPONSSTATUS + response.getStatus() + ":"
                     + loggerApiNewSafetyNet.loggerInfo(request, response, firstName + " " + lastName);
-            LOGGER.info(messagelogger);
+            LOGGER.error(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
         }
 
@@ -496,7 +496,7 @@ public class NewSafetyAlertController {
             response.setStatus(404);
             messagelogger = "The list is null. " + RESPONSSTATUS + response.getStatus() + ":"
                     + loggerApiNewSafetyNet.loggerInfo(request, response, address);
-            LOGGER.info(messagelogger);
+            LOGGER.error(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
         }
 
@@ -533,7 +533,7 @@ public class NewSafetyAlertController {
             response.setStatus(404);
             messagelogger = "No phone for the alerts. " + RESPONSSTATUS + response.getStatus() + ":"
                     + loggerApiNewSafetyNet.loggerInfo(request, response, firestation);
-            LOGGER.info(messagelogger);
+            LOGGER.error(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
         }
 
@@ -569,7 +569,7 @@ public class NewSafetyAlertController {
             response.setStatus(404);
             messagelogger = "No fire station for this address. " + RESPONSSTATUS + response.getStatus() + ":"
                     + loggerApiNewSafetyNet.loggerInfo(request, response, address);
-            LOGGER.info(messagelogger);
+            LOGGER.error(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
         }
         response.setStatus(200);
@@ -604,7 +604,7 @@ public class NewSafetyAlertController {
             response.setStatus(404);
             messagelogger = "No person in theses fire stations. " + RESPONSSTATUS + response.getStatus() + ":"
                     + loggerApiNewSafetyNet.loggerInfo(request, response, station.toString());
-            LOGGER.info(messagelogger);
+            LOGGER.error(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
         }
         response.setStatus(200);
@@ -638,7 +638,7 @@ public class NewSafetyAlertController {
             response.setStatus(404);
             messagelogger = "No person with this name. " + RESPONSSTATUS + response.getStatus() + ":"
                     + loggerApiNewSafetyNet.loggerInfo(request, response, firstName + " " + lastName);
-            LOGGER.info(messagelogger);
+            LOGGER.error(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
         }
 
@@ -674,7 +674,7 @@ public class NewSafetyAlertController {
             response.setStatus(404);
             messagelogger = "No emails for this city. " + RESPONSSTATUS + response.getStatus() + ":"
                     + loggerApiNewSafetyNet.loggerInfo(request, response, city);
-            LOGGER.info(messagelogger);
+            LOGGER.error(messagelogger);
             return ResponseEntity.status(response.getStatus()).build();
 
         }

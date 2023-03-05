@@ -56,7 +56,6 @@ public class SafetyNetService implements SafetyNetInterface {
     private NewFileJson newFileJson = createNewFileJson();
     private GetListsElementsJson getListsElementsJsonRepository = createGetListsElementsJson();
 
-    // pourquoi Override ?
     @Override
     public List<Persons> getAPerson(String firstNamelastName, String elemjson) throws IOException {
         List<Persons> listPersons = new ArrayList<>();
