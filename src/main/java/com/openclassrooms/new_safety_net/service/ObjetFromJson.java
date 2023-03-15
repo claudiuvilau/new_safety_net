@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import com.jsoniter.JsonIterator;
 import com.jsoniter.any.Any;
@@ -15,9 +16,11 @@ public class ObjetFromJson implements ObjetFromJsonRepository {
     // Récupération de notre logger.
     private static final Logger LOGGER = LogManager.getLogger(ObjetFromJson.class);
 
-    private JsonFromFile jsonFromFile = createClasseJsonFromFile();
+    @Autowired
+    private JsonFromFile jsonFromFile;
 
-    private LoggerApiNewSafetyNet loggerApiNewSafetyNet = createLoggerApiNewSafetyNet();
+    @Autowired
+    private LoggerApiNewSafetyNet loggerApiNewSafetyNet;
 
     private Any any;
 
@@ -81,14 +84,6 @@ public class ObjetFromJson implements ObjetFromJsonRepository {
                 }
             }
         }
-    }
-
-    private JsonFromFile createClasseJsonFromFile() {
-        return new JsonFromFile();
-    }
-
-    private LoggerApiNewSafetyNet createLoggerApiNewSafetyNet() {
-        return new LoggerApiNewSafetyNet();
     }
 
 }
