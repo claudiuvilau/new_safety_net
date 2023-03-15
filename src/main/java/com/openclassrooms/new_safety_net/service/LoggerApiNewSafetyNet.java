@@ -2,11 +2,13 @@ package com.openclassrooms.new_safety_net.service;
 
 import java.util.Enumeration;
 
+import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+@Service
 public class LoggerApiNewSafetyNet {
 
     private static final String FILELOG4J2XML = "log4j2-spring.xml";
