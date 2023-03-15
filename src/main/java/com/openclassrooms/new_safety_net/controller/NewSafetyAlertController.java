@@ -47,6 +47,10 @@ public class NewSafetyAlertController {
     @Autowired
     private GetListsElementsJsonRepository repositoryElementJson;
 
+    @Autowired
+    LoggerApiNewSafetyNet loggerApiNewSafetyNet;
+    // LoggerApiNewSafetyNet loggerApiNewSafetyNet = new LoggerApiNewSafetyNet();
+
     List<Persons> listPersons = new ArrayList<>();
     List<Firestations> listFirestations = new ArrayList<>();
     List<Medicalrecords> listMedicalrecords = new ArrayList<>();
@@ -58,8 +62,6 @@ public class NewSafetyAlertController {
     private static final Logger LOGGER = LogManager.getLogger(NewSafetyAlertController.class);
     private static final String RESPONSSTATUS = "Response status ";
     private static final String PARAMNOTEXIST = "The param does not exist. ";
-
-    LoggerApiNewSafetyNet loggerApiNewSafetyNet = new LoggerApiNewSafetyNet();
 
     @GetMapping("/persons")
     public ResponseEntity<List<Persons>> getPersons(HttpServletResponse response, HttpServletRequest request) {
