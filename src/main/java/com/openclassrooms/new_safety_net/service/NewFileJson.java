@@ -14,13 +14,18 @@ import com.openclassrooms.new_safety_net.model.Persons;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class NewFileJson implements NewFileJsonRepository {
 
     // Récupération de notre logger.
     private static final Logger LOGGER = LogManager.getLogger(NewFileJson.class);
 
-    private LoggerApiNewSafetyNet loggerApiNewSafetyNet = createLoggerApiNewSafetyNet();
+    @Autowired
+    private LoggerApiNewSafetyNet loggerApiNewSafetyNet;
+
+    @Autowired
+    CollectionsRessources collectionsRessources;
 
     private boolean fileCreated;
 
@@ -47,7 +52,7 @@ public class NewFileJson implements NewFileJsonRepository {
     @Override
     public void createNewFileJson(List<Persons> listPersons, List<Firestations> listFirestations,
             List<Medicalrecords> listMedicalrecords, String param) {
-        CollectionsRessources collectionsRessources = new CollectionsRessources();
+
         collectionsRessources.setPersons(listPersons);
         collectionsRessources.setFirestations(listFirestations);
         collectionsRessources.setMedicalrecords(listMedicalrecords);
@@ -90,10 +95,6 @@ public class NewFileJson implements NewFileJsonRepository {
             LOGGER.debug(messageLogger);
         }
         setFileCreated(true);
-    }
-
-    private LoggerApiNewSafetyNet createLoggerApiNewSafetyNet() {
-        return new LoggerApiNewSafetyNet();
     }
 
 }
