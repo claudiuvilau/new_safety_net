@@ -47,9 +47,8 @@ public class NewSafetyAlertController {
     @Autowired
     private GetListsElementsJsonRepository repositoryElementJson;
 
-    @Autowired
-    LoggerApiNewSafetyNet loggerApiNewSafetyNet;
-    // LoggerApiNewSafetyNet loggerApiNewSafetyNet = new LoggerApiNewSafetyNet();
+    // @Autowired
+    LoggerApiNewSafetyNet loggerApiNewSafetyNet = new LoggerApiNewSafetyNet();
 
     List<Persons> listPersons = new ArrayList<>();
     List<Firestations> listFirestations = new ArrayList<>();

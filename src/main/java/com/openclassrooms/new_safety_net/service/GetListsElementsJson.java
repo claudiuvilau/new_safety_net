@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.jsoniter.JsonIterator;
@@ -23,7 +24,8 @@ public class GetListsElementsJson implements GetListsElementsJsonRepository {
     // Récupération de notre logger.
     private static final Logger LOGGER = LogManager.getLogger(GetListsElementsJson.class);
 
-    private ObjetFromJson objetFromJson = createObjetFromJson();
+    @Autowired
+    private ObjetFromJson objetFromJson;
 
     @Override
     public List<Persons> getPersons(String elemjson) {
@@ -81,7 +83,4 @@ public class GetListsElementsJson implements GetListsElementsJsonRepository {
         return listMedicalrecords;
     }
 
-    private ObjetFromJson createObjetFromJson() {
-        return new ObjetFromJson();
-    }
 }
