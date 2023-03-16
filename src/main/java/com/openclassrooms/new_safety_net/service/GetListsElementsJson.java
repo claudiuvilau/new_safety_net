@@ -28,13 +28,13 @@ public class GetListsElementsJson implements GetListsElementsJsonRepository {
     private ObjetFromJson objetFromJson;
 
     @Autowired
-    Persons personsObj;
+    private Persons personsObj;
 
     @Autowired
-    Firestations firestationsObj;
+    private Firestations firestationsObj;
 
     @Autowired
-    Medicalrecords medicalrecordsObj;
+    private Medicalrecords medicalrecordsObj;
 
     @Override
     public List<Persons> getPersons(String elemjson) {

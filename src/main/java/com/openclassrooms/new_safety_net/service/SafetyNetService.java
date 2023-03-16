@@ -51,25 +51,25 @@ public class SafetyNetService implements SafetyNetInterface {
     private GetListsElementsJson getListsElementsJsonRepository;
 
     @Autowired
-    FireAddress fireAddress;
+    private FireAddress fireAddress;
 
     @Autowired
-    FoyerChildrenAdultsToFireStation foyerChildrenAdultsToFireStation;
+    private FoyerChildrenAdultsToFireStation foyerChildrenAdultsToFireStation;
 
     @Autowired
-    ChildrenOrAdults childrenOrAdults;
+    private ChildrenOrAdults childrenOrAdults;
 
     @Autowired
-    ChildAlert childAlertobj;
+    private ChildAlert childAlertobj;
 
     @Autowired
-    PhoneAlert phoneAlertObj;
+    private PhoneAlert phoneAlertObj;
 
     @Autowired
-    PersonsFireStation personsFireStation;
+    private PersonsFireStation personsFireStation;
 
     @Autowired
-    AddressListFirestation addressListFirestationObj;
+    private AddressListFirestation addressListFirestationObj;
 
     // Récupération de notre logger.
     private static final Logger LOGGER = LogManager.getLogger(SafetyNetService.class);
