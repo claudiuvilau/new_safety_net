@@ -47,9 +47,6 @@ public class NewSafetyAlertController {
     @Autowired
     private GetListsElementsJsonRepository repositoryElementJson;
 
-    // @Autowired
-    LoggerApiNewSafetyNet loggerApiNewSafetyNet = new LoggerApiNewSafetyNet();
-
     List<Persons> listPersons = new ArrayList<>();
     List<Firestations> listFirestations = new ArrayList<>();
     List<Medicalrecords> listMedicalrecords = new ArrayList<>();
@@ -59,6 +56,7 @@ public class NewSafetyAlertController {
 
     // Récupération de notre logger.
     private static final Logger LOGGER = LogManager.getLogger(NewSafetyAlertController.class);
+    LoggerApiNewSafetyNet loggerApiNewSafetyNet = new LoggerApiNewSafetyNet();
     private static final String RESPONSSTATUS = "Response status ";
     private static final String PARAMNOTEXIST = "The param does not exist. ";
 

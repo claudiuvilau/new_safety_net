@@ -5,12 +5,14 @@ import java.io.IOException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.jsoniter.JsonIterator;
 import com.jsoniter.any.Any;
 import com.openclassrooms.new_safety_net.model.JsonFromFile;
 import com.openclassrooms.new_safety_net.repository.ObjetFromJsonRepository;
 
+@Service
 public class ObjetFromJson implements ObjetFromJsonRepository {
 
     // Récupération de notre logger.

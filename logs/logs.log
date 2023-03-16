@@ -1,31 +1,8 @@
-2023-02-11 14:56:23 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 11076 (C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net)
-2023-02-11 23:27:19 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 21224 (C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net)
-2023-02-11 23:27:19 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
-2023-02-11 23:27:19 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
-2023-02-11 23:27:22 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
-2023-02-11 23:27:24 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 8080 (http) with context path ''
-2023-02-11 23:27:25 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 6.661 seconds (process running for 8.069)
-2023-02-11 23:27:44 [http-nio-8080-exec-1] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
-2023-02-11 23:27:44 [http-nio-8080-exec-1] DEBUG c.o.n.s.GetListsElementsJson                       - List medicalrecords is created.
-2023-02-11 23:27:44 [http-nio-8080-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - OK
-Request Method: <[GET]> /medicalrecords
-Request URL: http://localhost:8080/medicalrecords
-Content Type: null
-Response Code: 200
-Header Name: {"user-agent": "PostmanRuntime/7.30.1", "accept": "*/*", "postman-token": "2a9e3a3c-a94c-4b4d-9df0-b89fcbaf35e8", "host": "localhost:8080", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive"}
-2023-02-11 23:28:56 [http-nio-8080-exec-7] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
-2023-02-11 23:28:56 [http-nio-8080-exec-7] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
-2023-02-11 23:28:56 [http-nio-8080-exec-7] INFO  c.o.n.c.NewSafetyAlertController                   - OK
-Request Method: <[GET]> /persons
-Request URL: http://localhost:8080/persons
-Content Type: null
-Response Code: 200
-Header Name: {"user-agent": "PostmanRuntime/7.30.1", "accept": "*/*", "postman-token": "17706604-d7ea-41bb-b60b-c057fb752c4a", "host": "localhost:8080", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive"}
-2023-03-15 18:43:38 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 20864 (C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net)
-2023-03-15 18:43:38 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
-2023-03-15 18:43:38 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
-2023-03-15 18:43:41 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
-2023-03-15 18:43:42 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter             - 
+2023-03-16 17:25:28 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 7752 (C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net)
+2023-03-16 17:25:28 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-03-16 17:25:28 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2023-03-16 17:25:31 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
+2023-03-16 17:25:32 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter             - 
 
 ***************************
 APPLICATION FAILED TO START
@@ -33,7 +10,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field loggerApiNewSafetyNet in com.openclassrooms.new_safety_net.controller.NewSafetyAlertController required a bean of type 'com.openclassrooms.new_safety_net.service.LoggerApiNewSafetyNet' that could not be found.
+Field personsObj in com.openclassrooms.new_safety_net.service.SafetyNetService required a bean of type 'com.openclassrooms.new_safety_net.model.Persons' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -41,75 +18,517 @@ The injection point has the following annotations:
 
 Action:
 
-Consider defining a bean of type 'com.openclassrooms.new_safety_net.service.LoggerApiNewSafetyNet' in your configuration.
+Consider defining a bean of type 'com.openclassrooms.new_safety_net.model.Persons' in your configuration.
 
-2023-03-15 18:50:21 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 4780 (C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net)
-2023-03-15 18:50:21 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
-2023-03-15 18:50:21 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
-2023-03-15 18:50:24 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
-2023-03-15 18:50:28 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 8080 (http) with context path ''
-2023-03-15 18:50:28 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 8.153 seconds (process running for 9.212)
-2023-03-15 18:51:15 [http-nio-8080-exec-4] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
-2023-03-15 18:51:15 [http-nio-8080-exec-4] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
-2023-03-15 18:51:15 [http-nio-8080-exec-4] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+2023-03-16 17:29:53 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 3588 (C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net)
+2023-03-16 17:29:53 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-03-16 17:29:53 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2023-03-16 17:29:55 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
+2023-03-16 17:29:55 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter             - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field personsObj in com.openclassrooms.new_safety_net.service.SafetyNetService required a bean of type 'com.openclassrooms.new_safety_net.model.Persons' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.openclassrooms.new_safety_net.model.Persons' in your configuration.
+
+2023-03-16 17:30:24 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 17436 (C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net)
+2023-03-16 17:30:24 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-03-16 17:30:24 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2023-03-16 17:30:26 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
+2023-03-16 17:30:26 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter             - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field personsObj in com.openclassrooms.new_safety_net.service.SafetyNetService required a bean of type 'com.openclassrooms.new_safety_net.model.Persons' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.openclassrooms.new_safety_net.model.Persons' in your configuration.
+
+2023-03-16 17:33:28 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 1596 (C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net)
+2023-03-16 17:33:28 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-03-16 17:33:28 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2023-03-16 17:33:30 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
+2023-03-16 17:33:30 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter             - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field personsObj in com.openclassrooms.new_safety_net.service.SafetyNetService required a bean of type 'com.openclassrooms.new_safety_net.model.Persons' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.openclassrooms.new_safety_net.model.Persons' in your configuration.
+
+2023-03-16 17:39:48 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 19116 (C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net)
+2023-03-16 17:39:48 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-03-16 17:39:48 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2023-03-16 17:39:50 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
+2023-03-16 17:39:50 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter             - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field firestationsObj in com.openclassrooms.new_safety_net.service.SafetyNetService required a bean of type 'com.openclassrooms.new_safety_net.model.Firestations' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.openclassrooms.new_safety_net.model.Firestations' in your configuration.
+
+2023-03-16 17:40:31 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 17668 (C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net)
+2023-03-16 17:40:31 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-03-16 17:40:31 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2023-03-16 17:40:33 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
+2023-03-16 17:40:33 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter             - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field medicalrecordsObj in com.openclassrooms.new_safety_net.service.SafetyNetService required a bean of type 'com.openclassrooms.new_safety_net.model.Medicalrecords' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.openclassrooms.new_safety_net.model.Medicalrecords' in your configuration.
+
+2023-03-16 17:41:20 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 6972 (C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net)
+2023-03-16 17:41:20 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-03-16 17:41:20 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2023-03-16 17:41:22 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
+2023-03-16 17:41:23 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter             - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field objetFromJson in com.openclassrooms.new_safety_net.service.SafetyNetService required a bean of type 'com.openclassrooms.new_safety_net.service.ObjetFromJson' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.openclassrooms.new_safety_net.service.ObjetFromJson' in your configuration.
+
+2023-03-16 17:49:31 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 13280 (C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net)
+2023-03-16 17:49:31 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-03-16 17:49:31 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2023-03-16 17:49:32 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
+2023-03-16 17:49:33 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter             - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field objetFromJson in com.openclassrooms.new_safety_net.service.SafetyNetService required a bean of type 'com.openclassrooms.new_safety_net.service.ObjetFromJson' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.openclassrooms.new_safety_net.service.ObjetFromJson' in your configuration.
+
+2023-03-16 17:51:42 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 19668 (C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net)
+2023-03-16 17:51:42 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-03-16 17:51:42 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2023-03-16 17:51:44 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
+2023-03-16 17:51:45 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter             - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field jsonFromFile in com.openclassrooms.new_safety_net.service.ObjetFromJson required a bean of type 'com.openclassrooms.new_safety_net.model.JsonFromFile' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.openclassrooms.new_safety_net.model.JsonFromFile' in your configuration.
+
+2023-03-16 17:52:42 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 9108 (C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net)
+2023-03-16 17:52:42 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-03-16 17:52:42 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2023-03-16 17:52:45 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
+2023-03-16 17:52:46 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter             - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field newFileJson in com.openclassrooms.new_safety_net.service.SafetyNetService required a bean of type 'com.openclassrooms.new_safety_net.service.NewFileJson' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.openclassrooms.new_safety_net.service.NewFileJson' in your configuration.
+
+2023-03-16 18:04:25 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 15040 (C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net)
+2023-03-16 18:04:25 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-03-16 18:04:25 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2023-03-16 18:04:28 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
+2023-03-16 18:04:29 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter             - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field jsonFromFile in com.openclassrooms.new_safety_net.service.ObjetFromJson required a bean of type 'com.openclassrooms.new_safety_net.model.JsonFromFile' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.openclassrooms.new_safety_net.model.JsonFromFile' in your configuration.
+
+2023-03-16 18:04:58 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 11080 (C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net)
+2023-03-16 18:04:58 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-03-16 18:04:58 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2023-03-16 18:05:02 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
+2023-03-16 18:05:03 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter             - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field collectionsRessources in com.openclassrooms.new_safety_net.service.NewFileJson required a bean of type 'com.openclassrooms.new_safety_net.model.CollectionsRessources' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.openclassrooms.new_safety_net.model.CollectionsRessources' in your configuration.
+
+2023-03-16 18:05:33 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 13148 (C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net)
+2023-03-16 18:05:33 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-03-16 18:05:33 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2023-03-16 18:05:36 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
+2023-03-16 18:05:37 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter             - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field fireAddress in com.openclassrooms.new_safety_net.service.SafetyNetService required a bean of type 'com.openclassrooms.new_safety_net.model.FireAddress' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.openclassrooms.new_safety_net.model.FireAddress' in your configuration.
+
+2023-03-16 18:07:31 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 9280 (C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net)
+2023-03-16 18:07:31 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-03-16 18:07:31 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2023-03-16 18:07:34 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
+2023-03-16 18:07:35 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter             - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field foyerChildrenAdultsToFireStation in com.openclassrooms.new_safety_net.service.SafetyNetService required a bean of type 'com.openclassrooms.new_safety_net.model.FoyerChildrenAdultsToFireStation' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.openclassrooms.new_safety_net.model.FoyerChildrenAdultsToFireStation' in your configuration.
+
+2023-03-16 18:09:17 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 2712 (C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net)
+2023-03-16 18:09:17 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-03-16 18:09:17 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2023-03-16 18:09:21 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
+2023-03-16 18:09:24 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-16 18:09:25 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 8.386 seconds (process running for 9.75)
+2023-03-16 18:09:33 [http-nio-8080-exec-3] DEBUG c.o.n.s.SafetyNetService                           - Request URL: http://localhost:8080/communityEmail?city=Culver
+2023-03-16 18:09:33 [http-nio-8080-exec-3] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2023-03-16 18:09:33 [http-nio-8080-exec-3] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2023-03-16 18:09:33 [http-nio-8080-exec-3] DEBUG c.o.n.s.SafetyNetService                           - The list of persons: [Persons{firstName='John', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6512', email='jaboyd@email.com'}, Persons{firstName='Jacob', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6513', email='drk@email.com'}, Persons{firstName='Tenley', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6512', email='tenz@email.com'}, Persons{firstName='Roger', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6512', email='jaboyd@email.com'}, Persons{firstName='Felicia', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6544', email='jaboyd@email.com'}, Persons{firstName='Jonanathan', lastName='Marrack', address='29 15th St', city='Culver', zip='97451', phone='841-874-6513', email='drk@email.com'}, Persons{firstName='Tessa', lastName='Carman', address='834 Binoc Ave', city='Culver', zip='97451', phone='841-874-6512', email='tenz@email.com'}, Persons{firstName='Peter', lastName='Duncan', address='644 Gershwin Cir', city='Culver', zip='97451', phone='841-874-6512', email='jaboyd@email.com'}, Persons{firstName='Foster', lastName='Shepard', address='748 Townings Dr', city='Culver', zip='97451', phone='841-874-6544', email='jaboyd@email.com'}, Persons{firstName='Tony', lastName='Cooper', address='112 Steppes Pl', city='Culver', zip='97451', phone='841-874-6874', email='tcoop@ymail.com'}, Persons{firstName='Lily', lastName='Cooper', address='489 Manchester St', city='Culver', zip='97451', phone='841-874-9845', email='lily@email.com'}, Persons{firstName='Sophia', lastName='Zemicks', address='892 Downing Ct', city='Culver', zip='97451', phone='841-874-7878', email='soph@email.com'}, Persons{firstName='Warren', lastName='Zemicks', address='892 Downing Ct', city='Culver', zip='97451', phone='841-874-7512', email='ward@email.com'}, Persons{firstName='Zach', lastName='Zemicks', address='892 Downing Ct', city='Culver', zip='97451', phone='841-874-7512', email='zarc@email.com'}, Persons{firstName='Reginold', lastName='Walker', address='908 73rd St', city='Culver', zip='97451', phone='841-874-8547', email='reg@email.com'}, Persons{firstName='Jamie', lastName='Peters', address='908 73rd St', city='Culver', zip='97451', phone='841-874-7462', email='jpeter@email.com'}, Persons{firstName='Ron', lastName='Peters', address='112 Steppes Pl', city='Culver', zip='97451', phone='841-874-8888', email='jpeter@email.com'}, Persons{firstName='Allison', lastName='Boyd', address='112 Steppes Pl', city='Culver', zip='97451', phone='841-874-9888', email='aly@imail.com'}, Persons{firstName='Brian', lastName='Stelzer', address='947 E. Rose Dr', city='Culver', zip='97451', phone='841-874-7784', email='bstel@email.com'}, Persons{firstName='Shawna', lastName='Stelzer', address='947 E. Rose Dr', city='Culver', zip='97451', phone='841-874-7784', email='ssanw@email.com'}, Persons{firstName='Kendrik', lastName='Stelzer', address='947 E. Rose Dr', city='Culver', zip='97451', phone='841-874-7784', email='bstel@email.com'}, Persons{firstName='Clive', lastName='Ferguson', address='748 Townings Dr', city='Culver', zip='97451', phone='841-874-6741', email='clivfd@ymail.com'}, Persons{firstName='Eric', lastName='Cadigan', address='951 LoneTree Rd', city='Culver', zip='97451', phone='841-874-7458', email='gramps@email.com'}]
+2023-03-16 18:09:33 [http-nio-8080-exec-3] DEBUG c.o.n.s.SafetyNetService                           - The list of emails is created(before remove the duplicate): [jaboyd@email.com, drk@email.com, tenz@email.com, jaboyd@email.com, jaboyd@email.com, drk@email.com, tenz@email.com, jaboyd@email.com, jaboyd@email.com, tcoop@ymail.com, lily@email.com, soph@email.com, ward@email.com, zarc@email.com, reg@email.com, jpeter@email.com, jpeter@email.com, aly@imail.com, bstel@email.com, ssanw@email.com, bstel@email.com, clivfd@ymail.com, gramps@email.com]
+2023-03-16 18:09:33 [http-nio-8080-exec-3] INFO  c.o.n.c.NewSafetyAlertController                   - Response status 200:
+Request Method: <[GET]> /communityEmail
+Request URL: http://localhost:8080/communityEmail?city=Culver
+Content Type: null
+Response Code: 200
+Header Name: {"user-agent": "PostmanRuntime/7.31.1", "accept": "*/*", "postman-token": "9aeb42cd-d7dc-42ad-83c5-4aafe78cd44a", "host": "localhost:8080", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive"}
+2023-03-16 18:09:46 [http-nio-8080-exec-6] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2023-03-16 18:09:46 [http-nio-8080-exec-6] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2023-03-16 18:09:46 [http-nio-8080-exec-6] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /persons
+Request URL: http://localhost:8080/persons
+Content Type: null
+Response Code: 200
+Header Name: {"user-agent": "PostmanRuntime/7.31.1", "accept": "*/*", "postman-token": "69a98232-73d7-4f8d-b329-e7b26a5900a3", "host": "localhost:8080", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive"}
+2023-03-16 18:13:55 [http-nio-8080-exec-5] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2023-03-16 18:13:55 [http-nio-8080-exec-5] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2023-03-16 18:13:55 [http-nio-8080-exec-5] INFO  c.o.n.c.NewSafetyAlertController                   - OK
 Request Method: <[GET]> /persons
 Request URL: http://localhost:8080/persons
 Content Type: null
 Response Code: 200
 Header Name: {"host": "localhost:8080", "connection": "keep-alive", "sec-ch-ua": ""Microsoft Edge";v="111", "Not(A:Brand";v="8", "Chromium";v="111"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.41", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr-BE;q=0.9,fr;q=0.8,de-CH;q=0.7,de;q=0.6,en-AU;q=0.5,en;q=0.4,de-DE;q=0.3,en-US;q=0.2,en-GB;q=0.1,ro;q=0.1", "cookie": "tll_1912723=1673217409; nv_1912723=7; vid_1912723=Y6ltWp8zd1MMGFJHwFFVBgAAAAE; io_1912723=1"}
-2023-03-15 18:54:20 [http-nio-8080-exec-3] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
-2023-03-15 18:54:20 [http-nio-8080-exec-3] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
-2023-03-15 18:54:20 [http-nio-8080-exec-3] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+2023-03-16 18:22:03 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 2836 (C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net)
+2023-03-16 18:22:03 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-03-16 18:22:03 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2023-03-16 18:22:06 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
+2023-03-16 18:22:10 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-16 18:22:10 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 7.687 seconds (process running for 14.115)
+2023-03-16 18:22:58 [http-nio-8080-exec-3] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2023-03-16 18:22:58 [http-nio-8080-exec-3] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2023-03-16 18:22:58 [http-nio-8080-exec-3] INFO  c.o.n.c.NewSafetyAlertController                   - OK
 Request Method: <[GET]> /persons
 Request URL: http://localhost:8080/persons
 Content Type: null
 Response Code: 200
 Header Name: {"host": "localhost:8080", "connection": "keep-alive", "sec-ch-ua": ""Microsoft Edge";v="111", "Not(A:Brand";v="8", "Chromium";v="111"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.41", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr-BE;q=0.9,fr;q=0.8,de-CH;q=0.7,de;q=0.6,en-AU;q=0.5,en;q=0.4,de-DE;q=0.3,en-US;q=0.2,en-GB;q=0.1,ro;q=0.1", "cookie": "tll_1912723=1673217409; nv_1912723=7; vid_1912723=Y6ltWp8zd1MMGFJHwFFVBgAAAAE; io_1912723=1"}
-2023-03-15 19:02:04 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 7600 (C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net)
-2023-03-15 19:02:04 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
-2023-03-15 19:02:04 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
-2023-03-15 19:02:07 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
-2023-03-15 19:02:10 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 8080 (http) with context path ''
-2023-03-15 19:02:10 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 7.109 seconds (process running for 8.44)
-2023-03-15 19:02:42 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 20396 (C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net)
-2023-03-15 19:02:42 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
-2023-03-15 19:02:42 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
-2023-03-15 19:02:45 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
-2023-03-15 19:02:48 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 8080 (http) with context path ''
-2023-03-15 19:02:48 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 6.049 seconds (process running for 7.066)
-2023-03-15 19:03:31 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 12568 (C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net)
-2023-03-15 19:03:31 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
-2023-03-15 19:03:31 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
-2023-03-15 19:03:34 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
-2023-03-15 19:03:36 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 8080 (http) with context path ''
-2023-03-15 19:03:36 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 5.654 seconds (process running for 6.618)
-2023-03-15 19:03:50 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 11168 (C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net)
-2023-03-15 19:03:50 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
-2023-03-15 19:03:50 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
-2023-03-15 19:03:52 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
-2023-03-15 19:03:54 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 8080 (http) with context path ''
-2023-03-15 19:03:55 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 5.949 seconds (process running for 6.925)
-2023-03-15 19:04:38 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 10176 (C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net)
-2023-03-15 19:04:38 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
-2023-03-15 19:04:38 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
-2023-03-15 19:04:41 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
-2023-03-15 19:04:43 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 8080 (http) with context path ''
-2023-03-15 19:04:43 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 5.405 seconds (process running for 6.536)
-2023-03-15 19:09:07 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 12776 (C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net)
-2023-03-15 19:09:07 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
-2023-03-15 19:09:07 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
-2023-03-15 19:09:10 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
-2023-03-15 19:09:13 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 8080 (http) with context path ''
-2023-03-15 19:09:13 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 7.674 seconds (process running for 8.503)
-2023-03-15 19:11:24 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 19132 (C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net)
-2023-03-15 19:11:24 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
-2023-03-15 19:11:24 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
-2023-03-15 19:11:28 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
-2023-03-15 19:11:31 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 8080 (http) with context path ''
-2023-03-15 19:11:31 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 7.28 seconds (process running for 8.151)
-2023-03-15 19:15:28 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 13532 (C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net)
-2023-03-15 19:15:28 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
-2023-03-15 19:15:28 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
-2023-03-15 19:15:32 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
-2023-03-15 19:15:35 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 8080 (http) with context path ''
-2023-03-15 19:15:35 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 7.83 seconds (process running for 9.645)
+2023-03-16 18:24:12 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 4220 (C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net)
+2023-03-16 18:24:12 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-03-16 18:24:12 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2023-03-16 18:24:15 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
+2023-03-16 18:24:18 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-16 18:24:18 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 7.812 seconds (process running for 9.556)
+2023-03-16 18:24:21 [http-nio-8080-exec-1] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2023-03-16 18:24:21 [http-nio-8080-exec-1] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2023-03-16 18:24:21 [http-nio-8080-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /persons
+Request URL: http://localhost:8080/persons
+Content Type: null
+Response Code: 200
+Header Name: {"host": "localhost:8080", "connection": "keep-alive", "cache-control": "max-age=0", "sec-ch-ua": ""Microsoft Edge";v="111", "Not(A:Brand";v="8", "Chromium";v="111"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.41", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr-BE;q=0.9,fr;q=0.8,de-CH;q=0.7,de;q=0.6,en-AU;q=0.5,en;q=0.4,de-DE;q=0.3,en-US;q=0.2,en-GB;q=0.1,ro;q=0.1", "cookie": "tll_1912723=1673217409; nv_1912723=7; vid_1912723=Y6ltWp8zd1MMGFJHwFFVBgAAAAE; io_1912723=1"}
+2023-03-16 18:26:19 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 16708 (C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net)
+2023-03-16 18:26:19 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-03-16 18:26:19 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2023-03-16 18:26:22 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
+2023-03-16 18:26:25 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-16 18:26:25 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 7.376 seconds (process running for 8.741)
+2023-03-16 18:26:29 [http-nio-8080-exec-1] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2023-03-16 18:26:29 [http-nio-8080-exec-1] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2023-03-16 18:26:29 [http-nio-8080-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /persons
+Request URL: http://localhost:8080/persons
+Content Type: null
+Response Code: 200
+Header Name: {"host": "localhost:8080", "connection": "keep-alive", "cache-control": "max-age=0", "sec-ch-ua": ""Microsoft Edge";v="111", "Not(A:Brand";v="8", "Chromium";v="111"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.41", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr-BE;q=0.9,fr;q=0.8,de-CH;q=0.7,de;q=0.6,en-AU;q=0.5,en;q=0.4,de-DE;q=0.3,en-US;q=0.2,en-GB;q=0.1,ro;q=0.1", "cookie": "tll_1912723=1673217409; nv_1912723=7; vid_1912723=Y6ltWp8zd1MMGFJHwFFVBgAAAAE; io_1912723=1"}
+2023-03-16 18:28:05 [http-nio-8080-exec-6] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2023-03-16 18:28:05 [http-nio-8080-exec-6] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2023-03-16 18:28:06 [http-nio-8080-exec-6] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2023-03-16 18:28:06 [http-nio-8080-exec-6] INFO  c.o.n.c.NewSafetyAlertController                   - No Content. The person does not exist.
+Request Method: <[GET]> /person/claudiu
+Request URL: http://localhost:8080/person/claudiu
+Content Type: null
+Response Code: 204
+Header Name: {"host": "localhost:8080", "connection": "keep-alive", "sec-ch-ua": ""Microsoft Edge";v="111", "Not(A:Brand";v="8", "Chromium";v="111"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.41", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr-BE;q=0.9,fr;q=0.8,de-CH;q=0.7,de;q=0.6,en-AU;q=0.5,en;q=0.4,de-DE;q=0.3,en-US;q=0.2,en-GB;q=0.1,ro;q=0.1", "cookie": "tll_1912723=1673217409; nv_1912723=7; vid_1912723=Y6ltWp8zd1MMGFJHwFFVBgAAAAE; io_1912723=1"}
+2023-03-16 18:29:01 [http-nio-8080-exec-7] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2023-03-16 18:29:01 [http-nio-8080-exec-7] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2023-03-16 18:29:10 [http-nio-8080-exec-7] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2023-03-16 18:29:10 [http-nio-8080-exec-7] INFO  c.o.n.c.NewSafetyAlertController                   - No Content. The person does not exist.
+Request Method: <[GET]> /person/John
+Request URL: http://localhost:8080/person/John
+Content Type: null
+Response Code: 204
+Header Name: {"host": "localhost:8080", "connection": "keep-alive", "sec-ch-ua": ""Microsoft Edge";v="111", "Not(A:Brand";v="8", "Chromium";v="111"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.41", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr-BE;q=0.9,fr;q=0.8,de-CH;q=0.7,de;q=0.6,en-AU;q=0.5,en;q=0.4,de-DE;q=0.3,en-US;q=0.2,en-GB;q=0.1,ro;q=0.1", "cookie": "tll_1912723=1673217409; nv_1912723=7; vid_1912723=Y6ltWp8zd1MMGFJHwFFVBgAAAAE; io_1912723=1"}
+2023-03-16 18:29:36 [http-nio-8080-exec-3] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2023-03-16 18:29:36 [http-nio-8080-exec-3] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2023-03-16 18:29:38 [http-nio-8080-exec-3] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2023-03-16 18:29:38 [http-nio-8080-exec-3] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /person/JohnBoyd
+Request URL: http://localhost:8080/person/JohnBoyd
+Content Type: null
+Response Code: 200
+Header Name: {"host": "localhost:8080", "connection": "keep-alive", "sec-ch-ua": ""Microsoft Edge";v="111", "Not(A:Brand";v="8", "Chromium";v="111"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.41", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr-BE;q=0.9,fr;q=0.8,de-CH;q=0.7,de;q=0.6,en-AU;q=0.5,en;q=0.4,de-DE;q=0.3,en-US;q=0.2,en-GB;q=0.1,ro;q=0.1", "cookie": "tll_1912723=1673217409; nv_1912723=7; vid_1912723=Y6ltWp8zd1MMGFJHwFFVBgAAAAE; io_1912723=1"}
+2023-03-16 18:33:05 [http-nio-8080-exec-9] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2023-03-16 18:33:05 [http-nio-8080-exec-9] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2023-03-16 18:38:00 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 18900 (C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net)
+2023-03-16 18:38:00 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-03-16 18:38:00 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2023-03-16 18:38:03 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
+2023-03-16 18:38:06 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-16 18:38:06 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 6.914 seconds (process running for 7.986)
+2023-03-16 18:38:56 [http-nio-8080-exec-1] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2023-03-16 18:38:56 [http-nio-8080-exec-1] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2023-03-16 18:41:02 [http-nio-8080-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2023-03-16 18:41:44 [http-nio-8080-exec-1] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2023-03-16 18:41:44 [http-nio-8080-exec-1] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2023-03-16 18:42:15 [http-nio-8080-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /person/JohnBoyd
+Request URL: http://localhost:8080/person/JohnBoyd
+Content Type: null
+Response Code: 200
+Header Name: {"host": "localhost:8080", "connection": "keep-alive", "cache-control": "max-age=0", "sec-ch-ua": ""Microsoft Edge";v="111", "Not(A:Brand";v="8", "Chromium";v="111"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.41", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr-BE;q=0.9,fr;q=0.8,de-CH;q=0.7,de;q=0.6,en-AU;q=0.5,en;q=0.4,de-DE;q=0.3,en-US;q=0.2,en-GB;q=0.1,ro;q=0.1", "cookie": "tll_1912723=1673217409; nv_1912723=7; vid_1912723=Y6ltWp8zd1MMGFJHwFFVBgAAAAE; io_1912723=1"}
+2023-03-16 18:42:24 [http-nio-8080-exec-3] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2023-03-16 18:42:24 [http-nio-8080-exec-3] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2023-03-16 18:44:01 [http-nio-8080-exec-3] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2023-03-16 18:44:01 [http-nio-8080-exec-3] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2023-03-16 18:44:12 [http-nio-8080-exec-3] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2023-03-16 18:44:12 [http-nio-8080-exec-3] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2023-03-16 18:46:02 [http-nio-8080-exec-3] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2023-03-16 18:46:02 [http-nio-8080-exec-3] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2023-03-16 18:46:15 [http-nio-8080-exec-3] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2023-03-16 18:46:22 [http-nio-8080-exec-3] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2023-03-16 18:46:22 [http-nio-8080-exec-3] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2023-03-16 18:46:50 [http-nio-8080-exec-3] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2023-03-16 18:46:50 [http-nio-8080-exec-3] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2023-03-16 18:56:53 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 3808 (C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net)
+2023-03-16 18:56:53 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-03-16 18:56:53 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2023-03-16 18:56:57 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
+2023-03-16 18:57:00 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-16 18:57:00 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 7.913 seconds (process running for 9.111)
+2023-03-16 18:57:02 [http-nio-8080-exec-1] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2023-03-16 18:57:02 [http-nio-8080-exec-1] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2023-03-16 18:57:02 [http-nio-8080-exec-1] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2023-03-16 18:57:02 [http-nio-8080-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /person/JohnBoyd
+Request URL: http://localhost:8080/person/JohnBoyd
+Content Type: null
+Response Code: 200
+Header Name: {"host": "localhost:8080", "connection": "keep-alive", "cache-control": "max-age=0", "sec-ch-ua": ""Microsoft Edge";v="111", "Not(A:Brand";v="8", "Chromium";v="111"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.41", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr-BE;q=0.9,fr;q=0.8,de-CH;q=0.7,de;q=0.6,en-AU;q=0.5,en;q=0.4,de-DE;q=0.3,en-US;q=0.2,en-GB;q=0.1,ro;q=0.1", "cookie": "tll_1912723=1673217409; nv_1912723=7; vid_1912723=Y6ltWp8zd1MMGFJHwFFVBgAAAAE; io_1912723=1"}
+2023-03-16 18:57:07 [http-nio-8080-exec-2] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2023-03-16 18:57:07 [http-nio-8080-exec-2] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2023-03-16 18:57:07 [http-nio-8080-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2023-03-16 18:57:07 [http-nio-8080-exec-2] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /person/JohnBoyd
+Request URL: http://localhost:8080/person/JohnBoyd
+Content Type: null
+Response Code: 200
+Header Name: {"host": "localhost:8080", "connection": "keep-alive", "cache-control": "max-age=0", "sec-ch-ua": ""Microsoft Edge";v="111", "Not(A:Brand";v="8", "Chromium";v="111"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.41", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr-BE;q=0.9,fr;q=0.8,de-CH;q=0.7,de;q=0.6,en-AU;q=0.5,en;q=0.4,de-DE;q=0.3,en-US;q=0.2,en-GB;q=0.1,ro;q=0.1", "cookie": "tll_1912723=1673217409; nv_1912723=7; vid_1912723=Y6ltWp8zd1MMGFJHwFFVBgAAAAE; io_1912723=1"}
+2023-03-16 18:57:14 [http-nio-8080-exec-4] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2023-03-16 18:57:14 [http-nio-8080-exec-4] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2023-03-16 18:57:14 [http-nio-8080-exec-4] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2023-03-16 18:57:14 [http-nio-8080-exec-4] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /person/JohnBoyd
+Request URL: http://localhost:8080/person/JohnBoyd
+Content Type: null
+Response Code: 200
+Header Name: {"host": "localhost:8080", "connection": "keep-alive", "cache-control": "max-age=0", "sec-ch-ua": ""Microsoft Edge";v="111", "Not(A:Brand";v="8", "Chromium";v="111"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.41", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr-BE;q=0.9,fr;q=0.8,de-CH;q=0.7,de;q=0.6,en-AU;q=0.5,en;q=0.4,de-DE;q=0.3,en-US;q=0.2,en-GB;q=0.1,ro;q=0.1", "cookie": "tll_1912723=1673217409; nv_1912723=7; vid_1912723=Y6ltWp8zd1MMGFJHwFFVBgAAAAE; io_1912723=1"}
+2023-03-16 18:57:22 [http-nio-8080-exec-3] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2023-03-16 18:57:22 [http-nio-8080-exec-3] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2023-03-16 18:57:22 [http-nio-8080-exec-3] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2023-03-16 18:57:22 [http-nio-8080-exec-3] INFO  c.o.n.c.NewSafetyAlertController                   - No Content. The person does not exist.
+Request Method: <[GET]> /person/persons
+Request URL: http://localhost:8080/person/persons
+Content Type: null
+Response Code: 204
+Header Name: {"host": "localhost:8080", "connection": "keep-alive", "sec-ch-ua": ""Microsoft Edge";v="111", "Not(A:Brand";v="8", "Chromium";v="111"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.41", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr-BE;q=0.9,fr;q=0.8,de-CH;q=0.7,de;q=0.6,en-AU;q=0.5,en;q=0.4,de-DE;q=0.3,en-US;q=0.2,en-GB;q=0.1,ro;q=0.1", "cookie": "tll_1912723=1673217409; nv_1912723=7; vid_1912723=Y6ltWp8zd1MMGFJHwFFVBgAAAAE; io_1912723=1"}
+2023-03-16 18:57:31 [http-nio-8080-exec-5] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2023-03-16 18:57:31 [http-nio-8080-exec-5] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2023-03-16 18:57:31 [http-nio-8080-exec-5] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /persons
+Request URL: http://localhost:8080/persons
+Content Type: null
+Response Code: 200
+Header Name: {"host": "localhost:8080", "connection": "keep-alive", "sec-ch-ua": ""Microsoft Edge";v="111", "Not(A:Brand";v="8", "Chromium";v="111"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.41", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr-BE;q=0.9,fr;q=0.8,de-CH;q=0.7,de;q=0.6,en-AU;q=0.5,en;q=0.4,de-DE;q=0.3,en-US;q=0.2,en-GB;q=0.1,ro;q=0.1", "cookie": "tll_1912723=1673217409; nv_1912723=7; vid_1912723=Y6ltWp8zd1MMGFJHwFFVBgAAAAE; io_1912723=1"}
+2023-03-16 19:03:48 [main] INFO  c.o.n.NewSafetyNetApplication                      - Starting NewSafetyNetApplication using Java 17.0.3.1 with PID 16492 (C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net\target\classes started by kls_k in C:\Users\kls_k\OneDrive\Claudiu - hors connexion\WorkJavaVisualCode\new_safety_net)
+2023-03-16 19:03:48 [main] DEBUG c.o.n.NewSafetyNetApplication                      - Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-03-16 19:03:48 [main] INFO  c.o.n.NewSafetyNetApplication                      - No active profile set, falling back to 1 default profile: "default"
+2023-03-16 19:03:51 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http)
+2023-03-16 19:03:53 [main] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-16 19:03:53 [main] INFO  c.o.n.NewSafetyNetApplication                      - Started NewSafetyNetApplication in 5.765 seconds (process running for 6.801)
+2023-03-16 19:04:00 [http-nio-8080-exec-1] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2023-03-16 19:04:00 [http-nio-8080-exec-1] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2023-03-16 19:04:00 [http-nio-8080-exec-1] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /persons
+Request URL: http://localhost:8080/persons
+Content Type: null
+Response Code: 200
+Header Name: {"host": "localhost:8080", "connection": "keep-alive", "cache-control": "max-age=0", "sec-ch-ua": ""Microsoft Edge";v="111", "Not(A:Brand";v="8", "Chromium";v="111"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.41", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr-BE;q=0.9,fr;q=0.8,de-CH;q=0.7,de;q=0.6,en-AU;q=0.5,en;q=0.4,de-DE;q=0.3,en-US;q=0.2,en-GB;q=0.1,ro;q=0.1", "cookie": "tll_1912723=1673217409; nv_1912723=7; vid_1912723=Y6ltWp8zd1MMGFJHwFFVBgAAAAE; io_1912723=1"}
+2023-03-16 19:04:10 [http-nio-8080-exec-2] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2023-03-16 19:04:10 [http-nio-8080-exec-2] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2023-03-16 19:04:10 [http-nio-8080-exec-2] DEBUG c.o.n.s.SafetyNetService                           - Get the person is ok.
+2023-03-16 19:04:10 [http-nio-8080-exec-2] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /person/JohnBoyd
+Request URL: http://localhost:8080/person/JohnBoyd
+Content Type: null
+Response Code: 200
+Header Name: {"host": "localhost:8080", "connection": "keep-alive", "sec-ch-ua": ""Microsoft Edge";v="111", "Not(A:Brand";v="8", "Chromium";v="111"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": ""Windows"", "upgrade-insecure-requests": "1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.41", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate, br", "accept-language": "fr-FR,fr-BE;q=0.9,fr;q=0.8,de-CH;q=0.7,de;q=0.6,en-AU;q=0.5,en;q=0.4,de-DE;q=0.3,en-US;q=0.2,en-GB;q=0.1,ro;q=0.1", "cookie": "tll_1912723=1673217409; nv_1912723=7; vid_1912723=Y6ltWp8zd1MMGFJHwFFVBgAAAAE; io_1912723=1"}
+2023-03-16 19:04:24 [http-nio-8080-exec-6] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2023-03-16 19:04:24 [http-nio-8080-exec-6] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2023-03-16 19:04:24 [http-nio-8080-exec-6] INFO  c.o.n.c.NewSafetyAlertController                   - OK
+Request Method: <[GET]> /persons
+Request URL: http://localhost:8080/persons
+Content Type: null
+Response Code: 200
+Header Name: {"user-agent": "PostmanRuntime/7.31.1", "accept": "*/*", "postman-token": "0ec425f4-07f5-4ccf-a5d3-aad7fc3cedeb", "host": "localhost:8080", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive"}
+2023-03-16 19:04:30 [http-nio-8080-exec-3] DEBUG c.o.n.s.SafetyNetService                           - Request URL: http://localhost:8080/communityEmail?city=Culver
+2023-03-16 19:04:30 [http-nio-8080-exec-3] DEBUG c.o.n.s.ObjetFromJson                              - Json iterator is created.
+2023-03-16 19:04:30 [http-nio-8080-exec-3] DEBUG c.o.n.s.GetListsElementsJson                       - List persons is created.
+2023-03-16 19:04:30 [http-nio-8080-exec-3] DEBUG c.o.n.s.SafetyNetService                           - The list of persons: [Persons{firstName='John', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6512', email='jaboyd@email.com'}, Persons{firstName='Jacob', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6513', email='drk@email.com'}, Persons{firstName='Tenley', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6512', email='tenz@email.com'}, Persons{firstName='Roger', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6512', email='jaboyd@email.com'}, Persons{firstName='Felicia', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6544', email='jaboyd@email.com'}, Persons{firstName='Jonanathan', lastName='Marrack', address='29 15th St', city='Culver', zip='97451', phone='841-874-6513', email='drk@email.com'}, Persons{firstName='Tessa', lastName='Carman', address='834 Binoc Ave', city='Culver', zip='97451', phone='841-874-6512', email='tenz@email.com'}, Persons{firstName='Peter', lastName='Duncan', address='644 Gershwin Cir', city='Culver', zip='97451', phone='841-874-6512', email='jaboyd@email.com'}, Persons{firstName='Foster', lastName='Shepard', address='748 Townings Dr', city='Culver', zip='97451', phone='841-874-6544', email='jaboyd@email.com'}, Persons{firstName='Tony', lastName='Cooper', address='112 Steppes Pl', city='Culver', zip='97451', phone='841-874-6874', email='tcoop@ymail.com'}, Persons{firstName='Lily', lastName='Cooper', address='489 Manchester St', city='Culver', zip='97451', phone='841-874-9845', email='lily@email.com'}, Persons{firstName='Sophia', lastName='Zemicks', address='892 Downing Ct', city='Culver', zip='97451', phone='841-874-7878', email='soph@email.com'}, Persons{firstName='Warren', lastName='Zemicks', address='892 Downing Ct', city='Culver', zip='97451', phone='841-874-7512', email='ward@email.com'}, Persons{firstName='Zach', lastName='Zemicks', address='892 Downing Ct', city='Culver', zip='97451', phone='841-874-7512', email='zarc@email.com'}, Persons{firstName='Reginold', lastName='Walker', address='908 73rd St', city='Culver', zip='97451', phone='841-874-8547', email='reg@email.com'}, Persons{firstName='Jamie', lastName='Peters', address='908 73rd St', city='Culver', zip='97451', phone='841-874-7462', email='jpeter@email.com'}, Persons{firstName='Ron', lastName='Peters', address='112 Steppes Pl', city='Culver', zip='97451', phone='841-874-8888', email='jpeter@email.com'}, Persons{firstName='Allison', lastName='Boyd', address='112 Steppes Pl', city='Culver', zip='97451', phone='841-874-9888', email='aly@imail.com'}, Persons{firstName='Brian', lastName='Stelzer', address='947 E. Rose Dr', city='Culver', zip='97451', phone='841-874-7784', email='bstel@email.com'}, Persons{firstName='Shawna', lastName='Stelzer', address='947 E. Rose Dr', city='Culver', zip='97451', phone='841-874-7784', email='ssanw@email.com'}, Persons{firstName='Kendrik', lastName='Stelzer', address='947 E. Rose Dr', city='Culver', zip='97451', phone='841-874-7784', email='bstel@email.com'}, Persons{firstName='Clive', lastName='Ferguson', address='748 Townings Dr', city='Culver', zip='97451', phone='841-874-6741', email='clivfd@ymail.com'}, Persons{firstName='Eric', lastName='Cadigan', address='951 LoneTree Rd', city='Culver', zip='97451', phone='841-874-7458', email='gramps@email.com'}]
+2023-03-16 19:04:30 [http-nio-8080-exec-3] DEBUG c.o.n.s.SafetyNetService                           - The list of emails is created(before remove the duplicate): [jaboyd@email.com, drk@email.com, tenz@email.com, jaboyd@email.com, jaboyd@email.com, drk@email.com, tenz@email.com, jaboyd@email.com, jaboyd@email.com, tcoop@ymail.com, lily@email.com, soph@email.com, ward@email.com, zarc@email.com, reg@email.com, jpeter@email.com, jpeter@email.com, aly@imail.com, bstel@email.com, ssanw@email.com, bstel@email.com, clivfd@ymail.com, gramps@email.com]
+2023-03-16 19:04:30 [http-nio-8080-exec-3] INFO  c.o.n.c.NewSafetyAlertController                   - Response status 200:
+Request Method: <[GET]> /communityEmail
+Request URL: http://localhost:8080/communityEmail?city=Culver
+Content Type: null
+Response Code: 200
+Header Name: {"user-agent": "PostmanRuntime/7.31.1", "accept": "*/*", "postman-token": "7e740666-790a-4a73-aabf-cc27d43e3f44", "host": "localhost:8080", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive"}

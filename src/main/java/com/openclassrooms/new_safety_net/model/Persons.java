@@ -1,5 +1,11 @@
 package com.openclassrooms.new_safety_net.model;
 
+import org.springframework.stereotype.Component;
+
+import lombok.Data;
+
+@Data
+@Component
 public class Persons {
 
     private String firstName;

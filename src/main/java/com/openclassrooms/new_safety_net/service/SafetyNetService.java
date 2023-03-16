@@ -32,9 +32,6 @@ import com.openclassrooms.new_safety_net.model.PersonsOfFireStation;
 import com.openclassrooms.new_safety_net.model.PhoneAlert;
 import com.openclassrooms.new_safety_net.repository.SafetyNetInterface;
 
-import lombok.Data;
-
-@Data
 @Service
 public class SafetyNetService implements SafetyNetInterface {
 
@@ -45,13 +42,7 @@ public class SafetyNetService implements SafetyNetInterface {
     private Firestations firestationsObj;
 
     @Autowired
-    private Medicalrecords medicalrecordsObj;
-
-    @Autowired
     private LoggerApiNewSafetyNet loggerApiNewSafetyNet;
-
-    @Autowired
-    private ObjetFromJson objetFromJson;
 
     @Autowired
     private NewFileJson newFileJson;

@@ -1,5 +1,8 @@
 package com.openclassrooms.new_safety_net.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class PersonsOfFireStation {
 
     private String decompte;

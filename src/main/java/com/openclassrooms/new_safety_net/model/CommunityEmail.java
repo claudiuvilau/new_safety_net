@@ -3,6 +3,9 @@ package com.openclassrooms.new_safety_net.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class CommunityEmail {
 
     private List<String> listEmails = new ArrayList<>();
