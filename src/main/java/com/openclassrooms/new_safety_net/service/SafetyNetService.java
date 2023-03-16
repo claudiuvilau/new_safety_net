@@ -14,6 +14,7 @@ import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.openclassrooms.new_safety_net.model.AddressListFirestation;
@@ -37,10 +38,47 @@ import lombok.Data;
 @Service
 public class SafetyNetService implements SafetyNetInterface {
 
-    private Persons personsObj = createClassePersons();
-    private Firestations firestationsObj = createClassFirestations();
-    private Medicalrecords medicalrecordsObj = createClassMedicalrecords();
-    private LoggerApiNewSafetyNet loggerApiNewSafetyNet = createLoggerApiNewSafetyNet();
+    @Autowired
+    private Persons personsObj;
+
+    @Autowired
+    private Firestations firestationsObj;
+
+    @Autowired
+    private Medicalrecords medicalrecordsObj;
+
+    @Autowired
+    private LoggerApiNewSafetyNet loggerApiNewSafetyNet;
+
+    @Autowired
+    private ObjetFromJson objetFromJson;
+
+    @Autowired
+    private NewFileJson newFileJson;
+
+    @Autowired
+    private GetListsElementsJson getListsElementsJsonRepository;
+
+    @Autowired
+    FireAddress fireAddress;
+
+    @Autowired
+    FoyerChildrenAdultsToFireStation foyerChildrenAdultsToFireStation;
+
+    @Autowired
+    ChildrenOrAdults childrenOrAdults;
+
+    @Autowired
+    ChildAlert childAlertobj;
+
+    @Autowired
+    PhoneAlert phoneAlertObj;
+
+    @Autowired
+    PersonsFireStation personsFireStation;
+
+    @Autowired
+    AddressListFirestation addressListFirestationObj;
 
     // Récupération de notre logger.
     private static final Logger LOGGER = LogManager.getLogger(SafetyNetService.class);
@@ -51,10 +89,6 @@ public class SafetyNetService implements SafetyNetInterface {
     private static final String ELEMJSONMEDICALRECORDS = "medicalrecords";
     private static final int CHILDOLD = 17; // 17 max age for the children.
     private String messageLogger = "";
-
-    private ObjetFromJson objetFromJson = createObjetFromJson();
-    private NewFileJson newFileJson = createNewFileJson();
-    private GetListsElementsJson getListsElementsJsonRepository = createGetListsElementsJson();
 
     @Override
     public List<Persons> getAPerson(String firstNamelastName, String elemjson) throws IOException {
@@ -621,7 +655,7 @@ public class SafetyNetService implements SafetyNetInterface {
         List<PersonsOfFireStation> listPersonsAdults;
         List<Medicalrecords> listMedicalrecords;
         List<FoyerChildrenAdultsToFireStation> listFoyerChildrenAdults = new ArrayList<>();
-        FoyerChildrenAdultsToFireStation foyerChildrenAdultsToFireStation = new FoyerChildrenAdultsToFireStation();
+        foyerChildrenAdultsToFireStation = new FoyerChildrenAdultsToFireStation();
 
         listMedicalrecords = createListMedicalrecords();
 
@@ -648,7 +682,6 @@ public class SafetyNetService implements SafetyNetInterface {
         foyerChildrenAdultsToFireStation.setDecompte(Integer.toString(listPersonsChildren.size()) + " " + childolddmax);
         foyerChildrenAdultsToFireStation.setlistPersonsOfFireStations(listPersonsChildren);
         listFoyerChildrenAdults.add(foyerChildrenAdultsToFireStation);
-        foyerChildrenAdultsToFireStation = new FoyerChildrenAdultsToFireStation();
         foyerChildrenAdultsToFireStation.setDecompte(Integer.toString(listPersonsAdults.size()) + " " + adultoldmin);
         foyerChildrenAdultsToFireStation.setlistPersonsOfFireStations(listPersonsAdults);
         listFoyerChildrenAdults.add(foyerChildrenAdultsToFireStation);
@@ -685,7 +718,7 @@ public class SafetyNetService implements SafetyNetInterface {
             boolean childboolean) {
 
         List<ChildrenOrAdults> listchildrenOrAdults = new ArrayList<>();
-        ChildrenOrAdults childrenOrAdults = new ChildrenOrAdults();
+
         String lastfirstnameperson = "";
         String lastfirstnamemedicalrecords = "";
         Period periode;
@@ -827,7 +860,7 @@ public class SafetyNetService implements SafetyNetInterface {
 
         List<ChildAlert> listChildAlert = new ArrayList<>();
         if (!listChildren.isEmpty()) {
-            ChildAlert childAlertobj = new ChildAlert(listChildren, listAdults);
+            childAlertobj = new ChildAlert(listChildren, listAdults);
             listChildAlert.add(childAlertobj);
         }
 
@@ -852,8 +885,8 @@ public class SafetyNetService implements SafetyNetInterface {
         List<Persons> listP;
         listPersons = createListPersons();
         listP = checkPersonsFromThisAddressStation(listPersons, listF, stationNumber);
+        phoneAlertObj = new PhoneAlert();
 
-        PhoneAlert phoneAlertObj = new PhoneAlert();
         List<String> listPhones = new ArrayList<>();
         for (Persons element : listP) {
             listPhones.add(element.getPhone());
@@ -921,7 +954,7 @@ public class SafetyNetService implements SafetyNetInterface {
                 firstlastNameMedicalrecords = (elemMedicalrecords.getFirstName() + elemMedicalrecords.getLastName())
                         .toLowerCase();
                 if (firstlastNamePerson.equals(firstlastNameMedicalrecords)) {
-                    FireAddress fireAddress = createClassFireAddress();
+                    fireAddress = new FireAddress();
                     fireAddress.setFirestation(noFirestation);
                     fireAddress.setFirstName(elemPersons.getFirstName());
                     fireAddress.setLastName(elemPersons.getLastName());
@@ -977,7 +1010,7 @@ public class SafetyNetService implements SafetyNetInterface {
                 }
             }
             listAddressListFirestation = createAddressListFirestation(listP);
-            PersonsFireStation personsFireStation = new PersonsFireStation();
+            personsFireStation = new PersonsFireStation();
             personsFireStation.setAddress(elementAddressStation);
             personsFireStation.setListAddressFirestations(listAddressListFirestation);
             listPersonsFireStations.add(personsFireStation);
@@ -997,7 +1030,7 @@ public class SafetyNetService implements SafetyNetInterface {
                 firstAndLastNameMedicalrecords = elementMedicalrecords.getFirstName()
                         + elementMedicalrecords.getLastName();
                 if (firstAndLastNamePerson.equalsIgnoreCase(firstAndLastNameMedicalrecords)) {
-                    AddressListFirestation addressListFirestationObj = new AddressListFirestation();
+                    addressListFirestationObj = new AddressListFirestation();
                     addressListFirestationObj.setFirstName(elementMedicalrecords.getFirstName());
                     addressListFirestationObj.setLastName(elementMedicalrecords.getLastName());
                     addressListFirestationObj.setListAllergies(elementMedicalrecords.getAllergies());
@@ -1229,22 +1262,6 @@ public class SafetyNetService implements SafetyNetInterface {
             element.setZip(person.getZip());
     }
 
-    private Medicalrecords createClassMedicalrecords() {
-        return new Medicalrecords();
-    }
-
-    private Firestations createClassFirestations() {
-        return new Firestations();
-    }
-
-    private Persons createClassePersons() {
-        return new Persons();
-    }
-
-    private FireAddress createClassFireAddress() {
-        return new FireAddress();
-    }
-
     private List<Persons> createNewPersonsArrayList() {
         return new ArrayList<>();
     }
@@ -1271,22 +1288,6 @@ public class SafetyNetService implements SafetyNetInterface {
 
     private List<CommunityEmail> createNewCommunityEmail() {
         return new ArrayList<>();
-    }
-
-    private LoggerApiNewSafetyNet createLoggerApiNewSafetyNet() {
-        return new LoggerApiNewSafetyNet();
-    }
-
-    private ObjetFromJson createObjetFromJson() {
-        return new ObjetFromJson();
-    }
-
-    private NewFileJson createNewFileJson() {
-        return new NewFileJson();
-    }
-
-    private GetListsElementsJson createGetListsElementsJson() {
-        return new GetListsElementsJson();
     }
 
     private List<Persons> createListPersons() {
