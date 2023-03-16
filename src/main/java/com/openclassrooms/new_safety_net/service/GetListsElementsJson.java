@@ -27,10 +27,19 @@ public class GetListsElementsJson implements GetListsElementsJsonRepository {
     @Autowired
     private ObjetFromJson objetFromJson;
 
+    @Autowired
+    Persons personsObj;
+
+    @Autowired
+    Firestations firestationsObj;
+
+    @Autowired
+    Medicalrecords medicalrecordsObj;
+
     @Override
     public List<Persons> getPersons(String elemjson) {
         List<Persons> listPersons = new ArrayList<>();
-        Persons personsObj;
+
         objetFromJson.anyAny(elemjson);
 
         if (objetFromJson.getAny() != null) {
@@ -48,7 +57,7 @@ public class GetListsElementsJson implements GetListsElementsJsonRepository {
     @Override
     public List<Firestations> getFirestations(String elemjson) {
         List<Firestations> listFirestations = new ArrayList<>();
-        Firestations firestationsObj;
+
         objetFromJson.anyAny(elemjson);
 
         if (objetFromJson.getAny() != null) {
@@ -68,7 +77,7 @@ public class GetListsElementsJson implements GetListsElementsJsonRepository {
     @Override
     public List<Medicalrecords> getMedicalrecords(String elemjson) {
         List<Medicalrecords> listMedicalrecords = new ArrayList<>();
-        Medicalrecords medicalrecordsObj;
+
         objetFromJson.anyAny(elemjson);
 
         if (objetFromJson.getAny() != null) {

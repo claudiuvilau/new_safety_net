@@ -6,7 +6,9 @@ import java.nio.file.Files;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.stereotype.Component;
 
+@Component
 public class JsonFromFile {
 
     public static final String FILEPATHJSON = "src\\main\\resources\\jsonFile.json";

@@ -15,7 +15,9 @@ import com.openclassrooms.new_safety_net.model.Persons;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class NewFileJson implements NewFileJsonRepository {
 
     // Récupération de notre logger.
